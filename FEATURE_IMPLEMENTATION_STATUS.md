@@ -27,10 +27,10 @@ This document tracks the implementation status of all 51 features from the featu
 | 9 | Bull-to-Bear Flip Ratio | ⬜ | | Across horizons [5,21,63,250] |
 | 10 | Conviction Index | ⬜ | | K ∈ {3, 5, 10} consecutive tweets |
 | 11 | Abnormal Sentiment | ⬜ | | Horizons: [1,5,21,63,250] days (renamed from Reversal Magnitude) |
-| 12 | Extreme Bullish Consensus (80%) | ⬜ | | Binary indicator |
-| 13 | Extreme Bullish Consensus (90%) | ⬜ | | Binary indicator |
-| 13b | Extreme Bearish Consensus (80%) | ⬜ | | Binary indicator |
-| 13c | Extreme Bearish Consensus (90%) | ⬜ | | Binary indicator |
+| 12 | Extreme Bullish Consensus (80%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
+| 13 | Extreme Bullish Consensus (90%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
+| 13b | Extreme Bearish Consensus (80%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
+| 13c | Extreme Bearish Consensus (90%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
 | 14 | After-Hours Sentiment/Volume | ⬜ | | |
 | 15 | Market-Hours Sentiment/Volume | ⬜ | | |
 | 16 | First-Mover Sentiment | ⬜ | | N ∈ {5, 10, 50} first tweets |
@@ -77,7 +77,7 @@ This document tracks the implementation status of all 51 features from the featu
 
 | # | Feature Name | Status | Output File | Notes |
 |---|--------------|--------|-------------|-------|
-| 39 | Disagreement Index | ✅ | `feature_39_disagreement.pkl` | Completed Dec 24, 2025 |
+| 39 | Disagreement Index | ✅ | `features_01_basic_sentiment.pkl` | Merged into basic sentiment notebook |
 
 ---
 
@@ -110,20 +110,20 @@ This document tracks the implementation status of all 51 features from the featu
 ## Implementation Summary
 
 - **Total Features**: 51+ (some expanded with multiple horizons)
-- **Completed**: 15 features (Features 1-3, 28-38, 39)
+- **Completed**: 19 features (Features 1-3, 12-13c, 28-38, 39)
 - **In Progress**: 0 features
 - **Deprecated**: 1 feature (Feature 4)
-- **Not Started**: 35 features
+- **Not Started**: 31 features
 
 ---
 
 ## Next Steps
 
 1. ~~Complete Feature 39 (Disagreement Index)~~ ✅ Completed
-2. Implement User Flip Analysis (Features 5-9)
-3. Implement Conviction Index (Feature 10)
-4. Implement Abnormal Sentiment (Feature 11)
-5. Implement remaining sentiment dynamics features (12-16)
+2. Implement Abnormal Sentiment (Feature 11) - *Moved to separate file*
+3. Implement User Flip Analysis (Features 5-9)
+4. Implement Conviction Index (Feature 10)
+5. Implement remaining sentiment dynamics features (14-16)
 6. Begin user cohort features (17-27)
 7. Implement intraday/calendar features (40-48)
 8. Implement contextual features (49-51)

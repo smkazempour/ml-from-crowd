@@ -1,7 +1,7 @@
 # Social Media Feature Proposals for Stock Prediction
 
 **General Construction Rules:**
-*   **Horizons:** standardized to $H \in \{5, 21, 63, 252\}$ trading days (approx 1 week, 1 month, 1 quarter, 1 year).
+*   **Horizons:** standardized to $H \in \{5, 21, 63, 250\}$ trading days (approx 1 week, 1 month, 1 quarter, 1 year).
 *   **No Look-ahead:** All calculations use data strictly available at time $t$.
 *   **Date Mapping:** Leveraging Fama-French trading day counts where applicable.
 
@@ -28,7 +28,7 @@ Focusing on the *change* in opinion and the *direction* of that change.
 ## 2. User Cohort Composition (Who is talking?)
 Segmenting the crowd by experience and activity gaps.
 
-17. **Fresh Blood Count**: Volume from users who have not tweeted about this stock in the last $H$ days (where $H \in \{21, 252, AllTime\}$).
+17. **Fresh Blood Count**: Volume from users who have not tweeted about this stock in the last $H$ days (where $H \in \{21, 250, AllTime\}$).
 18. **Fresh Blood Ratio**: (Fresh Blood Count) / (Total Volume).
 19. **Re-entry Volume**: Volume from users inactive on this stock for $>H$ days but returned today.
 20. **Whale Dominance**: % of volume from top 1% users based on cumulative tweet count up to $t-1$.
