@@ -26,7 +26,7 @@ This document tracks the implementation status of all 51 features from the featu
 | 8 | Bear-to-Bull Flip Ratio | ⬜ | | Across horizons [5,21,63,250] |
 | 9 | Bull-to-Bear Flip Ratio | ⬜ | | Across horizons [5,21,63,250] |
 | 10 | Conviction Index | ⬜ | | K ∈ {3, 5, 10} consecutive tweets |
-| 11 | Abnormal Sentiment | ⬜ | | Horizons: [1,5,21,63,250] days (renamed from Reversal Magnitude) |
+| 11 | Abnormal Sentiment | ✅ | `features_03_abnormal_sentiment.pkl` | Horizons: [1,5,21,63,250] days (renamed from Reversal Magnitude) |
 | 12 | Extreme Bullish Consensus (80%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
 | 13 | Extreme Bullish Consensus (90%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
 | 13b | Extreme Bearish Consensus (80%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
@@ -110,17 +110,17 @@ This document tracks the implementation status of all 51 features from the featu
 ## Implementation Summary
 
 - **Total Features**: 51+ (some expanded with multiple horizons)
-- **Completed**: 19 features (Features 1-3, 12-13c, 28-38, 39)
+- **Completed**: 20 features (Features 1-3, 11, 12-13c, 28-38, 39)
 - **In Progress**: 0 features
 - **Deprecated**: 1 feature (Feature 4)
-- **Not Started**: 31 features
+- **Not Started**: 30 features
 
 ---
 
 ## Next Steps
 
 1. ~~Complete Feature 39 (Disagreement Index)~~ ✅ Completed
-2. Implement Abnormal Sentiment (Feature 11) - *Moved to separate file*
+2. ~~Implement Abnormal Sentiment (Feature 11)~~ ✅ Completed
 3. Implement User Flip Analysis (Features 5-9)
 4. Implement Conviction Index (Feature 10)
 5. Implement remaining sentiment dynamics features (14-16)

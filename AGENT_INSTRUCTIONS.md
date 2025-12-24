@@ -15,10 +15,12 @@ This project applies machine learning techniques to extract signals from financi
 
 **Status Tracking**: See `FEATURE_IMPLEMENTATION_STATUS.md` for detailed tracking of all 51 features.
 
-### ✓ Completed Features (15 total)
+### ✓ Completed Features (21 total)
 
-1. **features_01_basic_sentiment.ipynb** (Features 1-3)
-   - Bullish Ratio, Bearish Ratio, Net Sentiment
+1. **features_01_basic_sentiment.ipynb** (Features 1-3, 12-13, 39)
+   - Basic: Bullish Ratio, Bearish Ratio, Net Sentiment
+   - Extreme Consensus: Bullish/Bearish (80%, 90%)
+   - Network: Disagreement Index
    - Output: `features_01_basic_sentiment.pkl`
    - Status: ✅ Completed and validated
 
@@ -30,24 +32,23 @@ This project applies machine learning techniques to extract signals from financi
    - Status: ✅ Completed and validated
    - **Key Innovation**: Integrated Fama-French trading day calendar
 
-3. **feature_39_disagreement.ipynb** (Feature 39)
-   - Disagreement Index (sentiment divergence)
-   - Output: `feature_39_disagreement.pkl`
-   - Status: ✅ Completed Dec 24, 2025
+3. **features_03_abnormal_sentiment.ipynb** (Feature 11)
+   - Abnormal Sentiment (Horizons: 1, 5, 21, 63, 250 days)
+   - Output: `features_03_abnormal_sentiment.pkl`
+   - Status: ✅ Completed and validated
+   - **Key Innovation**: Uses Complete Trading Day Grid with 0-imputation for sentiment
 
 ### 🎯 Next Features to Implement
 
 See `FEATURE_IMPLEMENTATION_STATUS.md` for complete list. Priority order:
 1. User Flip Analysis (Features 5-9)
 2. Conviction Index (Feature 10)
-3. Abnormal Sentiment (Feature 11)
-4. Extreme Consensus (Features 12-13)
-5. After-Hours vs Market-Hours (Features 14-15)
-6. First-Mover Sentiment (Feature 16)
-7. User Cohort features (Features 17-27)
-8. Intraday/Calendar features (Features 40-48)
-9. Contextual features (Features 49-51)
-10. Final aggregation notebook
+3. After-Hours vs Market-Hours (Features 14-15)
+4. First-Mover Sentiment (Feature 16)
+5. User Cohort features (Features 17-27)
+6. Intraday/Calendar features (Features 40-48)
+7. Contextual features (Features 49-51)
+8. Final aggregation notebook
 
 ## Core Technical Decisions
 
