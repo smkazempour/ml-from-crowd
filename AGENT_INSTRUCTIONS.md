@@ -11,66 +11,54 @@ This project applies machine learning techniques to extract signals from financi
 
 ## Current Project Status
 
-### ✓ Completed Tasks
+**Location**: All feature extraction notebooks are in the `feature extraction/` folder.
+
+**Status Tracking**: See `FEATURE_IMPLEMENTATION_STATUS.md` for detailed tracking of all 51 features.
+
+### ✓ Completed Features (15 total)
 
 1. **features_01_basic_sentiment.ipynb** (Features 1-3)
    - Bullish Ratio, Bearish Ratio, Net Sentiment
-   - Processes all 15 years (2010-2024)
    - Output: `features_01_basic_sentiment.pkl`
-   - Status: Validated and pushed to git
+   - Status: ✅ Completed and validated
 
 2. **features_02_volume_attention.ipynb** (Features 28-38)
-   - Raw Volume, Log Volume, Unique User Count
-   - Volume Difference, Log Volume Change
-   - Abnormal Volume & Attention (4 horizons: 5, 21, 63, 250 days)
-   - Attention Surge indicators, Silence Gap, Relative Volume
-   - Attention Concentration (HHI)
+   - Raw Volume, Log Volume, Unique User Count, Volume metrics
+   - Abnormal Attention (4 horizons: 5, 21, 63, 250 days)
+   - Attention Surge, Silence Gap, Relative Volume, HHI
    - Output: `features_02_volume_attention.pkl`
-   - Status: Validated and pushed to git
-   - **Key Innovation**: Integrated Fama-French trading day calendar for accurate rolling windows
+   - Status: ✅ Completed and validated
+   - **Key Innovation**: Integrated Fama-French trading day calendar
 
-### 🎯 Pending Feature Groups (in priority order)
-
-3. **features_03_sentiment_dynamics.ipynb** (Features 4-16)
-   - Sentiment Delta (change over horizons)
-   - User flip analysis (bear-to-bull, bull-to-bear)
-   - Conviction Index, Reversal Magnitude
-   - Extreme consensus indicators (>80%, >90%)
-   - After-hours vs. market-hours sentiment/volume
-   - First-mover sentiment
-
-4. **features_04_user_cohorts.ipynb** (Features 17-27)
-   - Fresh Blood (new users), Re-entry volume
-   - Whale vs. Minnow dominance
-   - Night-Owl vs. Day-Trader ratios
-   - Retention Rate, Crowding Index (Gini)
-   - Specialist Ratio, Sector Expert Ratio
-
-5. **features_05_disagreement.ipynb** (Feature 39)
+3. **feature_39_disagreement.ipynb** (Feature 39)
    - Disagreement Index (sentiment divergence)
+   - Output: `feature_39_disagreement.pkl`
+   - Status: ✅ Completed Dec 24, 2025
 
-6. **features_06_intraday_calendar.ipynb** (Features 40-48)
-   - 8 daily session breakdowns (Pre-market, Market-open, Late morning, Mid-day, Early afternoon, Closing cross, Post-market, Overnight)
-   - Intraday volatility across sessions
+### 🎯 Next Features to Implement
 
-7. **features_07_contextual.ipynb** (Features 49-51)
-   - Symbol Focus (single-stock attention)
-   - Co-mention Count (complexity)
-   - Broadcasting/Spam Ratio
-
-8. **features_aggregate.ipynb** (Final integration)
-   - Load all 7 pickle files
-   - Merge on (symbol, date) key
-   - Output: `features_complete.pkl` with all 51+ features
-   - Quality checks and validation
+See `FEATURE_IMPLEMENTATION_STATUS.md` for complete list. Priority order:
+1. User Flip Analysis (Features 5-9)
+2. Conviction Index (Feature 10)
+3. Abnormal Sentiment (Feature 11)
+4. Extreme Consensus (Features 12-13)
+5. After-Hours vs Market-Hours (Features 14-15)
+6. First-Mover Sentiment (Feature 16)
+7. User Cohort features (Features 17-27)
+8. Intraday/Calendar features (Features 40-48)
+9. Contextual features (Features 49-51)
+10. Final aggregation notebook
 
 ## Core Technical Decisions
 
-### 1. Modular Feature Architecture
-- **One notebook per feature group** (not per individual feature)
-- **One pickle file per feature group** (all years consolidated)
-- **Incremental validation**: User validates each group before moving to next
-- **Git workflow**: Commit and push after each validated group
+### 1. Modular Feature Architecture (Updated Dec 24, 2025)
+- **One notebook per feature** or closely related feature family (e.g., features that only differ by time horizon)
+- **One pickle file per feature/family** (all years consolidated)
+- **Descriptive naming**: Use descriptive names without feature numbers (e.g., `feature_disagreement.ipynb` not `feature_39_disagreement.ipynb`)
+- **Feature numbers tracked separately** in `FEATURE_IMPLEMENTATION_STATUS.md`
+- **Incremental validation**: User validates each feature before moving to next
+- **Git workflow**: Commit and push after each validated feature
+- **Organized folder structure**: All feature extraction notebooks in `feature extraction/` folder
 
 ### 2. Sparse Data Handling (CRITICAL)
 **Problem**: Social media data is sparse - many stock-days have zero tweets, but rolling windows must count actual trading days.
@@ -117,10 +105,13 @@ complete_grid = pd.MultiIndex.from_product(
   4. Define Feature Calculation Functions
   5. Test on Sample Data
   6. Visualize Features
-  7. Validation Checks
-  8. Process All Years (with prev+current year loading)
-  9. Final Data Inspection
-  10. Save to Pickle
+  7. Feature Statistics
+  8. Data Quality Checks
+  9. Process All Years and Save Features
+  10. Save to Pickle with Verification
+  11. Summary Section (formula, interpretation, output file)
+
+- **File Organization**: All feature extraction notebooks in `feature extraction/` folder
 
 ### 6. Naming Conventions
 - **Global Variables**: Use CAPITAL_LETTERS
@@ -213,10 +204,12 @@ Each feature group must include:
 
 ## Key Files Reference
 - **feature_proposal.md**: Source of truth for all 51 feature definitions
-- **features_01_basic_sentiment.ipynb**: Template for modular feature notebooks
-- **features_02_volume_attention.ipynb**: Reference for handling sparse data with FF calendar
+- **FEATURE_IMPLEMENTATION_STATUS.md**: Detailed tracking of implementation status for all 51 features
+- **feature extraction/feature_39_disagreement.ipynb**: Simple template for single-feature notebooks
+- **feature extraction/features_01_basic_sentiment.ipynb**: Template for basic feature calculations
+- **feature extraction/features_02_volume_attention.ipynb**: Reference for handling sparse data with FF calendar
 - **AGENT_INSTRUCTIONS.md**: This file - project guidelines and current status
 
 ---
 
-**Last Updated**: December 3, 2025
+**Last Updated**: December 24, 2025
