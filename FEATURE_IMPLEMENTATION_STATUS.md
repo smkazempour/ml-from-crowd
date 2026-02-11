@@ -1,6 +1,6 @@
 # Feature Implementation Status
 
-**Last Updated**: February 9, 2026
+**Last Updated**: February 10, 2026
 
 This document tracks the implementation status of all 51 features from the feature proposal.
 
@@ -31,8 +31,8 @@ This document tracks the implementation status of all 51 features from the featu
 | 13 | Extreme Bullish Consensus (90%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
 | 13b | Extreme Bearish Consensus (80%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
 | 13c | Extreme Bearish Consensus (90%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
-| 14 | After-Hours Sentiment/Volume | 🚧 | `features_04_intraday_sessions.pkl` | Volume + Net Sentiment from Close(t-1) to Open(t) |
-| 15 | Market-Hours Sentiment/Volume | 🚧 | `features_04_intraday_sessions.pkl` | Volume + Net Sentiment from Open(t) to Close(t) |
+| 14 | After-Hours Sentiment/Volume | 🚧 | `features_04_intraday_sessions.pkl` | Aggregated from midnight_to_morning + pre_market + post_market sessions. Code complete, pending validation. |
+| 15 | Market-Hours Sentiment/Volume | 🚧 | `features_04_intraday_sessions.pkl` | Aggregated from market_open + late_morning + midday + early_afternoon + market_close sessions. Code complete, pending validation. |
 | 16 | First-Mover Sentiment | ⬜ | | N ∈ {5, 10, 50} first tweets |
 
 ---
@@ -85,15 +85,17 @@ This document tracks the implementation status of all 51 features from the featu
 
 | # | Feature Name | Status | Output File | Notes |
 |---|--------------|--------|-------------|-------|
-| 40 | Pre-Market Activity | 🚧 | `features_04_intraday_sessions.pkl` | 04:00-09:30 |
-| 41 | Market-Open Frenzy | 🚧 | `features_04_intraday_sessions.pkl` | 09:30-10:00 |
-| 42 | Late Morning | 🚧 | `features_04_intraday_sessions.pkl` | 10:00-12:00 |
-| 43 | Mid-Day Lull | 🚧 | `features_04_intraday_sessions.pkl` | 12:00-13:00 |
-| 44 | Early Afternoon | 🚧 | `features_04_intraday_sessions.pkl` | 13:00-15:30 |
-| 45 | Closing Cross | 🚧 | `features_04_intraday_sessions.pkl` | 15:30-16:00 |
-| 46 | Post-Market Activity | 🚧 | `features_04_intraday_sessions.pkl` | 16:00-20:00 |
-| 47 | Overnight/Insomnia | 🚧 | `features_04_intraday_sessions.pkl` | 20:00-04:00 |
-| 48 | Intraday Volatility (Sessions) | 🚧 | `features_04_intraday_sessions.pkl` | Std dev across 8 sessions |
+| 40 | Midnight to Morning | 🚧 | `features_04_intraday_sessions.pkl` | 00:00-09:00 (business days). Code complete, pending validation. |
+| 41 | Pre-Market | 🚧 | `features_04_intraday_sessions.pkl` | 09:00-09:30 (business days). Code complete, pending validation. |
+| 42 | Market Open | 🚧 | `features_04_intraday_sessions.pkl` | 09:30-10:00 (business days). Code complete, pending validation. |
+| 43 | Late Morning | 🚧 | `features_04_intraday_sessions.pkl` | 10:00-12:00 (business days). Code complete, pending validation. |
+| 44 | Mid-Day | 🚧 | `features_04_intraday_sessions.pkl` | 12:00-13:00 (business days). Code complete, pending validation. |
+| 45 | Early Afternoon | 🚧 | `features_04_intraday_sessions.pkl` | 13:00-15:30 (business days). Code complete, pending validation. |
+| 46 | Market Close | 🚧 | `features_04_intraday_sessions.pkl` | 15:30-16:00 (business days). Code complete, pending validation. |
+| 47 | Post-Market | 🚧 | `features_04_intraday_sessions.pkl` | 16:00-23:59 (business days). Code complete, pending validation. |
+| 47b | Weekend Activity | 🚧 | `features_04_intraday_sessions.pkl` | Volume + sentiment on weekends. Code complete, pending validation. |
+| 47c | Holiday Activity | 🚧 | `features_04_intraday_sessions.pkl` | Volume + sentiment on holidays. Code complete, pending validation. |
+| 48 | Intraday Volatility (Sessions) | 🚧 | `features_04_intraday_sessions.pkl` | Std dev of sentiment across 8 business day sessions. Code complete, pending validation. |
 
 ---
 
@@ -109,9 +111,9 @@ This document tracks the implementation status of all 51 features from the featu
 
 ## Implementation Summary
 
-- **Total Features**: 51+ (some expanded with multiple horizons)
+- **Total Features**: 53+ (some expanded with multiple horizons; 47b-c added for weekend/holiday)
 - **Completed**: 20 features (Features 1-3, 11, 12-13c, 28-38, 39)
-- **In Progress**: 11 features (Features 14-15, 40-48)
+- **In Progress**: 13 features (Features 14-15, 40-48, 47b-c) — code complete in `features_04_intraday_sessions.ipynb`, pending validation
 - **Deprecated**: 1 feature (Feature 4)
 - **Not Started**: 19 features
 
@@ -121,10 +123,11 @@ This document tracks the implementation status of all 51 features from the featu
 
 1. ~~Complete Feature 39 (Disagreement Index)~~ ✅ Completed
 2. ~~Implement Abnormal Sentiment (Feature 11)~~ ✅ Completed
-3. ~~Implement Intraday Session features (Features 14-15, 40-48)~~ 🚧 In Progress — `features_04_intraday_sessions.ipynb`
-4. Implement User Flip Analysis (Features 5-9)
-5. Implement Conviction Index (Feature 10)
-6. Implement First-Mover Sentiment (Feature 16)
-7. Begin user cohort features (17-27)
-8. Implement contextual features (49-51)
-9. Create final aggregation notebook combining all features
+3. ~~Implement Intraday Session features (Features 14-15, 40-48)~~ 🚧 Code complete — `features_04_intraday_sessions.ipynb` — pending validation and full run
+4. Validate and run Features 14-15, 40-48 on all 15 years
+5. Implement User Flip Analysis (Features 5-9)
+6. Implement Conviction Index (Feature 10)
+7. Implement First-Mover Sentiment (Feature 16)
+8. Begin user cohort features (17-27)
+9. Implement contextual features (49-51)
+10. Create final aggregation notebook combining all features

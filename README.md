@@ -97,7 +97,7 @@ merged_with_crsp_mlcrowd/ (85M rows, 15 yearly CSVs)
   - Filters to messages with Bullish or Bearish sentiment (35% of total)
   - Converts timestamps to US/Eastern timezone
   - Maps each message to a trading date (next market close after the message)
-  - Derives temporal features: hour, session, is_after_hours
+  - Derives temporal features: hour, session (HHMM int), is_after_hours, business_day, is_weekend, is_holiday
 - **Output**: 15 yearly CSVs in `cleaned_by_year_mlcrowd/` (176M messages total)
 
 #### merge_with_crsp.ipynb
@@ -106,7 +106,7 @@ merged_with_crsp_mlcrowd/ (85M rows, 15 yearly CSVs)
 - **Processing**:
   - Step 1 (Explode): Each message mentions one or more symbols via `symbol_list`. This step creates one row per (message, symbol) pair. Output: `exploded_by_year_mlcrowd/` (133M rows)
   - Step 2 (CRSP Merge): Inner join on ticker symbol and date. Adds stock price, volume, shares outstanding, raw return, and abnormal returns (DGTW, CAPM, FF3, FF5, FF6) at horizons 1, 3, 5, 21, 63 days
-- **Output**: 15 yearly CSVs in `merged_with_crsp_mlcrowd/` (85M rows, 40 columns)
+- **Output**: 15 yearly CSVs in `merged_with_crsp_mlcrowd/` (85M rows, 43 columns)
 
 > **Note**: The `merged_with_crsp_mlcrowd/` folder is the primary input for feature extraction. It contains message-level data (one row per tweet per symbol per trading date) with matched CRSP stock data.
 
@@ -135,10 +135,16 @@ All notebooks in this folder aggregate message-level data to **stock-day level**
 - **Output**: `features_mlcrowd/features_03_abnormal_sentiment.pkl` (28M rows -- complete trading grid with imputed neutral sentiment for missing days)
 
 #### features_04_intraday_sessions.ipynb
-- **Purpose**: Compute sentiment and volume broken down by time-of-day sessions
-- **Input**: `merged_with_crsp_mlcrowd/` (message-level CSVs)
-- **Features**: 8 business-day session pairs (volume + sentiment for midnight_to_morning, pre_market, market_open, late_morning, midday, early_afternoon, market_close, post_market), weekend/holiday volume and sentiment, after_hours/market_hours aggregates, intraday_sentiment_volatility
+- **Purpose**: Compute sentiment and volume broken down by time-of-day sessions, weekends, and holidays
+- **Input**: `merged_with_crsp_mlcrowd/` (message-level CSVs). Uses `session` (int64 HHMM), `business_day`, `is_weekend`, `is_holiday` columns directly.
+- **Features** (25 columns):
+  - 8 business-day session pairs (volume + sentiment): midnight_to_morning (00:00-09:00), pre_market (09:00-09:30), market_open (09:30-10:00), late_morning (10:00-12:00), midday (12:00-13:00), early_afternoon (13:00-15:30), market_close (15:30-16:00), post_market (16:00-23:59)
+  - Weekend and holiday volume + sentiment (2 pairs)
+  - After-hours aggregate (midnight_to_morning + pre_market + post_market)
+  - Market-hours aggregate (market_open + late_morning + midday + early_afternoon + market_close)
+  - Intraday sentiment volatility (std dev across 8 business-day sessions)
 - **Output**: `features_mlcrowd/features_04_intraday_sessions.pkl`
+- **Status**: Code complete, pending validation and full run
 
 #### merge_all_feature_files.ipynb
 - **Purpose**: Merge all individual feature files into one consolidated dataset

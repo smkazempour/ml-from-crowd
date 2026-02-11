@@ -7,7 +7,7 @@ This project applies machine learning techniques to extract signals from financi
 - **Source**: StockTwits data merged with CRSP (2010-2024, 15 years)
 - **Input Location**: `C:\Users\skazempour\Documents\StockTwits\dataset\v1\data\csv\merged_with_crsp_mlcrowd\`
 - **Output Location**: `C:\Users\skazempour\Documents\StockTwits\dataset\v1\data\csv\features_mlcrowd\`
-- **Format**: Annual CSV files → Consolidated pickle files (one per feature group)
+- **Format**: Annual CSV files (43 columns including `session` as int64 HHMM, `business_day`, `is_weekend`, `is_holiday`) → Consolidated pickle files (one per feature group)
 
 ## Current Project Status
 
@@ -38,17 +38,28 @@ This project applies machine learning techniques to extract signals from financi
    - Status: ✅ Completed and validated
    - **Key Innovation**: Uses Complete Trading Day Grid with 0-imputation for sentiment
 
+### 🚧 Code Complete, Pending Validation
+
+4. **features_04_intraday_sessions.ipynb** (Features 14-15, 40-48, plus weekend/holiday)
+   - 8 business day sessions: midnight_to_morning (00:00-09:00), pre_market (09:00-09:30), market_open (09:30-10:00), late_morning (10:00-12:00), midday (12:00-13:00), early_afternoon (13:00-15:30), market_close (15:30-16:00), post_market (16:00-23:59)
+   - After-Hours aggregate (midnight_to_morning + pre_market + post_market)
+   - Market-Hours aggregate (market_open + late_morning + midday + early_afternoon + market_close)
+   - Weekend and Holiday volume/sentiment (separate variables)
+   - Intraday sentiment volatility (std dev across 8 business day sessions)
+   - Output: `features_04_intraday_sessions.pkl` (25 feature columns)
+   - Status: 🚧 Code complete, pending validation and full run
+   - **Key Design**: Uses `session` (int64 HHMM), `business_day`, `is_weekend`, `is_holiday` columns directly from input data
+
 ### 🎯 Next Features to Implement
 
 See `FEATURE_IMPLEMENTATION_STATUS.md` for complete list. Priority order:
-1. User Flip Analysis (Features 5-9)
-2. Conviction Index (Feature 10)
-3. After-Hours vs Market-Hours (Features 14-15)
+1. Validate and run Intraday Session features (Features 14-15, 40-48)
+2. User Flip Analysis (Features 5-9)
+3. Conviction Index (Feature 10)
 4. First-Mover Sentiment (Feature 16)
 5. User Cohort features (Features 17-27)
-6. Intraday/Calendar features (Features 40-48)
-7. Contextual features (Features 49-51)
-8. Final aggregation notebook
+6. Contextual features (Features 49-51)
+7. Final aggregation notebook
 
 ## Core Technical Decisions
 
@@ -205,12 +216,13 @@ Each feature group must include:
 
 ## Key Files Reference
 - **feature_proposal.md**: Source of truth for all 51 feature definitions
-- **FEATURE_IMPLEMENTATION_STATUS.md**: Detailed tracking of implementation status for all 51 features
-- **feature extraction/feature_39_disagreement.ipynb**: Simple template for single-feature notebooks
-- **feature extraction/features_01_basic_sentiment.ipynb**: Template for basic feature calculations
-- **feature extraction/features_02_volume_attention.ipynb**: Reference for handling sparse data with FF calendar
+- **FEATURE_IMPLEMENTATION_STATUS.md**: Detailed tracking of implementation status for all 51+ features
+- **01 - feature extraction/features_01_basic_sentiment.ipynb**: Template for basic feature calculations
+- **01 - feature extraction/features_02_volume_attention.ipynb**: Reference for handling sparse data with FF calendar
+- **01 - feature extraction/features_03_abnormal_sentiment.ipynb**: Reference for Complete Trading Day Grid with 0-imputation
+- **01 - feature extraction/features_04_intraday_sessions.ipynb**: Intraday sessions, after/market hours, weekend/holiday features
 - **AGENT_INSTRUCTIONS.md**: This file - project guidelines and current status
 
 ---
 
-**Last Updated**: December 24, 2025
+**Last Updated**: February 10, 2026
