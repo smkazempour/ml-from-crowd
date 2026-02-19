@@ -64,10 +64,14 @@ def form_portfolio_from_signals_sort(signals, returns,
 
     # Create deciles based on signals
     merged['__decile__'] = merged.groupby(date_col)[s].transform(lambda x: pd.qcut(x, bins, labels=False, duplicates='drop') + 1)
-    
+    merged['__decile_max__'] = merged.groupby(date_col)['__decile__'].transform('max')
+    merged['__decile_min__'] = merged.groupby(date_col)['__decile__'].transform('min')
+    if np.any(merged['__decile_max__'] == merged['__decile_min__']):
+        print("Warning: Some dates have only one decile. Consider reducing the number of bins or checking for missing values.")
+
     # Create two portfolios based on signals
-    long = merged[merged['__decile__'] == bins]
-    short = merged[merged['__decile__'] == 1]
+    long = merged[merged['__decile__'] == merged['__decile_max__']]
+    short = merged[merged['__decile__'] == merged['__decile_min__']]
 
     # Calculate the weights
     if portfolio_weights is None:
