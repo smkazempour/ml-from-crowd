@@ -50,14 +50,16 @@ merged_with_crsp_mlcrowd/ (85M rows, 15 yearly CSVs)
               Data/predictions_*.pkl (14.5M rows each)
                     |
                     v
-              [05 - trading]  trading_daily.ipynb
-                    |         Loads all predictions, forms portfolios, calculates returns
+              [05 - trading]  form_portfolios.ipynb
+                    |         Loads selected predictions, forms portfolios, calculates returns
                     v
               Data/trading_daily_results.pkl
                     |
-                    v
-              [05 - trading]  trading_daily_analysis.ipynb
-                              Plots cumulative returns, runs Fama-French regressions
+                    +--> [05 - trading]  plot_cumulative_returns.ipynb
+                    |                    Plots log cumulative returns by model group
+                    |
+                    +--> [05 - trading]  time_series_regressions.ipynb
+                                         Fama-French factor regressions, LaTeX tables
 ```
 
 ---
@@ -242,36 +244,53 @@ Each of the above has an all-features counterpart that uses 31 dynamically selec
 
 ### 04 - predictive regressions/
 
+This folder contains analysis notebooks that operate on the prediction files produced by the model notebooks (`Data/predictions_*.pkl`). Predictive-power diagnostics live here; portfolio formation lives in `05 - trading/`.
+
 #### predictive_regressions.ipynb
-- **Purpose**: Earlier analysis comparing model predictions. Likely superseded by the trading analysis workflow.
+- **Purpose**: Run cross-sectional / pooled predictive regressions of realized returns on model predictions. Used to assess whether each model's predictions have explanatory power for next-day returns.
+
+#### plot_oos_r2.ipynb
+- **Purpose**: Compute and plot out-of-sample R² for each model over the OOS period.
+
+#### rank_correlation.ipynb
+- **Purpose**: Rank-correlation analysis (e.g., Spearman) between predicted and realized returns across models and over time.
+
+#### portfolio_returns.ipynb
+- **Purpose**: Exploratory portfolio-return analysis used alongside the regression diagnostics. Distinct from the production trading pipeline in `05 - trading/`.
+
+#### debug_deciles.ipynb
+- **Purpose**: Debugging notebook for inspecting decile sorts and detecting degenerate cases (e.g., dates with too few unique predictions).
 
 ---
 
 ### 05 - trading/
 
-#### trading_daily.ipynb
-- **Purpose**: Portfolio construction and performance evaluation
-- **Input**: `Data/merged_master.pkl` + all `Data/predictions_*.pkl` files + `D:/CRSP/dsf_final_*.pkl` + Fama-French factors (downloaded)
+#### form_portfolios.ipynb
+- **Purpose**: Portfolio construction and daily-return calculation
+- **Input**: `Data/merged_master.pkl` + selected `Data/predictions_*.pkl` files + `D:/CRSP/dsf_final_*.pkl` + Fama-French factors (downloaded)
 - **Processing**:
-  - Loads the MODELS dictionary (central registry of all 16 models)
+  - Loads the MODELS dictionary (central registry; entries can be commented in/out to control which models are evaluated)
   - Merges each model's predictions with actual returns
+  - Replaces each model's most-frequent prediction per date with NaN to drop degenerate days where many stocks share the same predicted value
   - Forms decile-sorted long-short portfolios (long top 10%, short bottom 10%)
   - Applies minimum stock filters (4 or 10 stocks)
   - Calculates daily portfolio returns over 2012-2022
-- **Output**: `Data/trading_daily_results.pkl` (contains portfolios dict, filtered portfolios, FF factors, model registry)
+- **Output**: `Data/trading_daily_results.pkl` (portfolios dict, filtered portfolios, FF factors, model registry)
 
-> **Important**: The MODELS dict in this notebook is the central registry. When adding a new model, it must be registered here.
+> **Important**: The MODELS dict in this notebook is the central registry for the trading pipeline. When adding a new model, register it here. The full registry of all 16 trained models is preserved as commented entries; uncomment to include a model in the pipeline.
 
-#### trading_daily_analysis.ipynb
-- **Purpose**: Visualization and statistical analysis of trading results
+#### plot_cumulative_returns.ipynb
+- **Purpose**: Visualize log cumulative returns of the portfolios produced by `form_portfolios.ipynb`
 - **Input**: `Data/trading_daily_results.pkl`
-- **Processing**:
-  - Plots log cumulative returns (grouped by 2-feature vs all-feature models)
-  - Runs Fama-French factor regressions (CAPM, FF3, FF5, FF6) with HAC standard errors
-  - Generates LaTeX regression tables
-- **Output**: PNG charts in `Figures/`, LaTeX tables printed to console
+- **Output**: PNG charts in `Figures/`, grouped by 2-feature vs all-feature models
 
-> **Important**: The model_groups dict in this notebook controls which models appear in each chart. When adding a new model, update both this and trading_daily.ipynb.
+#### time_series_regressions.ipynb
+- **Purpose**: Fama-French factor regressions of portfolio returns
+- **Input**: `Data/trading_daily_results.pkl`
+- **Processing**: CAPM / FF3 / FF5 / FF6 regressions with HAC standard errors; emits LaTeX tables via `latex_table.py`
+
+#### testing_trading_algorithm.ipynb
+- **Purpose**: Sandbox / sanity-check notebook for the portfolio formation logic. Used to validate the decile-sorting and long-short construction against simple cases before running the full pipeline.
 
 #### trading_library.py
 - **Purpose**: Shared utility functions for portfolio construction
