@@ -20,12 +20,12 @@ This document tracks the implementation status of all 51 features from the featu
 | 2 | Bearish Ratio | ✅ | `features_01_basic_sentiment.pkl` | |
 | 3 | Net Sentiment | ✅ | `features_01_basic_sentiment.pkl` | |
 | 4 | Sentiment Delta | ⏸️ | N/A | Removed - overlaps with Feature 11 |
-| 5 | Bear-to-Bull Flips (Count) | ⬜ | | Across horizons [5,21,63,250] |
-| 6 | Bull-to-Bear Flips (Count) | ⬜ | | Across horizons [5,21,63,250] |
-| 7 | Net Flip Count | ⬜ | | Across horizons [5,21,63,250] |
-| 8 | Bear-to-Bull Flip Ratio | ⬜ | | Across horizons [5,21,63,250] |
-| 9 | Bull-to-Bear Flip Ratio | ⬜ | | Across horizons [5,21,63,250] |
-| 10 | Conviction Index | ⬜ | | K ∈ {3, 5, 10} consecutive tweets |
+| 5 | Bear-to-Bull Flips (Count) | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | H ∈ {5,21,63,250} td. Code complete, pending validation. |
+| 6 | Bull-to-Bear Flips (Count) | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | H ∈ {5,21,63,250} td. Code complete, pending validation. |
+| 7 | Net Flip Count | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | Code complete, pending validation. |
+| 8 | Bear-to-Bull Flip Ratio | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | Code complete, pending validation. |
+| 9 | Bull-to-Bear Flip Ratio | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | Code complete, pending validation. |
+| 10 | Conviction Index | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | K ∈ {3,5,10}. Code complete, pending validation. |
 | 11 | Abnormal Sentiment | ✅ | `features_03_abnormal_sentiment.pkl` | Horizons: [1,5,21,63,250] days (renamed from Reversal Magnitude) |
 | 12 | Extreme Bullish Consensus (80%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
 | 13 | Extreme Bullish Consensus (90%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
@@ -33,7 +33,7 @@ This document tracks the implementation status of all 51 features from the featu
 | 13c | Extreme Bearish Consensus (90%) | ✅ | `features_01_basic_sentiment.pkl` | Binary indicator |
 | 14 | After-Hours Sentiment/Volume | 🚧 | `features_04_intraday_sessions.pkl` | Aggregated from midnight_to_morning + pre_market + post_market sessions. Code complete, pending validation. |
 | 15 | Market-Hours Sentiment/Volume | 🚧 | `features_04_intraday_sessions.pkl` | Aggregated from market_open + late_morning + midday + early_afternoon + market_close sessions. Code complete, pending validation. |
-| 16 | First-Mover Sentiment | ⬜ | | N ∈ {5, 10, 50} first tweets |
+| 16 | First-Mover Sentiment | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | N ∈ {5,10,50}. Code complete, pending validation. |
 
 ---
 
@@ -41,17 +41,17 @@ This document tracks the implementation status of all 51 features from the featu
 
 | # | Feature Name | Status | Output File | Notes |
 |---|--------------|--------|-------------|-------|
-| 17 | Fresh Blood Count | ⬜ | | H ∈ {21, 252, AllTime} |
-| 18 | Fresh Blood Ratio | ⬜ | | H ∈ {21, 252, AllTime} |
-| 19 | Re-entry Volume | ⬜ | | |
-| 20 | Whale Dominance | ⬜ | | Top 1% users |
-| 21 | Minnow Dominance | ⬜ | | Users with <5 tweets |
-| 22 | Night-Owl Ratio | ⬜ | | >80% after-hours activity |
-| 23 | Day-Trader Ratio | ⬜ | | >80% market-hours activity |
-| 24 | Retention Rate | ⬜ | | |
-| 25 | Crowding Index (Gini) | ⬜ | | |
-| 26 | Specialist Ratio | ⬜ | | ≤3 unique stocks |
-| 27 | Sector Expert Ratio | ⬜ | | Same sector focus |
+| 17 | Fresh Blood Count | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | H ∈ {21,63}. Code complete, pending validation. |
+| 18 | Fresh Blood Ratio | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | Code complete, pending validation. |
+| 19 | Re-entry Volume | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | Code complete, pending validation. |
+| 20 | Whale Dominance | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | Global expanding cumcount. Code complete, pending validation. |
+| 21 | Minnow Dominance | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | < 5 lifetime posts. Code complete, pending validation. |
+| 22 | Night-Owl Ratio | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | Expanding (not rolling) window. Code complete, pending validation. |
+| 23 | Day-Trader Ratio | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | Expanding window. Code complete, pending validation. |
+| 24 | Retention Rate | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | Code complete, pending validation. |
+| 25 | Crowding Index (Gini) | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | Code complete, pending validation. |
+| 26 | Specialist Ratio | 🚧 | `features_05_sentiment_dynamics_cohorts.pkl` | ≤3 unique symbols (expanding). Code complete, pending validation. |
+| 27 | Sector Expert Ratio | ⏸️ | N/A | Blocked — no sector mapping in current pipeline. |
 
 ---
 
@@ -103,19 +103,45 @@ This document tracks the implementation status of all 51 features from the featu
 
 | # | Feature Name | Status | Output File | Notes |
 |---|--------------|--------|-------------|-------|
-| 49 | Symbol Focus | ⬜ | | % users tweeting only this stock |
-| 50 | Co-mention Count (Complexity) | ⬜ | | Avg other symbols mentioned |
-| 51 | Broadcasting/Spam Ratio | ⬜ | | % messages with >5 symbols |
+| 49 | Symbol Focus | ⏸️ | N/A | Blocked — requires message text (cashtag parsing). |
+| 50 | Co-mention Count (Complexity) | ⏸️ | N/A | Blocked — requires message text. |
+| 51 | Broadcasting/Spam Ratio | ⏸️ | N/A | Blocked — requires message text. |
+
+---
+
+## 7. User Influence & Accuracy (New — beyond original 51)
+
+| # | Feature Name | Status | Output File | Notes |
+|---|--------------|--------|-------------|-------|
+| U1 | Skill-Weighted Net Sentiment | 🚧 | `features_07_user_influence_accuracy.pkl` | H ∈ {21,63} td lag. Code complete, pending validation. |
+| U2 | Avg Poster Skill | 🚧 | `features_07_user_influence_accuracy.pkl` | Mean shrunk hit-rate among tagged posters. |
+| U3 | Skilled Bull Ratio | 🚧 | `features_07_user_influence_accuracy.pkl` | Fraction of skill>0 posters who are Bullish. |
+| U4 | N Skilled Posters | 🚧 | `features_07_user_influence_accuracy.pkl` | Count of posters with positive skill history. |
+| U5 | Skill Dispersion | 🚧 | `features_07_user_influence_accuracy.pkl` | Std dev of skill scores (crowd quality heterogeneity). |
+
+---
+
+## 8. Event-Category & Magnitude Features (Deferred)
+
+**Status: ⏸️ BLOCKED — requires message body text**
+
+The merged StockTwits-CRSP dataset (`merged_with_crsp_mlcrowd/*.csv`) was created from
+`feature_wo_messages` source files that do not include message text.  Event classification
+(litigation, sales/contract, guidance, etc.) and typed magnitude extraction (dollar/unit/
+percent/time amounts) depend on regex over message bodies and cannot be computed from the
+current pipeline inputs.  Once a raw message-text source is integrated, implement as
+`features_06_event_categories.ipynb` using the reference code provided (see `event_classifier.py`
+and `event_magnitudes.py` in the project notes).
 
 ---
 
 ## Implementation Summary
 
-- **Total Features**: 53+ (some expanded with multiple horizons; 47b-c added for weekend/holiday)
+- **Total Features**: 58+ (original 51 + 5 new user-skill features + weekend/holiday expansions)
 - **Completed**: 20 features (Features 1-3, 11, 12-13c, 28-38, 39)
-- **In Progress**: 13 features (Features 14-15, 40-48, 47b-c) — code complete in `features_04_intraday_sessions.ipynb`, pending validation
-- **Deprecated**: 1 feature (Feature 4)
-- **Not Started**: 19 features
+- **Code Complete (pending validation)**: 36 features across features_04, features_05, features_07
+- **Blocked (missing data)**: Features 27, 49-51 (need sector mapping or message text)
+- **Deprecated**: 2 features (Feature 4; Sector Expert Ratio 27 reclassified)
 
 ---
 
@@ -123,11 +149,11 @@ This document tracks the implementation status of all 51 features from the featu
 
 1. ~~Complete Feature 39 (Disagreement Index)~~ ✅ Completed
 2. ~~Implement Abnormal Sentiment (Feature 11)~~ ✅ Completed
-3. ~~Implement Intraday Session features (Features 14-15, 40-48)~~ 🚧 Code complete — `features_04_intraday_sessions.ipynb` — pending validation and full run
-4. Validate and run Features 14-15, 40-48 on all 15 years
-5. Implement User Flip Analysis (Features 5-9)
-6. Implement Conviction Index (Feature 10)
-7. Implement First-Mover Sentiment (Feature 16)
-8. Begin user cohort features (17-27)
-9. Implement contextual features (49-51)
-10. Create final aggregation notebook combining all features
+3. ~~Implement Intraday Session features (Features 14-15, 40-48)~~ 🚧 Code complete in `features_04_intraday_sessions.ipynb`
+4. ~~Implement Flip / Conviction / First-Mover / Cohort features (5-10, 16-26)~~ 🚧 Code complete in `features_05_sentiment_dynamics_cohorts.ipynb`
+5. ~~Implement User Skill / Accuracy features~~ 🚧 Code complete in `features_07_user_influence_accuracy.ipynb`
+6. **Validate and run** features_04 on all 15 years
+7. **Validate and run** features_05 on all 15 years
+8. **Validate and run** features_07 on all 15 years
+9. Acquire message-text source → implement features_06 (event categories + magnitudes)
+10. Create final aggregation notebook combining all feature pickles

@@ -1,0 +1,303 @@
+================================================================================
+FEATURES_05 and FEATURES_07 -- ANNOTATED WALKTHROUGH
+(for explaining to a research partner -- references match the actual notebook
+ cells in "01 - feature extraction/features_05_sentiment_dynamics_cohorts.ipynb"
+ and "01 - feature extraction/features_07_user_influence_accuracy.ipynb")
+================================================================================
+
+
+################################################################################
+# FEATURES_05_SENTIMENT_DYNAMICS_COHORTS.ipynb
+# Question answered: is sentiment CHANGING, and WHO makes up the crowd?
+# 4 independent feature families, each built by its own function, then merged
+# together on (symbol, date) every year in the main processing loop (Section 9).
+################################################################################
+
+
+--------------------------------------------------------------------------------
+FAMILY A -- SENTIMENT FLIPS (Features 5-9)
+Function: calc_flip_features()   [cell "5f23d58f", Section 5a]
+--------------------------------------------------------------------------------
+
+def calc_flip_features(df, horizons=HORIZONS, prev_daily_dir=None):
+    # Keep only posts explicitly tagged Bullish/Bearish (drop untagged posts)
+    tagged = df[df["sentiment"].isin(["Bullish", "Bearish"])].copy()
+    tagged["direction"] = tagged["sentiment"].map({"Bullish": 1, "Bearish": -1})
+
+    # Collapse each user's posts on a symbol-day down to ONE direction
+    # (majority vote if they posted more than once that day)
+    daily = (
+        tagged.groupby(["user_id", "symbol", "date"])["direction"]
+        .mean().apply(lambda x: 1 if x > 0 else -1).reset_index()
+        ...
+    )
+
+    # prev_daily_dir = last year's daily directions, passed in from the main
+    # loop -- lets a user's Jan-1 post "flip" relative to their Dec-31 post
+    # from the PREVIOUS year, instead of treating every year as a cold start.
+    if prev_daily_dir is not None ...:
+        daily = pd.concat([prev_daily_dir, daily])...
+
+    # For each (user, symbol): look at their PREVIOUS post's direction
+    g = daily.groupby(["user_id", "symbol"])
+    daily["prev_dir"]  = g["direction"].shift(1)     # <-- the flip comparison
+    daily["td_gap"]    = daily["cur_td"] - daily["prev_td"]   # trading-day gap
+
+    # A "flip" = direction changed since the user's last post on this symbol
+    daily["b2b"]  = (daily["prev_dir"] == -1) & (daily["direction"] == 1)  # bear->bull
+    daily["b2br"] = (daily["prev_dir"] ==  1) & (daily["direction"] == -1) # bull->bear
+
+    # Aggregate flips to (symbol, date), separately for each horizon H
+    # (H = how many trading days back we allow the "previous post" to be)
+    for H in horizons:                                   # H in {5, 21, 63, 250}
+        w = daily[daily["td_gap"] <= H]                   # only count flips within H td
+        ... sum b2b / b2br per (symbol, date) ...
+        # -> bear_to_bull_flips_H, bull_to_bear_flips_H, net_flip_count_H
+        # -> bear_to_bull_ratio_H, bull_to_bear_ratio_H  (scaled by users active that day)
+
+WHAT TO POINT TO: the "prev_dir" shift + the b2b/b2br boolean lines are the
+actual flip detection. Everything else is bookkeeping (carry-forward across
+years, horizon looping, ratio scaling).
+
+
+--------------------------------------------------------------------------------
+FAMILY B -- CONVICTION INDEX (Feature 10)
+Function: calc_conviction_features()   [cell "0be4ed27", Section 5b]
+--------------------------------------------------------------------------------
+
+def calc_conviction_features(df, k_values=K_VALUES, prev_daily_dir=None):
+    ... same tagged/daily setup as Family A ...
+
+    # Detect when a user's direction changes vs. their previous post
+    daily["prev_dir"]    = g["direction"].shift(1)
+    daily["dir_changed"] = (daily["direction"] != daily["prev_dir"]).fillna(True)
+
+    # Every time direction changes, start a NEW "run" (streak); cumcount within
+    # a run gives the streak length (1, 2, 3, ... same-direction posts in a row)
+    daily["run_id"] = g["dir_changed"].cumsum()
+    daily["streak"] = daily.groupby(["user_id","symbol","run_id"]).cumcount() + 1
+
+    # Feature: % of today's active users whose CURRENT streak is >= K
+    for K in k_values:                                    # K in {3, 5, 10}
+        conv = (daily["streak"] >= K).groupby([symbol,date]).sum()
+        # -> conviction_index_K = (# users on a >=K streak) / (# active users)
+
+WHAT TO POINT TO: "dir_changed" -> "run_id" -> "streak" is the whole streak-
+counting mechanism. K is just a threshold applied to that streak length.
+
+
+--------------------------------------------------------------------------------
+FAMILY C -- FIRST-MOVER SENTIMENT (Feature 16)
+Function: calc_first_mover_features()   [cell "59aec400", Section 5c]
+--------------------------------------------------------------------------------
+
+def calc_first_mover_features(df, n_values=N_VALUES):
+    tagged = df[df["sentiment"].isin(["Bullish","Bearish"])].copy()
+    tagged = tagged.sort_values(["symbol","date","created_at"])  # <-- by TIME of day
+
+    for N in n_values:                                    # N in {5, 10, 50}
+        fn = tagged.groupby(["symbol","date"]).head(N)    # <-- first N tagged posts that day
+        # -> first_mover_net_sent_N = (bulls - bears) / (bulls + bears) among those N
+        # -> first_mover_volume_N   = how many of the N were actually tagged
+
+WHAT TO POINT TO: ".groupby(...).head(N)" after sorting by created_at is the
+entire mechanism -- literally "the first N posts of the day, chronologically."
+
+
+--------------------------------------------------------------------------------
+FAMILY D -- USER COHORT COMPOSITION (Features 17-26)
+Function: calc_cohort_features()   [cell "ca47773a", Section 5d]
+--------------------------------------------------------------------------------
+
+def calc_cohort_features(df, carry=None, horizons=None):
+    # carry = persistent state passed in from the main year-loop (see below).
+    # Without this, "lifetime post count" or "last time user X posted symbol Y"
+    # would reset to zero every year, which is wrong -- these are ALL-TIME stats.
+    if carry is None:
+        carry = dict(sym_last={}, global_cnt={}, sym_set={}, ah_cnt={})
+
+    # --- Fresh blood / re-entry / retention (Features 17-19, 24) ---
+    daily["gap_days"] = date - prev_date_for_this_(user,symbol)   # using carry if needed
+    for H in horizons:                                    # H in {21, 63}
+        fresh_H   = gap_days is NaN or gap_days > H         # never posted this symbol before (recently)
+        reentry_H = gap_days > H AND user has posted before # came back after a long absence
+        retain_H  = gap_days <= H                           # regular, still active
+
+    # --- Whale / minnow dominance (Features 20-21) ---
+    df["cum_before"] = carry["global_cnt"][user] + posts_so_far_this_year
+    p99 = daily 99th-percentile of cum_before across all users that day
+    is_whale  = cum_before >= p99          # top 1% most prolific posters, ever
+    is_minnow = cum_before < 5             # brand new / very infrequent posters
+
+    # --- Night-owl / day-trader (Features 22-23) ---
+    ah_ratio = (after-hours posts so far) / (total posts so far)   [expanding, all-history]
+    is_night_owl  = ah_ratio > 0.8
+    is_day_trader = ah_ratio < 0.2
+
+    # --- Specialist ratio (Feature 26) ---
+    total_nsyms = carry["sym_set"][user] (symbols before this year) + symbols seen this year so far
+    is_specialist = total_nsyms <= 3       # historically only ever discusses <=3 tickers
+
+    # --- Crowding / Gini (Feature 25) ---
+    crowding_gini = gini_coeff(post counts per user, for this symbol-day)
+    # 0 = everyone posts equally, 1 = one user dominates the conversation
+
+    ... aggregate everything to (symbol, date) ...
+
+    # --- Update carry state for NEXT year ---
+    new_carry["global_cnt"][user] += posts this year
+    new_carry["sym_set"][user]    |= symbols posted this year
+    new_carry["ah_cnt"][user]     += after-hours posts this year
+    new_carry["sym_last"][(user,symbol)] = last date posted
+    return result, new_carry
+
+WHAT TO POINT TO: the "carry" dict is the key design idea -- it's how "lifetime"
+/ "all-history" statistics survive across the year-by-year processing loop
+without ever loading all 14 years of raw data into memory simultaneously.
+
+
+--------------------------------------------------------------------------------
+MAIN LOOP (all 4 families tie together here)   [cell "ca9cb1ee", Section 9]
+--------------------------------------------------------------------------------
+
+carry_state    = None   # persists across years -- cohort features (Family D)
+prev_daily_dir = None   # persists across years -- flip/conviction (Families A/B)
+
+for file in files:                                # one CSV per year, in order
+    df_year = pd.read_csv(...)
+
+    flip_yr, prev_daily_dir = calc_flip_features(df_year, prev_daily_dir=prev_daily_dir)
+    conv_yr                 = calc_conviction_features(df_year, prev_daily_dir=prev_daily_dir)
+    fm_yr                   = calc_first_mover_features(df_year)
+    cohort_yr, carry_state  = calc_cohort_features(df_year, carry=carry_state)
+
+    yr_feats = flip_yr.merge(conv_yr).merge(fm_yr).merge(cohort_yr)  # on [symbol, date]
+    all_features.append(yr_feats)
+
+features_all = pd.concat(all_features)   # -> features_05_sentiment_dynamics_cohorts.pkl
+
+WHAT TO POINT TO: this loop is the proof that state carries forward correctly
+year-to-year -- notice prev_daily_dir and carry_state get REASSIGNED each
+iteration from the function's return value, then fed into the NEXT iteration.
+
+
+
+################################################################################
+# FEATURES_07_USER_INFLUENCE_ACCURACY.ipynb
+# Question answered: whose sentiment should count MORE, based on their actual
+# historical accuracy (not follower count, which isn't in this dataset)?
+################################################################################
+
+
+--------------------------------------------------------------------------------
+STEP 1 -- BUILD EACH USER'S TRACK RECORD ("skill score")
+Function: build_user_skill_table()   [cell "50bfe085", Section 4a]
+--------------------------------------------------------------------------------
+
+def build_user_skill_table(df, lag_td=21, ret_col="ar_capm_21", shrink=SHRINK):
+    tagged = df[df["sentiment"].isin(["Bullish","Bearish"])].copy()
+    tagged["direction"] = tagged["sentiment"].map({"Bullish": 1, "Bearish": -1})
+
+    # THE CORE IDEA: was this call "right"? direction * forward_return > 0
+    # ar_capm_21 = the stock's 21-trading-day-forward abnormal return, already
+    # sitting in the merged dataset (the same column used elsewhere as an ML target)
+    tagged["hit"] = (tagged["direction"] * tagged[ret_col] > 0).astype(float)
+
+    # Expanding (running) hit count and call count PER USER, using only calls
+    # made BEFORE this one (shift(1) excludes the current row from its own stats)
+    g = tagged.groupby("user_id")
+    tagged["cum_n"]    = g.cumcount()
+    tagged["cum_hits"] = g["hit"].cumsum().shift(1).fillna(0)
+
+    # Bayesian shrinkage toward 0.5 (coin flip / no skill).
+    # shrink=20 means: it's as if every user starts with 20 "phantom" 50/50 calls,
+    # so a brand-new user scores exactly 0, and needs ~40 real calls before their
+    # track record can meaningfully pull away from neutral.
+    shrunk_hr   = (cum_hits + shrink*0.5) / (cum_n + shrink)
+    skill_score = 2 * (shrunk_hr - 0.5)          # rescaled to be centered at 0
+
+    # THE NO-LOOK-AHEAD GUARANTEE:
+    # A call made on date d has its outcome (ar_capm_21) known only at d+21td.
+    # So this call may only influence OTHER messages dated >= d + lag_td.
+    avail_date = trading_day_index[d] + lag_td   # <-- the critical lag
+    return skill_timeline   # columns: user_id, date(=avail_date), skill_score
+
+WHAT TO POINT TO: the "hit" line (direction * return > 0) is literally "was
+this person right?" -- and the avail_date / lag_td line is what prevents any
+future information leaking backward into a feature that describes the present.
+
+
+--------------------------------------------------------------------------------
+STEP 2 -- ATTACH EACH USER'S CURRENT SKILL TO THEIR MESSAGES
+Function: attach_user_skill()   [cell "50bfe085", directly below build_user_skill_table]
+--------------------------------------------------------------------------------
+
+def attach_user_skill(df, skill_timeline, default=0.0):
+    # For a message on date t, take the MOST RECENT skill_score whose
+    # avail_date <= t (forward-fill). A user with no qualifying history yet
+    # gets skill_score = 0.0 (the "no skill" default).
+    combo["user_skill"] = combo.groupby("user_id")["skill_score"].ffill().fillna(default)
+    return df.assign(user_skill=...)
+
+WHAT TO POINT TO: the ".ffill()" is doing the actual "look up this user's most
+recent verified track record as of today" step.
+
+
+--------------------------------------------------------------------------------
+STEP 3 -- TURN PER-USER SKILL INTO FIRM-DAY FEATURES
+Function: calc_skill_features()   [cell "7ef6f50f", Section 4b]
+--------------------------------------------------------------------------------
+
+def calc_skill_features(df, skill_tl, lag_label="21"):
+    df_sk = attach_user_skill(df, skill_tl)
+    tagged = df_sk[df_sk["sentiment"].isin(["Bullish","Bearish"])]
+
+    # Weight each user's post by their skill (floor at 0, +0.5 so a neutral
+    # user still counts as "half a vote" rather than being silenced entirely)
+    tagged["w"] = tagged["user_skill"].clip(lower=0) + 0.5
+
+    for each (symbol, date):
+        # skill_wtd_net_sent: like plain net_sentiment, but skilled bulls/bears
+        # count for more than unskilled ones
+        skill_wtd_net_sent = (sum of w for bulls - sum of w for bears) / total w
+
+        avg_poster_skill    = mean(user_skill) among today's posters
+        skilled_bull_ratio  = fraction of SKILLED posters (skill>0) who are bullish
+        n_skilled_posters   = count of posters with skill > 0
+        skill_dispersion    = std dev of skill scores today
+                              (low = homogeneous crowd, high = mixed quality)
+
+WHAT TO POINT TO: the "w = clip(skill,0) + 0.5" line is the whole weighting
+scheme -- everything downstream is just a weighted version of familiar
+sentiment aggregates.
+
+
+--------------------------------------------------------------------------------
+MAIN LOOP -- WALK-FORWARD ACROSS YEARS   [cell "65d3c8ce", Section 8]
+--------------------------------------------------------------------------------
+
+calls_buffer = empty DataFrame   # accumulates (user_id, date, sentiment, ar_capm_21)
+
+for file in files:                                # one CSV per year, in order
+    df_year = pd.read_csv(...)
+
+    # Skill for THIS year is built from ALL calls seen so far (buffer + this year) --
+    # but the lag_td offset inside build_user_skill_table still prevents any single
+    # call's own future return from leaking into its own feature value.
+    combined_for_skill = concat(calls_buffer, df_year[relevant cols])
+    sf_year = calc_all_skill_features(combined_for_skill, lag_td_list=[21, 63])
+
+    sf_year = sf_year[sf_year.date.isin(df_year's dates)]   # keep only this year's rows
+    all_features.append(sf_year)
+
+    calls_buffer = concat(calls_buffer, df_year[relevant cols])   # grow the buffer
+
+features_all = concat(all_features)   # -> features_07_user_influence_accuracy.pkl
+
+WHAT TO POINT TO: "calls_buffer" growing every iteration is the walk-forward
+mechanism -- a user's skill score in year 5 is built ONLY from years 1-4's
+calls (via the buffer), never from year 5 or later.
+
+================================================================================
+END
+================================================================================
