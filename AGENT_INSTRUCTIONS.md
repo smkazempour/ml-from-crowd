@@ -15,7 +15,7 @@ This project applies machine learning techniques to extract signals from financi
 
 **Status Tracking**: See `FEATURE_IMPLEMENTATION_STATUS.md` for detailed tracking of all 51 features.
 
-### ✓ Completed Features (21 total)
+### ✓ Completed Features (20 total)
 
 1. **features_01_basic_sentiment.ipynb** (Features 1-3, 12-13, 39)
    - Basic: Bullish Ratio, Bearish Ratio, Net Sentiment
@@ -50,16 +50,32 @@ This project applies machine learning techniques to extract signals from financi
    - Status: 🚧 Code complete, pending validation and full run
    - **Key Design**: Uses `session` (int64 HHMM), `business_day`, `is_weekend`, `is_holiday` columns directly from input data
 
-### 🎯 Next Features to Implement
+### 🚧 Code Complete, Pending Validation
+
+5. **features_05_sentiment_dynamics_cohorts.ipynb** (Features 5-10, 16-26)
+   - Sentiment Flips (Bear-to-Bull / Bull-to-Bear / Net / Ratios) — H ∈ {5,21,63,250}
+   - Conviction Index — K ∈ {3,5,10}
+   - First-Mover Sentiment — N ∈ {5,10,50}
+   - User Cohort Composition: Fresh Blood, Re-entry, Whale/Minnow Dominance,
+     Night-Owl/Day-Trader, Retention Rate, Crowding Gini, Specialist Ratio
+   - Output: `features_05_sentiment_dynamics_cohorts.pkl`
+   - Status: 🚧 Code complete, pending validation and full run
+   - **Key Design**: Carry-state dict (`carry_state`) persists across the year loop
+     so global cumulative counts, user-symbol last-seen dates, and symbol sets
+     accumulate correctly over all 14 years without loading the full history at once.
+
+   **Note on features_06 (Event Categories + Magnitudes)**: Blocked pending message text.
+   The merged `merged_with_crsp_mlcrowd/` files come from `feature_wo_messages` source
+   (no body column).  When a raw text source is integrated, implement as
+   `features_06_event_categories.ipynb` using the reference code in project notes.
+
+### 🎯 Next Steps
 
 See `FEATURE_IMPLEMENTATION_STATUS.md` for complete list. Priority order:
-1. Validate and run Intraday Session features (Features 14-15, 40-48)
-2. User Flip Analysis (Features 5-9)
-3. Conviction Index (Feature 10)
-4. First-Mover Sentiment (Feature 16)
-5. User Cohort features (Features 17-27)
-6. Contextual features (Features 49-51)
-7. Final aggregation notebook
+1. Validate and run features_04 on all 15 years (intraday sessions)
+2. Validate and run features_05 on all 15 years (cohort/flip/conviction)
+3. Acquire message-text source → implement features_06 (event categories)
+4. Final aggregation notebook combining all feature pickles
 
 ## Core Technical Decisions
 
