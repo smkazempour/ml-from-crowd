@@ -64,17 +64,6 @@ This project applies machine learning techniques to extract signals from financi
      so global cumulative counts, user-symbol last-seen dates, and symbol sets
      accumulate correctly over all 14 years without loading the full history at once.
 
-6. **features_07_user_influence_accuracy.ipynb** (New — User Skill Track Record)
-   - Skill-Weighted Net Sentiment, Avg Poster Skill, Skilled Bull Ratio,
-     N Skilled Posters, Skill Dispersion — H ∈ {21,63} td
-   - Uses `ar_capm_21` (forward abnormal return already in merged data) as call outcome.
-   - Walk-forward: skill for year Y uses only calls from years 1..Y-1 (no look-ahead).
-   - Shrinkage toward 0.5 prior (Bayesian pseudo-count = 20).
-   - Output: `features_07_user_influence_accuracy.pkl`
-   - Status: 🚧 Code complete, pending validation and full run
-   - **Key Design**: Growing `calls_buffer` across year loop; `build_user_skill_table()`
-     applies a `lag_td`-trading-day availability offset inside itself.
-
    **Note on features_06 (Event Categories + Magnitudes)**: Blocked pending message text.
    The merged `merged_with_crsp_mlcrowd/` files come from `feature_wo_messages` source
    (no body column).  When a raw text source is integrated, implement as
@@ -85,9 +74,8 @@ This project applies machine learning techniques to extract signals from financi
 See `FEATURE_IMPLEMENTATION_STATUS.md` for complete list. Priority order:
 1. Validate and run features_04 on all 15 years (intraday sessions)
 2. Validate and run features_05 on all 15 years (cohort/flip/conviction)
-3. Validate and run features_07 on all 15 years (user skill)
-4. Acquire message-text source → implement features_06 (event categories)
-5. Final aggregation notebook combining all feature pickles
+3. Acquire message-text source → implement features_06 (event categories)
+4. Final aggregation notebook combining all feature pickles
 
 ## Core Technical Decisions
 

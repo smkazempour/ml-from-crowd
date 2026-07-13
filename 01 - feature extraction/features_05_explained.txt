@@ -1,8 +1,7 @@
 ================================================================================
-FEATURES_05 and FEATURES_07 -- ANNOTATED WALKTHROUGH
+FEATURES_05 -- ANNOTATED WALKTHROUGH
 (for explaining to a research partner -- references match the actual notebook
- cells in "01 - feature extraction/features_05_sentiment_dynamics_cohorts.ipynb"
- and "01 - feature extraction/features_07_user_influence_accuracy.ipynb")
+ cells in "01 - feature extraction/features_05_sentiment_dynamics_cohorts.ipynb")
 ================================================================================
 
 
@@ -85,6 +84,10 @@ def calc_conviction_features(df, k_values=K_VALUES, prev_daily_dir=None):
 WHAT TO POINT TO: "dir_changed" -> "run_id" -> "streak" is the whole streak-
 counting mechanism. K is just a threshold applied to that streak length.
 
+NOTE: the carry-forward input to this function in the Section 9 main loop was
+corrected during integration -- see "features_05_conviction_fix.md" in this
+folder for the before/after and why it matters.
+
 
 --------------------------------------------------------------------------------
 FAMILY C -- FIRST-MOVER SENTIMENT (Feature 16)
@@ -166,10 +169,18 @@ prev_daily_dir = None   # persists across years -- flip/conviction (Families A/B
 for file in files:                                # one CSV per year, in order
     df_year = pd.read_csv(...)
 
-    flip_yr, prev_daily_dir = calc_flip_features(df_year, prev_daily_dir=prev_daily_dir)
-    conv_yr                 = calc_conviction_features(df_year, prev_daily_dir=prev_daily_dir)
-    fm_yr                   = calc_first_mover_features(df_year)
-    cohort_yr, carry_state  = calc_cohort_features(df_year, carry=carry_state)
+    # prior_daily_dir = LAST year's directions; cur_daily_dir = THIS year's.
+    # Both flips and conviction receive the PRIOR year's directions; this
+    # year's directions only become the carry for the NEXT iteration.
+    # (See features_05_conviction_fix.md -- the original loop accidentally
+    #  passed the current year's directions to conviction.)
+    prior_daily_dir = prev_daily_dir
+    flip_yr, cur_daily_dir = calc_flip_features(df_year, prev_daily_dir=prior_daily_dir)
+    conv_yr                = calc_conviction_features(df_year, prev_daily_dir=prior_daily_dir)
+    fm_yr                  = calc_first_mover_features(df_year)
+    cohort_yr, carry_state = calc_cohort_features(df_year, carry=carry_state)
+
+    prev_daily_dir = cur_daily_dir (trimmed to the last 250 trading days)
 
     yr_feats = flip_yr.merge(conv_yr).merge(fm_yr).merge(cohort_yr)  # on [symbol, date]
     all_features.append(yr_feats)
@@ -179,124 +190,6 @@ features_all = pd.concat(all_features)   # -> features_05_sentiment_dynamics_coh
 WHAT TO POINT TO: this loop is the proof that state carries forward correctly
 year-to-year -- notice prev_daily_dir and carry_state get REASSIGNED each
 iteration from the function's return value, then fed into the NEXT iteration.
-
-
-
-################################################################################
-# FEATURES_07_USER_INFLUENCE_ACCURACY.ipynb
-# Question answered: whose sentiment should count MORE, based on their actual
-# historical accuracy (not follower count, which isn't in this dataset)?
-################################################################################
-
-
---------------------------------------------------------------------------------
-STEP 1 -- BUILD EACH USER'S TRACK RECORD ("skill score")
-Function: build_user_skill_table()   [cell "50bfe085", Section 4a]
---------------------------------------------------------------------------------
-
-def build_user_skill_table(df, lag_td=21, ret_col="ar_capm_21", shrink=SHRINK):
-    tagged = df[df["sentiment"].isin(["Bullish","Bearish"])].copy()
-    tagged["direction"] = tagged["sentiment"].map({"Bullish": 1, "Bearish": -1})
-
-    # THE CORE IDEA: was this call "right"? direction * forward_return > 0
-    # ar_capm_21 = the stock's 21-trading-day-forward abnormal return, already
-    # sitting in the merged dataset (the same column used elsewhere as an ML target)
-    tagged["hit"] = (tagged["direction"] * tagged[ret_col] > 0).astype(float)
-
-    # Expanding (running) hit count and call count PER USER, using only calls
-    # made BEFORE this one (shift(1) excludes the current row from its own stats)
-    g = tagged.groupby("user_id")
-    tagged["cum_n"]    = g.cumcount()
-    tagged["cum_hits"] = g["hit"].cumsum().shift(1).fillna(0)
-
-    # Bayesian shrinkage toward 0.5 (coin flip / no skill).
-    # shrink=20 means: it's as if every user starts with 20 "phantom" 50/50 calls,
-    # so a brand-new user scores exactly 0, and needs ~40 real calls before their
-    # track record can meaningfully pull away from neutral.
-    shrunk_hr   = (cum_hits + shrink*0.5) / (cum_n + shrink)
-    skill_score = 2 * (shrunk_hr - 0.5)          # rescaled to be centered at 0
-
-    # THE NO-LOOK-AHEAD GUARANTEE:
-    # A call made on date d has its outcome (ar_capm_21) known only at d+21td.
-    # So this call may only influence OTHER messages dated >= d + lag_td.
-    avail_date = trading_day_index[d] + lag_td   # <-- the critical lag
-    return skill_timeline   # columns: user_id, date(=avail_date), skill_score
-
-WHAT TO POINT TO: the "hit" line (direction * return > 0) is literally "was
-this person right?" -- and the avail_date / lag_td line is what prevents any
-future information leaking backward into a feature that describes the present.
-
-
---------------------------------------------------------------------------------
-STEP 2 -- ATTACH EACH USER'S CURRENT SKILL TO THEIR MESSAGES
-Function: attach_user_skill()   [cell "50bfe085", directly below build_user_skill_table]
---------------------------------------------------------------------------------
-
-def attach_user_skill(df, skill_timeline, default=0.0):
-    # For a message on date t, take the MOST RECENT skill_score whose
-    # avail_date <= t (forward-fill). A user with no qualifying history yet
-    # gets skill_score = 0.0 (the "no skill" default).
-    combo["user_skill"] = combo.groupby("user_id")["skill_score"].ffill().fillna(default)
-    return df.assign(user_skill=...)
-
-WHAT TO POINT TO: the ".ffill()" is doing the actual "look up this user's most
-recent verified track record as of today" step.
-
-
---------------------------------------------------------------------------------
-STEP 3 -- TURN PER-USER SKILL INTO FIRM-DAY FEATURES
-Function: calc_skill_features()   [cell "7ef6f50f", Section 4b]
---------------------------------------------------------------------------------
-
-def calc_skill_features(df, skill_tl, lag_label="21"):
-    df_sk = attach_user_skill(df, skill_tl)
-    tagged = df_sk[df_sk["sentiment"].isin(["Bullish","Bearish"])]
-
-    # Weight each user's post by their skill (floor at 0, +0.5 so a neutral
-    # user still counts as "half a vote" rather than being silenced entirely)
-    tagged["w"] = tagged["user_skill"].clip(lower=0) + 0.5
-
-    for each (symbol, date):
-        # skill_wtd_net_sent: like plain net_sentiment, but skilled bulls/bears
-        # count for more than unskilled ones
-        skill_wtd_net_sent = (sum of w for bulls - sum of w for bears) / total w
-
-        avg_poster_skill    = mean(user_skill) among today's posters
-        skilled_bull_ratio  = fraction of SKILLED posters (skill>0) who are bullish
-        n_skilled_posters   = count of posters with skill > 0
-        skill_dispersion    = std dev of skill scores today
-                              (low = homogeneous crowd, high = mixed quality)
-
-WHAT TO POINT TO: the "w = clip(skill,0) + 0.5" line is the whole weighting
-scheme -- everything downstream is just a weighted version of familiar
-sentiment aggregates.
-
-
---------------------------------------------------------------------------------
-MAIN LOOP -- WALK-FORWARD ACROSS YEARS   [cell "65d3c8ce", Section 8]
---------------------------------------------------------------------------------
-
-calls_buffer = empty DataFrame   # accumulates (user_id, date, sentiment, ar_capm_21)
-
-for file in files:                                # one CSV per year, in order
-    df_year = pd.read_csv(...)
-
-    # Skill for THIS year is built from ALL calls seen so far (buffer + this year) --
-    # but the lag_td offset inside build_user_skill_table still prevents any single
-    # call's own future return from leaking into its own feature value.
-    combined_for_skill = concat(calls_buffer, df_year[relevant cols])
-    sf_year = calc_all_skill_features(combined_for_skill, lag_td_list=[21, 63])
-
-    sf_year = sf_year[sf_year.date.isin(df_year's dates)]   # keep only this year's rows
-    all_features.append(sf_year)
-
-    calls_buffer = concat(calls_buffer, df_year[relevant cols])   # grow the buffer
-
-features_all = concat(all_features)   # -> features_07_user_influence_accuracy.pkl
-
-WHAT TO POINT TO: "calls_buffer" growing every iteration is the walk-forward
-mechanism -- a user's skill score in year 5 is built ONLY from years 1-4's
-calls (via the buffer), never from year 5 or later.
 
 ================================================================================
 END
