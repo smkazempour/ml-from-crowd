@@ -85,7 +85,7 @@ WHAT TO POINT TO: "dir_changed" -> "run_id" -> "streak" is the whole streak-
 counting mechanism. K is just a threshold applied to that streak length.
 
 NOTE: the carry-forward input to this function in the Section 9 main loop was
-corrected during integration -- see "features_05_conviction_fix.md" in this
+corrected during integration -- see "features_05_integration_fixes.md" in this
 folder for the before/after and why it matters.
 
 
@@ -123,7 +123,9 @@ def calc_cohort_features(df, carry=None, horizons=None):
     daily["gap_days"] = date - prev_date_for_this_(user,symbol)   # using carry if needed
     for H in horizons:                                    # H in {21, 63}
         fresh_H   = gap_days is NaN or gap_days > H         # never posted this symbol before (recently)
-        reentry_H = gap_days > H AND user has posted before # came back after a long absence
+        reentry_H = gap_days is not NaN and gap_days > H    # came back after a long absence
+                    # (integration fix: also fires on within-year returns,
+                    #  not just returns after a prior-year gap)
         retain_H  = gap_days <= H                           # regular, still active
 
     # --- Whale / minnow dominance (Features 20-21) ---
@@ -172,7 +174,7 @@ for file in files:                                # one CSV per year, in order
     # prior_daily_dir = LAST year's directions; cur_daily_dir = THIS year's.
     # Both flips and conviction receive the PRIOR year's directions; this
     # year's directions only become the carry for the NEXT iteration.
-    # (See features_05_conviction_fix.md -- the original loop accidentally
+    # (See features_05_integration_fixes.md -- the original loop accidentally
     #  passed the current year's directions to conviction.)
     prior_daily_dir = prev_daily_dir
     flip_yr, cur_daily_dir = calc_flip_features(df_year, prev_daily_dir=prior_daily_dir)
