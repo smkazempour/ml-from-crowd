@@ -98,6 +98,33 @@ Semantics after the fix:
 The fix also gives conviction the cross-year streak continuity it was designed
 for: a user Bullish through December stays on their streak in January.
 
+## Measured impact (validation run, July 2026)
+
+Validated on real data (`merged_with_crsp_mlcrowd`, 2023 full year = 7.19M rows,
+plus the small 2024 file = 2 trading days) with the exact committed notebook code.
+The 2024 file makes the bug *provable*: with only 2 days of history, no user can
+have a streak ≥ 3, so a correct cold-start `conviction_index_3` must be exactly 0.
+
+| conviction_index (mean, 2024) | buggy wiring | fixed wiring (2023 carry) | correct cold start |
+|---|---|---|---|
+| K = 3  | **0.083** (impossible > 0) | 0.465 | 0.000 |
+| K = 5  | 0.000 | 0.347 | 0.000 |
+| K = 10 | 0.000 | 0.241 | 0.000 |
+
+Two distinct errors, both visible:
+
+1. **Duplication manufactures streaks**: buggy K=3 = 0.083 vs a true maximum of
+   0 — users with just 2 same-direction days were double-counted into phantom
+   4-day streaks. In a full-year run this is the inflation channel (streaks
+   accumulate at ~2× speed inside the 250-td window).
+2. **The real carry is discarded**: fixed wiring carries genuine 2023 streaks
+   into January (0.465 / 0.347 / 0.241), which the buggy loop lost completely.
+
+Families A/B/C also validated clean on full 2023 (all ratios bounded [0,1],
+net-sentiment in [−1,1], flip counts non-negative and weakly increasing in H,
+no unexpected NaNs); family D validated on 2024 with a 2023-Q4-built carry
+(all ratios bounded, carry state grows correctly across the year boundary).
+
 ## Practical consequences
 
 - `features_05_sentiment_dynamics_cohorts.pkl` must be **regenerated** if it was
