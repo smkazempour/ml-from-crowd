@@ -148,13 +148,29 @@ All notebooks in this folder aggregate message-level data to **stock-day level**
 - **Output**: `features_mlcrowd/features_04_intraday_sessions.pkl`
 - **Status**: Code complete, pending validation and full run
 
+#### features_06_full_text_exploration.ipynb / features_07_user_influence_accuracy.ipynb / features_08_text_embedding_signal.ipynb
+- **Purpose**: Full-text track, merged in from a sibling project. `features_06` validates a
+  `messages/` (raw message body text) join and prototypes cashtag/mention extraction (no pickle
+  output). `features_07` scores users by walk-forward historical accuracy. `features_08` embeds
+  message bodies with a pretrained sentence-transformer and trains an online model to predict
+  next-day CAPM abnormal return directly from the embedding, aggregated to
+  `text_signal_mean`/`text_signal_std`/`text_signal_n` per stock-day.
+- **Input**: `messages/` (raw text, not part of the `merged_with_crsp_mlcrowd/` pipeline) joined
+  to `merged_with_crsp_mlcrowd/` by `message_id`.
+- **Output**: `features_mlcrowd/features_08_text_embedding_signal.pkl` (feature_06/07 have their
+  own separate outputs; see `FEATURE_IMPLEMENTATION_STATUS.md` Section 8 for details)
+- **Status**: Code complete and wired into `merge_all_feature_files.ipynb` /
+  `perpare_training_data.ipynb` (auto-picked-up, no code changes needed downstream). The full
+  15-year `features_08` run has not yet been executed — see Section 8 of
+  `FEATURE_IMPLEMENTATION_STATUS.md` for the run order and a CPU-time estimate.
+
 #### merge_all_feature_files.ipynb
 - **Purpose**: Merge all individual feature files into one consolidated dataset
 - **Input**: All `features_mlcrowd/features_*.pkl` files
 - **Processing**: Outer merge on (symbol, date); drops redundant columns (n_bullish, n_bearish, bullish_ratio, bearish_ratio, total_labeled) to avoid multicollinearity
 - **Output**: `features_mlcrowd/features_master.pkl` (28M rows, 33 feature columns)
 
-> **Note**: features_01, features_02, and features_04 read raw message CSVs because they need individual tweet data (counting sentiments, classifying by timestamp). features_03 reads features_01's output because it only needs the already-aggregated net_sentiment per stock-day.
+> **Note**: features_01, features_02, and features_04 read raw message CSVs because they need individual tweet data (counting sentiments, classifying by timestamp). features_03 reads features_01's output because it only needs the already-aggregated net_sentiment per stock-day. features_06-08 read a separate raw `messages/` text source not used by any other notebook in this folder.
 
 ---
 

@@ -1,6 +1,6 @@
 # Feature Implementation Status
 
-**Last Updated**: February 10, 2026
+**Last Updated**: July 21, 2026 (added Section 8 — full-text / text-embedding track)
 
 This document tracks the implementation status of all 51 features from the feature proposal.
 
@@ -123,11 +123,58 @@ and `event_magnitudes.py` in the project notes).
 
 ---
 
+## 8. Full-Text Track (New — beyond original 51)
+
+**Status: 🚧 Code complete, not yet run on this machine**
+
+This project was merged with a sibling project (`ml-from-crowd - full text`) that located a
+raw message-text source (`messages/` + `msg_info/`, from the same S3 export as the rest of
+the pipeline, but never previously wired in) and added three notebooks to
+`01 - feature extraction/`:
+
+- `features_06_full_text_exploration.ipynb` — validates the `messages/` join (by `message_id`)
+  and prototypes cashtag/mention extraction; groundwork for Features 49-51. Exploration only,
+  no pickle output.
+- `features_07_user_influence_accuracy.ipynb` — scores users by historical accuracy
+  (walk-forward, no look-ahead) and aggregates to `skill_wtd_net_sentiment` and related
+  stock-day features.
+- `features_08_text_embedding_signal.ipynb` — embeds each message body with a pretrained
+  sentence-transformer (`all-MiniLM-L6-v2`) and trains an online (`partial_fit`) linear model,
+  walk-forward by year, to predict next-day CAPM abnormal return directly from the embedding.
+  Aggregates to `text_signal_mean` / `text_signal_std` / `text_signal_n` at the `(symbol, date)`
+  level. This is the feature referenced elsewhere as "feature 08" or the text-embedding signal.
+
+**Pipeline wiring for feature 08** (completed as part of this merge):
+- `02 - prepare training dataset/merge_all_feature_files.ipynb` needed no changes — it already
+  globs every `*.pkl` in `features_mlcrowd/` and outer-merges on `(symbol, date)`, so
+  `features_08_text_embedding_signal.pkl` is picked up automatically once produced.
+- `02 - prepare training dataset/perpare_training_data.ipynb` gained a new fill-value block
+  (`text_signal_mean`/`std`/`n` → 0 on missing) so `03a`'s `dropna()` doesn't discard every row
+  from the cold-start year or from messageless stock-days.
+- `03a - linear regression/prediction_linear_regression_all_features.ipynb` auto-includes every
+  numeric column not explicitly excluded, so `text_signal_*` reaches it with no further changes
+  (a `ret`-prefix leakage-filter fix was also brought over here). The 2-feature curated baseline
+  notebook (`net_sentiment`, `log_volume`) is intentionally left unchanged.
+- `04 - predictive regressions/*` and `05 - trading/form_portfolios.ipynb` already resolve "the
+  all-features prediction file" dynamically (`find_all_features_file()`, picks the largest
+  `input=N` file on disk) and read the model list back out of `trading_daily_results.pkl`, so
+  they require no changes at all — they pick up the new feature automatically once `03a`'s
+  all-features notebook is re-run.
+
+**Not yet done (external to this repo, requires the user's machine):**
+`features_08`'s full 15-year run is CPU-only and estimated at 1-2 days of compute (see the
+notebook's own Section 7 benchmark); it has not been executed. Until it has, and until
+`merge_all_feature_files` → `perpare_training_data` → `03a_all_features` are re-run afterward,
+`text_signal_*` will not actually appear in `merged_master.pkl` or downstream predictions.
+
+---
+
 ## Implementation Summary
 
-- **Total Features**: 53+ (some expanded with multiple horizons; 47b-c added for weekend/holiday)
+- **Total Features**: 53+ (some expanded with multiple horizons; 47b-c added for weekend/holiday), plus 3 text-embedding-signal variables from the full-text track (Section 8)
 - **Completed**: 20 features (Features 1-3, 11, 12-13c, 28-38, 39)
 - **Code Complete (pending validation)**: 31 features across features_04, features_05
+- **Code complete, pipeline-wired, pending the full 15-year run**: `text_signal_mean/std/n` (features_08_text_embedding_signal.ipynb — see Section 8)
 - **Blocked (missing data)**: Features 27, 49-51 (need sector mapping or message text)
 - **Deprecated**: 2 features (Feature 4; Sector Expert Ratio 27 reclassified)
 
@@ -143,3 +190,8 @@ and `event_magnitudes.py` in the project notes).
 6. **Validate and run** features_05 on all 15 years
 7. Acquire message-text source → implement features_06 (event categories + magnitudes)
 8. Create final aggregation notebook combining all feature pickles
+9. **Run** `features_08_text_embedding_signal.ipynb` on all 15 years (CPU-only; expect on the
+   order of 1-2 days per the notebook's own runtime benchmark), then re-run
+   `merge_all_feature_files.ipynb` → `perpare_training_data.ipynb` →
+   `prediction_linear_regression_all_features.ipynb` → `04`/`05` notebooks in order to get
+   `text_signal_*` flowing through predictions, portfolios, and trading results (see Section 8)
