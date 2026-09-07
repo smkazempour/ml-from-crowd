@@ -64,18 +64,36 @@ This project applies machine learning techniques to extract signals from financi
      so global cumulative counts, user-symbol last-seen dates, and symbol sets
      accumulate correctly over all 14 years without loading the full history at once.
 
-   **Note on features_06 (Event Categories + Magnitudes)**: Blocked pending message text.
-   The merged `merged_with_crsp_mlcrowd/` files come from `feature_wo_messages` source
-   (no body column).  When a raw text source is integrated, implement as
-   `features_06_event_categories.ipynb` using the reference code in project notes.
+   **Note on message text**: the raw export's `messages/` folder (205 files, 52 GB, not
+   year-chunked) holds the message bodies. `features_06_full_text_exploration.ipynb`
+   validates the `message_id` join; event categories / Features 49-51 are still to be
+   implemented on top of it.
+
+6. **features_08_text_embeddings.ipynb** + **02/add_text_features.ipynb** (optional text track)
+   - Sentence embeddings (`all-MiniLM-L6-v2`, 384-dim) of every CRSP-matched message,
+     mean-pooled per stock-day; a message counts toward every symbol it mentions.
+   - Output: `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl` -- kept OUTSIDE
+     `features_mlcrowd/` on purpose (never merged into features_master).
+   - `add_text_features.ipynb` attaches it to the training data as
+     `merged_master_text=<mode>.pkl` (`raw` | `pca` | `supervised`); model notebooks pick a
+     variant via `TEXT_VARIANT`, and so do the 04/05 notebooks.
+   - Status: validated on 2010-2011; the full 15-year encode has not been run.
+   - Needs `sentence-transformers` in `py313` (installed) and sets
+     `KMP_DUPLICATE_LIB_OK=TRUE` before importing torch (conda MKL + pip torch each ship an
+     OpenMP runtime).
+   - Review notes and corrections: `01 - feature extraction/features_08_integration_notes.md`.
+   - `features_07_user_influence_accuracy.ipynb` (user-skill features) is **not** part of
+     the project and must not be added.
 
 ### 🎯 Next Steps
 
 See `FEATURE_IMPLEMENTATION_STATUS.md` for complete list. Priority order:
 1. Validate and run features_04 on all 15 years (intraday sessions)
 2. Validate and run features_05 on all 15 years (cohort/flip/conviction)
-3. Acquire message-text source → implement features_06 (event categories)
+3. Implement Features 49-51 / event categories on the `messages/` join from features_06
 4. Final aggregation notebook combining all feature pickles
+5. Text track: full `features_08` encode → `add_text_features` → model notebooks with
+   `TEXT_VARIANT` → 04/05
 
 ## Core Technical Decisions
 
@@ -241,4 +259,4 @@ Each feature group must include:
 
 ---
 
-**Last Updated**: February 10, 2026
+**Last Updated**: September 7, 2026
