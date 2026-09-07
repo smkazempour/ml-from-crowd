@@ -1,6 +1,6 @@
 # Feature Implementation Status
 
-**Last Updated**: February 10, 2026
+**Last Updated**: September 7, 2026 (Section 8: text-embedding track integrated)
 
 This document tracks the implementation status of all 51 features from the feature proposal.
 
@@ -123,12 +123,48 @@ and `event_magnitudes.py` in the project notes).
 
 ---
 
+## 8. Text-Embedding Track (beyond the original 51; optional)
+
+**Status: code complete and validated on 2010-2011; full 15-year encode not yet run**
+
+The raw S3 export includes message text (`messages/`, 205 files, 52 GB) that was never wired
+into the pipeline. Two notebooks in `01 - feature extraction/` and one in
+`02 - prepare training dataset/` add an optional text track that leaves the existing pipeline
+untouched:
+
+- `features_06_full_text_exploration.ipynb` -- exploration only: validates the `message_id`
+  join and prototypes cashtag / mention extraction (groundwork for Features 49-51, which
+  remain unimplemented). No pickle output.
+- `features_08_text_embeddings.ipynb` -- encodes every CRSP-matched message with
+  `all-MiniLM-L6-v2` (384-dim, L2-normalised) and mean-pools to the stock-day; a message is
+  counted toward every symbol it mentions. Output
+  `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl` (`symbol, date, embed_n,
+  embed_000..embed_383`), deliberately **outside** `features_mlcrowd/`. No return label is
+  used. Checkpointed join pass and per-year encoding; Section 7 prints the measured cost
+  estimate before the multi-day full run.
+- `add_text_features.ipynb` -- attaches the embeddings to the training data as
+  `merged_master_text=<mode>.pkl` in one of three forms (`TEXT_MODE`): `raw` (384 columns),
+  `pca` (top-K components, loadings fit pre-OOS), or `supervised` (walk-forward ridge
+  `text_score`), always with `text_n`. Model notebooks select a variant with
+  `TEXT_VARIANT`; 04/05 notebooks resolve the tagged prediction files with the same switch.
+
+Review findings, corrections to the contributed code, and validation results are in
+`01 - feature extraction/features_08_integration_notes.md`. The `features_07`
+user-skill notebook from the same branch is not part of the project.
+
+**Run order once the full encode is done**: `features_08` Sections 8-10 ->
+`add_text_features` (per mode) -> any `*_all_features` model notebook with `TEXT_VARIANT`
+set -> `04`/`05` notebooks with the same `TEXT_VARIANT`.
+
+---
+
 ## Implementation Summary
 
-- **Total Features**: 53+ (some expanded with multiple horizons; 47b-c added for weekend/holiday)
+- **Total Features**: 53+ (some expanded with multiple horizons; 47b-c added for weekend/holiday), plus the optional text-embedding track (Section 8)
 - **Completed**: 20 features (Features 1-3, 11, 12-13c, 28-38, 39)
 - **Code Complete (pending validation)**: 31 features across features_04, features_05
-- **Blocked (missing data)**: Features 27, 49-51 (need sector mapping or message text)
+- **Text track**: features_08 + add_text_features code complete and validated on 2010-2011; full encode pending
+- **Blocked (missing data)**: Features 27, 49-51 (need sector mapping or message text -- text is now available via features_06's join; 49-51 are still to be implemented)
 - **Deprecated**: 2 features (Feature 4; Sector Expert Ratio 27 reclassified)
 
 ---
@@ -141,5 +177,8 @@ and `event_magnitudes.py` in the project notes).
 4. ~~Implement Flip / Conviction / First-Mover / Cohort features (5-10, 16-26)~~ 🚧 Code complete in `features_05_sentiment_dynamics_cohorts.ipynb`
 5. **Validate and run** features_04 on all 15 years
 6. **Validate and run** features_05 on all 15 years
-7. Acquire message-text source → implement features_06 (event categories + magnitudes)
+7. ~~Acquire message-text source~~ (found: `messages/`, see Section 8) → implement Features 49-51 and event categories from `features_06`'s join
 8. Create final aggregation notebook combining all feature pickles
+9. **Run** `features_08_text_embeddings.ipynb` on all 15 years (CPU-only here; check the
+   Section 7 estimate first), then `add_text_features.ipynb` → model notebooks with
+   `TEXT_VARIANT` → 04/05 with the same `TEXT_VARIANT` (Section 8)

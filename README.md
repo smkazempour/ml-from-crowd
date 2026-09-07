@@ -39,12 +39,23 @@ merged_with_crsp_mlcrowd/ (85M rows, 15 yearly CSVs)
     |                                    |
     v                                    v
     +------>  [02 - prepare training dataset]  perpare_training_data.ipynb
-                    |  Merges features with CRSP prices + abnormal returns
-                    v
-              merged_master.pkl (16.8M rows, in Data/ folder)
-                    |
-                    v
-              [03a through 03e]  16 ML model notebooks
+    |               |  Merges features with CRSP prices + abnormal returns
+    |               v
+    |         merged_master.pkl (16.8M rows, in Data/ folder)
+    |               |
+    |               |      [01 - feature extraction]  features_08_text_embeddings.ipynb
+    |               |          (message text -> sentence embeddings, mean-pooled per stock-day;
+    |               |           kept OUTSIDE features_mlcrowd/, never merged into features_master)
+    |               |                          |
+    |               |                          v
+    |               |      text_embeddings_mlcrowd/text_embeddings_stock_day.pkl
+    |               |                          |
+    |               +--------------------------+
+    |               v
+    |         [02 - prepare training dataset]  add_text_features.ipynb   (optional text track)
+    |               |  TEXT_MODE = raw | pca | supervised -> merged_master_text=<mode>.pkl
+    |               v
+    +------>  [03a through 03e]  16 ML model notebooks  (TEXT_VARIANT = None | "<mode>")
                     |            Each produces a predictions_*.pkl file
                     v
               Data/predictions_*.pkl (14.5M rows each)
@@ -148,13 +159,23 @@ All notebooks in this folder aggregate message-level data to **stock-day level**
 - **Output**: `features_mlcrowd/features_04_intraday_sessions.pkl`
 - **Status**: Code complete, pending validation and full run
 
+#### features_06_full_text_exploration.ipynb
+- **Purpose**: Exploration only. Confirms that the raw StockTwits export includes message text (`messages/`, 205 files, 52 GB) and per-message keywords (`msg_info/`), validates the `message_id` join against `feature_wo_messages/`, and prototypes cashtag / mention extraction as groundwork for Features 49-51. No pickle output.
+
+#### features_08_text_embeddings.ipynb
+- **Purpose**: Encode the text of every CRSP-matched message with a pretrained sentence-transformer (`all-MiniLM-L6-v2`, 384-dim, L2-normalised) and mean-pool to the stock-day. Raw material for the text track, not a model input by itself; no return label is used.
+- **Input**: `merged_with_crsp_mlcrowd/` (message universe: message_id, symbol, trading date) + raw `messages/` text, joined on `message_id`. A message is encoded once and counted toward every symbol it mentions, as in features_01/02/04.
+- **Processing**: universe build (cached) -> checkpointed join pass with a line-based record reader (the files are not year-chunked and break CSV tokenizers) -> chunked encoding with fan-out aggregation -> per-year checkpoints -> combine.
+- **Output**: `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl` (`symbol, date, embed_n, embed_000..embed_383`), kept **outside** `features_mlcrowd/` so the generic feature merge never picks it up.
+- **Status**: Code complete and validated on 2010-2011; the full 15-year encode has not been run (CPU-only here; Section 7 of the notebook prints the measured estimate). Requires `sentence-transformers` in the `py313` env. See `features_08_integration_notes.md`.
+
 #### merge_all_feature_files.ipynb
 - **Purpose**: Merge all individual feature files into one consolidated dataset
 - **Input**: All `features_mlcrowd/features_*.pkl` files
 - **Processing**: Outer merge on (symbol, date); drops redundant columns (n_bullish, n_bearish, bullish_ratio, bearish_ratio, total_labeled) to avoid multicollinearity
 - **Output**: `features_mlcrowd/features_master.pkl` (28M rows, 33 feature columns)
 
-> **Note**: features_01, features_02, and features_04 read raw message CSVs because they need individual tweet data (counting sentiments, classifying by timestamp). features_03 reads features_01's output because it only needs the already-aggregated net_sentiment per stock-day.
+> **Note**: features_01, features_02, and features_04 read raw message CSVs because they need individual tweet data (counting sentiments, classifying by timestamp). features_03 reads features_01's output because it only needs the already-aggregated net_sentiment per stock-day. features_06 and features_08 read the separate raw `messages/` text source, which no other notebook uses.
 
 ---
 
@@ -169,6 +190,17 @@ All notebooks in this folder aggregate message-level data to **stock-day level**
   - Impute missing StockTwits features with 0 (no tweets = neutral/no signal)
   - Consolidate all years and delete intermediate files
 - **Output**: `Data/merged_master.pkl` (16.8M rows). This is the single input file for all ML models.
+
+#### add_text_features.ipynb (optional text track)
+- **Purpose**: Turn the stock-day embeddings from features_08 into model inputs and attach them to the training dataset, without touching `merged_master.pkl`.
+- **Input**: `Data/merged_master.pkl` + `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl`, aligned on (`ticker`, `date`) exactly as `perpare_training_data.ipynb` aligns features.
+- **`TEXT_MODE`**:
+  - `raw` -- all 384 dimensions as `text_emb_000..383` (works, but ~26 GB of extra columns at full sample; not practical on a 64 GB machine)
+  - `pca` -- `text_pc_1..K`, loadings fit on the pre-OOS period and applied forward (no returns used)
+  - `supervised` -- `text_score`, a monthly walk-forward ridge prediction of the cross-sectionally de-meaned next-day target from the 384 dimensions (same 252-day window convention as the model notebooks; no look-ahead)
+  - every mode also adds `text_n` (messages behind the stock-day; 0 = none) and fills missing stock-days with 0
+- **Output**: `Data/merged_master_text=<mode>.pkl` + a `.json` sidecar with the fit details.
+- **Downstream**: every `*_all_features` model notebook has a `TEXT_VARIANT` switch (`None` = unchanged behaviour; `"<mode>"` reads the matching file and tags its output `predictions_*_input=N_text=<mode>.pkl`). The 04/05 notebooks carry the same switch and resolve the tagged files only when asked.
 
 ---
 
@@ -328,6 +360,8 @@ This folder contains analysis notebooks that operate on the prediction files pro
 | `Documents/StockTwits/.../exploded_by_year_mlcrowd/` | Exploded by symbol (15 CSVs, 133M rows) |
 | `Documents/StockTwits/.../merged_with_crsp_mlcrowd/` | Merged with CRSP (15 CSVs, 85M rows) |
 | `Documents/StockTwits/.../features_mlcrowd/` | Feature pickle files (01-04 + master) |
+| `Documents/StockTwits/.../messages/`, `msg_info/` | Raw message text (205 files, 52 GB) and keywords -- used only by features_06/08 |
+| `Documents/StockTwits/.../text_embeddings_mlcrowd/` | features_08 output: stock-day sentence embeddings + per-year checkpoints |
 | `D:/CRSP/` | CRSP daily stock data (`dsf_final_*.pkl`, 2008-2024) |
 | `Dropbox/.../Data/` | merged_master.pkl, all predictions_*.pkl, trading results |
 | `Dropbox/.../Figures/` | All charts and visualizations |
@@ -336,9 +370,12 @@ This folder contains analysis notebooks that operate on the prediction files pro
 
 ## Naming Conventions
 
-**Prediction files**: `predictions_{model}_{input=N}.pkl`
+**Prediction files**: `predictions_{model}_{input=N}[_text={mode}].pkl`
 - model: linear_regression, lasso, elasticnet, neural_network, neural_network_tuned_Xlayer
-- N: 2 (net_sentiment + log_volume) or 31 (all features)
+- N: 2 (net_sentiment + log_volume) or the all-features count (31 originally; 53 with features_04; more once features_05 / text columns are added)
+- `_text={mode}` is present only when the model notebook was run with `TEXT_VARIANT` set (text track)
+
+**Text-track files**: `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl` (features_08 output), `Data/merged_master_text={mode}.pkl` (add_text_features output)
 
 **Tuning results**: `nn_tuning_results_{layers}_input={N}.pkl`
 
