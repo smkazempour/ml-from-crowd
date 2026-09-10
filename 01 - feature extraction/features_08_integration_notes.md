@@ -173,6 +173,29 @@ the practical routes.
   - Full join pass over all 205 files: ~3.1 s per file (~2.5M records each; ~11 min for the
     whole 52 GB); checkpoint resume and no-op re-run verified. **100.0%** of the 2010 and 2011
     universe messages found their text (11,198 and 33,063), no duplicates, no empty bodies.
+  - **Join pass at full scale (2026-09-07, first full run).** The ~3 s/file above was measured
+    with the universe restricted to 2010-2011 (44k ids). With the full 77,025,793-message
+    universe the same code took ~187 s per file (3.1 min measured on `msg_000.csv`; ~10 h for
+    the pass): `chunk.join(universe, on="message_id")` goes through pandas' merge machinery,
+    which re-factorizes all 77M universe keys on every 200k-record chunk. Replaced with
+    `universe.index.get_indexer(...)` on the sorted unique index plus positional takes of
+    `date`/`year`: 12 s per file for the whole `msg_000.csv` (3,124,620 records, 422,814
+    matches), identical rows, values and dtypes to the old join (`assert_frame_equal`, also
+    checked chunk by chunk). In the live run the pass proceeds at ~4-5 s per file.
+  - **Full join pass result (2026-09-07):** 205 files in 14.3 min; 77,025,602 of the 77,025,793
+    universe messages found their text (191 missing, 182 of them in 2020, 10 in 2017); every
+    other year is complete. Exactly one `message_id` (10655083, a 2012 $AAPL message) appears
+    twice: `msg_182.csv` holds a 2023 message whose body is a multi-line list of
+    `<patent number>, <title>` lines, and the line reader takes each such line as a record
+    start; one of those numbers equals the 2012 id. `load_year_messages` therefore no longer
+    asserts zero duplicates: it keeps the longest body per id (the fragment is a tail of the
+    other message) and still asserts that duplicates stay below max(10, 0.01%) of the year's
+    rows, which a Section 3 re-run on a non-clean `JOINED_DIR` would exceed. Verified: 2012
+    loads 70,594 unique ids with the $AAPL body. Scale of the reader heuristic: the 205 raw files contain
+    501,435,038 record-start lines (`^[0-9]{5,12},`, matching the ~501M raw messages), of which
+    497,722 (0.1%) are `<digits>, ` with a following space -- the shape of the false starts
+    above (or of real bodies that begin with a space); exactly one of them collided with a
+    universe id, so the join is unaffected beyond that one message.
   - Encoding (CPU, 24 threads): 658 msg/s on 2010, 532 msg/s on 2011. 2010 -> 8,718 stock-days,
     2011 -> 24,482; `embed_n` sums exactly to the number of (message, symbol) pairs with text
     (11,824 and 34,180, i.e. 292 and 1,117 multi-symbol messages fanned out); mean-vector norms
@@ -182,11 +205,20 @@ the practical routes.
   - Extrapolation: the universe has ~85M (message, symbol) rows, on the order of 75M unique
     messages; at ~550 msg/s the full encode is ~1.5-2 days of CPU time, plus ~11 min for the
     join pass and the one-off universe build.
+- **Full 15-year run (2026-09-07 18:30 -> 2026-09-09 14:04, CPU, BelowNormal priority):** 43.6 h
+  wall in total; encoding rates by year 370-624 msg/s (2021: 25,598,560 messages in 14.7 h at
+  485 msg/s; 2023 slowest at 410 msg/s). Peak working set 12.2 GB (while 2021 was loaded).
+  Output `text_embeddings_stock_day.pkl`: 3,505,815 stock-days x 387 columns, 5.2 GB on disk,
+  8,245 symbols, 2010-06-02 to 2024-01-03, no nulls; `embed_n` median 2, mean 24.4, max 98,358.
+  Stock-day counts per year equal an independent count of distinct (symbol, date) pairs from
+  `symbols_{year}.pkl` + the universe dates, except 2017 (-1) and 2020 (-1), which are the
+  stock-days whose only messages are among the 191 without text. Disk: joined text 8.2 GB,
+  per-year checkpoints + final table ~10.4 GB, all under `text_embeddings_mlcrowd/`.
 
 ## 7. Not done / to do
 
-- The full 15-year `features_08` run has not been executed. Section 7 of the notebook prints
-  the extrapolated cost from the measured rate before Section 8 is started.
+- ~~The full 15-year `features_08` run~~ Done 2026-09-09 (Section 6). The per-year checkpoints
+  and joined text are kept so a re-aggregation does not need the join pass again.
 - After the full run: `add_text_features.ipynb` in the chosen mode(s), then the model
   notebooks with `TEXT_VARIANT` set, then the 04/05 notebooks with the same setting.
 - `features_05` is still not part of `features_master.pkl` (unchanged from before this

@@ -125,7 +125,7 @@ and `event_magnitudes.py` in the project notes).
 
 ## 8. Text-Embedding Track (beyond the original 51; optional)
 
-**Status: code complete and validated on 2010-2011; full 15-year encode not yet run**
+**Status: full 15-year encode completed 2026-09-09 (3,505,815 stock-days, 5.2 GB); downstream `add_text_features` / model runs not yet done**
 
 The raw S3 export includes message text (`messages/`, 205 files, 52 GB) that was never wired
 into the pipeline. Two notebooks in `01 - feature extraction/` and one in

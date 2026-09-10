@@ -5,8 +5,8 @@ This project applies machine learning techniques to extract signals from financi
 
 **Data Specifications:**
 - **Source**: StockTwits data merged with CRSP (2010-2024, 15 years)
-- **Input Location**: `C:\Users\skazempour\Documents\StockTwits\dataset\v1\data\csv\merged_with_crsp_mlcrowd\`
-- **Output Location**: `C:\Users\skazempour\Documents\StockTwits\dataset\v1\data\csv\features_mlcrowd\`
+- **Input Location**: `D:\StockTwits\Data\v1\data\csv\merged_with_crsp_mlcrowd\`
+- **Output Location**: `D:\StockTwits\Data\v1\data\csv\features_mlcrowd\`
 - **Format**: Annual CSV files (43 columns including `session` as int64 HHMM, `business_day`, `is_weekend`, `is_holiday`) → Consolidated pickle files (one per feature group)
 
 ## Current Project Status
@@ -77,7 +77,7 @@ This project applies machine learning techniques to extract signals from financi
    - `add_text_features.ipynb` attaches it to the training data as
      `merged_master_text=<mode>.pkl` (`raw` | `pca` | `supervised`); model notebooks pick a
      variant via `TEXT_VARIANT`, and so do the 04/05 notebooks.
-   - Status: validated on 2010-2011; the full 15-year encode has not been run.
+   - Status: full 15-year encode completed 2026-09-09 (`text_embeddings_stock_day.pkl`, 3.5M stock-days); `add_text_features` not yet run on it.
    - Needs `sentence-transformers` in `py313` (installed) and sets
      `KMP_DUPLICATE_LIB_OK=TRUE` before importing torch (conda MKL + pip torch each ship an
      OpenMP runtime).

@@ -167,7 +167,7 @@ All notebooks in this folder aggregate message-level data to **stock-day level**
 - **Input**: `merged_with_crsp_mlcrowd/` (message universe: message_id, symbol, trading date) + raw `messages/` text, joined on `message_id`. A message is encoded once and counted toward every symbol it mentions, as in features_01/02/04.
 - **Processing**: universe build (cached) -> checkpointed join pass with a line-based record reader (the files are not year-chunked and break CSV tokenizers) -> chunked encoding with fan-out aggregation -> per-year checkpoints -> combine.
 - **Output**: `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl` (`symbol, date, embed_n, embed_000..embed_383`), kept **outside** `features_mlcrowd/` so the generic feature merge never picks it up.
-- **Status**: Code complete and validated on 2010-2011; the full 15-year encode has not been run (CPU-only here; Section 7 of the notebook prints the measured estimate). Requires `sentence-transformers` in the `py313` env. See `features_08_integration_notes.md`.
+- **Status**: Full 15-year encode completed 2026-09-09 (43.6 h on CPU; `text_embeddings_stock_day.pkl`, 3.5M stock-days, 5.2 GB). Requires `sentence-transformers` in the `py313` env. See `features_08_integration_notes.md`.
 
 #### merge_all_feature_files.ipynb
 - **Purpose**: Merge all individual feature files into one consolidated dataset
@@ -355,16 +355,16 @@ This folder contains analysis notebooks that operate on the prediction files pro
 
 | Location | Contents |
 |----------|----------|
-| `Documents/StockTwits/.../feature_wo_messages/` | Raw StockTwits (248 CSVs, 501M messages) |
-| `Documents/StockTwits/.../cleaned_by_year_mlcrowd/` | Cleaned StockTwits (15 CSVs, 176M messages) |
-| `Documents/StockTwits/.../exploded_by_year_mlcrowd/` | Exploded by symbol (15 CSVs, 133M rows) |
-| `Documents/StockTwits/.../merged_with_crsp_mlcrowd/` | Merged with CRSP (15 CSVs, 85M rows) |
-| `Documents/StockTwits/.../features_mlcrowd/` | Feature pickle files (01-04 + master) |
-| `Documents/StockTwits/.../messages/`, `msg_info/` | Raw message text (205 files, 52 GB) and keywords -- used only by features_06/08 |
-| `Documents/StockTwits/.../text_embeddings_mlcrowd/` | features_08 output: stock-day sentence embeddings + per-year checkpoints |
+| `D:/StockTwits/Data/v1/data/csv/feature_wo_messages/` | Raw StockTwits (248 CSVs, 501M messages) |
+| `D:/StockTwits/Data/v1/data/csv/cleaned_by_year_mlcrowd/` | Cleaned StockTwits (15 CSVs, 176M messages) |
+| `D:/StockTwits/Data/v1/data/csv/exploded_by_year_mlcrowd/` | Exploded by symbol (15 CSVs, 133M rows) |
+| `D:/StockTwits/Data/v1/data/csv/merged_with_crsp_mlcrowd/` | Merged with CRSP (15 CSVs, 85M rows) |
+| `D:/StockTwits/Data/v1/data/csv/features_mlcrowd/` | Feature pickle files (01-04 + master) |
+| `D:/StockTwits/Data/v1/data/csv/messages/`, `msg_info/` | Raw message text (205 files, 52 GB) and keywords -- used only by features_06/08 |
+| `D:/StockTwits/Data/v1/data/csv/text_embeddings_mlcrowd/` | features_08 output: stock-day sentence embeddings + per-year checkpoints |
 | `D:/CRSP/` | CRSP daily stock data (`dsf_final_*.pkl`, 2008-2024) |
-| `Dropbox/.../Data/` | merged_master.pkl, all predictions_*.pkl, trading results |
-| `Dropbox/.../Figures/` | All charts and visualizations |
+| `D:/StockTwits/Data/` | merged_master.pkl, all predictions_*.pkl, trading results |
+| `D:/StockTwits/Figures/` | All charts and visualizations |
 
 ---
 
