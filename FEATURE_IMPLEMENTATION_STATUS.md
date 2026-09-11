@@ -125,7 +125,7 @@ and `event_magnitudes.py` in the project notes).
 
 ## 8. Text-Embedding Track (beyond the original 51; optional)
 
-**Status: full 15-year encode completed 2026-09-09 (3,505,815 stock-days, 5.2 GB); downstream `add_text_features` / model runs not yet done**
+**Status: full 15-year encode completed 2026-09-09 (3,505,815 stock-days, 5.2 GB); `text_master.pkl` and the text-only OLS predictions built and evaluated 2026-09-11**
 
 The raw S3 export includes message text (`messages/`, 205 files, 52 GB) that was never wired
 into the pipeline. Two notebooks in `01 - feature extraction/` and one in
@@ -142,19 +142,23 @@ untouched:
   embed_000..embed_383`), deliberately **outside** `features_mlcrowd/`. No return label is
   used. Checkpointed join pass and per-year encoding; Section 7 prints the measured cost
   estimate before the multi-day full run.
-- `add_text_features.ipynb` -- attaches the embeddings to the training data as
-  `merged_master_text=<mode>.pkl` in one of three forms (`TEXT_MODE`): `raw` (384 columns),
-  `pca` (top-K components, loadings fit pre-OOS), or `supervised` (walk-forward ridge
-  `text_score`), always with `text_n`. Model notebooks select a variant with
-  `TEXT_VARIANT`; 04/05 notebooks resolve the tagged prediction files with the same switch.
+- `build_text_master.ipynb` (replaces the contributed `add_text_features.ipynb`, removed
+  2026-09-11) -- inner-joins the embeddings with the panel's keys, target, abnormal returns
+  and 53 features into `Data/text_master.pkl`: one row per tweeted stock-day (3,514,785 rows
+  x 478 columns), `mm_index` pointing back to the `merged_master` row. No fitting, no
+  compression, no imputation.
+- `03a/prediction_linear_regression_text_only.ipynb` -- the baseline walk-forward OLS design
+  (monthly refit, 252-day window) on the 384 embedding dimensions only; output
+  `predictions_linear_regression_textonly_input=384.pkl`, registered as `lr_text` in the
+  04/05 notebooks (`COMMON_SAMPLE` toggle for same-stock-day comparisons).
 
 Review findings, corrections to the contributed code, and validation results are in
 `01 - feature extraction/features_08_integration_notes.md`. The `features_07`
 user-skill notebook from the same branch is not part of the project.
 
-**Run order once the full encode is done**: `features_08` Sections 8-10 ->
-`add_text_features` (per mode) -> any `*_all_features` model notebook with `TEXT_VARIANT`
-set -> `04`/`05` notebooks with the same `TEXT_VARIANT`.
+**Run order**: `features_08` (done) -> `build_text_master` (done) ->
+`prediction_linear_regression_text_only` (done) -> `04` notebooks with `lr_text` registered.
+The `TEXT_VARIANT` switches in the model and 04/05 notebooks are legacy and inert.
 
 ---
 
@@ -163,7 +167,7 @@ set -> `04`/`05` notebooks with the same `TEXT_VARIANT`.
 - **Total Features**: 53+ (some expanded with multiple horizons; 47b-c added for weekend/holiday), plus the optional text-embedding track (Section 8)
 - **Completed**: 20 features (Features 1-3, 11, 12-13c, 28-38, 39)
 - **Code Complete (pending validation)**: 31 features across features_04, features_05
-- **Text track**: features_08 + add_text_features code complete and validated on 2010-2011; full encode pending
+- **Text track**: features_08 full encode done (2026-09-09); text_master + text-only OLS built and evaluated (2026-09-11); untagged-message extension and compression pending
 - **Blocked (missing data)**: Features 27, 49-51 (need sector mapping or message text -- text is now available via features_06's join; 49-51 are still to be implemented)
 - **Deprecated**: 2 features (Feature 4; Sector Expert Ratio 27 reclassified)
 
@@ -179,6 +183,4 @@ set -> `04`/`05` notebooks with the same `TEXT_VARIANT`.
 6. **Validate and run** features_05 on all 15 years
 7. ~~Acquire message-text source~~ (found: `messages/`, see Section 8) → implement Features 49-51 and event categories from `features_06`'s join
 8. Create final aggregation notebook combining all feature pickles
-9. **Run** `features_08_text_embeddings.ipynb` on all 15 years (CPU-only here; check the
-   Section 7 estimate first), then `add_text_features.ipynb` → model notebooks with
-   `TEXT_VARIANT` → 04/05 with the same `TEXT_VARIANT` (Section 8)
+9. ~~Run `features_08_text_embeddings.ipynb` on all 15 years~~ ✅ 2026-09-09; ~~text-only OLS~~ ✅ 2026-09-11. Next: untagged-message extension, compression of the 384 dims, all-features + text on `text_master` (Section 8)

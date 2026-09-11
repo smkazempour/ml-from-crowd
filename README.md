@@ -52,10 +52,15 @@ merged_with_crsp_mlcrowd/ (85M rows, 15 yearly CSVs)
     |               |                          |
     |               +--------------------------+
     |               v
-    |         [02 - prepare training dataset]  add_text_features.ipynb   (optional text track)
-    |               |  TEXT_MODE = raw | pca | supervised -> merged_master_text=<mode>.pkl
+    |         [02 - prepare training dataset]  build_text_master.ipynb   (text track)
+    |               |  embeddings + panel keys/target/features -> Data/text_master.pkl
+    |               |  (one row per tweeted stock-day, 3.5M rows x 478 columns)
     |               v
-    +------>  [03a through 03e]  16 ML model notebooks  (TEXT_VARIANT = None | "<mode>")
+    |         [03a]  prediction_linear_regression_text_only.ipynb
+    |               |  walk-forward OLS on the 384 embedding dims only
+    |               |  -> Data/predictions_linear_regression_textonly_input=384.pkl
+    |               v
+    +------>  [03a through 03e]  16 ML model notebooks (+ the text-only model above)
                     |            Each produces a predictions_*.pkl file
                     v
               Data/predictions_*.pkl (14.5M rows each)
@@ -191,16 +196,12 @@ All notebooks in this folder aggregate message-level data to **stock-day level**
   - Consolidate all years and delete intermediate files
 - **Output**: `Data/merged_master.pkl` (16.8M rows). This is the single input file for all ML models.
 
-#### add_text_features.ipynb (optional text track)
-- **Purpose**: Turn the stock-day embeddings from features_08 into model inputs and attach them to the training dataset, without touching `merged_master.pkl`.
-- **Input**: `Data/merged_master.pkl` + `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl`, aligned on (`ticker`, `date`) exactly as `perpare_training_data.ipynb` aligns features.
-- **`TEXT_MODE`**:
-  - `raw` -- all 384 dimensions as `text_emb_000..383` (works, but ~26 GB of extra columns at full sample; not practical on a 64 GB machine)
-  - `pca` -- `text_pc_1..K`, loadings fit on the pre-OOS period and applied forward (no returns used)
-  - `supervised` -- `text_score`, a monthly walk-forward ridge prediction of the cross-sectionally de-meaned next-day target from the 384 dimensions (same 252-day window convention as the model notebooks; no look-ahead)
-  - every mode also adds `text_n` (messages behind the stock-day; 0 = none) and fills missing stock-days with 0
-- **Output**: `Data/merged_master_text=<mode>.pkl` + a `.json` sidecar with the fit details.
-- **Downstream**: every `*_all_features` model notebook has a `TEXT_VARIANT` switch (`None` = unchanged behaviour; `"<mode>"` reads the matching file and tags its output `predictions_*_input=N_text=<mode>.pkl`). The 04/05 notebooks carry the same switch and resolve the tagged files only when asked.
+#### build_text_master.ipynb (text track)
+- **Purpose**: Join the stock-day embeddings from features_08 with the training panel into one compact table for the text models, without touching `merged_master.pkl`. Nothing is fitted, compressed or imputed.
+- **Input**: `Data/merged_master.pkl` + `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl`, inner-joined on (`ticker`, `date`) exactly as `perpare_training_data.ipynb` aligns features.
+- **Output**: `Data/text_master.pkl` (3,514,785 rows x 478 columns, 7.6 GB): `mm_index` (the row label of the same stock-day in `merged_master`, carried by prediction files as `index`), keys, `f_cumret1`, the 35 `ar_*` columns, the 53 features, `embed_n` and `embed_000..embed_383`. One row per panel stock-day that has message text (22.6% of the panel); duplicate ticker-days (two PERMNOs) are kept as in the baselines.
+- **Why a separate table**: only stock-days with messages can carry text, and attaching 384 float32 columns to the full 15.5M-row panel would take ~24 GB. The 53 baseline features are carried along so that "all features + text" can be estimated on the same tweeted stock-days.
+- **History**: replaces the contributed `add_text_features.ipynb` (PCA / walk-forward-ridge builder), removed on 2026-09-11. The `TEXT_VARIANT` switches left in the model and 04/05 notebooks are legacy and inert.
 
 ---
 
@@ -217,6 +218,12 @@ All notebooks in this folder aggregate message-level data to **stock-day level**
 #### prediction_linear_regression_all_features.ipynb
 - **Purpose**: Same as above but with all 31 features (dynamically selected from merged_master)
 - **Output**: `Data/predictions_linear_regression_input=31.pkl`
+
+#### prediction_linear_regression_text_only.ipynb (text track)
+- **Purpose**: OOS predictions from the **384 embedding dimensions only** -- no sentiment, volume or attention features and no message count -- with the same monthly-refit, 252-trading-day rolling-window OLS design as the other 03a notebooks.
+- **Input**: `Data/text_master.pkl`
+- **Output**: `Data/predictions_linear_regression_textonly_input=384.pkl` (3,480,379 predictions, 2012-2023, tweeted stock-days only; `index` = `merged_master` row label). The distinct model name keeps it out of the `find_all_features_file()` resolvers; it is registered explicitly as `lr_text` in the 04/05 notebooks, which also gained a `COMMON_SAMPLE` toggle to compare all models on the same stock-days.
+- **Results (2026-09-11, common sample = 3,171,329 tweeted stock-days, 2012-2022, de-meaned by date)**: the text-only OLS carries a weak but real signal. Pooled slope of the realised return on the prediction 0.060 (s.e. 0.023, two-way clustered) versus 1.02 for `lr_2` and 0.34 for `lr_all`; average daily Spearman rank correlation 0.0076 (`lr_2` 0.0228, `lr_all` 0.0146); equal-weighted top-minus-bottom prediction-decile spread 5.8 bp/day (t = 3.4) versus 17.4 bp (`lr_2`) and 24.2 bp (`lr_all`). Full-sample OOS R2 is negative (-0.0015; `lr_2` +0.0002, `lr_all` -0.0009): 384 unshrunk coefficients refit monthly on 250-600k rows are too noisy, so the ordering is informative but the level is not. In-sample R2 over the whole sample is 0.00006. Shrinkage or compression of the 384 dimensions is the obvious next step; see `01 - feature extraction/features_08_integration_notes.md` Section 8.
 
 ---
 
@@ -373,9 +380,9 @@ This folder contains analysis notebooks that operate on the prediction files pro
 **Prediction files**: `predictions_{model}_{input=N}[_text={mode}].pkl`
 - model: linear_regression, lasso, elasticnet, neural_network, neural_network_tuned_Xlayer
 - N: 2 (net_sentiment + log_volume) or the all-features count (31 originally; 53 with features_04; more once features_05 / text columns are added)
-- `_text={mode}` is present only when the model notebook was run with `TEXT_VARIANT` set (text track)
+- `_text={mode}`: legacy tag of the removed `add_text_features` track; no such files exist. The text-only model uses its own model name: `predictions_linear_regression_textonly_input=384.pkl`
 
-**Text-track files**: `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl` (features_08 output), `Data/merged_master_text={mode}.pkl` (add_text_features output)
+**Text-track files**: `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl` (features_08 output), `Data/text_master.pkl` (build_text_master output), `Data/predictions_linear_regression_textonly_input=384.pkl` (text-only model)
 
 **Tuning results**: `nn_tuning_results_{layers}_input={N}.pkl`
 

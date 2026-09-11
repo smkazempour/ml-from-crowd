@@ -69,15 +69,20 @@ This project applies machine learning techniques to extract signals from financi
    validates the `message_id` join; event categories / Features 49-51 are still to be
    implemented on top of it.
 
-6. **features_08_text_embeddings.ipynb** + **02/add_text_features.ipynb** (optional text track)
+6. **features_08_text_embeddings.ipynb** + **02/build_text_master.ipynb** + **03a/prediction_linear_regression_text_only.ipynb** (text track)
    - Sentence embeddings (`all-MiniLM-L6-v2`, 384-dim) of every CRSP-matched message,
      mean-pooled per stock-day; a message counts toward every symbol it mentions.
    - Output: `text_embeddings_mlcrowd/text_embeddings_stock_day.pkl` -- kept OUTSIDE
      `features_mlcrowd/` on purpose (never merged into features_master).
-   - `add_text_features.ipynb` attaches it to the training data as
-     `merged_master_text=<mode>.pkl` (`raw` | `pca` | `supervised`); model notebooks pick a
-     variant via `TEXT_VARIANT`, and so do the 04/05 notebooks.
-   - Status: full 15-year encode completed 2026-09-09 (`text_embeddings_stock_day.pkl`, 3.5M stock-days); `add_text_features` not yet run on it.
+   - `build_text_master.ipynb` joins it with the panel's keys, target, abnormal returns and
+     53 features into `Data/text_master.pkl` (one row per tweeted stock-day, 3.5M rows).
+     `prediction_linear_regression_text_only.ipynb` runs the walk-forward OLS on the 384
+     dimensions only (no message count) and writes
+     `predictions_linear_regression_textonly_input=384.pkl`, registered explicitly as
+     `lr_text` in the 04/05 notebooks (with a `COMMON_SAMPLE` toggle). The contributed
+     `add_text_features` builder (PCA / walk-forward ridge) was removed on 2026-09-11; the
+     `TEXT_VARIANT` switches it fed are legacy and inert.
+   - Status: full encode done 2026-09-09; `text_master.pkl` and the text-only OLS predictions built and evaluated 2026-09-11 (results in README, 03a section, and notes Section 8).
    - Needs `sentence-transformers` in `py313` (installed) and sets
      `KMP_DUPLICATE_LIB_OK=TRUE` before importing torch (conda MKL + pip torch each ship an
      OpenMP runtime).
@@ -92,8 +97,10 @@ See `FEATURE_IMPLEMENTATION_STATUS.md` for complete list. Priority order:
 2. Validate and run features_05 on all 15 years (cohort/flip/conviction)
 3. Implement Features 49-51 / event categories on the `messages/` join from features_06
 4. Final aggregation notebook combining all feature pickles
-5. Text track: full `features_08` encode → `add_text_features` → model notebooks with
-   `TEXT_VARIANT` → 04/05
+5. Text track: encode, `text_master` and the text-only OLS are done. Next: the untagged-message
+   extension (65% of raw messages carry no Bullish/Bearish tag and are excluded by the cleaning
+   filter; see `features_08_integration_notes.md` Section 8), compression of the 384 dimensions,
+   and "all features + text" on `text_master`
 
 ## Core Technical Decisions
 

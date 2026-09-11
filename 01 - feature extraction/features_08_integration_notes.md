@@ -225,3 +225,74 @@ the practical routes.
   branch).
 - The 03e LASSO prediction files are absent on this machine, so `form_portfolios` prints a
   warning and skips those models (as on `main`).
+
+---
+
+## 8. Text-only predictive regression (2026-09-11) and the untagged-message question
+
+**Design decisions (user, 2026-09-10/11).** Use the raw 384 dimensions, no compression yet;
+exclude the message count (`embed_n` is attention, not content); keep the baseline
+walk-forward OLS design so the comparison with `lr_2` / `lr_all` is like for like. The
+contributed `add_text_features.ipynb` (PCA / walk-forward-ridge builder, Section 4 above) was
+removed and replaced by `02 - prepare training dataset/build_text_master.ipynb`, a plain
+join of the embeddings with the panel's keys, target, abnormal returns and 53 features into
+`Data/text_master.pkl` (3,514,785 rows x 478 columns; `mm_index` = `merged_master` row
+label). The `TEXT_VARIANT` switches left in the model and 04/05 notebooks are inert.
+
+**Sample facts established on the way** (see also the README, "Data Pipeline Overview"):
+`merged_master` is the CRSP common-stock panel (share codes 10-12, NYSE/AMEX/NASDAQ, ~4,300
+stocks per day, 15,532,693 stock-days 2010-2023, not the 16.8M the README used to say);
+22.6% of its rows have at least one message; `f_cumret1` is the next trading day's CRSP
+return (verified on 99.6% of rows). Both the features and the embeddings are built from the
+same 85M-row message-symbol table, so the stock-days with `log_volume > 0` and the stock-days
+with an embedding coincide (3,514,787 vs 3,514,785; message counts agree on 99.995%). The
+cleaning filter keeps only messages tagged Bullish/Bearish (~35% of the raw 501M), so
+nothing downstream, text included, sees untagged messages.
+
+**Model.** `03a - linear regression/prediction_linear_regression_text_only.ipynb`: monthly
+refit, 252-trading-day window, OLS on `embed_000..383`, predictions for every tweeted
+stock-day 2012-2023 (3,480,379). Runs in ~4 min with 4 threads. Registered as `lr_text` in
+`plot_oos_r2`, `predictive_regressions`, `rank_correlation` and `form_portfolios`; the three
+04 notebooks gained `COMMON_SAMPLE = True` (rows lacking any model's prediction are dropped),
+which with `lr_text` registered is the tweeted stock-days.
+
+**Results** (common sample 3,171,329 tweeted stock-days, 2012-2022, target and predictions
+de-meaned by date):
+
+| | lr_2 (net sentiment + log volume) | lr_all (53 features) | lr_text (384 dims) |
+|---|---|---|---|
+| Full-sample OOS R2 | +0.000214 | -0.000896 | -0.001541 |
+| Pooled slope of return on prediction (s.e., 2-way cluster) | 1.016 (0.109) | 0.337 (0.078) | 0.060 (0.023) |
+| Mean daily Spearman rank correlation | 0.0228 | 0.0146 | 0.0076 |
+| Top-minus-bottom decile, equal-weighted, bp/day (t) | 17.4 (6.8) | 24.2 (10.8) | 5.8 (3.4) |
+| Share of days with positive decile spread | 0.58 | 0.61 | 0.54 |
+
+Reading: the text-only predictions order stocks in the right direction (rank correlation,
+decile spread and pooled slope all positive and significant) but are far too dispersed --
+a slope of 0.06 means the predictions would have to be shrunk by a factor of ~16 to be
+calibrated, and the OOS R2 is negative in every year. With 384 unshrunk coefficients refit
+every month on 250-600k rows this is expected; the whole-sample in-sample R2 is only
+0.00006. Yearly rank correlations are positive in 9 of 11 years (negative in 2020-2021).
+The signal is weaker than net sentiment alone on the same stock-days.
+
+**Untagged messages.** A scan of the 248 raw metadata files (501,442,290 rows; script kept under
+`text_embeddings_mlcrowd/_run/untagged_scan/`, ~19 min) applied the cleaning notebook's
+trading-date rule and the CRSP (ticker, date) match of `merged_master` to every message,
+tagged or not. It reproduces the tagged universe (77,018,883 CRSP-matched tagged messages vs
+77,025,793 in features_08; the difference is the CRSP-vs-Fama-French calendar). Untagged
+messages that would enter the sample if the Bullish/Bearish filter were dropped:
+**96,487,680 messages / 110,956,061 message-symbol pairs, 2010-2023**, i.e. 1.25x the tagged
+corpus (per year: 2017 7.5M, 2018 8.6M, 2020 12.5M, 2021 20.8M, 2022 13.3M, 2023 8.1M untagged
+vs 4.7M / 5.4M / 12.1M / 25.6M / 12.2M / 6.5M tagged). Of the 325M untagged raw messages,
+146M carry a cashtag and 96M of those match a CRSP common stock on their trading date. Cost
+of embedding them at the measured ~500 msg/s: ~54 h of CPU (about 2.2 days), plus one join
+pass; a GPU would cut this to hours. The extension was agreed to run as a *parallel* track
+(a second cleaned table with the filter off and a `tagged` flag, feeding only the embedding
+notebook, giving all / tagged-only / untagged-only stock-day embeddings) so the features and
+baselines stay untouched.
+
+**Next steps.** (1) Shrinkage / compression of the 384 dimensions (ridge, or PCA fit on the
+pre-2012 sample and applied forward) in the same walk-forward design -- the calibration
+problem, not the ordering, is what the raw OLS loses. (2) "All features + text" on
+`text_master` (the 53 features are in the table). (3) The untagged-message extension as a
+parallel embedding track, if the counts above justify it.
