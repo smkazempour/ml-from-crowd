@@ -275,8 +275,8 @@ every month on 250-600k rows this is expected; the whole-sample in-sample R2 is 
 0.00006. Yearly rank correlations are positive in 9 of 11 years (negative in 2020-2021).
 The signal is weaker than net sentiment alone on the same stock-days.
 
-**Untagged messages.** A scan of the 248 raw metadata files (501,442,290 rows; script kept under
-`text_embeddings_mlcrowd/_run/untagged_scan/`, ~19 min) applied the cleaning notebook's
+**Untagged messages.** A scan of the 248 raw metadata files (501,442,290 rows; script `tools/untagged_message_scan.py`,
+per-file checkpoints and summary CSV under `text_embeddings_mlcrowd/_run/untagged_scan/`, ~19 min) applied the cleaning notebook's
 trading-date rule and the CRSP (ticker, date) match of `merged_master` to every message,
 tagged or not. It reproduces the tagged universe (77,018,883 CRSP-matched tagged messages vs
 77,025,793 in features_08; the difference is the CRSP-vs-Fama-French calendar). Untagged
