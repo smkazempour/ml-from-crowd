@@ -142,18 +142,29 @@ share of single-message days fell from 69% to 36% and the share of >30-message d
 large; lr_2_rank 0.054 / 0.017 / 0.006. Every signal is strongest in small caps; the text keeps
 relatively more of its ordering in mid and large caps.
 
-**Horizon** (rank correlation with the cumulative DGTW abnormal return over h days):
+**Horizon** (rank correlation with the cumulative DGTW abnormal return over h days; corrected
+2026-09-12, `horizon_check.csv`):
 
-| h | text_rank | textcore_rank | lr_2_rank | lr_all_rank |
-|---|---|---|---|---|
-| 1 | 0.034 | 0.034 | 0.027 | 0.027 |
-| 3 | 0.041 | 0.040 | 0.034 | 0.032 |
-| 5 | 0.046 | 0.045 | 0.037 | 0.035 |
-| 10 | 0.053 | 0.052 | 0.043 | 0.040 |
+| h | core_rank (benchmark) | lr_all_rank | text_rank | textcore_ols_rank | textcore_enet_rank |
+|---|---|---|---|---|---|
+| raw 1d | 0.031 | 0.030 | 0.037 | 0.037 | 0.040 |
+| 1 | 0.028 | 0.027 | 0.034 | 0.034 | 0.037 |
+| 3 | 0.035 | 0.032 | 0.041 | 0.040 | 0.044 |
+| 5 | 0.039 | 0.035 | 0.046 | 0.045 | 0.049 |
+| 10 | 0.045 | 0.040 | 0.053 | 0.052 | 0.057 |
+| 21 | 0.060 | 0.051 | 0.070 | 0.066 | 0.074 |
+| 42 | 0.065 | 0.056 | 0.079 | 0.074 | 0.084 |
+| 63 | 0.073 | 0.062 | 0.089 | 0.084 | 0.094 |
 
-The correlation keeps growing out to ten trading days for every model, so the predicted
-return is not a one-day reversal that gives back; it accrues over the following two weeks.
-(The 21-day column is unavailable: `ar_dgtw_21` contains non-finite values in the table.)
+The correlation keeps growing out to three months for every model, so the predicted return is
+not a one-day reversal that gives back; it accrues. The text models' advantage over the
+benchmark widens with the horizon (0.006 at one day, 0.021 at 63 days for the elastic net).
+Caveat: the h-day abnormal returns of consecutive days overlap, so these are descriptive, not
+independent tests. Data note: in `merged_master` (hence `text_master`) `ar_dgtw_21` is exactly
+zero for every stock on every day of 2013, while the current CRSP file's 21-day columns for
+2013 are fine; the July build of `merged_master` used a bad input for that year and horizon.
+Those days are excluded from the 21-day row (no cross-sectional variance); other horizons are
+unaffected. An earlier version of this paragraph blamed non-finite values; that was wrong.
 
 **What the predictions load on** (rank correlation of the daily prediction ranks with ...):
 text_rank -0.42 with log volume, +0.30 with market cap, +0.10 with net sentiment, +0.31 with
@@ -210,7 +221,7 @@ project, not only to the text.
 - Decide the economic framing: small-cap universe with costs, or ordering-based claims.
 - Run the untagged embedding track (tools exist; ~54 h CPU or hours on a GPU), then rebuild the
   text table with three stock-day embeddings (all / tagged / untagged) and repeat Sections 2-4.
-- Minor: repair `ar_dgtw_21` (non-finite values) if the 21-day horizon is wanted.
+- Minor: rebuild `merged_master` (or patch `ar_dgtw_21` for 2013, which is all zeros) before using the 21-day horizon as a target.
 
 ## Files
 

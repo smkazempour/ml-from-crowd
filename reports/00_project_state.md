@@ -26,8 +26,8 @@ Targets: raw next-day return `f_cumret1` and the DGTW-adjusted `ar_dgtw_1`.
   `C:\Users\skazempour\Documents\StockTwits` is stale and should not be used.
 - `Data/merged_master.pkl`: CRSP common-stock panel 2010-2023 with the 53 StockTwits features,
   15.5M stock-days; 22.6% have at least one tagged message. Target `f_cumret1` = next-day
-  return; `ar_*` = abnormal returns (DGTW, CAPM, FF3/5/6; 1-63 days). `ar_dgtw_21` contains
-  non-finite values (unrepaired).
+  return; `ar_*` = abnormal returns (DGTW, CAPM, FF3/5/6; 1-63 days). `ar_dgtw_21` is exactly zero for every
+  stock throughout 2013 (a bad input in the July 2026 build; the CRSP file itself is fine).
 - `Data/v1/data/csv/text_embeddings_mlcrowd/text_embeddings_stock_day.pkl`: mean-pooled
   `all-MiniLM-L6-v2` embeddings (384 dims) of every tagged, CRSP-matched message, per
   (symbol, date); 3.5M stock-days; the full encode took 43.6 h CPU (2026-09-07..09). Only
@@ -78,8 +78,8 @@ Targets: raw next-day return `f_cumret1` and the DGTW-adjusted `ar_dgtw_1`.
 3. **Text + core** (`textcore`) keeps both: 0.037 / 22.6 bp with OLS, **0.040 / 23 bp with
    ridge or elastic net**, 0.038 / 25 bp with lasso. The other 51 features add nothing.
    Regularisation does nothing for the non-text features.
-4. Robust to the DGTW benchmark (ordering unchanged, text t-stats highest), persists over
-   10 days, strengthens with the amount of text (0.013 on single-message days to 0.084 on
+4. Robust to the DGTW benchmark (ordering unchanged, text t-stats highest), keeps accruing out
+   to 63 days with the text's lead over the benchmark widening (Report 02, horizon table), strengthens with the amount of text (0.013 on single-message days to 0.084 on
    >30-message days); the rise over time is composition, not learning.
 5. **Cap-weighted over the whole tweeted universe, every model earns ~0, benchmark included.**
    The predictability lives in small caps (within-small-cap cap-weighted spreads 14-40 bp/day).
@@ -106,7 +106,8 @@ Targets: raw next-day return `f_cumret1` and the DGTW-adjusted `ar_dgtw_1`.
 4. **Text representation.** The encoder is general-purpose; a finance-tuned or fine-tuned
    encoder (needs GPU), or message-level rather than mean-pooled aggregation (variance of the
    day's vectors, share of messages near a learned direction), are the two obvious upgrades.
-5. **Horizon and timing.** Targets beyond one day (repair `ar_dgtw_21`); messages posted
+5. **Horizon and timing.** Multi-day targets as proper (non-overlapping) tests, after
+   rebuilding `merged_master` or patching `ar_dgtw_21` for 2013; messages posted
    after the close versus during the day; the 21 bp reversal after heavy bullish chatter.
 6. Housekeeping: delete the stale C: copy once confirmed; remove the inert `TEXT_VARIANT`
    plumbing; the `05` registry's LASSO entries point at files that do not exist.

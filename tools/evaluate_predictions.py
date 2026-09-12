@@ -32,7 +32,9 @@ def daily_rank_corr(df, key, ry, g):
     vy = s["y2"] / s["n"] - (s["y"] / s["n"]) ** 2
     # a day on which the prediction is constant carries no ordering information: count it as 0,
     # not as missing (otherwise a model that predicts nothing on its worst days would look better)
-    rc = pd.Series(np.where(vx > 0, cov / np.sqrt(np.where(vx > 0, vx, 1.0) * vy), 0.0), index=s.index)
+    # a day on which the target has no cross-sectional variance is left out (NaN) rather than divided by 0
+    ok = (vx > 0) & (vy > 0)
+    rc = pd.Series(np.where(ok, cov / np.sqrt(np.where(ok, vx * vy, 1.0)), np.where(vy > 0, 0.0, np.nan)), index=s.index)
     return rc.where(s["n"] >= 10)
 
 

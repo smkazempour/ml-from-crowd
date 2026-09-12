@@ -40,7 +40,10 @@ def rank_corr_by(df, key, ycol, by=None):
     cov = s["xy"] / s["n"] - (s["x"] / s["n"]) * (s["y"] / s["n"])
     vx = s["x2"] / s["n"] - (s["x"] / s["n"]) ** 2
     vy = s["y2"] / s["n"] - (s["y"] / s["n"]) ** 2
-    rc = (cov / np.sqrt(vx * vy)).where(s["n"] >= 10)
+    # a day on which either side has no cross-sectional variance (e.g. a target that is constant
+    # across stocks that day) carries no ordering information: leave it out (NaN), do not divide by 0
+    ok = (s["n"] >= 10) & (vx > 0) & (vy > 0)
+    rc = pd.Series(np.where(ok, cov / np.sqrt(np.where(ok, vx * vy, 1.0)), np.nan), index=s.index)
     if by:
         return rc.groupby(level=by).agg(["mean", "count"]).assign(t=lambda d: rc.groupby(level=by).mean() / rc.groupby(level=by).std() * np.sqrt(d["count"]))
     return rc
