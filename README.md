@@ -325,6 +325,11 @@ This folder contains analysis notebooks that operate on the prediction files pro
 #### debug_deciles.ipynb
 - **Purpose**: Debugging notebook for inspecting decile sorts and detecting degenerate cases (e.g., dates with too few unique predictions).
 
+#### plot_model_performance.ipynb
+- **Purpose**: Figures comparing every registered model (baselines and text-only variants, return and rank targets) on the common sample: yearly and 12-month-rolling daily rank correlation, cumulative top-minus-bottom decile return, decile profiles per model, and a summary of full-sample rank correlation and decile spread with 95% bands.
+- **Input**: `merged_master.pkl` + the prediction files listed in its `MODELS` registry
+- **Output**: `Figures/text_models/*.png` and `model_performance_summary.csv` (the `Figures` folder sits next to `Code`)
+
 ---
 
 ### 05 - trading/
