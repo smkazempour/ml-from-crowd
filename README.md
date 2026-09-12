@@ -223,7 +223,32 @@ All notebooks in this folder aggregate message-level data to **stock-day level**
 - **Purpose**: OOS predictions from the **384 embedding dimensions only** -- no sentiment, volume or attention features and no message count -- with the same monthly-refit, 252-trading-day rolling-window OLS design as the other 03a notebooks.
 - **Input**: `Data/text_master.pkl`
 - **Output**: `Data/predictions_linear_regression_textonly_input=384.pkl` (3,480,379 predictions, 2012-2023, tweeted stock-days only; `index` = `merged_master` row label). The distinct model name keeps it out of the `find_all_features_file()` resolvers; it is registered explicitly as `lr_text` in the 04/05 notebooks, which also gained a `COMMON_SAMPLE` toggle to compare all models on the same stock-days.
-- **Results (2026-09-11, common sample = 3,171,329 tweeted stock-days, 2012-2022, de-meaned by date)**: the text-only OLS carries a weak but real signal. Pooled slope of the realised return on the prediction 0.060 (s.e. 0.023, two-way clustered) versus 1.02 for `lr_2` and 0.34 for `lr_all`; average daily Spearman rank correlation 0.0076 (`lr_2` 0.0228, `lr_all` 0.0146); equal-weighted top-minus-bottom prediction-decile spread 5.8 bp/day (t = 3.4) versus 17.4 bp (`lr_2`) and 24.2 bp (`lr_all`). Full-sample OOS R2 is negative (-0.0015; `lr_2` +0.0002, `lr_all` -0.0009): 384 unshrunk coefficients refit monthly on 250-600k rows are too noisy, so the ordering is informative but the level is not. In-sample R2 over the whole sample is 0.00006. Shrinkage or compression of the 384 dimensions is the obvious next step; see `01 - feature extraction/features_08_integration_notes.md` Section 8.
+- **Switches**: `ESTIMATOR` (`ols` | `ridge`, walk-forward-selected penalty), `TARGET_DEMEAN` (date fixed effects inside each window), `FEATURE_SET` (`embed` | `embed+norm`, the latter adding the two agreement measures `embed_norm` / `embed_cos` from `build_text_master`); environment variables `TEXTONLY_*` override them for headless runs. Output name encodes the choice: `predictions_{linear_regression|ridge}_textonly[_dm]_input={384|386}.pkl` plus a `.json` sidecar with the penalty path.
+- **Results (2026-09-11, common sample = 3,171,329 tweeted stock-days, 2012-2022, de-meaned by date)**, registered in 04 as `lr_text`, `lr_text_n`, `lr_text_n_dm`, `ridge_text_n`, `ridge_text_n_dm`:
+
+| model | regressors | training target | OOS R2 | slope (s.e.) | rank corr | D10-D1 bp/day (t) |
+|---|---|---|---|---|---|---|
+| lr_2 | net sentiment + log volume | raw | +0.000214 | 1.02 (0.11) | 0.0228 | 17.4 (6.8) |
+| lr_all | 53 features | raw | -0.000896 | 0.34 (0.08) | 0.0146 | 24.2 (10.8) |
+| lr_text | 384 dims, OLS | raw | -0.001541 | 0.06 (0.02) | 0.0076 | 5.8 (3.4) |
+| lr_text_n | 384 + norm/cos, OLS | raw | -0.001551 | 0.10 (0.02) | 0.0126 | 11.6 (6.1) |
+| lr_text_n_dm | 384 + norm/cos, OLS | date-de-meaned | -0.001027 | 0.15 (0.03) | 0.0151 | 10.6 (5.7) |
+| ridge_text_n | 384 + norm/cos, ridge | raw | +0.000004 | 0.67 (0.26) | 0.0100 | 4.6 (2.4) |
+| ridge_text_n_dm | 384 + norm/cos, ridge | date-de-meaned | +0.000018 | 0.87 (0.28) | 0.0161 | 9.8 (4.8) |
+
+  Reading. (1) The two agreement measures are the single biggest improvement: with OLS they
+  double the decile spread (5.8 -> 11.6 bp/day) and lift the rank correlation from 0.0076 to
+  0.0126 at no cost in calibration. (2) Date-de-meaned training helps every metric for both
+  estimators. (3) Ridge does what it was meant to do -- the pooled slope goes from 0.10-0.15 to
+  0.67-0.87 and the OOS R2 turns (barely) positive -- but the heavy shrinkage it selects
+  (lambda 10-100 in most months, occasionally 10,000, on the standardised columns) costs some
+  ordering on the raw target; combined with de-meaning it keeps the ordering (rank corr 0.016,
+  above `lr_all`'s 0.015 on the same stock-days, below `lr_2`'s 0.023) and is the
+  best-calibrated text model. (4) Every text model has negative rank correlation in 2020 and
+  2021 and its best year in 2022; `lr_2` stays positive throughout. (5) All levels are tiny:
+  the best text-only OOS R2 is 0.00002 versus 0.0002 for net sentiment + volume.
+  Details: `01 - feature extraction/features_08_integration_notes.md` Section 8.
+- **Rank target (`RANK_TARGET=1`, also in the two baseline 03a notebooks)**: training on the daily percentile rank of the target instead of the raw return. Text models: rank correlation 0.036-0.037 versus 0.029 for both baselines, positive in every year 2012-2022; the baselines keep the larger decile spread (tail information vs broad ordering). Registered as `*_rank` in `rank_correlation` / `predictive_regressions`. Phase 0 diagnostics (model-free benchmarks, tag anatomy, tag-in-embedding) in notes Section 8c.
 
 ---
 

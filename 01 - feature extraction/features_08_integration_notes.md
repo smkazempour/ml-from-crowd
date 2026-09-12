@@ -296,3 +296,116 @@ pre-2012 sample and applied forward) in the same walk-forward design -- the cali
 problem, not the ordering, is what the raw OLS loses. (2) "All features + text" on
 `text_master` (the 53 features are in the table). (3) The untagged-message extension as a
 parallel embedding track, if the counts above justify it.
+
+### 8b. Ridge, date-de-meaned training and the agreement features (2026-09-11, later)
+
+Per the user's decisions: ridge in the same walk-forward design, a switch for date-de-meaned
+training (target and regressors de-meaned by date inside each window, i.e. date fixed effects;
+regressors also de-meaned at prediction time), and two agreement measures computed in
+`build_text_master` from the stored mean vector -- `embed_norm` (its length) and `embed_cos`
+(the average pairwise cosine similarity among the day's messages implied by it,
+`(n*||mean||^2 - 1)/(n - 1)`, set to 1 for single-message days, which are 38.9% of the table;
+among multi-message days the mean is 0.45). The message count stays excluded.
+
+`prediction_linear_regression_text_only.ipynb` now has three switches (`ESTIMATOR`,
+`TARGET_DEMEAN`, `FEATURE_SET`; environment variables `TEXTONLY_*` override them so
+`tools/run_notebook.py` can launch variants) and one closed-form code path: standardise inside
+the window, one eigendecomposition of the Gram matrix, all candidate penalties from it, OLS =
+`lambda = 0`. Ridge penalty `alpha = lambda * n_train`, grid 0 / 1e-3 ... 1e4; the `lambda` for
+month m is the one with the lowest OOS squared error (both sides de-meaned by date, as the 04
+notebooks score) over the previous 12 months, `lambda = 1` until any history exists. Each run
+saves a `.json` sidecar with the per-month choice and the candidate-by-month error table. Each
+variant runs in 3.5-5 min. Registered as `lr_text_n`, `lr_text_n_dm`, `ridge_text_n`,
+`ridge_text_n_dm` in the 04 notebooks (the best one also in `form_portfolios`).
+
+Results, common sample 3,171,329 tweeted stock-days, 2012-2022, de-meaned by date:
+
+| model | regressors | training target | OOS R2 | slope (s.e.) | rank corr | D10-D1 bp/day (t) |
+|---|---|---|---|---|---|---|
+| lr_2 | net sentiment + log volume | raw | +0.000214 | 1.02 (0.11) | 0.0228 | 17.4 (6.8) |
+| lr_all | 53 features | raw | -0.000896 | 0.34 (0.08) | 0.0146 | 24.2 (10.8) |
+| lr_text | 384 dims, OLS | raw | -0.001541 | 0.06 (0.02) | 0.0076 | 5.8 (3.4) |
+| lr_text_n | 384 + norm/cos, OLS | raw | -0.001551 | 0.10 (0.02) | 0.0126 | 11.6 (6.1) |
+| lr_text_n_dm | 384 + norm/cos, OLS | date-de-meaned | -0.001027 | 0.15 (0.03) | 0.0151 | 10.6 (5.7) |
+| ridge_text_n | 384 + norm/cos, ridge | raw | +0.000004 | 0.67 (0.26) | 0.0100 | 4.6 (2.4) |
+| ridge_text_n_dm | 384 + norm/cos, ridge | date-de-meaned | +0.000018 | 0.87 (0.28) | 0.0161 | 9.8 (4.8) |
+
+Reading. (1) The two agreement measures are the single biggest improvement: with OLS they
+double the decile spread (5.8 -> 11.6 bp/day) and lift the rank correlation from 0.0076 to
+0.0126 at no cost in calibration. (2) Date-de-meaned training helps every metric for both
+estimators. (3) Ridge does what it was meant to do -- the pooled slope goes from 0.10-0.15 to
+0.67-0.87 and the OOS R2 turns (barely) positive -- but the heavy shrinkage it selects
+(lambda 10-100 in most months, occasionally 10,000, on the standardised columns) costs some
+ordering on the raw target; combined with de-meaning it keeps the ordering (rank corr 0.016,
+above `lr_all`'s 0.015 on the same stock-days, below `lr_2`'s 0.023) and is the
+best-calibrated text model. (4) Every text model has negative rank correlation in 2020 and
+2021 and its best year in 2022; `lr_2` stays positive throughout. (5) All levels are tiny:
+the best text-only OOS R2 is 0.00002 versus 0.0002 for net sentiment + volume.
+
+Next candidates: a milder shrinkage family (e.g. principal-component regression, or ridge
+with the penalty chosen on rank correlation rather than squared error, since the ordering is
+what carries the signal); the agreement measures on their own and interacted with net
+sentiment; the untagged-message extension (Section 8).
+
+### 8c. Rank target and Phase 0 diagnostics (2026-09-11, evening)
+
+**Rank target.** `RANK_TARGET=1` (environment variable; switch added to the two baseline 03a
+notebooks and the text-only notebook) replaces `f_cumret1` in training by its daily percentile
+rank minus 0.5 -- among all CRSP stocks for the baselines, among tweeted stock-days for the text
+table -- and tags the output `..._rank_...`. Same walk-forward design otherwise. Registered as
+`lr_2_rank`, `lr_all_rank`, `lr_text_n_rank`, `lr_text_n_dm_rank`, `ridge_text_n_rank`,
+`ridge_text_n_dm_rank` in `rank_correlation` and `predictive_regressions` (not in
+`plot_oos_r2`: an R2 against raw returns is meaningless for a rank prediction). Common sample
+as before (3,171,329 tweeted stock-days, 2012-2022, de-meaned by date):
+
+| model | training target | rank corr | D10-D1 bp/day (t) | pooled t |
+|---|---|---|---|---|
+| lr_2 | return | 0.0228 | 17.4 (6.8) | 9.3 |
+| lr_all | return | 0.0146 | 24.2 (10.8) | 4.3 |
+| ridge_text_n_dm | return | 0.0161 | 9.8 (4.8) | 3.2 |
+| lr_2_rank | rank | 0.0294 | 21.5 (7.5) | 7.3 |
+| lr_all_rank | rank | 0.0295 | 23.6 (8.6) | 5.6 |
+| lr_text_n_rank | rank | 0.0359 | 14.4 (5.5) | 4.9 |
+| lr_text_n_dm_rank | rank | 0.0361 | 14.5 (5.5) | 4.9 |
+| ridge_text_n_rank | rank | 0.0374 | 12.7 (4.9) | 3.7 |
+| ridge_text_n_dm_rank | rank | 0.0374 | 12.9 (5.0) | 3.7 |
+
+With the rank target the text models' rank correlation more than doubles (0.016 -> 0.037) and
+exceeds both baselines (0.029), and it is positive in **every** year 2012-2022 (0.045-0.048 in
+2020-2021, where the return-target text models were negative); the four text variants are
+indistinguishable. The baselines keep the larger decile spread and pooled t: their information
+is concentrated in the tails (the bottom decile), the text's is a broad ordering across the
+whole cross-section. Squared-error training on raw returns was throwing the text's ordering
+away; the rank target keeps it.
+
+**Phase 0 diagnostics** (`tools`-free script, log in `_run/phase0.log`; same evaluation sample):
+
+A. Single features, no model (daily Spearman with the de-meaned next-day return; D10-D1):
+`log_volume` -0.030 (t -17), D10-D1 **-27 bp/day** (t -10); `unique_user_count` the same;
+`net_sentiment` +0.010 (t 8.7), +7.6 bp; `abnormal_sentiment_1d` +0.012, +7.8 bp;
+`disagreement_index` -0.017; `embed_norm` +0.025 (t 15), +10.6 bp; `embed_cos` +0.013 but a flat
+decile spread (39% of days are single-message ties). So the dominant model-free signal among
+tweeted stock-days is a **negative attention effect** -- yesterday's most-discussed stocks
+underperform today -- and it is what `lr_2` is mostly made of; net sentiment alone is a third
+of `lr_2`. `embed_norm` inherits part of the attention effect mechanically (norm falls with
+the message count), which is why adding it doubled the OLS text spread.
+
+B. Anatomy: 65% of tweeted stock-days are unanimously bullish (net sentiment = 1), mostly
+single-message days, and earn +4.7 bp; the 14% of days with mostly-but-not-all bullish
+messages ([0.5, 1)) earn **-20.6 bp** the next day, -40 bp when there are more than 30 messages;
+unanimously bearish days -1.9 bp. Heavy bullish chatter predicts negative returns; the bearish
+tail is small.
+
+C. The tag inside the embedding: `net_sentiment` regressed on the 386 embedding columns (fit on
+year t-1, applied to year t, no returns involved) has OOS R2 0.16-0.34 and correlation ~0.5 with
+the tag. Used as a return predictor this "text stance" matches the tag's decile spread (7.2 vs
+7.6 bp) but adds nothing once orthogonalised to the tag (2.6 bp, t 1.7). On tagged messages the
+embedding's stance content is a noisy copy of the tag; the text's incremental information, per
+8c above, is not stance but a broad ordering that the rank target extracts.
+
+**Where this points.** (1) Keep the rank target for the text models. (2) The text signal and the
+attention/tag signal are different objects; a model that combines the text ranking with volume
+and net sentiment (on `text_master`, rank target) is the natural next test. (3) The attention
+effect deserves its own look: it is the largest single predictor in the sample and is
+"information in tweets" too. (4) Untagged messages: the text ordering does not depend on the
+tag, so the 96M untagged messages are usable as-is once embedded.

@@ -150,7 +150,9 @@ untouched:
 - `03a/prediction_linear_regression_text_only.ipynb` -- the baseline walk-forward OLS design
   (monthly refit, 252-day window) on the 384 embedding dimensions only; output
   `predictions_linear_regression_textonly_input=384.pkl`, registered as `lr_text` in the
-  04/05 notebooks (`COMMON_SAMPLE` toggle for same-stock-day comparisons).
+  04/05 notebooks (`COMMON_SAMPLE` toggle for same-stock-day comparisons). Switches for
+  ridge (walk-forward penalty), date-de-meaned training and the two agreement measures
+  (`embed_norm`, `embed_cos`); results table in README (03a) and notes Section 8b.
 
 Review findings, corrections to the contributed code, and validation results are in
 `01 - feature extraction/features_08_integration_notes.md`. The `features_07`

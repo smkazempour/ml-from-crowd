@@ -79,7 +79,9 @@ This project applies machine learning techniques to extract signals from financi
      `prediction_linear_regression_text_only.ipynb` runs the walk-forward OLS on the 384
      dimensions only (no message count) and writes
      `predictions_linear_regression_textonly_input=384.pkl`, registered explicitly as
-     `lr_text` in the 04/05 notebooks (with a `COMMON_SAMPLE` toggle). The contributed
+     `lr_text` in the 04/05 notebooks (with a `COMMON_SAMPLE` toggle), plus OLS/ridge x
+     raw/date-de-meaned variants with the agreement measures (`lr_text_n`, `lr_text_n_dm`,
+     `ridge_text_n`, `ridge_text_n_dm`; best: `ridge_text_n_dm`). The contributed
      `add_text_features` builder (PCA / walk-forward ridge) was removed on 2026-09-11; the
      `TEXT_VARIANT` switches it fed are legacy and inert.
    - Status: full encode done 2026-09-09; `text_master.pkl` and the text-only OLS predictions built and evaluated 2026-09-11 (results in README, 03a section, and notes Section 8).
