@@ -30,7 +30,10 @@ def daily_rank_corr(df, key, ry, g):
     cov = s["xy"] / s["n"] - (s["x"] / s["n"]) * (s["y"] / s["n"])
     vx = s["x2"] / s["n"] - (s["x"] / s["n"]) ** 2
     vy = s["y2"] / s["n"] - (s["y"] / s["n"]) ** 2
-    return (cov / np.sqrt(vx * vy)).where(s["n"] >= 10)
+    # a day on which the prediction is constant carries no ordering information: count it as 0,
+    # not as missing (otherwise a model that predicts nothing on its worst days would look better)
+    rc = pd.Series(np.where(vx > 0, cov / np.sqrt(np.where(vx > 0, vx, 1.0) * vy), 0.0), index=s.index)
+    return rc.where(s["n"] >= 10)
 
 
 def daily_decile_spread(df, key, g):

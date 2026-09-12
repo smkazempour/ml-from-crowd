@@ -409,3 +409,17 @@ and net sentiment (on `text_master`, rank target) is the natural next test. (3) 
 effect deserves its own look: it is the largest single predictor in the sample and is
 "information in tweets" too. (4) Untagged messages: the text ordering does not depend on the
 tag, so the 96M untagged messages are usable as-is once embedded.
+
+### 8d. Later work is documented in `reports/` (2026-09-11 onwards)
+
+From this point the per-test write-ups live in `Code/reports/` with their data tables in
+`reports/data/`: `01_text_only_baseline_results.md` (everything up to the rank-target result),
+`02_decomposition_dgtw_composition.md` (attention vs tag vs text, DGTW-adjusted target,
+composition, horizon, value weighting, all 53 features + text), `03_lasso_elasticnet.md`
+(lasso / elastic net with walk-forward penalty selection; the elastic net is implemented as
+an L1 path on the ridge-augmented Gram matrix because sklearn's `l1_ratio` form reproduced the
+lasso exactly at lasso-sized penalties). The text-only notebook's switches at that point:
+`ESTIMATOR` (ols | ridge | lasso | enet), `TARGET_DEMEAN`, `FEATURE_SET` (embed | embed+norm |
+core | embed+norm+core | all | embed+norm+all), `RANK_TARGET`, `TARGET_COL` (f_cumret1 |
+ar_dgtw_1), `TEXTONLY_SELECT` (sse | rankcorr), all overridable by environment variables for
+`tools/run_notebook.py`.
