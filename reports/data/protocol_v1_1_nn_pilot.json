@@ -1,0 +1,1220 @@
+{
+  "schema": "protocol_v1_1_nn_pilot",
+  "kind": "pilot",
+  "training_budget": "standard",
+  "coverage_scope": "partial",
+  "status": "complete",
+  "months": [
+    "2014-01",
+    "2015-03",
+    "2022-12"
+  ],
+  "purpose": "execution, convergence, capacity and reproducibility checks; no model ranking from pilot test outcomes",
+  "started_utc": "2026-09-13T05:40:39.995826+00:00",
+  "command": [
+    "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+    "-B",
+    "D:\\StockTwits\\Code\\tools\\protocol_nn.py",
+    "--prepared",
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\prepared\\8f3f4eb44b399771",
+    "--fit-days",
+    "504",
+    "--targets",
+    "raw",
+    "--features",
+    "core",
+    "textcore",
+    "--months",
+    "2014-01",
+    "2015-03",
+    "2022-12",
+    "--architecture",
+    "3",
+    "--seeds",
+    "5",
+    "--max-epochs",
+    "100",
+    "--workers",
+    "3",
+    "--threads",
+    "2",
+    "--out-root",
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot"
+  ],
+  "environment_overrides": {
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "PYTHONUTF8": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "KMP_DUPLICATE_LIB_OK": "TRUE"
+  },
+  "wrapper_sha256": "51b2e283a486fd3c5585471e2b48022ae129df2bdd51dbce8043dbd13fdab855",
+  "prepared": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\prepared\\8f3f4eb44b399771",
+  "logs": [
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\20260913T054039Z_47ac4c9b_first.log",
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\20260913T054039Z_47ac4c9b_resume.log"
+  ],
+  "first_pass_wall_seconds": 1249.9375932999974,
+  "registry": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\registry_pilot_3ee80dd9a643db16.json",
+  "registry_sha256": "b09dfc08a46ce195ee41833e865d68165de052ec0b17a4cafc205a5db23b37c6",
+  "prepared_fingerprint": "8f3f4eb44b39977139c7fd0bdcc345c551d8bbbd5a88d8160db8c14e5ed7b217",
+  "checkpoint_snapshots": {
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_core_raw_f504_pilot_e3534a40aa3a\\months\\2014-01.pkl": {
+      "sha256": "7c4b72604d673086a72ea6063e43fc6774521fa5d4680147362085ea7453f149",
+      "mtime_ns": 1789278070076687100
+    },
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_core_raw_f504_pilot_e3534a40aa3a\\months\\2015-03.pkl": {
+      "sha256": "c45785878170c9bb75a9c74edec19d98d1c617c9e64ba7b310863d9b96453bcf",
+      "mtime_ns": 1789278092924664600
+    },
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_core_raw_f504_pilot_e3534a40aa3a\\months\\2022-12.pkl": {
+      "sha256": "c78dea207528d7b42b570bfd921fa58018e1f7cbdd0a02c3150b54e9fbccda41",
+      "mtime_ns": 1789278219998904800
+    },
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_textcore_raw_f504_pilot_e2e1930b46c7\\months\\2014-01.pkl": {
+      "sha256": "6752f7d6bff73f582d5eba2193aa486b9bc741613b59bae992f703d358f5d0b5",
+      "mtime_ns": 1789278287867317200
+    },
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_textcore_raw_f504_pilot_e2e1930b46c7\\months\\2015-03.pkl": {
+      "sha256": "6b388e02cf0350e552b0b5dc3cb16d9ea1e5cb8a11f4a89825e78e1110f58422",
+      "mtime_ns": 1789278480713461000
+    },
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_textcore_raw_f504_pilot_e2e1930b46c7\\months\\2022-12.pkl": {
+      "sha256": "03c7cb9c63671224bb407ed81048ddfab8223ba3dbd9e8ac1e824ae296eafc73",
+      "mtime_ns": 1789279288897860300
+    }
+  },
+  "prediction_sha256": {
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_core_raw_f504_pilot_e3534a40aa3a\\predictions.pkl": "f60280a00dd441362275b56a2d782a32a4651d504ec6436a27466034610e5f89",
+    "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_textcore_raw_f504_pilot_e2e1930b46c7\\predictions.pkl": "6edae076ca77e1755d6ac78a0481958cd5aaf8c6c93540102ca0b0f3344da793"
+  },
+  "month_diagnostics": [
+    {
+      "feature_set": "core",
+      "month": "2014-01",
+      "checkpoint": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_core_raw_f504_pilot_e3534a40aa3a\\months\\2014-01.pkl",
+      "chosen_penalty": 0.001,
+      "selected_seed_epochs": [
+        2,
+        7,
+        11,
+        11,
+        1
+      ],
+      "candidate_seed_fits_at_epoch_cap": 0,
+      "selected_seed_fits_at_epoch_cap": 0,
+      "elapsed_seconds": 24.071485200009192,
+      "elapsed_scope": "shared block construction and training; excludes initial bundle load",
+      "fit_rows": 88375,
+      "validation_rows": 60454,
+      "prediction_rows": 13159,
+      "feature_count": 2,
+      "input_array_bytes": 1295904,
+      "capacity_note": "input-array size only, not measured peak process memory",
+      "split": {
+        "month": "2014-01",
+        "fit_days": 504,
+        "validation_days": 126,
+        "horizon": 1,
+        "cutoff": 1005,
+        "fit_first": 374,
+        "fit_last": 877,
+        "valid_first": 879,
+        "valid_last": 1004,
+        "test_first": 1006,
+        "test_last": 1026,
+        "fit_rows": 88375,
+        "fit_labeled_days": 504,
+        "fit_first_date": "2011-06-28",
+        "fit_last_date": "2013-06-28",
+        "valid_rows": 60454,
+        "valid_labeled_days": 126,
+        "valid_first_date": "2013-07-02",
+        "valid_last_date": "2013-12-30",
+        "test_rows": 13159,
+        "test_labeled_days": 21,
+        "test_first_date": "2014-01-02",
+        "test_last_date": "2014-01-31"
+      },
+      "candidates": [
+        {
+          "penalty": 1e-05,
+          "selected": false,
+          "ensemble_validation_ic": 0.014257281654381922,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041707080231697585
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 8,
+              "epochs_run": 13,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041650198479057876
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 11,
+              "epochs_run": 16,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041643663576923964
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 11,
+              "epochs_run": 16,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041639887344466234
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041765660126568405
+            }
+          ]
+        },
+        {
+          "penalty": 0.0001,
+          "selected": false,
+          "ensemble_validation_ic": 0.014322515960299218,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04170705584606321
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 7,
+              "epochs_run": 12,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04164669011446846
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 7,
+              "epochs_run": 12,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041658809089761814
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 11,
+              "epochs_run": 16,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041640829921949035
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04176646385663301
+            }
+          ]
+        },
+        {
+          "penalty": 0.001,
+          "selected": true,
+          "ensemble_validation_ic": 0.014360344362367595,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04170919445249788
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 7,
+              "epochs_run": 12,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04164663668000041
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 11,
+              "epochs_run": 16,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041645800987261186
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 11,
+              "epochs_run": 16,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04164218702887039
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04176942898221366
+            }
+          ]
+        }
+      ],
+      "code_sha256": {
+        "protocol_nn.py": "bcb3b39c9df07a3bace200763a89eb54d691a32db49e9a62648a54d9816cdc11",
+        "protocol_nn_metrics.py": "524620514fb0bf024fa4d8bb5bfa179739338e6e4e34b47faddbeb938fc8bfb9",
+        "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+        "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+        "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83"
+      }
+    },
+    {
+      "feature_set": "core",
+      "month": "2015-03",
+      "checkpoint": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_core_raw_f504_pilot_e3534a40aa3a\\months\\2015-03.pkl",
+      "chosen_penalty": 0.001,
+      "selected_seed_epochs": [
+        6,
+        2,
+        12,
+        10,
+        5
+      ],
+      "candidate_seed_fits_at_epoch_cap": 0,
+      "selected_seed_fits_at_epoch_cap": 0,
+      "elapsed_seconds": 46.923960499989334,
+      "elapsed_scope": "shared block construction and training; excludes initial bundle load",
+      "fit_rows": 224057,
+      "validation_rows": 83168,
+      "prediction_rows": 16567,
+      "feature_count": 2,
+      "input_array_bytes": 2590336,
+      "capacity_note": "input-array size only, not measured peak process memory",
+      "split": {
+        "month": "2015-03",
+        "fit_days": 504,
+        "validation_days": 126,
+        "horizon": 1,
+        "cutoff": 1296,
+        "fit_first": 665,
+        "fit_last": 1168,
+        "valid_first": 1170,
+        "valid_last": 1295,
+        "test_first": 1297,
+        "test_last": 1318,
+        "fit_rows": 224057,
+        "fit_labeled_days": 504,
+        "fit_first_date": "2012-08-22",
+        "fit_last_date": "2014-08-25",
+        "valid_rows": 83168,
+        "valid_labeled_days": 126,
+        "valid_first_date": "2014-08-27",
+        "valid_last_date": "2015-02-26",
+        "test_rows": 16567,
+        "test_labeled_days": 22,
+        "test_first_date": "2015-03-02",
+        "test_last_date": "2015-03-31"
+      },
+      "candidates": [
+        {
+          "penalty": 1e-05,
+          "selected": false,
+          "ensemble_validation_ic": 0.0251253894848715,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 12,
+              "epochs_run": 17,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04164490027292788
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04167207611335616
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 4,
+              "epochs_run": 9,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04166982609554368
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 5,
+              "epochs_run": 10,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041668994895834185
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 5,
+              "epochs_run": 10,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04166432054581279
+            }
+          ]
+        },
+        {
+          "penalty": 0.0001,
+          "selected": false,
+          "ensemble_validation_ic": 0.025360890117557957,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 12,
+              "epochs_run": 17,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04164619769018185
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04167314779589488
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 4,
+              "epochs_run": 9,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04166936477472825
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 5,
+              "epochs_run": 10,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.0416723993360639
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 5,
+              "epochs_run": 10,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04166541926717845
+            }
+          ]
+        },
+        {
+          "penalty": 0.001,
+          "selected": true,
+          "ensemble_validation_ic": 0.026650723451008534,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 6,
+              "epochs_run": 11,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04167536028611749
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04169848006863665
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 12,
+              "epochs_run": 17,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04164101873448682
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 10,
+              "epochs_run": 15,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04173355428871945
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 5,
+              "epochs_run": 10,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041676087914087605
+            }
+          ]
+        }
+      ],
+      "code_sha256": {
+        "protocol_nn.py": "bcb3b39c9df07a3bace200763a89eb54d691a32db49e9a62648a54d9816cdc11",
+        "protocol_nn_metrics.py": "524620514fb0bf024fa4d8bb5bfa179739338e6e4e34b47faddbeb938fc8bfb9",
+        "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+        "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+        "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83"
+      }
+    },
+    {
+      "feature_set": "core",
+      "month": "2022-12",
+      "checkpoint": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_core_raw_f504_pilot_e3534a40aa3a\\months\\2022-12.pkl",
+      "chosen_penalty": 0.001,
+      "selected_seed_epochs": [
+        3,
+        11,
+        2,
+        17,
+        8
+      ],
+      "candidate_seed_fits_at_epoch_cap": 0,
+      "selected_seed_fits_at_epoch_cap": 0,
+      "elapsed_seconds": 173.99248090000765,
+      "elapsed_scope": "shared block construction and training; excludes initial bundle load",
+      "fit_rows": 1055817,
+      "validation_rows": 230086,
+      "prediction_rows": 33260,
+      "feature_count": 2,
+      "input_array_bytes": 10553304,
+      "capacity_note": "input-array size only, not measured peak process memory",
+      "split": {
+        "month": "2022-12",
+        "fit_days": 504,
+        "validation_days": 126,
+        "horizon": 1,
+        "cutoff": 3250,
+        "fit_first": 2619,
+        "fit_last": 3122,
+        "valid_first": 3124,
+        "valid_last": 3249,
+        "test_first": 3251,
+        "test_last": 3271,
+        "fit_rows": 1055817,
+        "fit_labeled_days": 504,
+        "fit_first_date": "2020-06-01",
+        "fit_last_date": "2022-05-27",
+        "valid_rows": 230086,
+        "valid_labeled_days": 126,
+        "valid_first_date": "2022-06-01",
+        "valid_last_date": "2022-11-29",
+        "test_rows": 33260,
+        "test_labeled_days": 21,
+        "test_first_date": "2022-12-01",
+        "test_last_date": "2022-12-30"
+      },
+      "candidates": [
+        {
+          "penalty": 1e-05,
+          "selected": false,
+          "ensemble_validation_ic": 0.04214701622058728,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 8,
+              "epochs_run": 13,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041536390550521565
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 20,
+              "epochs_run": 25,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041529580384147745
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 5,
+              "epochs_run": 10,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041537329803324
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 12,
+              "epochs_run": 17,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04153595943872368
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04155854840643064
+            }
+          ]
+        },
+        {
+          "penalty": 0.0001,
+          "selected": false,
+          "ensemble_validation_ic": 0.04208109325383068,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041561670554596156
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 8,
+              "epochs_run": 13,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04155422987924482
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041553585481124644
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 12,
+              "epochs_run": 17,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04153873874480477
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 4,
+              "epochs_run": 9,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04155057879418994
+            }
+          ]
+        },
+        {
+          "penalty": 0.001,
+          "selected": true,
+          "ensemble_validation_ic": 0.04226703140295488,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 3,
+              "epochs_run": 8,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04157190414705974
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 11,
+              "epochs_run": 16,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04156142137885175
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04158132212559434
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 17,
+              "epochs_run": 22,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04154759138418602
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 8,
+              "epochs_run": 13,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04155395532085434
+            }
+          ]
+        }
+      ],
+      "code_sha256": {
+        "protocol_nn.py": "bcb3b39c9df07a3bace200763a89eb54d691a32db49e9a62648a54d9816cdc11",
+        "protocol_nn_metrics.py": "524620514fb0bf024fa4d8bb5bfa179739338e6e4e34b47faddbeb938fc8bfb9",
+        "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+        "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+        "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83"
+      }
+    },
+    {
+      "feature_set": "textcore",
+      "month": "2014-01",
+      "checkpoint": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_textcore_raw_f504_pilot_e2e1930b46c7\\months\\2014-01.pkl",
+      "chosen_penalty": 0.001,
+      "selected_seed_epochs": [
+        11,
+        1,
+        2,
+        1,
+        2
+      ],
+      "candidate_seed_fits_at_epoch_cap": 0,
+      "selected_seed_fits_at_epoch_cap": 0,
+      "elapsed_seconds": 67.22288339999795,
+      "elapsed_scope": "shared block construction and training; excludes initial bundle load",
+      "fit_rows": 88375,
+      "validation_rows": 60454,
+      "prediction_rows": 13159,
+      "feature_count": 388,
+      "input_array_bytes": 251405376,
+      "capacity_note": "input-array size only, not measured peak process memory",
+      "split": {
+        "month": "2014-01",
+        "fit_days": 504,
+        "validation_days": 126,
+        "horizon": 1,
+        "cutoff": 1005,
+        "fit_first": 374,
+        "fit_last": 877,
+        "valid_first": 879,
+        "valid_last": 1004,
+        "test_first": 1006,
+        "test_last": 1026,
+        "fit_rows": 88375,
+        "fit_labeled_days": 504,
+        "fit_first_date": "2011-06-28",
+        "fit_last_date": "2013-06-28",
+        "valid_rows": 60454,
+        "valid_labeled_days": 126,
+        "valid_first_date": "2013-07-02",
+        "valid_last_date": "2013-12-30",
+        "test_rows": 13159,
+        "test_labeled_days": 21,
+        "test_first_date": "2014-01-02",
+        "test_last_date": "2014-01-31"
+      },
+      "candidates": [
+        {
+          "penalty": 1e-05,
+          "selected": false,
+          "ensemble_validation_ic": 0.013781252679963768,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 5,
+              "epochs_run": 10,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.0350625449646649
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03836959790138072
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.0380498608929939
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03783125710137494
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 7,
+              "epochs_run": 12,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.035737609609308135
+            }
+          ]
+        },
+        {
+          "penalty": 0.0001,
+          "selected": false,
+          "ensemble_validation_ic": 0.014540034317271815,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 11,
+              "epochs_run": 16,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.029728154798039617
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03832032763869456
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03801137248984152
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03778970609860339
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03953637353959988
+            }
+          ]
+        },
+        {
+          "penalty": 0.001,
+          "selected": true,
+          "ensemble_validation_ic": 0.014586773491993239,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 11,
+              "epochs_run": 16,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.02732249524554994
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03806893646063697
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03769427346120967
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03747712441916345
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 2,
+              "epochs_run": 7,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.037954999152386544
+            }
+          ]
+        }
+      ],
+      "code_sha256": {
+        "protocol_nn.py": "bcb3b39c9df07a3bace200763a89eb54d691a32db49e9a62648a54d9816cdc11",
+        "protocol_nn_metrics.py": "524620514fb0bf024fa4d8bb5bfa179739338e6e4e34b47faddbeb938fc8bfb9",
+        "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+        "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+        "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83"
+      }
+    },
+    {
+      "feature_set": "textcore",
+      "month": "2015-03",
+      "checkpoint": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_textcore_raw_f504_pilot_e2e1930b46c7\\months\\2015-03.pkl",
+      "chosen_penalty": 0.001,
+      "selected_seed_epochs": [
+        5,
+        13,
+        7,
+        11,
+        7
+      ],
+      "candidate_seed_fits_at_epoch_cap": 0,
+      "selected_seed_fits_at_epoch_cap": 0,
+      "elapsed_seconds": 260.0658175000135,
+      "elapsed_scope": "shared block construction and training; excludes initial bundle load",
+      "fit_rows": 224057,
+      "validation_rows": 83168,
+      "prediction_rows": 16567,
+      "feature_count": 388,
+      "input_array_bytes": 502525184,
+      "capacity_note": "input-array size only, not measured peak process memory",
+      "split": {
+        "month": "2015-03",
+        "fit_days": 504,
+        "validation_days": 126,
+        "horizon": 1,
+        "cutoff": 1296,
+        "fit_first": 665,
+        "fit_last": 1168,
+        "valid_first": 1170,
+        "valid_last": 1295,
+        "test_first": 1297,
+        "test_last": 1318,
+        "fit_rows": 224057,
+        "fit_labeled_days": 504,
+        "fit_first_date": "2012-08-22",
+        "fit_last_date": "2014-08-25",
+        "valid_rows": 83168,
+        "valid_labeled_days": 126,
+        "valid_first_date": "2014-08-27",
+        "valid_last_date": "2015-02-26",
+        "test_rows": 16567,
+        "test_labeled_days": 22,
+        "test_first_date": "2015-03-02",
+        "test_last_date": "2015-03-31"
+      },
+      "candidates": [
+        {
+          "penalty": 1e-05,
+          "selected": false,
+          "ensemble_validation_ic": 0.028628664815240932,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 9,
+              "epochs_run": 14,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03577335215889338
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 1,
+              "epochs_run": 6,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.039499145650572005
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 8,
+              "epochs_run": 13,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03618795212999173
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 13,
+              "epochs_run": 18,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.0333137563851193
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 9,
+              "epochs_run": 14,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03594950705940858
+            }
+          ]
+        },
+        {
+          "penalty": 0.0001,
+          "selected": false,
+          "ensemble_validation_ic": 0.029821874405100583,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 8,
+              "epochs_run": 13,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03585947247156948
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 13,
+              "epochs_run": 18,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03515995355902549
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 16,
+              "epochs_run": 21,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03457819736213317
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 8,
+              "epochs_run": 13,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03530094438761466
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 7,
+              "epochs_run": 12,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03665500233556548
+            }
+          ]
+        },
+        {
+          "penalty": 0.001,
+          "selected": true,
+          "ensemble_validation_ic": 0.03501696295393669,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 5,
+              "epochs_run": 10,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.036734154914827684
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 13,
+              "epochs_run": 18,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.033011803800662966
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 7,
+              "epochs_run": 12,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03598427301718515
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 11,
+              "epochs_run": 16,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.032896316056883444
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 7,
+              "epochs_run": 12,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.03608122197926647
+            }
+          ]
+        }
+      ],
+      "code_sha256": {
+        "protocol_nn.py": "bcb3b39c9df07a3bace200763a89eb54d691a32db49e9a62648a54d9816cdc11",
+        "protocol_nn_metrics.py": "524620514fb0bf024fa4d8bb5bfa179739338e6e4e34b47faddbeb938fc8bfb9",
+        "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+        "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+        "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83"
+      }
+    },
+    {
+      "feature_set": "textcore",
+      "month": "2022-12",
+      "checkpoint": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_pilot\\nn3_textcore_raw_f504_pilot_e2e1930b46c7\\months\\2022-12.pkl",
+      "chosen_penalty": 0.001,
+      "selected_seed_epochs": [
+        12,
+        4,
+        18,
+        7,
+        8
+      ],
+      "candidate_seed_fits_at_epoch_cap": 0,
+      "selected_seed_fits_at_epoch_cap": 0,
+      "elapsed_seconds": 1068.250782499992,
+      "elapsed_scope": "shared block construction and training; excludes initial bundle load",
+      "fit_rows": 1055817,
+      "validation_rows": 230086,
+      "prediction_rows": 33260,
+      "feature_count": 388,
+      "input_array_bytes": 2047340976,
+      "capacity_note": "input-array size only, not measured peak process memory",
+      "split": {
+        "month": "2022-12",
+        "fit_days": 504,
+        "validation_days": 126,
+        "horizon": 1,
+        "cutoff": 3250,
+        "fit_first": 2619,
+        "fit_last": 3122,
+        "valid_first": 3124,
+        "valid_last": 3249,
+        "test_first": 3251,
+        "test_last": 3271,
+        "fit_rows": 1055817,
+        "fit_labeled_days": 504,
+        "fit_first_date": "2020-06-01",
+        "fit_last_date": "2022-05-27",
+        "valid_rows": 230086,
+        "valid_labeled_days": 126,
+        "valid_first_date": "2022-06-01",
+        "valid_last_date": "2022-11-29",
+        "test_rows": 33260,
+        "test_labeled_days": 21,
+        "test_first_date": "2022-12-01",
+        "test_last_date": "2022-12-30"
+      },
+      "candidates": [
+        {
+          "penalty": 1e-05,
+          "selected": false,
+          "ensemble_validation_ic": 0.05112282951838539,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 9,
+              "epochs_run": 14,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.040138933824099436
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 4,
+              "epochs_run": 9,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.040591912877949575
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 6,
+              "epochs_run": 11,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04041687318311656
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 7,
+              "epochs_run": 12,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04029676683977933
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 4,
+              "epochs_run": 9,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.040695713870489605
+            }
+          ]
+        },
+        {
+          "penalty": 0.0001,
+          "selected": false,
+          "ensemble_validation_ic": 0.05160076913643267,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 5,
+              "epochs_run": 10,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04076755564698422
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 4,
+              "epochs_run": 9,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.040826904899912
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 16,
+              "epochs_run": 21,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04061952774344412
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 3,
+              "epochs_run": 8,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.040965444289463256
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 7,
+              "epochs_run": 12,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.040763498911745535
+            }
+          ]
+        },
+        {
+          "penalty": 0.001,
+          "selected": true,
+          "ensemble_validation_ic": 0.05511763652658993,
+          "seeds": [
+            {
+              "seed": 7,
+              "best_epoch": 12,
+              "epochs_run": 17,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04119935687231413
+            },
+            {
+              "seed": 1007,
+              "best_epoch": 4,
+              "epochs_run": 9,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04146485712041514
+            },
+            {
+              "seed": 2007,
+              "best_epoch": 18,
+              "epochs_run": 23,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04128666174480074
+            },
+            {
+              "seed": 3007,
+              "best_epoch": 7,
+              "epochs_run": 12,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.04149210347916185
+            },
+            {
+              "seed": 4007,
+              "best_epoch": 8,
+              "epochs_run": 13,
+              "hit_epoch_cap": false,
+              "final_training_data_loss": 0.041371920245147915
+            }
+          ]
+        }
+      ],
+      "code_sha256": {
+        "protocol_nn.py": "bcb3b39c9df07a3bace200763a89eb54d691a32db49e9a62648a54d9816cdc11",
+        "protocol_nn_metrics.py": "524620514fb0bf024fa4d8bb5bfa179739338e6e4e34b47faddbeb938fc8bfb9",
+        "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+        "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+        "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83"
+      }
+    }
+  ],
+  "resume_wall_seconds": 8.311048900010064,
+  "resume_verified": {
+    "checkpoint_bytes_and_mtimes_unchanged": true,
+    "prediction_bytes_unchanged": true,
+    "resumed_months": 6
+  },
+  "restored_state_checks": [
+    {
+      "feature_set": "core",
+      "month": "2014-01",
+      "seeds_restored": 5,
+      "prediction_rows": 13159,
+      "exact_equal": true,
+      "max_abs_difference": 0.0,
+      "threads": 2
+    },
+    {
+      "feature_set": "textcore",
+      "month": "2022-12",
+      "seeds_restored": 5,
+      "prediction_rows": 33260,
+      "exact_equal": true,
+      "max_abs_difference": 0.0,
+      "threads": 2
+    }
+  ],
+  "completed_utc": "2026-09-13T06:02:00.035751+00:00"
+}

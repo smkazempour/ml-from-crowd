@@ -1,0 +1,12 @@
+{
+  "source": "Protocol v1.1 local study, frozen 2026-09-13",
+  "sha256": {
+    "protocol_nn.py": "bcb3b39c9df07a3bace200763a89eb54d691a32db49e9a62648a54d9816cdc11",
+    "protocol_nn_metrics.py": "524620514fb0bf024fa4d8bb5bfa179739338e6e4e34b47faddbeb938fc8bfb9",
+    "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+    "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83",
+    "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+    "protocol_report.py": "08ada6f288984714ec9adf0421fd160d399fca4ef5f20c5c94fd80ccdbee201a"
+  }
+}

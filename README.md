@@ -2,7 +2,42 @@
 
 ## What This Project Does
 
-This project predicts daily stock returns using social media sentiment from StockTwits. Machine learning models are trained on rolling 252-day (1 year) windows and retrained monthly. The out-of-sample evaluation period is 2012-2022.
+For the current research state, start with [reports/00_project_state.md](reports/00_project_state.md).
+The revised 96-model linear comparison is complete:
+[reports/07_protocol_linear_results.md](reports/07_protocol_linear_results.md).
+Text improves return ranking, but equal-weighted portfolio gains are not established.
+The [complete NN3 comparison](reports/08_protocol_nn_results.md) finished September 17, 2026:
+24 NN3 specifications across all three fitting windows, evaluated alongside 96 linear models.
+Completion evidence and run history are in [reports/NN_RUN_STATUS.md](reports/NN_RUN_STATUS.md).
+The [preliminary NN3 report](reports/08a_protocol_nn_preliminary_results.md) remains available
+as the earlier snapshot covering only the 504- and 252-session windows.
+For a separate server run that finishes NN3 and compares network depth, use
+[the server package and instructions](server_nn/README.md). It exports the corrected
+data, completed linear baselines and compatible NN checkpoints into a portable snapshot.
+The [server handoff](reports/SERVER_RUN_HANDOFF.md) identifies the prepared transfer folder and validation results.
+The earlier evaluation recovery and historical NN pilot remain in
+[Report 06](reports/06_evaluation_and_nn_pilot.md).
+The adopted shared procedure is in [reports/EXPERIMENTAL_PROTOCOL.md](reports/EXPERIMENTAL_PROTOCOL.md).
+Its first-close timing trace and concrete training-window design are in
+[reports/TIMING_CONVENTION.md](reports/TIMING_CONVENTION.md).
+The living agenda, including possible directions for multiple papers, is in
+[reports/RESEARCH_QUESTIONS.md](reports/RESEARCH_QUESTIONS.md).
+Older pipeline counts and model registries below are historical; the current text table
+has 480 columns and its 53 non-text features exclude the unfinished cohort/conviction group.
+
+This project predicts daily stock returns using StockTwits sentiment, attention, engineered
+features and message embeddings. The revised experiment uses 504 fitting sessions plus
+126 validation sessions, monthly retraining, and a common January 2014 to December 2022
+test period. The 252- and 756-session fitting windows are prespecified comparisons.
+
+Use the new [linear protocol notebook](03a%20-%20linear%20regression/prediction_linear_regression_protocol.ipynb)
+and [NN protocol notebook](03d%20-%20neural%20network/prediction_neural_network_protocol.ipynb)
+for these experiments. Both call the same input preparation and split code in
+`tools/protocol_data.py`; `tools/protocol_evaluate.py` evaluates their prediction registries.
+The frozen grids and comparison families are in
+[the experiment specification](reports/data/protocol_v1_1_experiment.json).
+Large prepared arrays, monthly checkpoints and predictions stay under ignored `.runs/`;
+the historical notebooks and `Data/` predictions retain their original settings.
 
 ---
 

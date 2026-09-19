@@ -1,5 +1,9 @@
 # Report 03 -- Lasso and elastic net on the text features
 
+> Evaluation update (2026-09-12): these are historical results. See
+> [Report 06](06_evaluation_and_nn_pilot.md) for fractional treatment of prediction ties
+> and paired Newey-West comparisons with the core benchmark. Prediction files were preserved.
+
 Date: 2026-09-12. Builds on Reports 01-02 (notation as in Report 02, Section 0). Data tables:
 `reports/data/lasso_enet_f_cumret1.csv`, `reports/data/lasso_enet_ar_dgtw_1.csv` (each with a
 `_yearly` companion). Common evaluation sample as before: tweeted stock-days 2012-2022 with

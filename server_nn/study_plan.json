@@ -1,0 +1,128 @@
+{
+  "schema": "stocktwits_server_nn_plan_v1",
+  "registered_date": "2026-09-13",
+  "status": "Declared before server architecture training; NN3 is an existing in-progress experiment",
+  "protocol": "v1.1",
+  "definitions": {
+    "architectures_and_phase_models": "server_nn/common.py::ARCHITECTURES, PHASES, phase_models",
+    "training_configuration": "server_nn/common.py::training_config",
+    "frozen_training_kernel": "server_nn/vendor/protocol_nn.py",
+    "data_and_split_kernel": "server_nn/vendor/protocol_data.py",
+    "evaluation_kernel": "server_nn/vendor/protocol_evaluate.py",
+    "architecture_contrasts_and_adaptive_policy": "server_nn/evaluate.py::extended_contrasts, POLICY, choose_architecture",
+    "certification": "The export bundle_manifest.json hashes this plan and every transferred code/data file. Executable definitions govern execution; changes require a new bundle and documented plan version."
+  },
+  "objectives": [
+    "Complete the matched NN3 versus OLS/ridge/lasso/elastic-net study across three fitting windows.",
+    "Compare fixed hidden-layer depths at the primary 504-session fitting window.",
+    "Optionally compare widths at fixed three-layer depth.",
+    "Optionally evaluate monthly validation-selected depth separately from fixed architectures."
+  ],
+  "architectures": {
+    "nn1": [128],
+    "nn2": [128, 64],
+    "nn3": [128, 64, 32],
+    "nn4": [128, 64, 32, 16],
+    "nn3_narrow": [64, 32, 16],
+    "nn3_wide": [256, 128, 64]
+  },
+  "network": {
+    "hidden_block": "Linear, BatchNorm1d, ReLU",
+    "output": "One linear output",
+    "parameter_count": "All trainable linear weights/biases and BatchNorm affine parameters; exclude running statistics.",
+    "interpretation": "Depth comparisons fix the first-layer width, not the total parameter count. Width sensitivity fixes depth."
+  },
+  "data": {
+    "prepared_fingerprint": "8f3f4eb44b39977139c7fd0bdcc345c551d8bbbd5a88d8160db8c14e5ed7b217",
+    "features": {"core": 2, "textcore": 388, "all": 53, "textall": 439},
+    "targets": {"raw": "f_cumret1", "dgtw": "ar_dgtw_1"},
+    "forecast_horizon_sessions": 1,
+    "timing": "Signal t is the first nominal 16:00 Eastern close at/after each post; forecast close t to close t+1. Known early-close routing limitation is retained.",
+    "label_correction": "Use corrected immutable prepared cache, including FTNW next-observed-session horizon exclusion and same-date target reranking.",
+    "feature_transform": "Scalar features use same-date centered average ranks in [-1,1]; embeddings/agreement remain unranked. Fit-window equal-date means/scales are applied to validation/test.",
+    "target_transform": "Same-date centered return ranks in [-0.5,0.5]; at least 10 observations and nonconstant targets for an eligible target date.",
+    "sample": "Prediction eligibility does not depend on future labels. Comparisons use common rows within each target family. Raw and DGTW outcome coverage may differ."
+  },
+  "splits": {
+    "test_start": "2014-01",
+    "test_end": "2022-12",
+    "test_months": 108,
+    "primary_fit_sessions": 504,
+    "validation_sessions": 126,
+    "refit_frequency": "Monthly",
+    "refit_on_fit_plus_validation": false,
+    "boundary_rule": "For b=last session before test month and h=1: valid_last=b-h, valid_first=b-h-V+1, fit_last=valid_first-h-1, fit_first=fit_last-F+1.",
+    "holdout_status": "Historical development evidence; no claim of an untouched test period."
+  },
+  "training": {
+    "loss": "0.5 equal-date weighted MSE of rank targets + 0.5 lambda sum of squared Linear weights",
+    "date_weights": "Each eligible fitting date has equal total weight; each eligible stock within a date receives equal weight.",
+    "penalized_parameters": "Linear weights only; biases and BatchNorm parameters excluded",
+    "optimizer": "Adam",
+    "optimizer_weight_decay": 0.0,
+    "learning_rate": 0.001,
+    "batch_size": 10000,
+    "seeds": [7, 1007, 2007, 3007, 4007],
+    "penalties": [0.00001, 0.0001, 0.001],
+    "maximum_epochs": 100,
+    "early_stopping_patience": 5,
+    "checkpoint_minimum_validation_ic_improvement": 1e-8,
+    "learning_rate_scheduler": {"name": "ReduceLROnPlateau", "mode": "max", "factor": 0.5, "patience": 2},
+    "seed_checkpoint_selection": "Each seed uses its best mean daily validation IC checkpoint under the improvement rule.",
+    "penalty_selection": "Maximum mean daily validation IC of five-seed mean predictions; exact ties choose the first declared penalty.",
+    "test_prediction": "Mean of the five selected seed predictions at the validation-selected penalty.",
+    "test_outcome_use": "No test outcomes determine preprocessing, training, stopping, penalty or architecture choices.",
+    "device": "CPU",
+    "default_threads_per_worker": 2,
+    "default_workers": 24,
+    "resource_policy": "Worker count can change after profiling without changing model identity. Thread count/runtime changes create distinct identities and block incompatible legacy reuse."
+  },
+  "phases": {
+    "nn3": {"enabled_by_default": true, "architectures": ["nn3"], "fit_sessions": [504, 252, 756], "neural_specifications": 24, "monthly_jobs": 2592, "candidate_seed_fits": 38880, "linear_baselines": 96, "evaluated_models": 120},
+    "depth": {"enabled_by_default": true, "architectures": ["nn1", "nn2", "nn3", "nn4"], "fit_sessions": [504], "neural_specifications": 32, "monthly_jobs": 3456, "candidate_seed_fits": 51840, "additional_neural_specifications_after_nn3": 24, "linear_baselines": 32, "evaluated_models": 64},
+    "width": {"enabled_by_default": false, "architectures": ["nn3_narrow", "nn3", "nn3_wide"], "fit_sessions": [504], "neural_specifications": 24, "monthly_jobs": 2592, "candidate_seed_fits": 38880, "additional_neural_specifications_after_nn3": 16, "linear_baselines": 32, "evaluated_models": 56}
+  },
+  "unique_compute_before_checkpoint_reuse": {
+    "default_nn3_and_depth": {"neural_specifications": 48, "monthly_jobs": 5184, "candidate_seed_fits": 77760},
+    "all_three_phases": {"neural_specifications": 64, "monthly_jobs": 6912, "candidate_seed_fits": 103680},
+    "reuse_rule": "Identical NN3 model/month specifications share server checkpoints across phases. Certified compatible local NN3 checkpoints can replace training under an inference-bridge receipt."
+  },
+  "pilot_policy": {
+    "training_budget": "Complete standard seeds, penalties and epoch ceiling; no reduced-budget scientific results.",
+    "reference_benchmark": "F504 raw core/textcore, January 2014, March 2015, December 2022; six jobs.",
+    "large_block_benchmark": "F756 raw textall, January 2014, March 2015, December 2022; three jobs.",
+    "architecture_pilot": "All depth phase specifications for January 2014; 32 jobs, reusable in matching full server runs.",
+    "purpose": "Check numerical behavior, elapsed time, allocation and restart behavior. Test outcomes do not alter the registered menu.",
+    "benchmark_isolation": "Benchmark outputs are isolated from scientific study registries; resource sweeps repeat identical workloads in fresh interpreters.",
+    "epoch_ceiling": "Inspect and report ceiling hits; do not silently lower budgets or discard difficult candidates."
+  },
+  "evaluation": {
+    "primary_metric": "Mean daily rank IC",
+    "secondary_metrics": ["Gross equal-weighted top-minus-bottom decile spread", "Gross lagged-capitalization-weighted top-minus-bottom decile spread"],
+    "portfolio_ties": "Fractional boundary weights; constant forecasts hold cash; at least 10 fractional stock equivalents per decile.",
+    "uncertainty": {"method": "Calendar-aware HAC for daily paired differences", "primary_lags": 5, "sensitivity_lags": [21, 63]},
+    "multiplicity": "Bonferroni within target/family/metric/period over all registered contrasts. HAC lags are sensitivities, not selected. Optional phases are declared extensions, not unadjusted searches for a winner.",
+    "family_counts_per_target_metric_period": {
+      "nn3": {"feature": 60, "estimator": 84, "history": 40},
+      "depth": {"feature": 32, "estimator": 76, "architecture": 12},
+      "width": {"feature": 28, "estimator": 60, "architecture": 8},
+      "depth_with_optional_adaptive": {"feature": 36, "estimator": 92, "architecture": 12, "adaptive": 4}
+    },
+    "feature_contrasts": "all/core, textcore/core, textall/core, textall/all within estimator and history",
+    "estimator_contrasts": "Every non-OLS versus OLS, and every NN versus each ridge/lasso/elastic-net baseline at fixed inputs/history",
+    "history_contrasts": "F252/F756 versus F504 in the NN3 phase",
+    "architecture_contrasts": "Each registered alternative versus NN3 at identical features/target/F504; no all-pairs architecture search",
+    "diagnostics": ["Year and period stability", "Size and activity groups", "Longer outcome horizons", "Parameter counts", "Training duration", "Selected epochs and epoch-ceiling hits"],
+    "economic_limitations": "Gross sorts do not account for costs or establish executable same-close returns."
+  },
+  "optional_adaptive_depth": {
+    "enabled_by_default": false,
+    "fit_sessions": 504,
+    "additional_prediction_series": 8,
+    "additional_training_required": false,
+    "selection": "Monthly maximum ensemble validation IC across all four architectures, each with its previously validation-selected penalty.",
+    "exact_ties": "Fewer trainable parameters, then declared order nn1, nn2, nn3, nn4.",
+    "benchmark": "Fixed NN3 within feature/target, in a separately declared adaptive family.",
+    "outputs": "Separate depth_adaptive report and monthly selection ledger. Fixed-depth report remains primary."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "target": "f_cumret1",
+  "benchmark": "core_rank",
+  "hac_lags": 5,
+  "inference": "two-sided normal, Bartlett HAC with small-sample correction",
+  "multiplicity": "Bonferroni over non-benchmark models, separately per metric/target/period",
+  "ties": "fractional rank intervals; constant prediction = cash; constant target = undefined IC",
+  "legs": "date-demeaned; Sharpe is descriptive, not a standalone investable portfolio",
+  "join": [
+    "date",
+    "permno"
+  ],
+  "stock_days": 3171329,
+  "days": 2768,
+  "date_range": [
+    "2012-01-03",
+    "2022-12-30"
+  ],
+  "panel": {
+    "path": "D:\\StockTwits\\Data\\text_master.pkl",
+    "bytes": 8177386900,
+    "mtime_ns": 1789170696259087400
+  },
+  "models": {
+    "core_rank": {
+      "path": "D:\\StockTwits\\Data\\predictions_linear_regression_core_rank_input=2.pkl",
+      "bytes": 134234551,
+      "mtime_ns": 1789183746178669600
+    },
+    "all_ols": {
+      "path": "D:\\StockTwits\\Data\\predictions_linear_regression_all_rank_input=53.pkl",
+      "bytes": 134234551,
+      "mtime_ns": 1789186432583946100
+    },
+    "textcore_ols": {
+      "path": "D:\\StockTwits\\Data\\predictions_linear_regression_textcore_rank_input=388.pkl",
+      "bytes": 134234551,
+      "mtime_ns": 1789183864110402900
+    },
+    "textcore_ridge_rc": {
+      "path": "D:\\StockTwits\\Data\\predictions_ridge_textcore_rank_rc_input=388.pkl",
+      "bytes": 134234551,
+      "mtime_ns": 1789188504699509800
+    },
+    "textcore_enet_rc": {
+      "path": "D:\\StockTwits\\Data\\predictions_elasticnet_textcore_rank_rc_input=388.pkl",
+      "bytes": 134234551,
+      "mtime_ns": 1789189146049260500
+    },
+    "textcore_lasso_rc": {
+      "path": "D:\\StockTwits\\Data\\predictions_lasso_textcore_rank_rc_input=388.pkl",
+      "bytes": 134234551,
+      "mtime_ns": 1789187757608052200
+    },
+    "textcore_lasso_sse": {
+      "path": "D:\\StockTwits\\Data\\predictions_lasso_textcore_rank_input=388.pkl",
+      "bytes": 134234551,
+      "mtime_ns": 1789187651193700100
+    }
+  },
+  "created": "2026-09-12T20:58:34.506250",
+  "arguments": {
+    "data_dir": "D:\\StockTwits\\Data",
+    "panel": "text_master.pkl",
+    "target": "f_cumret1",
+    "models": "core_rank=D:\\StockTwits\\Data\\predictions_linear_regression_core_rank_input=2.pkl,all_ols=D:\\StockTwits\\Data\\predictions_linear_regression_all_rank_input=53.pkl,textcore_ols=D:\\StockTwits\\Data\\predictions_linear_regression_textcore_rank_input=388.pkl,textcore_ridge_rc=D:\\StockTwits\\Data\\predictions_ridge_textcore_rank_rc_input=388.pkl,textcore_enet_rc=D:\\StockTwits\\Data\\predictions_elasticnet_textcore_rank_rc_input=388.pkl,textcore_lasso_rc=D:\\StockTwits\\Data\\predictions_lasso_textcore_rank_rc_input=388.pkl,textcore_lasso_sse=D:\\StockTwits\\Data\\predictions_lasso_textcore_rank_input=388.pkl",
+    "benchmark": "core_rank",
+    "hac_lags": 5,
+    "start": "2012-01-01",
+    "end": "2022-12-31",
+    "periods": "",
+    "tweeted_only": 1,
+    "out": "reports\\data\\recovery_raw.csv"
+  },
+  "python": "3.13.11",
+  "interpreter": "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+  "code_sha256": {
+    "evaluate_predictions.py": "2380e0c8d191b763ae0d85996bd5a8e2d43c133d566ddc05ff47f2d361eab2ed",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7"
+  }
+}

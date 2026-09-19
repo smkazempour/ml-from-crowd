@@ -15,6 +15,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from prediction_metrics import align_predictions, bin_returns, hac_mean, sharpe
 
 DATA = Path(r"D:\StockTwits\Data")
 CRSP = DATA / "CRSP"
@@ -22,24 +23,13 @@ CRSP = DATA / "CRSP"
 
 def ls_returns(df, key, bins, weight):
     """Daily long-short return: top bin minus bottom bin of `key`, weights 'ew' or 'cap'."""
-    g = df.groupby("date")
-    b = np.ceil(g[key].rank(method="first", pct=True) * bins).clip(1, bins).astype(int)
-    d = df.assign(b=b)
-    d = d[d["b"].isin([1, bins])].copy()
-    w = np.ones(len(d)) if weight == "ew" else d["cap"].to_numpy(dtype=float)
-    d["w"] = w
-    d["wr"] = d["w"] * d["ret"]
-    s = d.groupby(["date", "b"]).agg(wr=("wr", "sum"), w=("w", "sum"), n=("w", "size")).reset_index()
-    s["r"] = s["wr"] / s["w"]
-    p = s.pivot(index="date", columns="b", values="r")
-    n = s.pivot(index="date", columns="b", values="n")
-    ok = (n[1] >= 10) & (n[bins] >= 10)
-    return (p[bins] - p[1]).where(ok)
+    p, _ = bin_returns(df, key, "ret", bins=bins, weight=None if weight == "ew" else "cap", min_per_bin=10)
+    return p[bins]-p[1]
 
 
 def stats(x):
     x = x.dropna()
-    return {"mean_bp": x.mean() * 1e4, "t": x.mean() / x.std() * np.sqrt(len(x)), "sharpe": x.mean() / x.std() * np.sqrt(252), "n_days": len(x)}
+    return {"mean_bp": x.mean()*1e4, "t": hac_mean(x)["t"], "sharpe": sharpe(x), "n_days": len(x)}
 
 
 def main():
@@ -53,7 +43,7 @@ def main():
 
     df = pd.read_pickle(DATA / "merged_master.pkl")[["date", "permno", "f_cumret1", "log_volume"]].copy()
     for k, f in models.items():
-        df[k] = pd.read_pickle(DATA / f).set_index("index")["prediction"]
+        df[k] = align_predictions(df, pd.read_pickle(DATA / f))
     df["date"] = pd.to_datetime(df["date"])
     df = df[(df["date"] >= a.start) & (df["date"] <= a.end) & (df["log_volume"] > 0)]
     df = df.dropna(subset=["f_cumret1"] + list(models)).copy()

@@ -1,0 +1,134 @@
+{
+  "protocol": "v1.1",
+  "status": "authorized implementation; main test results not inspected when grids were specified",
+  "question_ids": [
+    "Q1",
+    "Q2"
+  ],
+  "source_timing": "first nominal close at or after message; target close t to close t+1",
+  "primary_fit_days": 504,
+  "comparison_fit_days": [
+    252,
+    756
+  ],
+  "validation_days": 126,
+  "test_start": "2014-01",
+  "test_end": "2022-12",
+  "horizon": 1,
+  "feature_sets": [
+    "core",
+    "all",
+    "textcore",
+    "textall"
+  ],
+  "targets": [
+    "raw",
+    "dgtw"
+  ],
+  "target_transform": "centered within-date average return rank",
+  "input_transform": "centered daily scalar ranks; unranked embeddings/agreement; fit-only equal-date scaling",
+  "loss": "0.5 equal-date weighted squared error plus declared model penalty",
+  "linear_estimators": [
+    "ols",
+    "ridge",
+    "lasso",
+    "enet"
+  ],
+  "neural_architecture": [
+    128,
+    64,
+    32
+  ],
+  "ridge_alphas": [
+    1000,
+    100,
+    10,
+    1,
+    0.1,
+    0.01,
+    0.001,
+    0.0001,
+    1e-05,
+    1e-06
+  ],
+  "lasso_enet_alpha_fractions": [
+    1,
+    0.3,
+    0.1,
+    0.03,
+    0.01,
+    0.003,
+    0.001,
+    0.0003,
+    0.0001
+  ],
+  "enet_l1_ratios": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "lasso_enet_alpha_definition": "max(abs(weighted_centered_X_transpose_y))*fraction/l1_ratio; lasso ratio=1",
+  "nn_penalties": [
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "nn_seeds": [
+    7,
+    1007,
+    2007,
+    3007,
+    4007
+  ],
+  "nn_learning_rate": 0.001,
+  "nn_batch_size": 10000,
+  "nn_max_epochs": 100,
+  "nn_patience": 5,
+  "nn_selection": "validation mean daily IC of averaged seed predictions",
+  "refit_train_plus_validation": false,
+  "primary_metric": "daily Spearman IC",
+  "secondary_metrics": [
+    "equal-weight gross decile spread",
+    "lag-cap-weight gross decile spread"
+  ],
+  "minimum_ic_names": 10,
+  "minimum_fractional_names_per_decile": 10,
+  "inference": "paired calendar-aware Bartlett HAC; lags5 with21/63 sensitivity",
+  "comparison_families": [
+    "all/core, textcore/core, textall/core, and textall/all within estimator/window",
+    "estimator vs OLS within features/window; NN also vs ridge/lasso/enet within features/window",
+    "fit252/756 vs fit504 within estimator/features"
+  ],
+  "multiplicity": "Bonferroni within registered phase/target/contrast family/metric; combined NN report recomputes families including NN",
+  "specification_amendments": [
+    {
+      "stage": "linear training running; full test evaluation not yet inspected",
+      "change": "Spell out textall-versus-all in the feature family, in addition to the three noncore-versus-core comparisons.",
+      "reason": "Correct an incomplete JSON description to match the already implemented evaluator and the incremental-text research question. No training/grid change; linear feature family contains 48 comparisons per target/metric."
+    },
+    {
+      "stage": "before NN training and before full linear test evaluation",
+      "change": "Add matched NN-versus-ridge/lasso/elastic-net pairs to the estimator family, alongside the existing comparisons to OLS.",
+      "reason": "The nonlinearity question requires comparison to regularized linear models as well as OLS. All three are specified in advance rather than choosing the best linear test result. Full combined estimator family has 84 comparisons per target/metric; the linear-only family remains 36."
+    },
+    {
+      "stage": "final source-timing audit, before any full test evaluation",
+      "change": "Exclude the FTNW/permno17182 signal-date2019-03-13 raw and DGTW one-day labels, rerank that date, and rerun affected fitting/validation windows. Preserve the prediction row. Exclude known longer-horizon diagnostic labels crossing the same observed trading gap.",
+      "reason": "The imported one-day return uses the next recorded stock return on2019-03-26, nine exchange sessions later. Data correction is required by the accepted close-t-to-close-(t+h) timing convention; no model or grid was selected from test performance."
+    }
+  ],
+  "diagnostics": [
+    "year",
+    "2014-2018 and2019-2022",
+    "size terciles",
+    "activity terciles",
+    "cumulative horizons1,3,5,10,21,42,63; corruptedDGTW21excluded"
+  ],
+  "history": "2012-2022 historical results and old two-month NN pilots already inspected; no untouched holdout claimed",
+  "source_limitations": [
+    "fixed16:00close ignores early closes",
+    "h>1 fits not authorized by this h1 run specification; horizon evaluation is descriptive",
+    "gross portfolio results exclude costs/borrow"
+  ],
+  "prepared_cache": "D:/StockTwits/Code/.runs/protocol_v1_1/prepared/8f3f4eb44b399771"
+}

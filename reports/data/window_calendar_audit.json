@@ -1,0 +1,198 @@
+{
+  "created_utc": "2026-09-13T04:22:09.880158+00:00",
+  "purpose": "Read-only calendar warmup audit for proposed fixed 126-date validation and 252/504/756 actual fitting-date windows.",
+  "calendar_source": "Union of observed dates in the local full CRSP annual panels; no StockTwits row-date thinning; not an independent official exchange-calendar validation or an early-close audit.",
+  "metadata": {
+    "path": "D:\\StockTwits\\Data\\text_master.json",
+    "sha256": "abb1d9a65e9295b02d2e0c7e0e63add303fb5dd3ada86a1926bdc14b0aad1cf0",
+    "text_date_range": [
+      "2010-06-02",
+      "2023-12-29"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "D:\\StockTwits\\Data\\CRSP\\dsf_final_2010.pkl",
+      "size_bytes": 5546680272,
+      "mtime_ns": 1768932390007520600,
+      "rows": 1115087,
+      "unique_dates": 252,
+      "first_date": "2010-01-04",
+      "last_date": "2010-12-31"
+    },
+    {
+      "path": "D:\\StockTwits\\Data\\CRSP\\dsf_final_2011.pkl",
+      "size_bytes": 5390409609,
+      "mtime_ns": 1768934879977594700,
+      "rows": 1083669,
+      "unique_dates": 252,
+      "first_date": "2011-01-03",
+      "last_date": "2011-12-30"
+    },
+    {
+      "path": "D:\\StockTwits\\Data\\CRSP\\dsf_final_2012.pkl",
+      "size_bytes": 5193793890,
+      "mtime_ns": 1768937267610550800,
+      "rows": 1044142,
+      "unique_dates": 250,
+      "first_date": "2012-01-03",
+      "last_date": "2012-12-31"
+    },
+    {
+      "path": "D:\\StockTwits\\Data\\CRSP\\dsf_final_2013.pkl",
+      "size_bytes": 5135331612,
+      "mtime_ns": 1768939782614438700,
+      "rows": 1032391,
+      "unique_dates": 252,
+      "first_date": "2013-01-02",
+      "last_date": "2013-12-31"
+    },
+    {
+      "path": "D:\\StockTwits\\Data\\CRSP\\dsf_final_2014.pkl",
+      "size_bytes": 5268347631,
+      "mtime_ns": 1768942294823620600,
+      "rows": 1059131,
+      "unique_dates": 252,
+      "first_date": "2014-01-02",
+      "last_date": "2014-12-31"
+    }
+  ],
+  "calendar": {
+    "first": "2010-01-04",
+    "last": "2014-12-31",
+    "n_sessions": 1258,
+    "n_sessions_on_or_after_text_start": 1155,
+    "text_start_is_session": true
+  },
+  "rule": {
+    "b": "Last exchange session before the first test session of a calendar month",
+    "validation_start_index": "b-h-V+1",
+    "validation_end_index": "b-h",
+    "fitting_start_index": "b-2*h-V-F+1",
+    "fitting_end_index": "b-2*h-V",
+    "constraints": [
+      "fitting_end+h < validation_start",
+      "validation_end+h <= b"
+    ],
+    "required_prior_sessions": "F+V+2*h",
+    "boundary_policy": "Strict separation; h excluded start-date sessions at each boundary. No second purge."
+  },
+  "eligibility": [
+    {
+      "fitting_dates": 252,
+      "validation_dates": 126,
+      "horizon_sessions": 1,
+      "required_prior_sessions": 380,
+      "first_eligible_test_month": "2011-12",
+      "first_test_date": "2011-12-01",
+      "model_cutoff_date": "2011-11-30",
+      "fitting_start": "2010-06-02",
+      "fitting_end": "2011-05-31",
+      "validation_start": "2011-06-02",
+      "validation_end": "2011-11-29",
+      "prior_sessions_available": 380,
+      "previous_month": "2011-11",
+      "previous_month_prior_sessions": 359,
+      "strict_fit_label_end": "2011-06-01",
+      "last_validation_label_end": "2011-11-30"
+    },
+    {
+      "fitting_dates": 504,
+      "validation_dates": 126,
+      "horizon_sessions": 1,
+      "required_prior_sessions": 632,
+      "first_eligible_test_month": "2013-01",
+      "first_test_date": "2013-01-02",
+      "model_cutoff_date": "2012-12-31",
+      "fitting_start": "2010-06-29",
+      "fitting_end": "2012-06-26",
+      "validation_start": "2012-06-28",
+      "validation_end": "2012-12-28",
+      "prior_sessions_available": 651,
+      "previous_month": "2012-12",
+      "previous_month_prior_sessions": 631,
+      "strict_fit_label_end": "2012-06-27",
+      "last_validation_label_end": "2012-12-31"
+    },
+    {
+      "fitting_dates": 756,
+      "validation_dates": 126,
+      "horizon_sessions": 1,
+      "required_prior_sessions": 884,
+      "first_eligible_test_month": "2014-01",
+      "first_test_date": "2014-01-02",
+      "model_cutoff_date": "2013-12-31",
+      "fitting_start": "2010-06-29",
+      "fitting_end": "2013-06-28",
+      "validation_start": "2013-07-02",
+      "validation_end": "2013-12-30",
+      "prior_sessions_available": 903,
+      "previous_month": "2013-12",
+      "previous_month_prior_sessions": 882,
+      "strict_fit_label_end": "2013-07-01",
+      "last_validation_label_end": "2013-12-31"
+    },
+    {
+      "fitting_dates": 252,
+      "validation_dates": 126,
+      "horizon_sessions": 63,
+      "required_prior_sessions": 504,
+      "first_eligible_test_month": "2012-06",
+      "first_test_date": "2012-06-01",
+      "model_cutoff_date": "2012-05-31",
+      "fitting_start": "2010-06-03",
+      "fitting_end": "2011-06-01",
+      "validation_start": "2011-08-31",
+      "validation_end": "2012-03-01",
+      "prior_sessions_available": 505,
+      "previous_month": "2012-05",
+      "previous_month_prior_sessions": 483,
+      "strict_fit_label_end": "2011-08-30",
+      "last_validation_label_end": "2012-05-31"
+    },
+    {
+      "fitting_dates": 504,
+      "validation_dates": 126,
+      "horizon_sessions": 63,
+      "required_prior_sessions": 756,
+      "first_eligible_test_month": "2013-07",
+      "first_test_date": "2013-07-01",
+      "model_cutoff_date": "2013-06-28",
+      "fitting_start": "2010-06-29",
+      "fitting_end": "2012-06-26",
+      "validation_start": "2012-09-26",
+      "validation_end": "2013-04-01",
+      "prior_sessions_available": 775,
+      "previous_month": "2013-06",
+      "previous_month_prior_sessions": 755,
+      "strict_fit_label_end": "2012-09-25",
+      "last_validation_label_end": "2013-06-28"
+    },
+    {
+      "fitting_dates": 756,
+      "validation_dates": 126,
+      "horizon_sessions": 63,
+      "required_prior_sessions": 1008,
+      "first_eligible_test_month": "2014-07",
+      "first_test_date": "2014-07-01",
+      "model_cutoff_date": "2014-06-30",
+      "fitting_start": "2010-06-29",
+      "fitting_end": "2013-06-28",
+      "validation_start": "2013-09-30",
+      "validation_end": "2014-03-31",
+      "prior_sessions_available": 1027,
+      "previous_month": "2014-06",
+      "previous_month_prior_sessions": 1006,
+      "strict_fit_label_end": "2013-09-27",
+      "last_validation_label_end": "2014-06-30"
+    }
+  ],
+  "proposed_common_start_h1": "2014-01",
+  "proposed_common_start_h63": "2014-07",
+  "qualifications": [
+    "This is calendar warmup eligibility, conditional on point-in-time availability of features and labels.",
+    "The metadata date range alone does not establish uninterrupted daily feature coverage or adequate cross-sectional counts.",
+    "The audit reads 2010-2014 only, enough to determine initial warmup eligibility; it does not audit test-period coverage through 2022/2023.",
+    "Longer-horizon labels require their specific data-quality and availability audit, including the known 2013 DGTW-21 issue."
+  ]
+}

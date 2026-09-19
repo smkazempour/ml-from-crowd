@@ -1,0 +1,5 @@
+# Preserve frozen Python source hashes across Windows and Linux checkouts.
+*.py text eol=lf
+
+# Published reports carry byte-level provenance; do not normalize their line endings.
+reports/** -text

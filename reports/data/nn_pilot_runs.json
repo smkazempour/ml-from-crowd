@@ -1,0 +1,54 @@
+[
+  {
+    "model": "nn3_all_rank",
+    "prediction_file": ".runs\\text_nn\\nn3_all_rank_pilot_468c7c69f0ba\\predictions_nn3_all_rank_input=53.pkl",
+    "sidecar": ".runs\\text_nn\\nn3_all_rank_pilot_468c7c69f0ba\\predictions_nn3_all_rank_input=53.json",
+    "prediction_sha256": "7ef492b8c8ac2d760d239fcffe874d4a5381ffb2cffe17ee9b1183e1b7b04153",
+    "rows": 35562,
+    "months": [
+      "2012-01",
+      "2022-12"
+    ],
+    "resume_log": ".runs\\nn3_all_resume.log",
+    "run_fingerprint": "468c7c69f0ba0aeee01de8ddb830b8286b64fa477601e68c1509e62a2c429411"
+  },
+  {
+    "model": "nn3_core_rank",
+    "prediction_file": ".runs\\text_nn\\nn3_core_rank_pilot_1531ccf92276\\predictions_nn3_core_rank_input=2.pkl",
+    "sidecar": ".runs\\text_nn\\nn3_core_rank_pilot_1531ccf92276\\predictions_nn3_core_rank_input=2.json",
+    "prediction_sha256": "c96a1450c17d20091c03478fa692a80ce991e3e7fc12fc9ba17cadcaba17e36b",
+    "rows": 35562,
+    "months": [
+      "2012-01",
+      "2022-12"
+    ],
+    "resume_log": ".runs\\nn3_core_resume.log",
+    "run_fingerprint": "1531ccf9227610fe2563cc7f2a9111b87e496c86cfe09472b9109bcb05c9edfd"
+  },
+  {
+    "model": "nn3_textall_rank",
+    "prediction_file": ".runs\\text_nn\\nn3_textall_rank_pilot_00b0a4c18766\\predictions_nn3_textall_rank_input=439.pkl",
+    "sidecar": ".runs\\text_nn\\nn3_textall_rank_pilot_00b0a4c18766\\predictions_nn3_textall_rank_input=439.json",
+    "prediction_sha256": "f6a9ab45d6f78468440ecc9ced7613e317a791557dd0a3bafd178e93d95ce905",
+    "rows": 35562,
+    "months": [
+      "2012-01",
+      "2022-12"
+    ],
+    "resume_log": ".runs\\nn3_textall_resume.log",
+    "run_fingerprint": "00b0a4c187665bed8aac257b8c4a1f03acacbf9627011ef0a1b4ad059dff0391"
+  },
+  {
+    "model": "nn3_textcore_rank",
+    "prediction_file": ".runs\\text_nn\\nn3_textcore_rank_pilot_29c8b405eb7d\\predictions_nn3_textcore_rank_input=388.pkl",
+    "sidecar": ".runs\\text_nn\\nn3_textcore_rank_pilot_29c8b405eb7d\\predictions_nn3_textcore_rank_input=388.json",
+    "prediction_sha256": "f8233939119941af444977726c0756c9c0357b57b41f38252016a21ad1d97f95",
+    "rows": 35562,
+    "months": [
+      "2012-01",
+      "2022-12"
+    ],
+    "resume_log": ".runs\\nn3_textcore_resume.log",
+    "run_fingerprint": "29c8b405eb7df3a70648721484291974e9d94e3b798d22485a50856c46eaa910"
+  }
+]

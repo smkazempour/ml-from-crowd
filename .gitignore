@@ -51,6 +51,9 @@ venv.bak/
 .DS_Store
 Thumbs.db
 
+# Local experiment checkpoints, scratch arrays and logs (reports stay tracked)
+.runs/
+
 # Data files (optional - uncomment if you want to ignore large data files)
 # *.csv
 # *.xlsx

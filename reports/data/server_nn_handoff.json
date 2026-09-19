@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-09-13T16:10:48.915257+00:00",
+  "bundle": "D:\\StockTwits\\Code\\.runs\\server_nn_bundle_20260913",
+  "bundle_manifest_sha256": "2e25740caff66762fae49081d7bc26c2ca469c106636e90d8132e6a2f52f0f87",
+  "files": 496,
+  "bytes": 20202925007,
+  "legacy_nn_months": 349,
+  "unit_and_fixture_tests_passed": 37,
+  "bridge": {
+    "status": "passed",
+    "threads": 2,
+    "cases": [
+      {
+        "key": "raw|core|504|2014-01",
+        "rows": 13159,
+        "source_checkpoint": "legacy_nn/nn3_core_raw_f504_full_2a52b0995e8c_2a52b0995e8c/months/2014-01.pkl",
+        "max_absolute_errors": {
+          "mean": 0.0,
+          "scale": 0.0,
+          "constant": 0.0,
+          "prediction": 0.0
+        },
+        "absolute_tolerance": 1e-06
+      },
+      {
+        "key": "raw|textcore|504|2022-12",
+        "rows": 33260,
+        "source_checkpoint": "legacy_nn/nn3_textcore_raw_f504_full_c1a5ed9b699c_c1a5ed9b699c/months/2022-12.pkl",
+        "max_absolute_errors": {
+          "mean": 0.0,
+          "scale": 0.0,
+          "constant": 0.0,
+          "prediction": 0.0
+        },
+        "absolute_tolerance": 1e-06
+      }
+    ],
+    "scope": "Input/scaler and restored-ensemble inference only; no test outcomes or new training."
+  },
+  "real_data_import_resume": {
+    "cases": [
+      {
+        "model": "nn3_core_raw_fit504_val126",
+        "month": "2014-01",
+        "rows": 13159,
+        "import": "passed",
+        "resume_bytes_and_mtime_unchanged": true,
+        "pilot_publication": "passed",
+        "training_performed": false
+      },
+      {
+        "model": "nn3_textcore_raw_fit504_val126",
+        "month": "2022-12",
+        "rows": 33260,
+        "import": "passed",
+        "resume_bytes_and_mtime_unchanged": true,
+        "pilot_publication": "passed",
+        "training_performed": false
+      }
+    ]
+  },
+  "two_worker_dispatch": {
+    "workers": 2,
+    "imported_jobs": 2,
+    "resumed_jobs": 2,
+    "checkpoint_bytes_and_mtime_unchanged": true,
+    "training_performed": false
+  },
+  "local_active_sources_unchanged": true,
+  "local_controller_alive": true,
+  "local_training_child_alive": true,
+  "root_and_exported_package_identical": true,
+  "remote_execution_performed": false,
+  "limitations": [
+    "Windows runtime tested; actual Linux/Slurm execution remains to be validated on the server.",
+    "Server throughput and NN memory must be benchmarked on its actual CPU allocation.",
+    "Cross-platform bridge certifies saved-model inference, not bitwise equivalence of future training."
+  ]
+}

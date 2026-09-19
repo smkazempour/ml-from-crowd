@@ -1,5 +1,9 @@
 # Report 02 -- Decomposing the text signal: attention vs tag vs text, DGTW-adjusted returns, composition, value weighting
 
+> Evaluation update (2026-09-12): these are historical results. See
+> [Report 06](06_evaluation_and_nn_pilot.md) for fractional treatment of prediction ties
+> and paired Newey-West comparisons with the core benchmark. Prediction files were preserved.
+
 Date: 2026-09-11 (evening). Builds on Report 01. Data tables for every number below are in
 `reports/data/` (`decomposition_*.csv`, `composition_check.csv`, `value_weighted_check.csv`).
 All evaluations use the **common sample**: tweeted stock-days 2012-2022 with every listed

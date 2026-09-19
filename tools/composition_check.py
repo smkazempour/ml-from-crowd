@@ -20,32 +20,20 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from prediction_metrics import align_predictions, rank_correlation, hac_mean
 
 DATA = Path(r"D:\StockTwits\Data")
 CRSP = DATA / "CRSP"
-HORIZONS = [1, 3, 5, 10, 21]
+HORIZONS = [1, 3, 5, 10, 21, 42, 63]
 
 
 def rank_corr_by(df, key, ycol, by=None):
     """Mean daily Spearman between key and ycol (both ranked within date), optionally within
     groups of `by` (a column with the group label; groups are formed within each date)."""
     keys = ["date"] + ([by] if by else [])
-    df = df.dropna(subset=[key, ycol])          # a NaN target would otherwise distort the group sums
-    g = df.groupby(keys)
-    rx, ry = g[key].rank(pct=True), g[ycol].rank(pct=True)
-    tmp = pd.DataFrame({"x": rx, "y": ry, "xy": rx * ry, "x2": rx ** 2, "y2": ry ** 2})
-    for k in keys:
-        tmp[k] = df[k].to_numpy()
-    s = tmp.groupby(keys).agg(n=("x", "size"), x=("x", "sum"), y=("y", "sum"), xy=("xy", "sum"), x2=("x2", "sum"), y2=("y2", "sum"))
-    cov = s["xy"] / s["n"] - (s["x"] / s["n"]) * (s["y"] / s["n"])
-    vx = s["x2"] / s["n"] - (s["x"] / s["n"]) ** 2
-    vy = s["y2"] / s["n"] - (s["y"] / s["n"]) ** 2
-    # a day on which either side has no cross-sectional variance (e.g. a target that is constant
-    # across stocks that day) carries no ordering information: leave it out (NaN), do not divide by 0
-    ok = (s["n"] >= 10) & (vx > 0) & (vy > 0)
-    rc = pd.Series(np.where(ok, cov / np.sqrt(np.where(ok, vx * vy, 1.0)), np.nan), index=s.index)
+    rc = rank_correlation(df, key, ycol, by=keys)
     if by:
-        return rc.groupby(level=by).agg(["mean", "count"]).assign(t=lambda d: rc.groupby(level=by).mean() / rc.groupby(level=by).std() * np.sqrt(d["count"]))
+        return rc.groupby(level=by).agg(["mean", "count"]).assign(t=rc.groupby(level=by).apply(lambda s: hac_mean(s)["t"]))
     return rc
 
 
@@ -64,7 +52,7 @@ def main():
     tm = tm[(tm["date"] >= a.start) & (tm["date"] <= a.end)]
     for k, f in models.items():
         p = pd.read_pickle(DATA / f)
-        tm[k] = p.set_index("index")["prediction"]
+        tm[k] = align_predictions(tm, p)
     tm = tm.dropna(subset=["f_cumret1"] + list(models)).copy()
 
     # market cap from CRSP (permno, date)

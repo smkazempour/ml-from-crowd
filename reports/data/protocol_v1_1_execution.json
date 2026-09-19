@@ -1,0 +1,550 @@
+{
+  "protocol": "v1.1",
+  "purpose": "Execution pointers; consult the referenced live logs/status for current progress.",
+  "interpreter": "C:/Users/skazempour/AppData/Local/anaconda3/envs/py313/python.exe",
+  "working_directory": "D:/StockTwits/Code",
+  "prepared": "D:/StockTwits/Code/.runs/protocol_v1_1/prepared/8f3f4eb44b399771",
+  "linear": {
+    "status_note": "Corrected full training and evaluation complete: 96 models, 648 checkpoints, 108 months each. 468 independent checkpoints were verified and reused; 180 affected fitting/validation jobs were rerun. Report07 contains the completed comparison.",
+    "registry": "D:/StockTwits/Code/.runs/protocol_v1_1/linear/full_3314fb5ca2fe170a/registry.json",
+    "evaluation_metadata": "reports/data/protocol_v1_1_linear.json",
+    "run_directory": "D:/StockTwits/Code/.runs/protocol_v1_1/linear/full_3314fb5ca2fe170a",
+    "log": "D:/StockTwits/Code/.runs/protocol_v1_1/linear_corrected.log",
+    "expected_models": 96,
+    "expected_month_target_jobs": 648,
+    "command_arguments": [
+      "-B",
+      "-u",
+      "tools/protocol_linear.py",
+      "--prepared",
+      ".runs/protocol_v1_1/prepared/8f3f4eb44b399771",
+      "--fit-days",
+      "504",
+      "252",
+      "756",
+      "--targets",
+      "raw",
+      "dgtw",
+      "--workers",
+      "8",
+      "--threads",
+      "2"
+    ],
+    "evaluation_prefix": "reports/data/protocol_v1_1_linear",
+    "report": "reports/07_protocol_linear_results.md",
+    "superseded_run_directory": "D:/StockTwits/Code/.runs/protocol_v1_1/linear/full_de5588856ec52d96",
+    "reused_checkpoints": 468,
+    "rerun_jobs": 180,
+    "migration_audit": "D:/StockTwits/Code/.runs/protocol_v1_1/linear/full_3314fb5ca2fe170a/migration_audit.json"
+  },
+  "neural_pilot": {
+    "status_note": "Complete: all 90 candidate-seed fits, no epoch-cap hits, exact six-task resume and two restored-state checks.",
+    "runner": "tools/run_protocol_nn_pilot.py",
+    "wrapper_log": "D:/StockTwits/Code/.runs/protocol_v1_1/nn_pilot_wrapper.log",
+    "report": "reports/data/protocol_v1_1_nn_pilot.json",
+    "models": 2,
+    "months": [
+      "2014-01",
+      "2015-03",
+      "2022-12"
+    ],
+    "fit_days": 504,
+    "targets": [
+      "raw"
+    ],
+    "features": [
+      "core",
+      "textcore"
+    ],
+    "seeds": 5,
+    "epoch_ceiling": 100,
+    "purpose": "Full-budget execution/convergence/restart checks; partial coverage, not a performance comparison."
+  },
+  "neural_full": {
+    "runner": "tools/run_protocol_nn_study.py",
+    "expected_models": 24,
+    "expected_month_jobs": 2592,
+    "expected_candidate_seed_fits": 38880,
+    "combined_models": 120,
+    "evaluation_prefix": "reports/data/protocol_v1_1_combined",
+    "report": "reports/08_protocol_nn_results.md",
+    "launch_rule": "After successful linear verification and the full-budget NN pilot checks.",
+    "status_note": "Complete September 17, 2026 at 22:07:23 UTC (17:07 Central), attempt 3. All 2,592 monthly checkpoints and 24 NN3 specifications are complete. Training, combined 120-model evaluation and final report generation exited successfully; recorded final artifact SHA-256 hashes verified. Report 08 supersedes the preliminary report for full-study coverage.",
+    "controller_pid_at_launch": 17280,
+    "run_directory": "D:/StockTwits/Code/.runs/protocol_v1_1/nn_study/48b73c386ddd0dec",
+    "status": "D:/StockTwits/Code/.runs/protocol_v1_1/nn_study/48b73c386ddd0dec/status.json",
+    "launcher_log": "D:/StockTwits/Code/.runs/protocol_v1_1/nn_study_launcher_20260913T060222Z.log",
+    "launcher_errors": "D:/StockTwits/Code/.runs/protocol_v1_1/nn_study_launcher_20260913T060222Z.err",
+    "command_arguments": [
+      "-B",
+      "-u",
+      "tools/run_protocol_nn_study.py",
+      "--linear-registry",
+      ".runs/protocol_v1_1/linear/full_3314fb5ca2fe170a/registry.json",
+      "--prepared",
+      ".runs/protocol_v1_1/prepared/8f3f4eb44b399771",
+      "--workers",
+      "8",
+      "--threads",
+      "2"
+    ],
+    "training_log": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\nn_attempt_003.log",
+    "initial_validation": {
+      "phase": "train_nn",
+      "controller_pid": 17280,
+      "child_pid": 12712,
+      "all_8_source_snapshots_match": true,
+      "first_full_checkpoint_matches_pilot": {
+        "feature_set": "core",
+        "target": "raw",
+        "fit_days": 504,
+        "month": "2014-01",
+        "prediction_rows": 13159,
+        "predictions_exact": true,
+        "chosen_penalty_equal": true
+      }
+    },
+    "progress_snapshot": {
+      "observed_utc": "2026-09-18T01:38:14.976993+00:00",
+      "status": "complete",
+      "phase": "complete",
+      "attempt": 3,
+      "finished_at_utc": "2026-09-17T22:07:23+00:00",
+      "completed_month_jobs": 2592,
+      "expected_month_jobs": 2592,
+      "remaining_month_jobs": 0,
+      "completed_specifications": 24,
+      "expected_specifications": 24,
+      "completed_months_by_window": {
+        "252": 864,
+        "504": 864,
+        "756": 864
+      },
+      "combined_evaluated_models": 120,
+      "controller_alive": false,
+      "training_child_alive": false,
+      "active_workers": 0,
+      "source_hashes_unchanged": true,
+      "report08_available": true,
+      "preliminary_report_available": true,
+      "all_pipeline_exit_codes_zero": true,
+      "recorded_artifact_hashes_verified": true
+    },
+    "progress_snapshot_history": [
+      {
+        "observed_utc": "2026-09-13T15:35:02+00:00",
+        "elapsed_hours": 9.5442,
+        "completed_month_jobs": 332,
+        "expected_month_jobs": 2592,
+        "completed_specifications": 3,
+        "expected_specifications": 24,
+        "completed_seed_fits_at_snapshot": 5005,
+        "active_target": "raw",
+        "active_fit_days": 504,
+        "active_feature_set": "textall",
+        "completed_months_by_feature": {
+          "core": 108,
+          "textcore": 108,
+          "all": 108,
+          "textall": 8
+        },
+        "source_hashes_unchanged": true,
+        "errors_observed": false,
+        "rough_remaining_days": [
+          3,
+          5
+        ],
+        "estimate_note": "Approximation from completed specification durations and remaining feature/target/window mix; job-count fraction is not compute-time fraction."
+      },
+      {
+        "observed_utc": "2026-09-14T14:42:14+00:00",
+        "elapsed_hours": 32.66,
+        "completed_month_jobs": 1056,
+        "expected_month_jobs": 2592,
+        "completed_specifications": 9,
+        "expected_specifications": 24,
+        "completed_seed_fits_at_snapshot": 15901,
+        "log_scan_observed_utc": "2026-09-14T14:42:18+00:00",
+        "active_target": "raw",
+        "active_fit_days": 252,
+        "active_feature_set": "textcore",
+        "completed_months_by_window": {
+          "504": 864,
+          "252": 192,
+          "756": 0
+        },
+        "completed_months_in_active_window": {
+          "raw": {
+            "core": 108,
+            "textcore": 84,
+            "all": 0,
+            "textall": 0
+          },
+          "dgtw": {
+            "core": 0,
+            "textcore": 0,
+            "all": 0,
+            "textall": 0
+          }
+        },
+        "primary_504_all_eight_specifications_complete": true,
+        "source_hashes_unchanged": true,
+        "controller_alive": true,
+        "training_child_alive": true,
+        "active_workers": 8,
+        "threads_per_worker": 2,
+        "available_ram_gib": 27.9,
+        "heartbeat_age_seconds": 1.0,
+        "errors_observed": false,
+        "warnings_observed": false,
+        "nonfinite_log_values_observed": false,
+        "completed_fit_epoch_range": [
+          6,
+          41
+        ],
+        "completed_fit_epoch_median": 12,
+        "epoch_cap_hits": 0,
+        "primary_504_training_hours": 29.51,
+        "rough_remaining_days": [
+          2,
+          3
+        ],
+        "estimate_note": "Planning estimate: roughly 12-16 hours of remaining F252 and 40-48 hours for the unstarted F756 block, plus evaluation. Actual F756 stopping behavior is unmeasured; job-count fraction is not compute-time fraction.",
+        "comparative_nn_evaluation_started": false,
+        "report08_available": false
+      },
+      {
+        "observed_utc": "2026-09-15T15:49:24.568528+00:00",
+        "status": "interrupted",
+        "elapsed_training_hours_to_last_heartbeat": 49.26,
+        "completed_month_jobs": 1752,
+        "expected_month_jobs": 2592,
+        "remaining_month_jobs": 840,
+        "completed_specifications": 16,
+        "expected_specifications": 24,
+        "completed_months_by_window": {
+          "504": 864,
+          "252": 864,
+          "756": 24
+        },
+        "active_target_at_interruption": "raw",
+        "active_fit_days_at_interruption": 756,
+        "active_feature_set_at_interruption": "core",
+        "last_completed_month_in_active_specification": "2015-12",
+        "controller_alive": false,
+        "training_child_alive": false,
+        "last_heartbeat_utc": "2026-09-15T07:17:44+00:00",
+        "last_log_write_utc": "2026-09-15T07:17:46.879127+00:00",
+        "source_hashes_unchanged": true,
+        "saved_checkpoints_verified": 1752,
+        "complete_prediction_hashes_verified": 16,
+        "integrity_failures": 0,
+        "completed_seed_fits_logged": 26354,
+        "completed_fit_epoch_range": [
+          6,
+          52
+        ],
+        "epoch_cap_hits": 0,
+        "errors_observed": false,
+        "warnings_observed": false,
+        "interrupted_month_jobs": 8,
+        "unsaved_completed_seed_fits_logged": 74,
+        "comparative_nn_evaluation_started": false,
+        "report08_available": false,
+        "restarted": false
+      },
+      {
+        "observed_utc": "2026-09-15T16:11:50.101923+00:00",
+        "status": "running",
+        "phase": "train_nn",
+        "attempt": 2,
+        "completed_month_jobs": 1768,
+        "expected_month_jobs": 2592,
+        "completed_specifications": 16,
+        "expected_specifications": 24,
+        "completed_months_by_window": {
+          "252": 864,
+          "504": 864,
+          "756": 40
+        },
+        "active_target": "raw",
+        "active_fit_days": 756,
+        "active_feature_set": "core",
+        "controller_alive": true,
+        "training_child_alive": true,
+        "reused_monthly_checkpoints": 1752,
+        "new_month_jobs_saved": 16,
+        "source_hashes_unchanged": true,
+        "errors_observed": false,
+        "report08_available": false,
+        "new_seed_fits_logged": 282,
+        "preliminary_report_available": true
+      },
+      {
+        "observed_utc": "2026-09-16T14:59:45.350395+00:00",
+        "status": "running",
+        "phase": "train_nn",
+        "attempt": 3,
+        "completed_month_jobs": 1926,
+        "expected_month_jobs": 2592,
+        "remaining_month_jobs": 666,
+        "completed_specifications": 17,
+        "expected_specifications": 24,
+        "completed_months_by_window": {
+          "252": 864,
+          "504": 864,
+          "756": 198
+        },
+        "completed_months_in_active_window": {
+          "raw": {
+            "core": 108,
+            "textcore": 90,
+            "all": 0,
+            "textall": 0
+          },
+          "dgtw": {
+            "core": 0,
+            "textcore": 0,
+            "all": 0,
+            "textall": 0
+          }
+        },
+        "active_target": "raw",
+        "active_fit_days": 756,
+        "active_feature_set": "textcore",
+        "controller_alive": true,
+        "training_child_alive": true,
+        "reused_monthly_checkpoints": 1926,
+        "checkpoint_replay_complete": true,
+        "source_hashes_unchanged": true,
+        "report08_available": false,
+        "preliminary_report_available": true,
+        "estimated_remaining_runtime_hours": [
+          35,
+          45
+        ],
+        "estimate_note": "Remaining matched F504 task time divided by 8 workers: text18.6906h plus nontext4.3006h; scale for observed F756 costs, allow scheduling and evaluation. Planning range Thursday Sep17 late evening through Friday Sep18 morning Central after Sep16 09:55 restart; interruptions invalidate wall-clock estimate.",
+        "new_seed_fits_logged": 0,
+        "active_workers": 8,
+        "heartbeat_age_seconds": 4.350411,
+        "errors_observed": false
+      }
+    ],
+    "interruption_audit": "reports/data/protocol_v1_1_interruption_audit.json",
+    "resumption": {
+      "observed_utc": "2026-09-16T14:59:45.350395+00:00",
+      "resumed_at_utc": "2026-09-16T14:55:10+00:00",
+      "attempt": 3,
+      "controller_pid": 28852,
+      "training_child_pid": 32968,
+      "status": "running",
+      "phase": "train_nn",
+      "study_fingerprint": "48b73c386ddd0dec0b78d1e46a89ace1caa18cde09252723534a459d0de644ca",
+      "saved_monthly_checkpoints_at_restart": 1926,
+      "resumed_monthly_checkpoints_verified_in_log": 1926,
+      "launcher_log": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_resume_20260916T145510Z.log",
+      "launcher_errors": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_resume_20260916T145510Z.err",
+      "training_log": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\nn_attempt_003.log",
+      "workers": 8,
+      "threads": 2,
+      "source_and_data_identity_unchanged": true,
+      "interrupted_status_archive": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\status_attempt_002_interrupted.json",
+      "recovery_launcher": {
+        "path": "tools/resume_protocol_nn_study.py",
+        "sha256": "4a81327843a5bd4978348399aabde2289a4e607f14c51cb1116b57febc191a27",
+        "scope": "Only controller status updates; scientific source files, recipe and artifact writers unchanged",
+        "tests_passed": {
+          "recovery": 7,
+          "original_controller": 5
+        }
+      },
+      "command_arguments": [
+        "C:/Users/skazempour/AppData/Local/anaconda3/envs/py313/python.exe",
+        "-B",
+        "D:\\StockTwits\\Code\\tools\\resume_protocol_nn_study.py",
+        "--expected-wrapper-sha256",
+        "4a81327843a5bd4978348399aabde2289a4e607f14c51cb1116b57febc191a27",
+        "--linear-registry",
+        "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\registry.json",
+        "--prepared",
+        "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\prepared\\8f3f4eb44b399771",
+        "--workers",
+        "8",
+        "--threads",
+        "2"
+      ],
+      "preexisting_checkpoint_sizes_and_mtimes_unchanged": true,
+      "new_seed_fits_logged": 0
+    },
+    "preliminary_evaluation": {
+      "status": "complete",
+      "runner": "tools/evaluate_protocol_nn_preliminary.py",
+      "evaluation_prefix": "reports/data/protocol_v1_1_nn_preliminary",
+      "report": "reports/08a_protocol_nn_preliminary_results.md",
+      "included_nn_models": 16,
+      "included_linear_models": 64,
+      "included_fitting_windows": [
+        504,
+        252
+      ],
+      "test_period": "2014-2022",
+      "planned_family_sizes": {
+        "feature": 60,
+        "estimator": 84,
+        "history": 40
+      },
+      "completed_at": "2026-09-15T11:07:35.097138",
+      "snapshot_registry": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\registry.json",
+      "source_audit": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\source_audit.json",
+      "reconciliation": "reports/data/protocol_v1_1_nn_preliminary_reconciliation.json",
+      "report_sha256": "c83e344edb3c17272e7af633e1a33479e1bc22a70fe50d4c9ab990a2b5180cb7",
+      "validated_linear_summary_rows": 192,
+      "linear_summary_max_difference": 0.0,
+      "evaluation_seconds": 601.6064278999984
+    },
+    "resumption_history": [
+      {
+        "observed_utc": "2026-09-15T16:11:50.101923+00:00",
+        "resumed_at_utc": "2026-09-15T15:55:31+00:00",
+        "attempt": 2,
+        "controller_pid": 28636,
+        "training_child_pid": 17308,
+        "status": "running",
+        "phase": "train_nn",
+        "study_fingerprint": "48b73c386ddd0dec0b78d1e46a89ace1caa18cde09252723534a459d0de644ca",
+        "resumed_monthly_checkpoints_verified_in_log": 1752,
+        "new_month_jobs_saved": 16,
+        "new_seed_fits_logged": 282,
+        "launcher_log": "D:/StockTwits/Code/.runs/protocol_v1_1/nn_resume_20260915T155531Z.log",
+        "launcher_errors": "D:/StockTwits/Code/.runs/protocol_v1_1/nn_resume_20260915T155531Z.err",
+        "training_log": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\nn_attempt_002.log",
+        "workers": 8,
+        "threads": 2,
+        "source_and_data_identity_unchanged": true,
+        "interrupted_status_archive": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\status_attempt_001_interrupted.json"
+      }
+    ],
+    "recovery_launcher": {
+      "path": "tools/resume_protocol_nn_study.py",
+      "sha256": "4a81327843a5bd4978348399aabde2289a4e607f14c51cb1116b57febc191a27",
+      "scope": "Only controller status updates; scientific source files, recipe and artifact writers unchanged",
+      "tests_passed": {
+        "recovery": 7,
+        "original_controller": 5
+      }
+    },
+    "interruption_attempt_002_audit": "reports/data/protocol_v1_1_interruption_attempt_002.json",
+    "completion": {
+      "observed_utc": "2026-09-18T01:38:14.976993+00:00",
+      "finished_at_utc": "2026-09-17T22:07:23+00:00",
+      "finished_at_central": "2026-09-17T17:07:23-05:00",
+      "attempt": 3,
+      "study_fingerprint": "48b73c386ddd0dec0b78d1e46a89ace1caa18cde09252723534a459d0de644ca",
+      "nn_registry": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\nn\\registry_full_708e46b537a93a72.json",
+      "combined_registry": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\combined_registry.json",
+      "evaluation": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_combined",
+      "report": "D:\\StockTwits\\Code\\reports\\08_protocol_nn_results.md",
+      "models": 120,
+      "nn_models": 24,
+      "linear_models": 96,
+      "monthly_checkpoints": 2592,
+      "commands": [
+        {
+          "phase": "train_nn",
+          "command": [
+            "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+            "-B",
+            "D:\\StockTwits\\Code\\tools\\protocol_nn.py",
+            "--prepared",
+            "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\prepared\\8f3f4eb44b399771",
+            "--workers",
+            "8",
+            "--threads",
+            "2",
+            "--architecture",
+            "3",
+            "--fit-days",
+            "504",
+            "252",
+            "756",
+            "--features",
+            "core",
+            "textcore",
+            "all",
+            "textall",
+            "--targets",
+            "raw",
+            "dgtw",
+            "--start",
+            "2014-01",
+            "--end",
+            "2022-12",
+            "--seeds",
+            "5",
+            "--max-epochs",
+            "100",
+            "--out-root",
+            "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\nn"
+          ],
+          "log": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\nn_attempt_003.log",
+          "exit_code": 0
+        },
+        {
+          "phase": "evaluate",
+          "command": [
+            "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+            "-B",
+            "D:\\StockTwits\\Code\\tools\\protocol_evaluate.py",
+            "--registry",
+            "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\combined_registry.json",
+            "--prepared",
+            "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\prepared\\8f3f4eb44b399771",
+            "--out",
+            "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_combined"
+          ],
+          "log": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\evaluation_attempt_003.log",
+          "exit_code": 0
+        },
+        {
+          "phase": "report",
+          "command": [
+            "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+            "-B",
+            "D:\\StockTwits\\Code\\tools\\protocol_report.py",
+            "--registry",
+            "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\combined_registry.json",
+            "--evaluation",
+            "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_combined",
+            "--out",
+            "D:\\StockTwits\\Code\\reports\\08_protocol_nn_results.md",
+            "--title",
+            "Protocol v1.1: NN3 and matched linear results"
+          ],
+          "log": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\report_attempt_003.log",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\combined_registry.json": "4bcbe9681313408101b4e41546876b559378048c516de72aaee914bdbc786e73",
+        "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_combined.json": "39d684a83ff36354f85a1ebbd60e13d22b40bad6c5d7b5c5c2881bfcedd2bcc2",
+        "D:\\StockTwits\\Code\\reports\\08_protocol_nn_results.md": "6b624ef6428b57de48dee1178947c6487ed6d1f0f3952c5ffab5673a14bc43a4"
+      },
+      "artifact_hash_checks": {
+        "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_study\\48b73c386ddd0dec\\combined_registry.json": true,
+        "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_combined.json": true,
+        "D:\\StockTwits\\Code\\reports\\08_protocol_nn_results.md": true
+      },
+      "launcher_errors_bytes": 0,
+      "completed_at_third_attempt_elapsed_hours": 31.204
+    }
+  },
+  "resource_settings": {
+    "linear_workers": 8,
+    "threads_per_worker": 2,
+    "physical_ram_gb": 68.4,
+    "largest_linear_window_profile_peak_private_gb": 5.44,
+    "note": "Do not increase concurrency without checking peak memory. Model settings and hashes must match to reuse checkpoints.",
+    "nn_workers": 8
+  },
+  "source_correction_audit": "D:/StockTwits/Code/.runs/protocol_v1_1/prepared/8f3f4eb44b399771/horizon_repair_audit.json"
+}

@@ -1,0 +1,78 @@
+{
+  "observed_utc": "2026-09-15T15:49:24.568528+00:00",
+  "validated_monthly_checkpoints": 1752,
+  "validated_complete_prediction_hashes": 16,
+  "completed_months_by_window": {
+    "252": 864,
+    "504": 864,
+    "756": 24
+  },
+  "failures": [],
+  "validation_scope": "Each pickle loaded; specification fingerprint, task identity, finite predictions, exact expected row positions, and all three candidate/five-seed state entries checked. Published full predictions checked against recorded SHA-256.",
+  "status": "interrupted",
+  "last_heartbeat_utc": "2026-09-15T07:17:44+00:00",
+  "last_log_write_utc": "2026-09-15T07:17:46.879127+00:00",
+  "last_checkpoint_utc": "2026-09-15T07:16:40.848749+00:00",
+  "system_boot_utc": "2026-09-15T07:25:17.637962+00:00",
+  "matching_training_processes": [],
+  "source_hashes_unchanged": true,
+  "prepared_manifest_unchanged": true,
+  "linear_registry_unchanged": true,
+  "controller_python_unchanged": true,
+  "completed_seed_fits_logged": 26354,
+  "completed_fit_epoch_range": [
+    6,
+    52
+  ],
+  "epoch_cap_hits": 0,
+  "errors_observed": false,
+  "warnings_observed": false,
+  "interrupted_months": [
+    "2016-01",
+    "2016-02",
+    "2016-03",
+    "2016-04",
+    "2016-05",
+    "2016-06",
+    "2016-07",
+    "2016-08"
+  ],
+  "unsaved_completed_seed_fits_logged": 74,
+  "active_specification_at_interruption": {
+    "fit_days": 756,
+    "target": "raw",
+    "feature_set": "core"
+  },
+  "restarted": false,
+  "report08_available": false,
+  "windows_restart_evidence": [
+    {
+      "event_id": 1074,
+      "local_time": "2026-09-15T02:17:45-05:00",
+      "process": "MoUsoCoreWorker.exe",
+      "reason": "Operating System: Service pack (Planned)",
+      "shutdown_type": "restart"
+    },
+    {
+      "event_id": 1074,
+      "local_time": "2026-09-15T02:19:13-05:00",
+      "process": "TrustedInstaller.exe",
+      "reason": "Operating System: Upgrade (Planned)",
+      "shutdown_type": "restart"
+    }
+  ],
+  "resume_command_arguments": [
+    "-B",
+    "-u",
+    "tools/run_protocol_nn_study.py",
+    "--linear-registry",
+    ".runs/protocol_v1_1/linear/full_3314fb5ca2fe170a/registry.json",
+    "--prepared",
+    ".runs/protocol_v1_1/prepared/8f3f4eb44b399771",
+    "--workers",
+    "8",
+    "--threads",
+    "2"
+  ],
+  "recovery_note": "Relaunch the existing controller with the same environment and settings. It verifies/reuses completed monthly checkpoints. Eight interrupted month tasks must start again; there is no within-month seed/epoch restart."
+}

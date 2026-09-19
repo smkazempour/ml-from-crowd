@@ -1,5 +1,9 @@
 # Report 01 -- Can the text of StockTwits messages predict next-day returns? First results
 
+> Evaluation update (2026-09-12): these are historical results. See
+> [Report 06](06_evaluation_and_nn_pilot.md) for fractional treatment of prediction ties
+> and paired Newey-West comparisons with the core benchmark. Prediction files were preserved.
+
 Date: 2026-09-11. Code state: commit a0f23ab plus the figure notebook. Data on `D:\StockTwits\Data`.
 Companion notes with measurements and code-level detail: `01 - feature extraction/features_08_integration_notes.md`, Sections 8-8c.
 

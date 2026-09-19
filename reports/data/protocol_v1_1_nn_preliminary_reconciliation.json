@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "linear_model_metric_rows": 192,
+  "linear_comparison": {
+    "mean": {
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    "se": {
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    "t": {
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    "p": {
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    "ci_low": {
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    "ci_high": {
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    "n": {
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    "calendar_days": {
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    "missing_days": {
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    "hac_lags": {
+      "max_absolute_difference": 0.0,
+      "passed": true
+    }
+  },
+  "contrast_rows": 6264,
+  "planned_family_counts": {
+    "feature": 60,
+    "estimator": 84,
+    "history": 40
+  },
+  "all80models_exact_prediction_rows": 3034035,
+  "missing_prediction_rows": 0,
+  "coverage": {
+    "raw": {
+      "models": 40,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 3033080
+    },
+    "dgtw": {
+      "models": 40,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 2748978
+    }
+  },
+  "run_elapsed_seconds": 601.6064278999984
+}

@@ -1,0 +1,585 @@
+{
+  "schema_version": "protocol_v1_1_evaluation",
+  "created": "2026-09-15T11:07:35.097138",
+  "registry": {
+    "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\registry.json",
+    "bytes": 702789,
+    "mtime_ns": 1789487987941776200
+  },
+  "prepared": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\prepared\\8f3f4eb44b399771",
+  "prepared_manifest_sha256": "1af41eb7a92181be66446ca63477c150d9838d15fbd1ed78cf2d9fb02ec6fdd4",
+  "source_limitations": [
+    "nominal 16:00 message routing ignores early closes",
+    "ar_dgtw_21 has known 2013 panel corruption; crsp_ar_dgtw_21 is separately retained",
+    "h>1 imported labels and factor-CAR completeness not certified"
+  ],
+  "arguments": {
+    "registry": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\registry.json",
+    "prepared": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\prepared\\8f3f4eb44b399771",
+    "out": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_nn_preliminary",
+    "start": "2014-01-01",
+    "end": "2022-12-31",
+    "cap_column": "cap",
+    "diagnostic_fit_days": 504,
+    "skip_horizons": true,
+    "skip_subgroups": true
+  },
+  "prediction_sources": {
+    "ols_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487887799937200
+    },
+    "ridge_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487888213944300
+    },
+    "lasso_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487888644482400
+    },
+    "enet_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487889047820600
+    },
+    "ols_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487889432670200
+    },
+    "ridge_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487889826403100
+    },
+    "lasso_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487890243524400
+    },
+    "enet_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487890636208800
+    },
+    "ols_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487891020073900
+    },
+    "ridge_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487891451876600
+    },
+    "lasso_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487891859696000
+    },
+    "enet_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487892237683700
+    },
+    "ols_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487892629334800
+    },
+    "ridge_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487893023665300
+    },
+    "lasso_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487893416240800
+    },
+    "enet_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487893758304700
+    },
+    "ols_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487899592676100
+    },
+    "ridge_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487899991457100
+    },
+    "lasso_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487900393649300
+    },
+    "enet_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487900795831400
+    },
+    "ols_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487901194227700
+    },
+    "ridge_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487901621490500
+    },
+    "lasso_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487902032202000
+    },
+    "enet_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487902407793400
+    },
+    "ols_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487902732364200
+    },
+    "ridge_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487902982991400
+    },
+    "lasso_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487903280301800
+    },
+    "enet_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487903496071600
+    },
+    "ols_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487903727141500
+    },
+    "ridge_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487904012103700
+    },
+    "lasso_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487904258646100
+    },
+    "enet_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487904696936500
+    },
+    "nn3_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_core_raw_fit504_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487911414997700
+    },
+    "nn3_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_all_raw_fit504_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487912104213200
+    },
+    "nn3_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_textcore_raw_fit504_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487912532115200
+    },
+    "nn3_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_textall_raw_fit504_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487912952511700
+    },
+    "nn3_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_core_raw_fit252_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487913384472700
+    },
+    "nn3_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_all_raw_fit252_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487914138246500
+    },
+    "nn3_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_textcore_raw_fit252_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487914855436000
+    },
+    "nn3_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_textall_raw_fit252_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487915597952500
+    },
+    "ols_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487894011543200
+    },
+    "ridge_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487894251111800
+    },
+    "lasso_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487894458287800
+    },
+    "enet_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487894684709900
+    },
+    "ols_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487894916995000
+    },
+    "ridge_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487895147035300
+    },
+    "lasso_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487895572009500
+    },
+    "enet_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487895986446900
+    },
+    "ols_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487896426809600
+    },
+    "ridge_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487896815956300
+    },
+    "lasso_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487897198131200
+    },
+    "enet_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487897629757200
+    },
+    "ols_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487898027803500
+    },
+    "ridge_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487898402472600
+    },
+    "lasso_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487898802089000
+    },
+    "enet_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487899203438300
+    },
+    "ols_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487905068383900
+    },
+    "ridge_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487905466622500
+    },
+    "lasso_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487905835626800
+    },
+    "enet_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487906223693400
+    },
+    "ols_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487906627964700
+    },
+    "ridge_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487907030103000
+    },
+    "lasso_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487907403884700
+    },
+    "enet_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487907796163300
+    },
+    "ols_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487908182534000
+    },
+    "ridge_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487908567854600
+    },
+    "lasso_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487908964835300
+    },
+    "enet_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487909360953900
+    },
+    "ols_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ols_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487909782689200
+    },
+    "ridge_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\ridge_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487910180914200
+    },
+    "lasso_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\lasso_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487910583000600
+    },
+    "enet_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\enet_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789487911008054000
+    },
+    "nn3_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_core_dgtw_fit504_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487911822040800
+    },
+    "nn3_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_all_dgtw_fit504_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487912316117000
+    },
+    "nn3_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487912743440900
+    },
+    "nn3_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_textall_dgtw_fit504_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487913181909800
+    },
+    "nn3_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_core_dgtw_fit252_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487913697551000
+    },
+    "nn3_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_all_dgtw_fit252_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487914470967000
+    },
+    "nn3_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487915215254300
+    },
+    "nn3_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\predictions\\nn3_textall_dgtw_fit252_val126.pkl",
+      "bytes": 104881822,
+      "mtime_ns": 1789487915945515500
+    }
+  },
+  "coverage": {
+    "raw": {
+      "models": 40,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 3033080
+    },
+    "dgtw": {
+      "models": 40,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 2748978
+    }
+  },
+  "output_files": {
+    "summary": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_nn_preliminary.csv",
+      "bytes": 46730,
+      "mtime_ns": 1789488450719407600
+    },
+    "_daily": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_nn_preliminary_daily.csv",
+      "bytes": 49538670,
+      "mtime_ns": 1789488454850197900
+    },
+    "_yearly": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_nn_preliminary_yearly.csv",
+      "bytes": 424356,
+      "mtime_ns": 1789488454909916000
+    },
+    "_periods": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_nn_preliminary_periods.csv",
+      "bytes": 145911,
+      "mtime_ns": 1789488454927548900
+    },
+    "_contrasts": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_nn_preliminary_contrasts.csv",
+      "bytes": 1603036,
+      "mtime_ns": 1789488455054940700
+    },
+    "_coverage": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_nn_preliminary_coverage.csv",
+      "bytes": 6364,
+      "mtime_ns": 1789488455061021800
+    },
+    "_deciles": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_nn_preliminary_deciles.csv",
+      "bytes": 251300,
+      "mtime_ns": 1789488455085625200
+    },
+    "_subgroups": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_nn_preliminary_subgroups.csv",
+      "bytes": 2,
+      "mtime_ns": 1789488455089479000
+    },
+    "_horizons": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\protocol_v1_1_nn_preliminary_horizons.csv",
+      "bytes": 2,
+      "mtime_ns": 1789488455092521700
+    }
+  },
+  "common_sample": "Joint finite predictions across every registered model within each target; then observed outcome",
+  "primary_metric": "rank_ic",
+  "secondary_metrics": [
+    "ew_spread_bp",
+    "cap_spread_bp"
+  ],
+  "multiplicity": "Bonferroni denominators retained from all120 planned models within target/family/metric/period; no interim-look correction",
+  "contrast_families": "Feature: noncore versus core plus textall versus all. Estimator: every non-OLS versus OLS, plus every NN versus each ridge/lasso/enet at fixed inputs/history. History: each non-F504 versus F504.",
+  "inference": "Two-sided normal Bartlett HAC, n/(n-1) correction, missing trading sessions retain actual calendar distance",
+  "hac_lags": [
+    5,
+    21,
+    63
+  ],
+  "min_ic_stocks": 10,
+  "minimum_fractional_stocks_per_decile": 10,
+  "capitalization": "cap",
+  "ties": "Fractional rank intervals; constant forecasts hold cash",
+  "legs": "Raw realized target returns and target returns demeaned by that scope/day's unweighted eligible-stock mean; cash stays zero",
+  "portfolio_limit": "Descriptive gross sorts. No attainable same-close execution, turnover, costs, factor alpha, or investment claim.",
+  "subgroups": "F504 by default; contemporaneous midrank terciles before outcome filtering; equal values stay together",
+  "horizons": "F504 forecasts trained on h1 evaluated against cumulative close-t-to-close-(t+h) returns; not disjoint future-return intervals or h-specific fits",
+  "skipped_horizons": [],
+  "python": "3.13.11",
+  "interpreter": "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+  "code_sha256": {
+    "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7"
+  },
+  "preliminary": true,
+  "included_models": 80,
+  "included_nn_models": 16,
+  "included_linear_models": 64,
+  "included_windows": [
+    504,
+    252
+  ],
+  "primary_window": 504,
+  "sensitivity_window": 252,
+  "planned_models": 120,
+  "excluded_models": 40,
+  "excluded_scope": "All F756:8 NN3 and32 matched linear models; excluded before scoring",
+  "pending_diagnostics": "Subgroups and longer horizons not yet computed in this interim evaluation",
+  "planned_family_counts": {
+    "raw": {
+      "history": 40,
+      "feature": 60,
+      "estimator": 84
+    },
+    "dgtw": {
+      "history": 40,
+      "feature": 60,
+      "estimator": 84
+    }
+  },
+  "observed_family_counts": {
+    "feature": 40,
+    "estimator": 56,
+    "history": 20
+  },
+  "absent_contrasts_per_target_metric_period": {
+    "feature": 20,
+    "estimator": 28,
+    "history": 20
+  },
+  "annual_contrasts": "Descriptive stability diagnostics; same planned family sizes within each year, not corrected across years or interim looks",
+  "interpretation": "Interim disclosure, not model or architecture selection; keep remaining experiment fixed",
+  "frozen_code_sha256": {
+    "run_protocol_nn_study.py": "854de2760eb90a9b5a9f891331dd5cc0ca66ba5c217c43b324f53be7622ef5ad",
+    "protocol_nn.py": "bcb3b39c9df07a3bace200763a89eb54d691a32db49e9a62648a54d9816cdc11",
+    "protocol_nn_metrics.py": "524620514fb0bf024fa4d8bb5bfa179739338e6e4e34b47faddbeb938fc8bfb9",
+    "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+    "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83",
+    "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+    "protocol_report.py": "08ada6f288984714ec9adf0421fd160d399fca4ef5f20c5c94fd80ccdbee201a"
+  },
+  "wrapper_sha256": "ad6a71558d5e8effac57ca1f53521ccc6bbbfb88d18e0c92975df13ad22b0038",
+  "source_audit": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\nn_preliminary\\20260915T155756561635Z\\source_audit.json",
+  "numerical_threads": 1,
+  "priority": "below_normal",
+  "free_gib_before_scoring": 36.073429107666016,
+  "elapsed_seconds": 601.6064278999984,
+  "output_sha256": {
+    "protocol_v1_1_nn_preliminary.csv": "678d0b8875482bd225ee5ad22698ef9b221882bd2c12e73fb60d1e63cb443987",
+    "protocol_v1_1_nn_preliminary_contrasts.csv": "1a64748e80b97a53be9403e78ac61b480ba5ccfa1aeaec180bfc9602707167ba",
+    "protocol_v1_1_nn_preliminary_coverage.csv": "585ec8a2fbb6a4103e1c91fca352e2d046628f3de01f46fd3038d1e7b310e61d",
+    "protocol_v1_1_nn_preliminary_daily.csv": "2faa42762c7c34c6569784483e4e42ccde0dddc8c233a8629c20a036783cc8cd",
+    "protocol_v1_1_nn_preliminary_deciles.csv": "7eeb8c9506ca97b948006b2e54573e9b4aa47acd451f9375db93ced38bace66c",
+    "protocol_v1_1_nn_preliminary_horizons.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "protocol_v1_1_nn_preliminary_periods.csv": "a754dce232cc2a1d24c01fbea32f6cbdab61ba11f429edaf03bed487bdeccf4c",
+    "protocol_v1_1_nn_preliminary_subgroups.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "protocol_v1_1_nn_preliminary_yearly.csv": "d90b4e322589dbe2af34802dce0142ddcab1d44a2c3edcb59f99ffee5fd5c9e8",
+    "protocol_v1_1_nn_preliminary_yearly_contrasts.csv": "1f725c8c4ca5a0f887e084a69d9c617763f3e30d9818706d7d529db7e7dc7f33"
+  }
+}

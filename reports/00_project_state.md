@@ -1,7 +1,49 @@
-# Project state -- StockTwits text and return prediction (as of 2026-09-12)
+# Project state -- StockTwits text and return prediction (as of 2026-09-19)
 
-Read this first in a new session. Detailed results: Reports 01-03 in this folder; code-level
+**Completed study:** [Report 08](08_protocol_nn_results.md) contains the full
+120-model comparison: 24 NN3 specifications and 96 matched linear specifications.
+All 2,592 NN monthly checkpoints, evaluation and report generation completed on
+September 17 at 17:07 Central. [NN_RUN_STATUS.md](NN_RUN_STATUS.md) records completion
+and the two earlier interruptions. The sections below retain the historical
+social-only design; stock characteristics and return-history conditioning are the
+next experiment, before any further window optimization or neural-network runs.
+
+**Research-design update (2026-09-12):** [RESEARCH_QUESTIONS.md](RESEARCH_QUESTIONS.md)
+preserves Q1–Q6 and potential paper directions, including news, fundamentals and aggregate
+markets. [EXPERIMENTAL_PROTOCOL.md](EXPERIMENTAL_PROTOCOL.md) defines common timing,
+transformation, split, loss and comparison rules, with task-specific extensions and an
+explicit implementation-gap list. These are the adopted standards; historical model outputs
+retain their historical specifications. Core OLS remains the reference for the current
+stock-return track; future questions require the corresponding market/news/fundamental
+benchmarks. The sections below describe the narrower historical pipeline.
+Protocol v1.1 specifies 504 actual fitting dates plus 126 validation dates, with
+252/756 fitting-date comparisons on the same validation/test periods. The code-backed
+[timing convention](TIMING_CONVENTION.md) keeps t as the first assigned close and
+targets close t to close t+h; it documents exact label-maturity gaps and current
+calendar/target limitations. The window design is now implemented in shared
+`tools/protocol_data.py`, with matched OLS/ridge/lasso/elastic-net and NN runners.
+The revised full linear comparison is complete: 96 specifications, 648 month-target
+jobs and 108 test months, evaluated on the corrected common samples in
+[Report 07](07_protocol_linear_results.md). At the primary 504-session window, text
+improves rank IC for ridge, lasso and elastic net on both targets after the registered
+multiple-testing adjustment. Text + core has lower equal-weighted decile spreads than
+core alone. These findings do not establish net trading profitability.
+The [NN status note](NN_RUN_STATUS.md) tracks the subsequent matched NN3 study.
+See `data/protocol_v1_1_experiment.json` for the frozen grids; 67 automated checks and
+all 73 notebook schema checks passed. The original source data remain unchanged;
+the prepared cache excludes one invalid one-day return and associated gap-crossing
+diagnostic labels, with the correction and rerun provenance recorded in Report 07.
+
+Read this first in a new session. Current linear results: Report 07. Historical results: Reports 01-03
+(Report 04 = methodology review of Gu-Kelly-Xiu 2020 and Chen-Kelly-Xiu 2022); code-level
 history: `01 - feature extraction/features_08_integration_notes.md`.
+
+**Recovery update (2026-09-12):** Report 06 (`06_evaluation_and_nn_pilot.md`) gives the
+corrected benchmark comparisons and the NN pilot validation. Reports 01-03 retain the
+historical tables. The current evaluator uses fractional ties, cash on constant-prediction
+days, economic-key joins and paired Newey-West tests. Its decile spreads supersede the
+older row-order tie breaks. NN pilot artifacts and logs live under `Code/.runs/`, isolated
+from the existing predictions in `Data/`.
 
 ## 1. Question and benchmark convention
 
@@ -78,8 +120,13 @@ Targets: raw next-day return `f_cumret1` and the DGTW-adjusted `ar_dgtw_1`.
 3. **Text + core** (`textcore`) keeps both: 0.037 / 22.6 bp with OLS, **0.040 / 23 bp with
    ridge or elastic net**, 0.038 / 25 bp with lasso. The other 51 features add nothing.
    Regularisation does nothing for the non-text features.
-4. Robust to the DGTW benchmark (ordering unchanged, text t-stats highest), keeps accruing out
-   to 63 days with the text's lead over the benchmark widening (Report 02, horizon table), strengthens with the amount of text (0.013 on single-message days to 0.084 on
+   Here “51” means the additional columns in the current 53-feature table (groups 01-04).
+   The cohort/conviction features in `features_05` have code but no output pickle in the
+   current data, and were not tested by these comparisons. Report 06 finds significant
+   incremental rank correlation, but no spread improvement surviving its Bonferroni tests.
+4. Robust to the DGTW benchmark (ordering unchanged, text t-stats highest), with positive
+   cumulative-horizon correlations out to 63 days (Report 02; descriptive overlapping
+   outcomes, not a test of when the return is earned), strengthens with the amount of text (0.013 on single-message days to 0.084 on
    >30-message days); the rise over time is composition, not learning.
 5. **Cap-weighted over the whole tweeted universe, every model earns ~0, benchmark included.**
    The predictability lives in small caps (within-small-cap cap-weighted spreads 14-40 bp/day).
@@ -111,3 +158,25 @@ Targets: raw next-day return `f_cumret1` and the DGTW-adjusted `ar_dgtw_1`.
    after the close versus during the day; the 21 bp reversal after heavy bullish chatter.
 6. Housekeeping: delete the stale C: copy once confirmed; remove the inert `TEXT_VARIANT`
    plumbing; the `05` registry's LASSO entries point at files that do not exist.
+7. **Nonlinear models on the text track** (added 2026-09-12): neural networks first, then
+   gradient-boosted trees and random forests, all on `textcore` with the rank target and
+   measured against the core-OLS benchmark. Follow the Gu-Kelly-Xiu recipe (1-3 hidden layers,
+   ReLU, batch normalisation, Adam with early stopping on the last 20% of the window, weight
+   penalty, 5-10 seed ensemble; shallow trees with depth tuned on the same split). The
+   existing `03d` notebooks were built for the 2/53-feature panel (sklearn `MLPRegressor`,
+   constant predictions on 2 features) and `03b`/`03c` are empty; new notebooks should read
+   `text_master.pkl` and register in 04/05 like the linear text models. Give the trees a
+   PLS/PCA-compressed text input as an optional comparison with the raw 388 columns.
+   Report 04 describes strong raw-embedding forest results in the revised CKX paper.
+   Details and priorities: `reports/04_methodology_gkx_ckx.md`
+   Section 3, items 6-7 and 11.
+8. **Methodology adoptions from Gu-Kelly-Xiu (2020) and Chen-Kelly-Xiu (2022)** (review
+   written 2026-09-12, `reports/04_methodology_gkx_ckx.md`). In order: pairwise
+   Diebold-Mariano-type test of every model against the benchmark (daily differences in rank
+   correlation / spread, Newey-West); past-return controls in the benchmark; equal day
+   weighting and a Fama-MacBeth ridge option; PLS/PCR on the text; Huber loss on the return
+   target; portfolio reporting (predicted vs realised deciles, long/short legs, annualised
+   Sharpe, turnover, drawdown, 10/20 bp costs, micro-cap exclusion); overnight vs intraday
+   target split and skip-a-day test; corpus hygiene for the re-encode (single-cashtag,
+   minimum length, near-duplicate flag); ensemble of the working models; tag-supervised vs
+   market-reaction-supervised sentiment scores; 2022-2023 as the post-encoder-cutoff check.
