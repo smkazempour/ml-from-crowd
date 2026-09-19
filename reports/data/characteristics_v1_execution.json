@@ -1,0 +1,287 @@
+{
+  "experiment_id": "characteristics_v1",
+  "recorded_at": "2026-09-19T17:36:09+00:00",
+  "record_type": "launch_snapshot_not_live_status",
+  "baseline_commit": "9ac568e",
+  "controller_pid_at_launch": 9532,
+  "workers": 6,
+  "threads_per_worker": 2,
+  "live_status_path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\status.json",
+  "launch_stdout": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\launch_20260919T173229Z.log",
+  "launch_stderr": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\launch_20260919T173229Z.err",
+  "resume_command": [
+    "C:/Users/skazempour/AppData/Local/anaconda3/envs/py313/python.exe",
+    "-B",
+    "tools/run_characteristic_study.py",
+    "--prepared",
+    ".runs/characteristics_v1/prepared/35ef3a5eb0cb5e42",
+    "--workers",
+    "6",
+    "--threads",
+    "2"
+  ],
+  "launch_status": {
+    "status": "running",
+    "phase": "train_linear",
+    "pid": 9532,
+    "child_pid": 11168,
+    "attempt": 1,
+    "started_at": "2026-09-19T17:32:29+00:00",
+    "fingerprint": "d20631f4712e3eb5fef7faace788adcd5e490f252dda7bea4c83fb97adbe2904",
+    "run_dir": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5",
+    "commands": [
+      {
+        "phase": "implementation_pilot",
+        "command": [
+          "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+          "-B",
+          "D:\\StockTwits\\Code\\tools\\characteristic_linear.py",
+          "--prepared",
+          "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+          "--linear-registry",
+          "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\registry.json",
+          "--threads",
+          "2",
+          "--out-root",
+          "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear",
+          "--fit-days",
+          "504",
+          "--months",
+          "2014-01",
+          "2022-12",
+          "--workers",
+          "2"
+        ],
+        "log": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\pilot_attempt_001.log",
+        "started_at": "2026-09-19T17:32:37+00:00",
+        "finished_at": "2026-09-19T17:34:03+00:00",
+        "exit_code": 0
+      }
+    ],
+    "updated_at": "2026-09-19T17:36:03+00:00",
+    "prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+    "prepared_manifest_sha256": "4d7fc5a6edd68b85effd5f7aaf84accf9c93fcc7a96317702fad0b579a9765d3",
+    "command": [
+      "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+      "-B",
+      "D:\\StockTwits\\Code\\tools\\characteristic_linear.py",
+      "--prepared",
+      "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+      "--linear-registry",
+      "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\registry.json",
+      "--threads",
+      "2",
+      "--out-root",
+      "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear",
+      "--fit-days",
+      "504",
+      "252",
+      "756",
+      "--workers",
+      "6"
+    ],
+    "log": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear_attempt_001.log",
+    "last_exit_code": 0,
+    "pilot_registry": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\pilot_92f5f0565c46246d\\registry.json"
+  },
+  "study_identity": {
+    "experiment": {
+      "experiment_id": "characteristics_v1",
+      "declared_date": "2026-09-19",
+      "research_questions": [
+        "Q3",
+        "Q1"
+      ],
+      "parent_commit": "9ac568e",
+      "parent_prepared": ".runs/protocol_v1_1/prepared/8f3f4eb44b399771",
+      "parent_linear_registry": ".runs/protocol_v1_1/linear/full_3314fb5ca2fe170a/registry.json",
+      "characteristic_source": "D:/StockTwits/Data/CRSP/dsf.pkl",
+      "universe": "Exactly the existing social-data-covered prepared keys; no characteristic complete-case selection",
+      "information_clock": "Observed by signal close t; outcomes close t to close t+1",
+      "feature_sets": [
+        "core",
+        "all",
+        "textcore",
+        "textall",
+        "characteristics",
+        "characteristics_sentiment",
+        "characteristics_attention",
+        "characteristics_core",
+        "characteristics_all",
+        "characteristics_textcore",
+        "characteristics_textall"
+      ],
+      "market_control_count": 17,
+      "market_control_missingness_indicators": 17,
+      "market_controls": [
+        "ret1",
+        "ret5",
+        "ret21",
+        "ret63",
+        "ret126",
+        "ret252",
+        "momentum252_skip21",
+        "log_market_cap",
+        "log_price",
+        "turnover1",
+        "turnover21",
+        "log_dollar_volume1",
+        "log_dollar_volume21",
+        "volatility21",
+        "volatility63",
+        "max_return21",
+        "amihud21"
+      ],
+      "accounting_predictors": "Excluded pending point-in-time availability audit; legacy bm has no publication lag",
+      "primary_target": "raw",
+      "targets": [
+        "raw",
+        "dgtw"
+      ],
+      "dgtw_limitation": "Inherited upstream characteristic-sort accounting availability is not certified point in time",
+      "estimators": [
+        "ols",
+        "ridge",
+        "lasso",
+        "enet"
+      ],
+      "primary_fit_days": 504,
+      "fit_days": [
+        504,
+        252,
+        756
+      ],
+      "validation_days": 126,
+      "test_start": "2014-01",
+      "test_end": "2022-12",
+      "test_months": 108,
+      "refit_on_validation": false,
+      "training_and_selection": "Unchanged protocol_linear.py grid_specification and protocol_data.py transformations/make_tasks; hashes recorded at launch",
+      "new_feature_sets": 7,
+      "new_model_specifications": 168,
+      "reused_social_only_specifications": 96,
+      "total_model_specifications": 264,
+      "month_target_history_checkpoints": 648,
+      "primary_metric": "rank_ic",
+      "secondary_metrics": [
+        "ew_spread_bp",
+        "cap_spread_bp"
+      ],
+      "hac_lags": [
+        5,
+        21,
+        63
+      ],
+      "periods": [
+        "full",
+        "2014-2018",
+        "2019-2022"
+      ],
+      "incremental_social_edges": [
+        [
+          "characteristics_sentiment",
+          "characteristics"
+        ],
+        [
+          "characteristics_attention",
+          "characteristics"
+        ],
+        [
+          "characteristics_core",
+          "characteristics"
+        ],
+        [
+          "characteristics_core",
+          "characteristics_sentiment"
+        ],
+        [
+          "characteristics_core",
+          "characteristics_attention"
+        ],
+        [
+          "characteristics_all",
+          "characteristics_core"
+        ],
+        [
+          "characteristics_textcore",
+          "characteristics_core"
+        ],
+        [
+          "characteristics_textall",
+          "characteristics_all"
+        ],
+        [
+          "characteristics_textall",
+          "characteristics_textcore"
+        ],
+        [
+          "characteristics_all",
+          "characteristics"
+        ],
+        [
+          "characteristics_textcore",
+          "characteristics"
+        ],
+        [
+          "characteristics_textall",
+          "characteristics"
+        ]
+      ],
+      "family_sizes_per_target_metric_period": {
+        "incremental_social": 144,
+        "conditioning": 48,
+        "estimator": 99,
+        "history": 88
+      },
+      "deferred": [
+        "window optimization",
+        "new penalty grids",
+        "alternative target/loss searches",
+        "neural-network designs"
+      ],
+      "report": "reports/09_characteristic_linear_results.md",
+      "evaluation_prefix": "reports/data/characteristics_v1_linear"
+    },
+    "specification_sha256": "3302ecc1b2a7c498cf8c51f4fd1ecbd3310d7c2759c1ed7a2b2be8a2e338fdd6",
+    "parent": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\prepared\\8f3f4eb44b399771",
+    "parent_manifest_sha256": "1af41eb7a92181be66446ca63477c150d9838d15fbd1ed78cf2d9fb02ec6fdd4",
+    "linear_registry": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\registry.json",
+    "linear_registry_sha256": "514747508660e1c2f2358c3f05d70a02b624e5ab09ccb64d61f55b667b17fcbb",
+    "source": "D:\\StockTwits\\Data\\CRSP\\dsf.pkl",
+    "source_size": 6354579994,
+    "source_mtime_ns": 1768870859596270800,
+    "threads": 2,
+    "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:21:58) [MSC v.1929 64 bit (AMD64)]",
+    "code": {
+      "run_characteristic_study.py": "42e50d5e7bb0e1642a1168d3a78ab884c7305c78593fc49194a048053c05300e",
+      "characteristic_data.py": "7e16e9e77250f6dbc258d0ba536bd032aed844fcf940c8515ca9b3186a1c88dd",
+      "characteristic_linear.py": "6ef9ed71336c723312e0b6a27ad33d8d974ac8b7afda51289d37dc53134ba1ff",
+      "characteristic_evaluate.py": "51fd7102a5e5c8b327bd13ec646eab5cb5f908f11d0dd7d74663cb04eeeb8a84",
+      "characteristic_report.py": "a42834b5d6c14cfef09f48b1d53e6e39050a528b0e130b3373b2769c2e403da6",
+      "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+      "protocol_linear.py": "9033999dcbe9375bff43213908aa4f2e3bedf81eeb53fd2123f0f20007cc8eb5",
+      "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+      "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+      "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83",
+      "resume_protocol_nn_study.py": "4a81327843a5bd4978348399aabde2289a4e607f14c51cb1116b57febc191a27"
+    },
+    "supplied_prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+    "supplied_prepared_manifest_sha256": "4d7fc5a6edd68b85effd5f7aaf84accf9c93fcc7a96317702fad0b579a9765d3"
+  },
+  "validation": {
+    "tools_tests_passed": 110,
+    "new_tools_tests": 32,
+    "server_tests_passed_before_baseline_commit": 32,
+    "implementation_pilot_jobs_passed": 4,
+    "implementation_pilot_fit_seconds": {
+      "raw_2014-01": 12.7,
+      "dgtw_2014-01": 10.8,
+      "raw_2022-12": 33.5,
+      "dgtw_2022-12": 30.2
+    },
+    "reused_social_only_models_verified": 96
+  },
+  "performance_results_available": false,
+  "full_fit_directory": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57",
+  "saved_monthly_checkpoints_at_recording": 18
+}

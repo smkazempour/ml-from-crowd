@@ -9,6 +9,13 @@ Text improves return ranking, but equal-weighted portfolio gains are not establi
 The [complete NN3 comparison](reports/08_protocol_nn_results.md) finished September 17, 2026:
 24 NN3 specifications across all three fitting windows, evaluated alongside 96 linear models.
 Completion evidence and run history are in [reports/NN_RUN_STATUS.md](reports/NN_RUN_STATUS.md).
+The current experiment adds past returns and market-based stock characteristics to
+the linear models, with a characteristic-only benchmark and separate sentiment and
+attention increments. See [the fixed design](reports/CHARACTERISTIC_EXPERIMENT.md),
+[run status](reports/CHARACTERISTIC_RUN_STATUS.md), and
+[reproduction instructions](tools/CHARACTERISTIC_STUDY.md).
+Window optimization and further neural-network designs are deferred until these
+linear results are available.
 The [preliminary NN3 report](reports/08a_protocol_nn_preliminary_results.md) remains available
 as the earlier snapshot covering only the 504- and 252-session windows.
 For a separate server run that finishes NN3 and compares network depth, use

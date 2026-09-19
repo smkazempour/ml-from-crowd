@@ -5,8 +5,21 @@
 All 2,592 NN monthly checkpoints, evaluation and report generation completed on
 September 17 at 17:07 Central. [NN_RUN_STATUS.md](NN_RUN_STATUS.md) records completion
 and the two earlier interruptions. The sections below retain the historical
-social-only design; stock characteristics and return-history conditioning are the
-next experiment, before any further window optimization or neural-network runs.
+social-only design. The characteristic-conditioned linear experiment is now running,
+before any further window optimization or neural-network runs. Its
+[fixed design](CHARACTERISTIC_EXPERIMENT.md) covers 264 specifications, including a
+characteristic-only benchmark, separate sentiment and attention additions, and the
+original social-only models on exactly the same stock-days. See
+[current run status](CHARACTERISTIC_RUN_STATUS.md) and
+[reproduction instructions](../tools/CHARACTERISTIC_STUDY.md).
+Market-based characteristics are available; accounting predictors are deferred
+because the legacy book-to-market merge lacks publication-date timing.
+
+**Current comparison convention:** Report 09 will measure social information relative
+to a matched characteristic-only model, and the effect of adding characteristics
+relative to each matched social-only model. The core-only OLS benchmark below remains
+part of the historical social-only analyses; it is not the sole benchmark for this
+new experiment.
 
 **Research-design update (2026-09-12):** [RESEARCH_QUESTIONS.md](RESEARCH_QUESTIONS.md)
 preserves Q1–Q6 and potential paper directions, including news, fundamentals and aggregate
