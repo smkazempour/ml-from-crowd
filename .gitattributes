@@ -1,5 +1,12 @@
 # Preserve frozen Python source hashes across Windows and Linux checkouts.
 *.py text eol=lf
 
+# These completed Stage A sources were certified with mixed/CRLF bytes.
+# Preserve the archived identity instead of normalizing an already completed run.
+tools/linear_interaction_evaluate.py -text
+tools/linear_interaction_runner.py -text
+tools/run_linear_interaction_study.py -text
+tools/notify_study.ps1 -text
+
 # Published reports carry byte-level provenance; do not normalize their line endings.
 reports/** -text

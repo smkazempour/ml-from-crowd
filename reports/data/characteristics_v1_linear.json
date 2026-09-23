@@ -1,0 +1,1844 @@
+{
+  "schema_version": "characteristic_conditioning_evaluation_v1",
+  "created": "2026-09-19T13:49:42.612886",
+  "registry": {
+    "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\registry.json",
+    "bytes": 801069,
+    "mtime_ns": 1789842513250346800
+  },
+  "prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+  "prepared_manifest_sha256": "4d7fc5a6edd68b85effd5f7aaf84accf9c93fcc7a96317702fad0b579a9765d3",
+  "source_limitations": [
+    "nominal 16:00 message routing ignores early closes",
+    "ar_dgtw_21 has known 2013 panel corruption; crsp_ar_dgtw_21 is separately retained",
+    "h>1 imported labels and factor-CAR completeness not certified",
+    "Market-based controls only; no audited point-in-time accounting characteristics.",
+    "Legacy upstream daily bm joins fiscal datadate without reporting lag; excluded from predictors; inherited DGTW target has this limitation.",
+    "Close-t market inputs and nominal-close message routing inherit the executable-close and early-close limitations."
+  ],
+  "arguments": {
+    "registry": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\registry.json",
+    "prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+    "out": "D:\\StockTwits\\Code\\reports\\data\\characteristics_v1_linear",
+    "start": "2014-01-01",
+    "end": "2022-12-31",
+    "cap_column": "cap",
+    "diagnostic_fit_days": 504,
+    "skip_horizons": false,
+    "skip_subgroups": false
+  },
+  "prediction_sources": {
+    "ols_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277876545756000
+    },
+    "ridge_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277877850665800
+    },
+    "lasso_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277879155183800
+    },
+    "enet_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277880428139900
+    },
+    "ols_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277881730043200
+    },
+    "ridge_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277882991503100
+    },
+    "lasso_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277884257094200
+    },
+    "enet_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277885541576100
+    },
+    "ols_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277886819528400
+    },
+    "ridge_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277888090744300
+    },
+    "lasso_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277889362015900
+    },
+    "enet_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277890658632100
+    },
+    "ols_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277891917119800
+    },
+    "ridge_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277893194769500
+    },
+    "lasso_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277894478597500
+    },
+    "enet_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277895717861300
+    },
+    "ols_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277917229343800
+    },
+    "ridge_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277918539891200
+    },
+    "lasso_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277919809825900
+    },
+    "enet_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277921035107600
+    },
+    "ols_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277922265567700
+    },
+    "ridge_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277923506746500
+    },
+    "lasso_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277924773863000
+    },
+    "enet_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277926002888400
+    },
+    "ols_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277927241607900
+    },
+    "ridge_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277928484276600
+    },
+    "lasso_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277929693771400
+    },
+    "enet_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277930964275400
+    },
+    "ols_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277932193310600
+    },
+    "ridge_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277933409435200
+    },
+    "lasso_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277934631834700
+    },
+    "enet_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277935926681800
+    },
+    "ols_core_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_core_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277957140559700
+    },
+    "ridge_core_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_core_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277958458418400
+    },
+    "lasso_core_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_core_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277959750724000
+    },
+    "enet_core_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_core_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277960955725100
+    },
+    "ols_all_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_all_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277962139827100
+    },
+    "ridge_all_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_all_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277963361818500
+    },
+    "lasso_all_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_all_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277964621360800
+    },
+    "enet_all_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_all_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277965854500100
+    },
+    "ols_textcore_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textcore_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277967109899900
+    },
+    "ridge_textcore_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textcore_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277968354682200
+    },
+    "lasso_textcore_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textcore_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277969589466700
+    },
+    "enet_textcore_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textcore_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277970803351700
+    },
+    "ols_textall_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textall_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277972030607400
+    },
+    "ridge_textall_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textall_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277973272404700
+    },
+    "lasso_textall_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textall_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277974512433400
+    },
+    "enet_textall_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textall_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277975768562300
+    },
+    "ols_characteristics_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842290781661200
+    },
+    "ridge_characteristics_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842292013174500
+    },
+    "lasso_characteristics_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842293262597500
+    },
+    "enet_characteristics_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842294512437200
+    },
+    "ols_characteristics_sentiment_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_sentiment_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842295720062800
+    },
+    "ridge_characteristics_sentiment_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_sentiment_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842296945111300
+    },
+    "lasso_characteristics_sentiment_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_sentiment_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842298115880300
+    },
+    "enet_characteristics_sentiment_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_sentiment_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842299338585100
+    },
+    "ols_characteristics_attention_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_attention_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842300635315800
+    },
+    "ridge_characteristics_attention_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_attention_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842301841641100
+    },
+    "lasso_characteristics_attention_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_attention_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842303071411100
+    },
+    "enet_characteristics_attention_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_attention_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842304310431400
+    },
+    "ols_characteristics_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842305548972800
+    },
+    "ridge_characteristics_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842306771613000
+    },
+    "lasso_characteristics_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842307993298800
+    },
+    "enet_characteristics_core_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_core_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842309205724500
+    },
+    "ols_characteristics_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842310425694100
+    },
+    "ridge_characteristics_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842311713143200
+    },
+    "lasso_characteristics_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842313014616400
+    },
+    "enet_characteristics_all_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_all_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842314332704200
+    },
+    "ols_characteristics_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842315639709500
+    },
+    "ridge_characteristics_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842316923056500
+    },
+    "lasso_characteristics_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842318225092600
+    },
+    "enet_characteristics_textcore_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textcore_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842319583088000
+    },
+    "ols_characteristics_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842320880503600
+    },
+    "ridge_characteristics_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842322244437900
+    },
+    "lasso_characteristics_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842323550956400
+    },
+    "enet_characteristics_textall_raw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textall_raw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842324867280000
+    },
+    "ols_characteristics_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842363975197600
+    },
+    "ridge_characteristics_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842365259719600
+    },
+    "lasso_characteristics_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842366531257400
+    },
+    "enet_characteristics_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842367832344600
+    },
+    "ols_characteristics_sentiment_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_sentiment_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842369184347600
+    },
+    "ridge_characteristics_sentiment_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_sentiment_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842370516913700
+    },
+    "lasso_characteristics_sentiment_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_sentiment_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842371914172500
+    },
+    "enet_characteristics_sentiment_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_sentiment_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842373294858800
+    },
+    "ols_characteristics_attention_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_attention_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842374645723100
+    },
+    "ridge_characteristics_attention_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_attention_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842376042341600
+    },
+    "lasso_characteristics_attention_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_attention_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842377437594000
+    },
+    "enet_characteristics_attention_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_attention_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842378835512500
+    },
+    "ols_characteristics_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842380231576700
+    },
+    "ridge_characteristics_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842381612969900
+    },
+    "lasso_characteristics_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842383042683100
+    },
+    "enet_characteristics_core_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_core_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842384452858000
+    },
+    "ols_characteristics_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842385832083400
+    },
+    "ridge_characteristics_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842387185639000
+    },
+    "lasso_characteristics_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842388591409300
+    },
+    "enet_characteristics_all_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_all_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842390022191800
+    },
+    "ols_characteristics_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842391453509500
+    },
+    "ridge_characteristics_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842392836149000
+    },
+    "lasso_characteristics_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842394264590800
+    },
+    "enet_characteristics_textcore_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textcore_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842395653994900
+    },
+    "ols_characteristics_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842397077793400
+    },
+    "ridge_characteristics_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842398493845500
+    },
+    "lasso_characteristics_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842399841634200
+    },
+    "enet_characteristics_textall_raw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textall_raw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842401242819400
+    },
+    "ols_characteristics_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842440098279600
+    },
+    "ridge_characteristics_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842441306096600
+    },
+    "lasso_characteristics_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842442568157800
+    },
+    "enet_characteristics_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842443858790400
+    },
+    "ols_characteristics_sentiment_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_sentiment_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842445127842300
+    },
+    "ridge_characteristics_sentiment_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_sentiment_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842446421872500
+    },
+    "lasso_characteristics_sentiment_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_sentiment_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842447767462500
+    },
+    "enet_characteristics_sentiment_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_sentiment_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842449017949700
+    },
+    "ols_characteristics_attention_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_attention_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842450258925200
+    },
+    "ridge_characteristics_attention_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_attention_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842451536038400
+    },
+    "lasso_characteristics_attention_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_attention_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842452793392400
+    },
+    "enet_characteristics_attention_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_attention_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842453999543400
+    },
+    "ols_characteristics_core_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_core_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842455312447100
+    },
+    "ridge_characteristics_core_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_core_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842456501124500
+    },
+    "lasso_characteristics_core_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_core_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842457766116300
+    },
+    "enet_characteristics_core_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_core_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842459003245000
+    },
+    "ols_characteristics_all_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_all_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842460336086100
+    },
+    "ridge_characteristics_all_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_all_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842461671959500
+    },
+    "lasso_characteristics_all_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_all_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842462953104000
+    },
+    "enet_characteristics_all_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_all_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842464225420200
+    },
+    "ols_characteristics_textcore_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textcore_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842465516505900
+    },
+    "ridge_characteristics_textcore_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textcore_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842466764965100
+    },
+    "lasso_characteristics_textcore_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textcore_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842468037606100
+    },
+    "enet_characteristics_textcore_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textcore_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842469347448500
+    },
+    "ols_characteristics_textall_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textall_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842470712218500
+    },
+    "ridge_characteristics_textall_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textall_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842472085402300
+    },
+    "lasso_characteristics_textall_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textall_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842473481519000
+    },
+    "enet_characteristics_textall_raw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textall_raw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842474846862600
+    },
+    "ols_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277896978281400
+    },
+    "ridge_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277898225323300
+    },
+    "lasso_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277899505656900
+    },
+    "enet_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277900758881800
+    },
+    "ols_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277901994758800
+    },
+    "ridge_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277903247093000
+    },
+    "lasso_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277904491837100
+    },
+    "enet_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277905757010900
+    },
+    "ols_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277907001841900
+    },
+    "ridge_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277908230575500
+    },
+    "lasso_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277909502553800
+    },
+    "enet_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277910736596500
+    },
+    "ols_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277911967750500
+    },
+    "ridge_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277913294329800
+    },
+    "lasso_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277914584940100
+    },
+    "enet_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277915897422300
+    },
+    "ols_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277937207669700
+    },
+    "ridge_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277938472388800
+    },
+    "lasso_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277939699665200
+    },
+    "enet_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277940956867600
+    },
+    "ols_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277942184374700
+    },
+    "ridge_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277943400964300
+    },
+    "lasso_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277944660073000
+    },
+    "enet_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277945915142100
+    },
+    "ols_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277947166092700
+    },
+    "ridge_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277948412517900
+    },
+    "lasso_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277949633815500
+    },
+    "enet_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277950839340900
+    },
+    "ols_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277952037894600
+    },
+    "ridge_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277953264378900
+    },
+    "lasso_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277954580277100
+    },
+    "enet_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277955801905200
+    },
+    "ols_core_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_core_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277977039253100
+    },
+    "ridge_core_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_core_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277978322706100
+    },
+    "lasso_core_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_core_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277979613669300
+    },
+    "enet_core_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_core_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277980844961200
+    },
+    "ols_all_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_all_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277982069179000
+    },
+    "ridge_all_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_all_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277983312062000
+    },
+    "lasso_all_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_all_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277984587602400
+    },
+    "enet_all_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_all_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277985878410100
+    },
+    "ols_textcore_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textcore_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277987101051200
+    },
+    "ridge_textcore_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textcore_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277988353551400
+    },
+    "lasso_textcore_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textcore_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277989652415100
+    },
+    "enet_textcore_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textcore_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277990959852900
+    },
+    "ols_textall_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ols_textall_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277992210522100
+    },
+    "ridge_textall_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_ridge_textall_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277993469814400
+    },
+    "lasso_textall_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_lasso_textall_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277994725794400
+    },
+    "enet_textall_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\protocol_v1_1\\linear\\full_3314fb5ca2fe170a\\predictions_enet_textall_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789277995944826300
+    },
+    "ols_characteristics_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842326183948300
+    },
+    "ridge_characteristics_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842327470364600
+    },
+    "lasso_characteristics_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842328788895700
+    },
+    "enet_characteristics_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842330074891600
+    },
+    "ols_characteristics_sentiment_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_sentiment_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842331331831200
+    },
+    "ridge_characteristics_sentiment_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_sentiment_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842332647554900
+    },
+    "lasso_characteristics_sentiment_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_sentiment_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842333965222600
+    },
+    "enet_characteristics_sentiment_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_sentiment_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842335297365500
+    },
+    "ols_characteristics_attention_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_attention_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842336582993700
+    },
+    "ridge_characteristics_attention_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_attention_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842337882295700
+    },
+    "lasso_characteristics_attention_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_attention_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842339215748400
+    },
+    "enet_characteristics_attention_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_attention_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842340581561400
+    },
+    "ols_characteristics_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842341900127700
+    },
+    "ridge_characteristics_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842343298633300
+    },
+    "lasso_characteristics_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842344630752200
+    },
+    "enet_characteristics_core_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_core_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842345931963800
+    },
+    "ols_characteristics_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842347283101400
+    },
+    "ridge_characteristics_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842348678896800
+    },
+    "lasso_characteristics_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842350048249500
+    },
+    "enet_characteristics_all_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_all_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842351446204200
+    },
+    "ols_characteristics_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842352857680800
+    },
+    "ridge_characteristics_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842354271866600
+    },
+    "lasso_characteristics_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842355684679200
+    },
+    "enet_characteristics_textcore_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textcore_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842357097566700
+    },
+    "ols_characteristics_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842358447631700
+    },
+    "ridge_characteristics_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842359830248200
+    },
+    "lasso_characteristics_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842361227826500
+    },
+    "enet_characteristics_textall_dgtw_fit504_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textall_dgtw_fit504_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842362659346700
+    },
+    "ols_characteristics_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842402540732900
+    },
+    "ridge_characteristics_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842403818180300
+    },
+    "lasso_characteristics_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842405052777200
+    },
+    "enet_characteristics_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842406335655300
+    },
+    "ols_characteristics_sentiment_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_sentiment_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842407674701700
+    },
+    "ridge_characteristics_sentiment_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_sentiment_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842409027293600
+    },
+    "lasso_characteristics_sentiment_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_sentiment_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842410410988000
+    },
+    "enet_characteristics_sentiment_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_sentiment_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842411780227900
+    },
+    "ols_characteristics_attention_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_attention_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842413161659300
+    },
+    "ridge_characteristics_attention_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_attention_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842414539830700
+    },
+    "lasso_characteristics_attention_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_attention_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842415902179400
+    },
+    "enet_characteristics_attention_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_attention_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842417281864200
+    },
+    "ols_characteristics_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842418616248200
+    },
+    "ridge_characteristics_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842419960514000
+    },
+    "lasso_characteristics_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842421355554300
+    },
+    "enet_characteristics_core_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_core_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842422731231800
+    },
+    "ols_characteristics_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842424080326600
+    },
+    "ridge_characteristics_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842425454528600
+    },
+    "lasso_characteristics_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842426830743500
+    },
+    "enet_characteristics_all_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_all_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842428198699100
+    },
+    "ols_characteristics_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842429535911700
+    },
+    "ridge_characteristics_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842430843448000
+    },
+    "lasso_characteristics_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842432201305400
+    },
+    "enet_characteristics_textcore_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textcore_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842433576557600
+    },
+    "ols_characteristics_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842434938220200
+    },
+    "ridge_characteristics_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842436277707700
+    },
+    "lasso_characteristics_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842437568851600
+    },
+    "enet_characteristics_textall_dgtw_fit252_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textall_dgtw_fit252_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842438863187500
+    },
+    "ols_characteristics_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842476148322100
+    },
+    "ridge_characteristics_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842477402056900
+    },
+    "lasso_characteristics_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842478669238700
+    },
+    "enet_characteristics_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842480034628800
+    },
+    "ols_characteristics_sentiment_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_sentiment_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842481381542500
+    },
+    "ridge_characteristics_sentiment_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_sentiment_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842482733788600
+    },
+    "lasso_characteristics_sentiment_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_sentiment_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842484094300800
+    },
+    "enet_characteristics_sentiment_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_sentiment_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842485443605800
+    },
+    "ols_characteristics_attention_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_attention_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842486836489200
+    },
+    "ridge_characteristics_attention_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_attention_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842488198379000
+    },
+    "lasso_characteristics_attention_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_attention_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842489612828400
+    },
+    "enet_characteristics_attention_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_attention_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842490946530800
+    },
+    "ols_characteristics_core_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_core_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842492264120700
+    },
+    "ridge_characteristics_core_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_core_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842493642760300
+    },
+    "lasso_characteristics_core_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_core_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842495083568200
+    },
+    "enet_characteristics_core_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_core_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842496468263900
+    },
+    "ols_characteristics_all_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_all_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842497881218700
+    },
+    "ridge_characteristics_all_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_all_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842499280487300
+    },
+    "lasso_characteristics_all_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_all_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842500661554400
+    },
+    "enet_characteristics_all_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_all_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842502023797900
+    },
+    "ols_characteristics_textcore_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textcore_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842503351495300
+    },
+    "ridge_characteristics_textcore_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textcore_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842504715446600
+    },
+    "lasso_characteristics_textcore_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textcore_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842506049221600
+    },
+    "enet_characteristics_textcore_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textcore_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842507397959000
+    },
+    "ols_characteristics_textall_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ols_characteristics_textall_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842508755798500
+    },
+    "ridge_characteristics_textall_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_ridge_characteristics_textall_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842510173909400
+    },
+    "lasso_characteristics_textall_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_lasso_characteristics_textall_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842511594614700
+    },
+    "enet_characteristics_textall_dgtw_fit756_val126": {
+      "path": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\predictions_enet_characteristics_textall_dgtw_fit756_val126.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1789842512968795100
+    }
+  },
+  "coverage": {
+    "raw": {
+      "models": 132,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 3033080
+    },
+    "dgtw": {
+      "models": 132,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 2748978
+    }
+  },
+  "output_files": {
+    "summary": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\characteristics_v1_linear.csv",
+      "bytes": 170022,
+      "mtime_ns": 1789843777770822400
+    },
+    "_daily": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\characteristics_v1_linear_daily.csv.gz",
+      "bytes": 51874482,
+      "mtime_ns": 1789843788166212800
+    },
+    "_yearly": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\characteristics_v1_linear_yearly.csv",
+      "bytes": 1547281,
+      "mtime_ns": 1789843782369296600
+    },
+    "_periods": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\characteristics_v1_linear_periods.csv",
+      "bytes": 529724,
+      "mtime_ns": 1789843782386943200
+    },
+    "_contrasts": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\characteristics_v1_linear_contrasts.csv",
+      "bytes": 6013631,
+      "mtime_ns": 1789843782496763300
+    },
+    "_coverage": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\characteristics_v1_linear_coverage.csv",
+      "bytes": 23390,
+      "mtime_ns": 1789843782508332300
+    },
+    "_deciles": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\characteristics_v1_linear_deciles.csv",
+      "bytes": 4803159,
+      "mtime_ns": 1789843782574965600
+    },
+    "_subgroups": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\characteristics_v1_linear_subgroups.csv",
+      "bytes": 378088,
+      "mtime_ns": 1789843782599289800
+    },
+    "_horizons": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\characteristics_v1_linear_horizons.csv",
+      "bytes": 341816,
+      "mtime_ns": 1789843782606700000
+    }
+  },
+  "common_sample": "Joint finite predictions across every registered model within each target; then observed outcome",
+  "primary_metric": "rank_ic",
+  "secondary_metrics": [
+    "ew_spread_bp",
+    "cap_spread_bp"
+  ],
+  "multiplicity": "Bonferroni over the fixed 264-model plan, separately within target/family/metric/period; incomplete windows or missing statistics never reduce the denominators. HAC21/HAC63 are sensitivities. No correction across interim looks or the project's research history.",
+  "contrast_families": {
+    "incremental_social": [
+      [
+        "sentiment_given_characteristics",
+        "characteristics_sentiment",
+        "characteristics"
+      ],
+      [
+        "attention_given_characteristics",
+        "characteristics_attention",
+        "characteristics"
+      ],
+      [
+        "core_given_characteristics",
+        "characteristics_core",
+        "characteristics"
+      ],
+      [
+        "attention_given_characteristics_sentiment",
+        "characteristics_core",
+        "characteristics_sentiment"
+      ],
+      [
+        "sentiment_given_characteristics_attention",
+        "characteristics_core",
+        "characteristics_attention"
+      ],
+      [
+        "engineered_given_characteristics_core",
+        "characteristics_all",
+        "characteristics_core"
+      ],
+      [
+        "text_given_characteristics_core",
+        "characteristics_textcore",
+        "characteristics_core"
+      ],
+      [
+        "text_given_characteristics_all",
+        "characteristics_textall",
+        "characteristics_all"
+      ],
+      [
+        "engineered_given_characteristics_textcore",
+        "characteristics_textall",
+        "characteristics_textcore"
+      ],
+      [
+        "all_given_characteristics",
+        "characteristics_all",
+        "characteristics"
+      ],
+      [
+        "textcore_given_characteristics",
+        "characteristics_textcore",
+        "characteristics"
+      ],
+      [
+        "textall_given_characteristics",
+        "characteristics_textall",
+        "characteristics"
+      ]
+    ],
+    "conditioning": "C+S minus S for core/all/textcore/textall",
+    "estimator": "Each penalized linear estimator minus OLS at matched inputs and history",
+    "history": "F252 and F756 minus F504 at matched inputs and estimator"
+  },
+  "inference": "Two-sided normal Bartlett HAC, n/(n-1) correction, missing trading sessions retain actual calendar distance",
+  "hac_lags": [
+    5,
+    21,
+    63
+  ],
+  "min_ic_stocks": 10,
+  "minimum_fractional_stocks_per_decile": 10,
+  "capitalization": "cap",
+  "ties": "Fractional rank intervals; constant forecasts hold cash",
+  "legs": "Raw realized target returns and target returns demeaned by that scope/day's unweighted eligible-stock mean; cash stays zero",
+  "portfolio_limit": "Descriptive gross sorts. No attainable same-close execution, turnover, costs, factor alpha, or investment claim.",
+  "subgroups": "F504 by default; contemporaneous midrank terciles before outcome filtering; equal values stay together",
+  "horizons": "F504 forecasts trained on h1 evaluated against cumulative close-t-to-close-(t+h) returns; not disjoint future-return intervals or h-specific fits",
+  "skipped_horizons": [
+    {
+      "target": "dgtw",
+      "horizon": 21,
+      "reason": "Known source ar_dgtw_21 corruption; excluded pending repair"
+    }
+  ],
+  "python": "3.13.11",
+  "interpreter": "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+  "code_sha256": {
+    "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7"
+  },
+  "planned_models": 264,
+  "included_models": 264,
+  "included_windows": [
+    504,
+    252,
+    756
+  ],
+  "preliminary": false,
+  "pilot": false,
+  "planned_family_counts": {
+    "incremental_social": 144,
+    "conditioning": 48,
+    "estimator": 99,
+    "history": 88
+  },
+  "observed_family_counts": {
+    "raw": {
+      "incremental_social": 144,
+      "conditioning": 48,
+      "history": 88,
+      "estimator": 99
+    },
+    "dgtw": {
+      "incremental_social": 144,
+      "conditioning": 48,
+      "history": 88,
+      "estimator": 99
+    }
+  },
+  "primary_target": "raw",
+  "secondary_target": "dgtw",
+  "primary_window": 504,
+  "optimization": "Fitting histories are fixed sensitivities; no test-based selection, new hyperparameter optimization, or neural fits",
+  "kernel_reuse": "Unmodified protocol_evaluate score/alignment/calendar/HAC pipeline; only paired_contrasts replaced in a scoped adapter",
+  "reused_kernel_sha256": {
+    "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7"
+  },
+  "wrapper_sha256": "51fd7102a5e5c8b327bd13ec646eab5cb5f908f11d0dd7d74663cb04eeeb8a84",
+  "registry_sha256": "44ad947e526e26b870c9ae07b254cce4e42cbea3799e180696d2189c9de83375",
+  "prepared_sha256": {
+    "manifest.json": "4d7fc5a6edd68b85effd5f7aaf84accf9c93fcc7a96317702fad0b579a9765d3",
+    "X.npy": "6950aaa0aa36615df903d7605efb060369e7f04ce299733f1b92e23fa6c1a787",
+    "y.npy": "ef7d0d013b7d44caf7dc6495a5e77d1fd91d0f3607f18a082c4045f59ac2e983",
+    "q.npy": "e5943044cd908a9b214b65a2fa2b110f06c5399a11be0b7cfd05903f872578ba",
+    "codes.npy": "afc9a8efe010cc4ec03b45275b2b9d8360def3582de1d8a9b0da662c47df9518",
+    "calendar.npy": "5b4fc803952c4acf8369619087192805e0d865daba5c6590812b61652534a47c",
+    "keys.pkl": "a26d73a704db186859026b92014bc35409b064ea49042b89b81a95f0046e8631",
+    "evaluation.pkl": "84e9c9bde6f22f18a73dede6904f7e3b06363412adef30620a8c00645ff66dda"
+  },
+  "prediction_sha256": {
+    "ols_core_raw_fit504_val126": "0203fc687049f48ccb2fd3d63e6f3a6198a884c9124ac9ecb53a17d23b87a6fc",
+    "ridge_core_raw_fit504_val126": "08f7ab6b94856a745203a7b896df35a4c48c1651cbe7b918d1d0aed94b6f8819",
+    "lasso_core_raw_fit504_val126": "2dba5c76fde02d1b82d9f3113468e46ed8e8c4946b369719608e638f5114a4ea",
+    "enet_core_raw_fit504_val126": "4f453ad69601ad9718ea29637700352d64dc2fe362f1f20e6b03cfba35ade080",
+    "ols_all_raw_fit504_val126": "30b57d0511a804687272921385fffb53b99dc46c13c2a57b9cd828f48e8a0891",
+    "ridge_all_raw_fit504_val126": "541f9ab7659273d02b56cdb94a844fcce49e5d9ae18b0a64e3cb260475c68bf9",
+    "lasso_all_raw_fit504_val126": "b0743c7738266e6530f77d676d7debdd7a98699db6f4f9f25e94bd83c4637598",
+    "enet_all_raw_fit504_val126": "2ab342eb666f5450f2f9e08df0d3049394e1039fe7174fbd61b60b3cd945f1d9",
+    "ols_textcore_raw_fit504_val126": "363428c23bd6d6e0dcd0687fd9773b174b6324ef1bb4998b2bac33affcf0b611",
+    "ridge_textcore_raw_fit504_val126": "8a4ffd6d6f15def496300b9539db1201ecc72e45bb20fda51fea5f305dd4fc06",
+    "lasso_textcore_raw_fit504_val126": "ecf8b5bf9ad828253cf2aa7413b4f722f9de285ba7ca6e4dacbfb457a9b9803c",
+    "enet_textcore_raw_fit504_val126": "88b3ceeb0b84a61bbf2ce2decdf64ba17cf9109a61ff77bb3bc5a5ce526a459e",
+    "ols_textall_raw_fit504_val126": "15a66bfd8ac8ffdb1decf88bf30a141fc247e87a1f54d3e944107182cd6cc673",
+    "ridge_textall_raw_fit504_val126": "8f725fe14668543649c4313e4cfb3a7c8eec2592c938f2a0a8d69ffcd48d32dc",
+    "lasso_textall_raw_fit504_val126": "9b999651d69f2311187d496ca11a52999921896e892281340272f5a5f0aeb0e2",
+    "enet_textall_raw_fit504_val126": "baaa84b8e32a93016d28b55efd8c1936e5df426ef889f0710ca4201555da35ab",
+    "ols_core_dgtw_fit504_val126": "d2dbf3131127cd389bb2227a6feaefc69736b3454ddd0f93c2166b1c25586fec",
+    "ridge_core_dgtw_fit504_val126": "22ebbc25ab91f6e99dee1888ac7855d0c1b2143a98757378c1bcd02733cf6f9f",
+    "lasso_core_dgtw_fit504_val126": "7a1553383f99b50337edd97ac34afa94a9c4a859aef16806b5019adb95b3fbf7",
+    "enet_core_dgtw_fit504_val126": "7c079a393dd5388857f583a3ac0e8e662d8d99cee39a0f19e44ab2493e661bf8",
+    "ols_all_dgtw_fit504_val126": "909cf5ffcdf403de7535b84951e2b25e131b0cdca0aad651c55458ec93aab881",
+    "ridge_all_dgtw_fit504_val126": "4fe8971dbe717c38aa47898e91d86377aeec980bdd98b6d664bafeb12fc689f1",
+    "lasso_all_dgtw_fit504_val126": "ae57a730ec724eb4a20edb6a2b9eb60508d29428584a21d167794272cb9e1e5f",
+    "enet_all_dgtw_fit504_val126": "631cb8fee440ce08c3a764e47f6793b43f61620afe23f121ff994dbe56388282",
+    "ols_textcore_dgtw_fit504_val126": "48604dfb5e426d6dd6e0e518e5e182ac791eafd4bea0131c614151bceea45661",
+    "ridge_textcore_dgtw_fit504_val126": "4aa67a7d99bbab27c5546e4e288eededf5cc28487681e8e6dc36b750b8292124",
+    "lasso_textcore_dgtw_fit504_val126": "8b3dbd2078e06114344f2ba0798436f9295d92354368acf36854c89ed67b934c",
+    "enet_textcore_dgtw_fit504_val126": "fb6734da861c3201caa7c82978a55f8dcd994440cbf8a26a901b7a5568d200ad",
+    "ols_textall_dgtw_fit504_val126": "3ade97302871b040a845096239a57201eed1532950cceb6d54a424bd963bfeea",
+    "ridge_textall_dgtw_fit504_val126": "f0e756f766b3a14d705ead97cc90a55b6d6206af440d67123225ee515ea42e21",
+    "lasso_textall_dgtw_fit504_val126": "c20f0f246eb382dde5b8ebd72042a181f0f4a1125defd87a8b7cd952e8c43c44",
+    "enet_textall_dgtw_fit504_val126": "6c4db65622561fb117f852865054107cd21e20e621bf366be5ba152ce36740dc",
+    "ols_core_raw_fit252_val126": "009b478333ac0aec6fd3582c0dc7a688f3baff3708df8cb3649cac25e1656691",
+    "ridge_core_raw_fit252_val126": "6f9af01b373566649a32dd2525042711b6937939931191ce10fab64e6a1908ff",
+    "lasso_core_raw_fit252_val126": "880f1ff3881d5d6aa8442f259d7d9a44002d5dea1c6d7edfb1d5f6e4997e51af",
+    "enet_core_raw_fit252_val126": "c15db7853cfdffb2db7f31cf2d61872a7213c7e5acf102b5781a266699c3aecf",
+    "ols_all_raw_fit252_val126": "7a9594d9810dcebc17495b770ae767ee662d749d4e3f19df4a2da0d2e3efad0c",
+    "ridge_all_raw_fit252_val126": "fe57176655d4477f5371d7c671b75ab62af757886e45a6ca790755733cdb6ed9",
+    "lasso_all_raw_fit252_val126": "1bbdca756143bc1bb69e5ef276b0bf2ef48540bca754a16d45a1a8519e27a9fb",
+    "enet_all_raw_fit252_val126": "27227d24d96eaf6802e8df498f7a63d7dfe115e27a6b077581118e623ad85ab9",
+    "ols_textcore_raw_fit252_val126": "66ee3a951bcd24a21f845b63ce09107b67d08d8e2d68ab3a7cc4a34b9fbdbd45",
+    "ridge_textcore_raw_fit252_val126": "4cfb2ce382ab1dcac6a15a3d98c17d58e421b914c6686b50a7e7018ee941d85b",
+    "lasso_textcore_raw_fit252_val126": "f3f72231d52b56f151797032998e13cb2d4a452c6e3b0841a20a7107c14ee946",
+    "enet_textcore_raw_fit252_val126": "9a19139806aa6f41ccdef54f3356464daf637e983d92c29ebd7347e69940709d",
+    "ols_textall_raw_fit252_val126": "1a718db881ecfb7dce2b79813405be7c5d5af6bf11066c04606cd452ea036032",
+    "ridge_textall_raw_fit252_val126": "260871d20bc41cd325d947e81ac647c128f3726550e04139411317848903f6b6",
+    "lasso_textall_raw_fit252_val126": "032b2971920fc7d2bd2e305bfc1afeb6af8866022ca02d8b8001169cce898e6e",
+    "enet_textall_raw_fit252_val126": "56dfcefc69043689c5cf4d6504dc5960b10876cb169735fae33abd73d1dc5bf4",
+    "ols_core_dgtw_fit252_val126": "6a3429818ac3b296c8516125c603eb359c1a5821bce63a46f4cd6c5a68c5b1d1",
+    "ridge_core_dgtw_fit252_val126": "9fa599b6d8afe420e6f4b3f13339fb949af3e1577c78be52cde116daca8820a9",
+    "lasso_core_dgtw_fit252_val126": "dd4f2e3bfd0e099c4ad0d6d66254c9b94266ab8f2b40a11242eaf1e115c42f98",
+    "enet_core_dgtw_fit252_val126": "f4f853e08c179f78b602cd63b9841f180af9af65c9399d27562f360de5020ebb",
+    "ols_all_dgtw_fit252_val126": "3bc61094f40df141d7d90b8c827e50bedc95978e8121448f04dd9196df2268c1",
+    "ridge_all_dgtw_fit252_val126": "5958aa85671acb4de294427297710eadc91369ab2867ba71f8d46c60a39d04f2",
+    "lasso_all_dgtw_fit252_val126": "7dc1fc5f708b0c807e881d3b2df02cfe38a446e663e947c1c4ee6d24b46e56b1",
+    "enet_all_dgtw_fit252_val126": "0f4046ea118800adbf03f6c2903be375f44fc17395a6fe3be6e42133567a8de8",
+    "ols_textcore_dgtw_fit252_val126": "bf2dcbc0a41c2eafa4fad1232a97d89ec8c8a45db91fc45cd8bb58f23d5b06b5",
+    "ridge_textcore_dgtw_fit252_val126": "44d986dcdef6b9e539254d9eb6a0822324dbe2ae114bd8d508e7530bd1a4be14",
+    "lasso_textcore_dgtw_fit252_val126": "e0601f35756909f0025e672ed2c96ff27c9f368c8391f67bc855c9a4c4998700",
+    "enet_textcore_dgtw_fit252_val126": "9217559be11f317ca0114fe3a14810208b715e80f370aa9d8ce23a14e007e524",
+    "ols_textall_dgtw_fit252_val126": "e267c0d1140bd3bcdf137deb9554dea17d285098615fda909b5e3d50ef8ba5c9",
+    "ridge_textall_dgtw_fit252_val126": "ace731c1291f1c39d5ff88b1ded1f0208f50b867b639ecdbe9f5311fce564059",
+    "lasso_textall_dgtw_fit252_val126": "90c9e64e29ed573a6eab20dc5b85c801e28f9de01ef9c72d1a9f6019529d9eb0",
+    "enet_textall_dgtw_fit252_val126": "b6f2b609e190a66c28d5f6910496b85fc4f4b4d3addf3d1b99618cbcb09edc70",
+    "ols_core_raw_fit756_val126": "eb3b04151fd57c54ad652b495fd9098435f1f00105dd04e90bbdfa1ea3a0755b",
+    "ridge_core_raw_fit756_val126": "0df3dcc6f61dcfb64febcc2cc27a1f298a58b65efb282d2dc4c4cd6d87dc8b6d",
+    "lasso_core_raw_fit756_val126": "51a2e12b72e8d099560924d4a39dba8a3d0cebcbf4a09cdbee3fb3e7fdae9c74",
+    "enet_core_raw_fit756_val126": "eeb92f5beec6e71e53c63413ee6b3f31bfa8ae0dff2b62ea6dd5dd35e8079da8",
+    "ols_all_raw_fit756_val126": "5237ea0188928a5794aec8664db2bc75782af814efc22a8ebaa13b7c53e3bd13",
+    "ridge_all_raw_fit756_val126": "554259cd22866d78a02445e19044dea3a57a91f890bdbfdb5951f4f297452734",
+    "lasso_all_raw_fit756_val126": "f0992fa5220f2669cb4efcaae13694e57803eb7dc1dfe0ebd43428b1f113d362",
+    "enet_all_raw_fit756_val126": "e962314b8ed4b32ff12f17186fe16cf36f7c02ccf9f2f87ab03fd670411752ec",
+    "ols_textcore_raw_fit756_val126": "4e3e31124854ad09aa1666c3de1161542c196cc3630ea2ea07ccf94178c6ab92",
+    "ridge_textcore_raw_fit756_val126": "051ce79987e4f8f5aad2c399197dc4be909ba4ccb0f755d0c4147d4e93d79a4f",
+    "lasso_textcore_raw_fit756_val126": "1c7ccdf909c96b9e68bdf007866df2b6f79adfe5fa61abb551734f352dc90d8b",
+    "enet_textcore_raw_fit756_val126": "9787a6216c8d39be2b39d20caf9165f42db26816a6556453bcd967c89cd37dc2",
+    "ols_textall_raw_fit756_val126": "4e5814498d4ebb675cacf5297f6f98282f4b7346431d5c68e9b9534934311d3a",
+    "ridge_textall_raw_fit756_val126": "a42da4cabb547283034dfc5d7e483ef6e1cbb556fe24a16a63d7686edec4dbad",
+    "lasso_textall_raw_fit756_val126": "7baee3b443dd52482083d3bc7762d908fac919320886f2ffb297b5ff50d5a11e",
+    "enet_textall_raw_fit756_val126": "7495a6ad8bf5eee1733c77fa3a168675a9225678f7963671f9feaa272deeaced",
+    "ols_core_dgtw_fit756_val126": "91832e2787c366081d80ce11aaecab9c1570ee0b04b110e469c544748bdd37c8",
+    "ridge_core_dgtw_fit756_val126": "f6ff0a22d0b20fb211ef267816bd232b4c56e274950478377a525ceeb0cc69b7",
+    "lasso_core_dgtw_fit756_val126": "1cc7ad0494cf819184ab3db0602de0456795c4d09d6b4f6a2531b89dcf62e318",
+    "enet_core_dgtw_fit756_val126": "0b35cb3f03e72d39768a098ac17641ba0f8f8acae8140f2e20de3431c517b1a4",
+    "ols_all_dgtw_fit756_val126": "f68c6a72c6d47d3490da51798e7a6ad84b1d3e1b524c1b26d9b5f0b1508dfa7d",
+    "ridge_all_dgtw_fit756_val126": "9c55531a688ad3862de76699b0125a14f48a2a1a7f7605e8d5206375ccada895",
+    "lasso_all_dgtw_fit756_val126": "9f965bd890a1e9a5ac316550cd9cc120a45fca70356cc6ee1a3213105c9c5bfb",
+    "enet_all_dgtw_fit756_val126": "f905f6951051dd3e8aca90f956f3b729cad9119645b86743033418c6a2cb1354",
+    "ols_textcore_dgtw_fit756_val126": "b11e22da80155a8438b7ad537cf32c01fdee18f66d8c390717eb8d6453965ad8",
+    "ridge_textcore_dgtw_fit756_val126": "2de3fad38d66c42fdbfa99330d102944acddacb2a7ac396c45b2a0cb4e84e27a",
+    "lasso_textcore_dgtw_fit756_val126": "6c1677f5818853046913293a302dbd3f55cb3b67c5225ef94b048f57d445f991",
+    "enet_textcore_dgtw_fit756_val126": "e2721ce6accad881a84c9e270276377e56a9bd8b6ec5f4cdc88151dd24f8ad35",
+    "ols_textall_dgtw_fit756_val126": "835992e2cf8700886435b0218ee24f433b5dcb7221d3fa9489074e3eb3ab7ac9",
+    "ridge_textall_dgtw_fit756_val126": "267d1909806b4c5770a24fde7d309fa1d40ba97317bc141e7a07d4faa90bfee9",
+    "lasso_textall_dgtw_fit756_val126": "89c72b613a2baf820a10ffc064b62bbf564bdd20bcacc4d7478e49e431ddb70b",
+    "enet_textall_dgtw_fit756_val126": "3b3cbf157f03b1a6a6c32ca9c99d33838b0fe0ca55548f6ce7e5735ffc858a6a",
+    "ols_characteristics_raw_fit504_val126": "667ab3813249f6cf5df7602b9670af9666f86dd7f84c58be5a9d3dba413f4464",
+    "ridge_characteristics_raw_fit504_val126": "8299d7f2b9f02e127ba52fbf87c8728ac9f1915622ed69b59b271c4a36ac99c2",
+    "lasso_characteristics_raw_fit504_val126": "4b8492cd9263dc02b856ca545ed30604d36341e071e60db231978a7286755cd7",
+    "enet_characteristics_raw_fit504_val126": "edd13649c98ffe35acc282eeda9ec72648b0d5fb12601bcc7d0a72685c562a15",
+    "ols_characteristics_sentiment_raw_fit504_val126": "bbde95b563a2e0e388bb4f95bb4cd61c8cc711b6230ded9b64132f1c6c8c6ab7",
+    "ridge_characteristics_sentiment_raw_fit504_val126": "d84e0d86a6c69e9ccb06fb2abd1b1523ff937b4333b76b6ffe975e595e05f993",
+    "lasso_characteristics_sentiment_raw_fit504_val126": "3775261cd3759fe23230d5a07b62ccfa26f704ac3173c057a01a027cbdce7c0b",
+    "enet_characteristics_sentiment_raw_fit504_val126": "ea4f21dd2ddc9fd8fba2ea6584704771f6c42fe31f7e6d9e48c559b43967c08f",
+    "ols_characteristics_attention_raw_fit504_val126": "f2d64d5975682df9d36ba06d40571e7e22d812f5aaf173af1fad8236667ac285",
+    "ridge_characteristics_attention_raw_fit504_val126": "74ad4991d727d432e1e3f7cf6b50c0a9e0c50c28c12b1b59a71b6cd76220e461",
+    "lasso_characteristics_attention_raw_fit504_val126": "a8a88e09be4b9d2a84a6747f2e797604a3c0fa6b3d828e3976965aad8fccb111",
+    "enet_characteristics_attention_raw_fit504_val126": "cf967e377804137dd9a1c4e2c3fc2ea18561f6e9cc7e286530db13fc335338d5",
+    "ols_characteristics_core_raw_fit504_val126": "a8f39b4880f04e630216a898cbcdc5ba0df97b84620cba97b57ffae5a01ef2c6",
+    "ridge_characteristics_core_raw_fit504_val126": "d22166db051ca2cd04242d415125e12a2ae96f68dab59e24be25926bbeac8676",
+    "lasso_characteristics_core_raw_fit504_val126": "57976ee9679784600cab7c38bb0d0ff109ef6bedd208af21db35234289ce403b",
+    "enet_characteristics_core_raw_fit504_val126": "80c04d1b12df798a47cb548f785ebf81ee55faa9725052409d57e3a20378c95e",
+    "ols_characteristics_all_raw_fit504_val126": "f0f6f3737422249eaa43205c606a7dcf2df3e38ece12a5b67982fbd5adcf8c2a",
+    "ridge_characteristics_all_raw_fit504_val126": "59fce3c5c1d53d159fa8fbd29463afb13f97ed05cdae6e6dc665f3760b8e8c63",
+    "lasso_characteristics_all_raw_fit504_val126": "d89b830f8058a8a9bb69228735ab8c293924b66d5a9958ec93df1a74e0410066",
+    "enet_characteristics_all_raw_fit504_val126": "c923cae70639e7c17f0ce30822797aed40d2805da062da077a701e7e71a27988",
+    "ols_characteristics_textcore_raw_fit504_val126": "923c1a61a11868b7b68eb79c31ce0dda96bac0f657cb5986264803a169271029",
+    "ridge_characteristics_textcore_raw_fit504_val126": "785eb478564d56b71395dd485ef3df163d47e52325c71f092efbfcadcb9dd3cc",
+    "lasso_characteristics_textcore_raw_fit504_val126": "f6daf94528a81c552c864448c313da2f349ffbcde3330917b06c1bcbe478dc8a",
+    "enet_characteristics_textcore_raw_fit504_val126": "466ac049f3e8407be748abaa8e280017f3fd89904872cdce4204b369f97be75a",
+    "ols_characteristics_textall_raw_fit504_val126": "2fd25bf2835adaa816984b0fd2889d72584e13123b3b777547aabdac967d67b0",
+    "ridge_characteristics_textall_raw_fit504_val126": "0460e3a3a99163851e8065bdca05ec44c7b488952a9eb174250e2b9025c09b01",
+    "lasso_characteristics_textall_raw_fit504_val126": "fc1a0484d355b4986e8e9adb43aa875c2fc75f96599f0887b195ae9966f29e05",
+    "enet_characteristics_textall_raw_fit504_val126": "ad27028c6b25d1f6022d52c3e17622f529fa1220ccd6fb02d7542af60b715dec",
+    "ols_characteristics_dgtw_fit504_val126": "2dc5e190d4915404fa5f3906f22b0ae99ccb7d7efc9c64775e2086df9dc67934",
+    "ridge_characteristics_dgtw_fit504_val126": "3e9e16ac14dd66286b7bdd9aa96ae10b2853c1c5b01f28e358021a40d91d3518",
+    "lasso_characteristics_dgtw_fit504_val126": "15c27b4b028f4844d6fd1f071dca63e933291dfc6091f56895eb3a4a3bfa8f84",
+    "enet_characteristics_dgtw_fit504_val126": "a72a11e2dd295058bb72156bac72121dfd2c0c673ee36ec4b70a18776d5c5681",
+    "ols_characteristics_sentiment_dgtw_fit504_val126": "be8b8da044a5cec520538865eb7d0b9f03d12d2ef43f76ee5d90017736eb081a",
+    "ridge_characteristics_sentiment_dgtw_fit504_val126": "b6ded2a7114b6b205754de7d6a31103551711479a69bebb308a6180d24850732",
+    "lasso_characteristics_sentiment_dgtw_fit504_val126": "016b3bc684d6f57ba7af3c6ed9db1b25d30e82d0557b46d1bd72a8f3803db54e",
+    "enet_characteristics_sentiment_dgtw_fit504_val126": "99e3a19d20639ebf09c4623ff53f5df807e2d4900efcf14b3bfcf2a63895a170",
+    "ols_characteristics_attention_dgtw_fit504_val126": "0a1de2f28c3c1a66546966b227f69d41dad14a4a5491798c8ddaba6698bc3c71",
+    "ridge_characteristics_attention_dgtw_fit504_val126": "6c1ddfa86a59495c5f31e6f24d4e613932cfd1e8351111bab1f8b26f1ab686a5",
+    "lasso_characteristics_attention_dgtw_fit504_val126": "27ad78bc241a74e993c32a6c428ae13cb04cb3c618921c06b7dc78054122a837",
+    "enet_characteristics_attention_dgtw_fit504_val126": "40f6456ac0954a1d83c49464a0967b7ded9c6522827a960c80297b2c2e6bbb32",
+    "ols_characteristics_core_dgtw_fit504_val126": "c0be0577f1ed0386cbdafa70e6b37f671902595f9262bf8fad26943464d64494",
+    "ridge_characteristics_core_dgtw_fit504_val126": "416e820eb1f69adf9f6cdae5a72bd7194ebee0320f5212c1750f67c87b78dae7",
+    "lasso_characteristics_core_dgtw_fit504_val126": "7ba0b0a5aa596b4cf74d464c4db69a835efe363574e176e8b48c7a525d280c67",
+    "enet_characteristics_core_dgtw_fit504_val126": "345fc142c6dbf53bece95448545a71e4b47a672a8f21e92aeaefdfcf81e10795",
+    "ols_characteristics_all_dgtw_fit504_val126": "9b9a79288e236ff588773bbd29dd8980e24afd10d3b8fa6c2b327099dcd86f3e",
+    "ridge_characteristics_all_dgtw_fit504_val126": "0f48abf1d06998e247bce18fd2935855cbc54395f06dbd782ce63cf08737d2fc",
+    "lasso_characteristics_all_dgtw_fit504_val126": "a6a6a40f27c550a8776431a879de14146270d4f73f6ee19d788bf8bc913bd632",
+    "enet_characteristics_all_dgtw_fit504_val126": "20754cf121b9d07a2ed9b8fa464b2fdbc43f9ce4a4d067a0dd09b2ea46a2b057",
+    "ols_characteristics_textcore_dgtw_fit504_val126": "b8501c14eaf559a879fe85d10f749d5e655a124c1abd6321f6ff8c192df52fb2",
+    "ridge_characteristics_textcore_dgtw_fit504_val126": "b0e41d3cf1891af94b4e965c25b2b1ee5d69e80218dad2c3db080590537cf3db",
+    "lasso_characteristics_textcore_dgtw_fit504_val126": "f9e270d0c509bf6f90243bc467448ed5a60fc1c45bb220baed24302d838d2c5c",
+    "enet_characteristics_textcore_dgtw_fit504_val126": "7bbe6b325b4f57db46d69348e494f28094a7d9a262343b846135163cd388b913",
+    "ols_characteristics_textall_dgtw_fit504_val126": "38bda882bb07ca12e1d64cb4fe66478a3519987b8ba8f7ab35d6229f9f117991",
+    "ridge_characteristics_textall_dgtw_fit504_val126": "5e9517ea3167506d93888a36bea3d0a1af456cd87355085699a9b23074e5e075",
+    "lasso_characteristics_textall_dgtw_fit504_val126": "0a5316997c56a13bb1cb669d4b7285a7a454cd17a1e9096e4af79942639a04d5",
+    "enet_characteristics_textall_dgtw_fit504_val126": "f68475f1c8b9ebb66912c911482310718a9811346a5d5c2be37572b08d2b02e1",
+    "ols_characteristics_raw_fit252_val126": "35a494354fbd99398a4a90c517b02690a9e2314dcf3de7fc1e6aae417560a5d4",
+    "ridge_characteristics_raw_fit252_val126": "2cea3f9f5e8d1772f34b9344bb43e4969d30ba07b4d123586ffbf17e0729d13c",
+    "lasso_characteristics_raw_fit252_val126": "9e9b4ecbd9a425ffe62629dcd9981e81ad9dd4481f2314c070b63115b17c1f45",
+    "enet_characteristics_raw_fit252_val126": "8c754c233f6fe23d9c46258e77ac240907ef53e8bd99697c3cd33077577549dd",
+    "ols_characteristics_sentiment_raw_fit252_val126": "3f6d0e222b9a5fb71c8bcb412a13d6d5cef4359918867f7378acb15dcd5fa6bd",
+    "ridge_characteristics_sentiment_raw_fit252_val126": "9b4aa346edf0d10d3970b3c3a1d81df3e8f0e97a9645661a2c38b9fa8a8caa2a",
+    "lasso_characteristics_sentiment_raw_fit252_val126": "d1203717310017de63b029f8e4f6fdc1a941acec714c45d65dc81b7843c3798b",
+    "enet_characteristics_sentiment_raw_fit252_val126": "ec8107ef99617b171dda95b0206e4d36760924bc8ec0a5a0da04ea0fddacd960",
+    "ols_characteristics_attention_raw_fit252_val126": "4e45155e254d2b345eb16398cb5b9c78d37d1fad46428c766e9c9420b849ca36",
+    "ridge_characteristics_attention_raw_fit252_val126": "53f059d7e0136237e6aa458fd86f2a6a458bd09bbc9f9fcbb02db59e88541259",
+    "lasso_characteristics_attention_raw_fit252_val126": "7cf6be74477c1110c60d488694c9e249f68ed76dda90b4b01eca5014403e071d",
+    "enet_characteristics_attention_raw_fit252_val126": "865669f30c691bb289324fce1f69c7a3cf1600074fbdd3bccc96cfeec5a0e589",
+    "ols_characteristics_core_raw_fit252_val126": "cad4c808383777c0e1f6b4263b970e8a38081aee4c24c984129907f45ffebd98",
+    "ridge_characteristics_core_raw_fit252_val126": "f4d03c37438f703036274e51db03ee0df4909d07993b56260a102fca2d0fea5b",
+    "lasso_characteristics_core_raw_fit252_val126": "a96d10d3e0c195f4b309b82a8930bc92a751c507886a95b564131c95bdd7ab8a",
+    "enet_characteristics_core_raw_fit252_val126": "6b35251e65f6a9e1f77aac367487eca230d074880a767ecee883b59163a2616e",
+    "ols_characteristics_all_raw_fit252_val126": "ad0dadd52c39f407bf59aea8234f3cfddbfe72fd7a3fe5b9b935f068de63b09d",
+    "ridge_characteristics_all_raw_fit252_val126": "1b3db152264e9798866f643dd890452b7b46de66783cd778d79b67d1aff4ddc7",
+    "lasso_characteristics_all_raw_fit252_val126": "c3c6587ea8fa5587e20585eca36c50dde31b5b9d44295595f5cc032092b7d1e8",
+    "enet_characteristics_all_raw_fit252_val126": "4c8e31a6c885525e18786ca9939edfc141027aa0f90845e6051d85d8b7eb5401",
+    "ols_characteristics_textcore_raw_fit252_val126": "8e7c94e836cf6aca988e6a99cdcc9dcd3383d486edfc6dfbffb874c259751ff0",
+    "ridge_characteristics_textcore_raw_fit252_val126": "ca33084192fa4112d7f4691c2b69cb415f978fb18bf2f9e0c801fb2a00447157",
+    "lasso_characteristics_textcore_raw_fit252_val126": "8cea00719792747fe1bc97cac9327f374c0620c82668abacd5f8855e11da0ea2",
+    "enet_characteristics_textcore_raw_fit252_val126": "ab05d58aff575b4bfd921d3236d6b7a34c27e5d50b941088c2129cd10348b3a2",
+    "ols_characteristics_textall_raw_fit252_val126": "3d5c1437854cc7723b8027a33b02e5e5317796c259653875ad8078f14eccbd7a",
+    "ridge_characteristics_textall_raw_fit252_val126": "1de3109873f79f242b792d08388db2eb285291686c3f73b9e10a14afb9269133",
+    "lasso_characteristics_textall_raw_fit252_val126": "fa8bef2bef762894d4a07a73f788b3efe9d7d3dbdb2bcd8d3aa6d27bde48ff2f",
+    "enet_characteristics_textall_raw_fit252_val126": "136bfc46a571220e26038862491fd4e607248a529e655e287fcccdd11f290a23",
+    "ols_characteristics_dgtw_fit252_val126": "eca5526ce95940e187df7a31d4462de60e97b888dd02f54d6e60dc40ac3cacb0",
+    "ridge_characteristics_dgtw_fit252_val126": "ed7b5e3341739c10ef4a0521e521358499b3907fdd00c1b5581849271a829d2e",
+    "lasso_characteristics_dgtw_fit252_val126": "d7f9a5f49a64729f60d10e2b71a682bff2d037ebbcf917f6a6c7a0060721f62f",
+    "enet_characteristics_dgtw_fit252_val126": "8f178d8623be8c2165dfe7ea108c6cd07c08cb201a40cc1d06df1907d5150ed9",
+    "ols_characteristics_sentiment_dgtw_fit252_val126": "4afec6dae80f145ac457022798f327e4d4e840fed5df983f993253efc7f87be1",
+    "ridge_characteristics_sentiment_dgtw_fit252_val126": "77b2b903b8be7c30b3c9f733168208a614d8698c227bd67a256593aadbf9a33a",
+    "lasso_characteristics_sentiment_dgtw_fit252_val126": "c36d13a3d798b756fcbe97dd13962dd5fa802bb30d5d5363426f54e4acfd7cc3",
+    "enet_characteristics_sentiment_dgtw_fit252_val126": "bd5fd084ec34d37535a92c2e2cb54834bc7263df177ef930d14da64f35bc9cf8",
+    "ols_characteristics_attention_dgtw_fit252_val126": "d26218b817de3b5ada85afa9d1e7512bedbc900f258fced6e6758bbde3aabb1c",
+    "ridge_characteristics_attention_dgtw_fit252_val126": "7b4cdaea1e7fa8bea2aaad6417466b8e41e6d29be90f3572857b2201fb35edc8",
+    "lasso_characteristics_attention_dgtw_fit252_val126": "e2529807a80b1c3f877984e0aaa023e452a7ae3f7e6ba103300f58d1d1113f60",
+    "enet_characteristics_attention_dgtw_fit252_val126": "eedce98e886adeadc06527a6aee0e6e0b593e2f7d72ddab26c444d0da87d7049",
+    "ols_characteristics_core_dgtw_fit252_val126": "47dcc2997354334670d46d059b176163a85bbaa6c126fe0060f479f763bfd30f",
+    "ridge_characteristics_core_dgtw_fit252_val126": "ee34d7a597f85e2c7ef8021a647ba7f70911a8148ec90a974359fcec51df1842",
+    "lasso_characteristics_core_dgtw_fit252_val126": "f7d9620c2683533b1b3bd440af7d604b77065ffcd9e54826b5aaee40213d087f",
+    "enet_characteristics_core_dgtw_fit252_val126": "e1213059b6e679ff666c0fd5bd95bbec9f85c64aa4f108194ad4718ce6dd9085",
+    "ols_characteristics_all_dgtw_fit252_val126": "d89dcb225a91abb67a95376bb8bd27533144840c72d350c7fc52ba74fe53da81",
+    "ridge_characteristics_all_dgtw_fit252_val126": "927994acf4a1131bda9fec86d995ebd0595bc62735a625b2c20c2cc6097f9676",
+    "lasso_characteristics_all_dgtw_fit252_val126": "8cac4f4ea2f3800f22b93f92e80e21d6624978f726721570f7476b3f8441f8e2",
+    "enet_characteristics_all_dgtw_fit252_val126": "0a492821d142c1adc7a7e47cea2a7938f2751f5adcc1e9f2205051af17132113",
+    "ols_characteristics_textcore_dgtw_fit252_val126": "9483081690cdced98258a79c5bee6203e6c3bdf05922edf67a6dddbb0fc8683b",
+    "ridge_characteristics_textcore_dgtw_fit252_val126": "a4969fc6df077dc7a1ded76440a6876f2cc523d4fb23b42c364c8af394540d80",
+    "lasso_characteristics_textcore_dgtw_fit252_val126": "3cbb3dc84a91d1163fcbbce4d3e8c4d984f23f1f84499c241bf3c830880be936",
+    "enet_characteristics_textcore_dgtw_fit252_val126": "5ab58a5ffe3fa11cc09c6ef24468650dc1d188e8e00260f5e3c1abab4efff609",
+    "ols_characteristics_textall_dgtw_fit252_val126": "229a1c6f0ea18e5493b1fe36ea1a47335b772f7a61b33699349004d0db39d81b",
+    "ridge_characteristics_textall_dgtw_fit252_val126": "f70c1c00c7ae68dffcebee1addb840d63bb1bebc07396886141f2738e2ece9ed",
+    "lasso_characteristics_textall_dgtw_fit252_val126": "8b64a4531e27315c68d7a414b7fb388f1aaca91a4e37955a428b6fe5000df2ca",
+    "enet_characteristics_textall_dgtw_fit252_val126": "72c055b926618127021e12063b1be0fb0a4d8c8100f677c94132e5aedc61edb4",
+    "ols_characteristics_raw_fit756_val126": "719cbeda2de0de47a8e0abe21df41d6786809b405fcd1131b3386b7265747610",
+    "ridge_characteristics_raw_fit756_val126": "319f2c0af591036b9bca0bb63a8869385e76a077e4212c03b1978112e80be23b",
+    "lasso_characteristics_raw_fit756_val126": "188c956ec93267329eb97a7661a1ae5318d3620c08c7ef030f0bf5e953b07f94",
+    "enet_characteristics_raw_fit756_val126": "6b2d340d3d94c63cfddb36f8f83dc62d9bfce86c9a937c3c8049ea8c6724fd05",
+    "ols_characteristics_sentiment_raw_fit756_val126": "7d8745705b52c90e76ddbc104026c495e1e91077695d394f43452b2cfddcfc17",
+    "ridge_characteristics_sentiment_raw_fit756_val126": "25ae38c98960f61fefe78274d5e453cede1dfa17b95c5c9195bd1b8249423c20",
+    "lasso_characteristics_sentiment_raw_fit756_val126": "1d61c59f093c7b0dadbff39a5304b8dc9807cf9a8a61ed9834ca9483f1ee4515",
+    "enet_characteristics_sentiment_raw_fit756_val126": "7188ec6a025f46a34e12efddad14953b6902cd665aa2d450948ac60e941dafac",
+    "ols_characteristics_attention_raw_fit756_val126": "aa9ef5140bd79176503fdeb248dd146859a505279a917115780037c9ab3b9063",
+    "ridge_characteristics_attention_raw_fit756_val126": "783df60242d85865a7dbdc7a8c9bd6839761b6efc5736e8277bf8a9ad0964a97",
+    "lasso_characteristics_attention_raw_fit756_val126": "cad963493fdda50e403184b57bcf05474c134d5c441178225eec335ff5606f7b",
+    "enet_characteristics_attention_raw_fit756_val126": "5f3c98ce80f2d90dfe5d2fb5a0db80029602bf0153b4f7be71043c8621dd3823",
+    "ols_characteristics_core_raw_fit756_val126": "cfa1ddab3fd6a463863eecfe1cedb68921b6335d28797f7f18a2baba04488516",
+    "ridge_characteristics_core_raw_fit756_val126": "22274281b2f31327eed0fb53c4dd4e22d93f2fe7967ad949077d1d7c3e811ac3",
+    "lasso_characteristics_core_raw_fit756_val126": "6b18cea4af0bd5320fdbbf5672591d352b034e7e8c3a66b71de9b92af23f62bf",
+    "enet_characteristics_core_raw_fit756_val126": "b0287ba1f3dc0cee1087d37ac3678a77468e28cfbd6aa9771c1fe66fd4d256da",
+    "ols_characteristics_all_raw_fit756_val126": "4c13dd78a84bedd3155f8a7e0b001433d24033e552ac26543ec942e59430e9de",
+    "ridge_characteristics_all_raw_fit756_val126": "431508ba8fb39c131d2eed0caa69fbdce067b32e154e0827f44b911bb982a703",
+    "lasso_characteristics_all_raw_fit756_val126": "d288885bb12f9509d23e9684c7a6b7ebc477ed96d6c348a86c9cf2cb8d7a2491",
+    "enet_characteristics_all_raw_fit756_val126": "166c5a03ed8cc42bc1b7723d76db63e3a16a46bf960b8478ffd5b90f7d7c2777",
+    "ols_characteristics_textcore_raw_fit756_val126": "94ad3cb778b8d87d8405d31d9ef18a3e6dd2f6ad102d7b2545a50479a1b29e67",
+    "ridge_characteristics_textcore_raw_fit756_val126": "8d2b00da7d02dab24c63e7f4e447a486bdeb2bc87ee80bf5b5f5c2c17281879d",
+    "lasso_characteristics_textcore_raw_fit756_val126": "bbffbc9f89bcfa63faa340a639c00e503a3698e672c6dacb92bc68acd113b722",
+    "enet_characteristics_textcore_raw_fit756_val126": "698fd2dfb4bedb89006757b6b3a600aac9d0b17bbc8aa8faa57aad33b76d5144",
+    "ols_characteristics_textall_raw_fit756_val126": "2671351a9b302ce2ad2c9a6c8a56921e8063a0e747463eb96c635651127913fe",
+    "ridge_characteristics_textall_raw_fit756_val126": "90bdc9e53de3cf680ce7f7584dfabd07fe02988b72fcf73c72f076a1016579e2",
+    "lasso_characteristics_textall_raw_fit756_val126": "094560ecb08d9553ba253666f85151fda4b6090bafdfa2109ae5d83cb3036a23",
+    "enet_characteristics_textall_raw_fit756_val126": "77639b17e194c71ceac5e92cbd8b44d441a51673526b68a11c76f907d27286f4",
+    "ols_characteristics_dgtw_fit756_val126": "28cbfd00842d94969848820c5d1d08478cf8510c5102b3d64fe3ce45eef74341",
+    "ridge_characteristics_dgtw_fit756_val126": "ed79d742bf7aa8974f8394204c74629eecdcd835d5c675492efeec1714642d98",
+    "lasso_characteristics_dgtw_fit756_val126": "9f6e902da716407fecf7d0f0fd4665129beb4f53c7c804bd06f8d6313f80b7cf",
+    "enet_characteristics_dgtw_fit756_val126": "766e6d83f9abbaef883da0a1b67fcb7b54817040b2d5b76d1fa0e31e9f62008a",
+    "ols_characteristics_sentiment_dgtw_fit756_val126": "6fba905a66af00e39edc07635c68ba0c4e3ca24e52be0657d97fb9cc0e897793",
+    "ridge_characteristics_sentiment_dgtw_fit756_val126": "0f17c08c8f435d3f0b7f888d2f234200c4e7c9f9241276bbe28f2ec3b22a71a0",
+    "lasso_characteristics_sentiment_dgtw_fit756_val126": "3d2b47a9cde0b369da151a72ece1ab0490d7ff4e718aa04e42823fc14ce29d3b",
+    "enet_characteristics_sentiment_dgtw_fit756_val126": "dd663c98d9f1cf7f8a5b83315bb20cd91528faddaacecc2d54eda7b8be9a12e0",
+    "ols_characteristics_attention_dgtw_fit756_val126": "404a0a09a79befb766a0af5b167134705475cde2e39db1e6e2af7a712ce0eea8",
+    "ridge_characteristics_attention_dgtw_fit756_val126": "d488390e7b49517ff23f5c6d8732c0e0bf4dd0caf5e92867800d29fdd345e909",
+    "lasso_characteristics_attention_dgtw_fit756_val126": "3b298f1d386383d9fd57a84143b3362fe586126cef61ffded2a77b440dab51ee",
+    "enet_characteristics_attention_dgtw_fit756_val126": "d61a849e13fff36c6369102eca341b294547edea7728cd6a456a92b5681ec142",
+    "ols_characteristics_core_dgtw_fit756_val126": "1bffb758ed2e4eee575931e3e0221573d04389a1984074b25bc600c81ed27c1a",
+    "ridge_characteristics_core_dgtw_fit756_val126": "6301f00b3496a750f92f147c098fff58a5f6afe76f940235b446c5d70fb18aed",
+    "lasso_characteristics_core_dgtw_fit756_val126": "c6e8f2950f9d1ace4d2486a53f049a9da89ca09d159aec0a39736e6fb4a6ad7f",
+    "enet_characteristics_core_dgtw_fit756_val126": "eda7860ec2f8224190afba89480f0aa02206dfcc8bd0ddcff5bbc490dcd5b844",
+    "ols_characteristics_all_dgtw_fit756_val126": "d6aa0646a6f2185e2ab22b25b366797806840f2723131d5b582dc2d69499b9ff",
+    "ridge_characteristics_all_dgtw_fit756_val126": "b4dc8d0c537a425cc385b527ad2617d2298d7f8fe6be2ced549a76e9eeb5c8c9",
+    "lasso_characteristics_all_dgtw_fit756_val126": "cac8675bbcc38006f8795c896fd0f69fe320efb9b1f9f1b565dc41e0656273c5",
+    "enet_characteristics_all_dgtw_fit756_val126": "07297eb5cef593dfd4d966ded298095a28b5dfc261c89d719dc968899818e658",
+    "ols_characteristics_textcore_dgtw_fit756_val126": "979acc76bb8025f7a3b3395fd7702eae302e32963d672bf1097c8083fa00145c",
+    "ridge_characteristics_textcore_dgtw_fit756_val126": "506cf6a51d4cbecb4e8165f61f9b5553566c2b3a47161fddd22cb2e5f8edb9b8",
+    "lasso_characteristics_textcore_dgtw_fit756_val126": "69e1776e41a67f2c8447318c97ecfed05a8642039f575f74373645b04a88f1a2",
+    "enet_characteristics_textcore_dgtw_fit756_val126": "4f81fbb2b938fafc0d8f6a0f088e28bad72bb84becefd20aa5d6dbfb900e153f",
+    "ols_characteristics_textall_dgtw_fit756_val126": "32eb3e0c1c55552ebdf0d00080114e2bdecb075c7cdb6315396e4b11fd23c599",
+    "ridge_characteristics_textall_dgtw_fit756_val126": "b36465b28cfdb26f71d1e37a2475965a3b87bdc9f24e96c4106d11a5e5246353",
+    "lasso_characteristics_textall_dgtw_fit756_val126": "2d7e53a029f1c8184c94d30e3c1fc87bec38d24f181beec911cefb12695156b2",
+    "enet_characteristics_textall_dgtw_fit756_val126": "a90cfeb19fb6e4b0dbefdf4fc1693def576fe6d16bacfbdd0d6861ff0a42b3df"
+  },
+  "output_sha256": {
+    "characteristics_v1_linear.csv": "1d718f7595deb0ccd9d064098162f3ca3da3946be9eae71de5e0ef0494e66dc7",
+    "characteristics_v1_linear_daily.csv.gz": "6877fc87be5e5a454ca1ccaf572db50d4d8d71996f74078c7ca107e372885040",
+    "characteristics_v1_linear_yearly.csv": "13b559938c616adf9893f29c941855c059bc53902be49dcb195bbfc3795a68c0",
+    "characteristics_v1_linear_periods.csv": "f07090f5861e2dfc2dca349a5ae40a4c0c5e2f0144539eaaddfdf1b46c678df4",
+    "characteristics_v1_linear_contrasts.csv": "584c31556a9d9d241366012250d4062d9c9ec4bae3cd444650eba8f0256707cc",
+    "characteristics_v1_linear_coverage.csv": "0b69fdd6e26427368e7021a5bfd48f79af6158d742080bd1e51ed858de46b788",
+    "characteristics_v1_linear_deciles.csv": "2e69035cbcdb0db164b6dfbea1b12ffef583f6746ab169ab1ae2873a82868171",
+    "characteristics_v1_linear_subgroups.csv": "a12e1c7161edc878d77dff262b5fd6840b4cf13b09ea99ecbea4e0bf4ce164b1",
+    "characteristics_v1_linear_horizons.csv": "73d1a8387930fc91f06251d74d3db4edfc8ccceebfe2817ec6aba05a1b798f91"
+  },
+  "daily_artifact": "Deterministic gzip (mtime=0); uncompressed daily CSV retained locally",
+  "numerical_threads": 2,
+  "elapsed_seconds": 1181.0260782999685
+}

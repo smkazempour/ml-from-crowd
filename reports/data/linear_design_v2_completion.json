@@ -1,0 +1,177 @@
+{
+  "experiment_id": "linear_design_v2",
+  "record_type": "independently_verified_completion",
+  "verified_at": "2026-09-22T00:57:17+00:00",
+  "study_status_path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\status.json",
+  "status": {
+    "status": "complete",
+    "phase": "complete",
+    "pid": 20204,
+    "child_pid": null,
+    "attempt": 1,
+    "started_at": "2026-09-21T18:19:20+00:00",
+    "fingerprint": "c11478141261534f5b10fc4e1285ecb07ce67f631eb447a5e22adde8a30d6293",
+    "run_dir": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f",
+    "workers": 4,
+    "threads": 2,
+    "commands": [
+      {
+        "phase": "implementation_pilot",
+        "command": [
+          "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+          "-B",
+          "D:\\StockTwits\\Code\\tools\\linear_design_runner.py",
+          "--prepared",
+          "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+          "--baseline-registry",
+          "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\registry.json",
+          "--spec",
+          "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_experiment.json",
+          "--out-root",
+          "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear",
+          "--threads",
+          "2",
+          "--months",
+          "2014-01",
+          "2022-12",
+          "--workers",
+          "2"
+        ],
+        "log": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\pilot_attempt_001.log",
+        "started_at": "2026-09-21T18:19:25+00:00",
+        "finished_at": "2026-09-21T18:26:08+00:00",
+        "exit_code": 0
+      },
+      {
+        "phase": "train_linear",
+        "command": [
+          "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+          "-B",
+          "D:\\StockTwits\\Code\\tools\\linear_design_runner.py",
+          "--prepared",
+          "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+          "--baseline-registry",
+          "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\registry.json",
+          "--spec",
+          "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_experiment.json",
+          "--out-root",
+          "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear",
+          "--threads",
+          "2",
+          "--workers",
+          "4"
+        ],
+        "log": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear_attempt_001.log",
+        "started_at": "2026-09-21T18:26:08+00:00",
+        "finished_at": "2026-09-21T22:09:20+00:00",
+        "exit_code": 0
+      },
+      {
+        "phase": "evaluate",
+        "command": [
+          "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+          "-B",
+          "D:\\StockTwits\\Code\\tools\\linear_design_evaluate.py",
+          "--registry",
+          "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\registry.json",
+          "--prepared",
+          "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+          "--out",
+          "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2",
+          "--threads",
+          "2"
+        ],
+        "log": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\evaluation_attempt_001.log",
+        "started_at": "2026-09-21T22:10:38+00:00",
+        "finished_at": "2026-09-21T22:31:41+00:00",
+        "exit_code": 0
+      },
+      {
+        "phase": "report",
+        "command": [
+          "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+          "-B",
+          "D:\\StockTwits\\Code\\tools\\linear_design_report.py",
+          "--registry",
+          "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\registry.json",
+          "--evaluation",
+          "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2",
+          "--out",
+          "D:\\StockTwits\\Code\\reports\\10_linear_design_results.md"
+        ],
+        "log": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\report_attempt_001.log",
+        "started_at": "2026-09-21T22:31:41+00:00",
+        "finished_at": "2026-09-21T22:31:46+00:00",
+        "exit_code": 0
+      }
+    ],
+    "updated_at": "2026-09-21T22:31:46+00:00",
+    "command": [
+      "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+      "-B",
+      "D:\\StockTwits\\Code\\tools\\linear_design_report.py",
+      "--registry",
+      "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\registry.json",
+      "--evaluation",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2",
+      "--out",
+      "D:\\StockTwits\\Code\\reports\\10_linear_design_results.md"
+    ],
+    "log": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\report_attempt_001.log",
+    "last_exit_code": 0,
+    "pilot_registry": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\pilot_66842e4db4c63298\\registry.json",
+    "registry": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\registry.json",
+    "evaluation": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2",
+    "report": "D:\\StockTwits\\Code\\reports\\10_linear_design_results.md",
+    "finished_at": "2026-09-21T22:31:46+00:00",
+    "models": 228,
+    "artifact_sha256": {
+      "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\registry.json": "29efe41fcd313f4e9a39c8cffc6a6ea26e12f4ff5b5e573bded0883c0b8d967c",
+      "D:\\StockTwits\\Code\\reports\\10_linear_design_results.md": "67687096eb43dae43aa82456bdd841505de10ab1f77ac618b5945a20e1738264",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2.json": "e451344bd453ff1cbf5482e6920e3e99dd3c9d3070a6f55f71e47db68571f465",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2.csv": "3812d9ab1b50e6d06dbebc9a58d992decb8c4965d8ea3f52bd174bc01086d811",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_daily.csv.gz": "db5dd8a14054f82e235f3f6e0c131353242c546245e7046589472080a1934b6b",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_yearly.csv": "3922543432f0fbfbdcd10d89e325f65032ce90546fce50ebb5977331b9ec18c0",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_periods.csv": "b2978393ec051560f283a5034426a30d33b0b0c883c4f27a72f6b5094321b1c2",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_contrasts.csv": "486019a8279e85a7b92b3eea7fdeb8385cdabb2bec599282329e120275dbb526",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_coverage.csv": "ed4f64f3c4cc4732d454fa8b4c2d6181a4bba9050395ad23d0a0fac9b35cb383",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_deciles.csv": "99f687b52e8528c4dec03c1d6239bc029aa192a57caf290ae50cdf752d1d3a48",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_subgroups.csv": "554b1077d9a1f05fb4cd9957018ebde34ee93c48489528865fca03427c1986a7",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_horizons.csv": "d8d8e95aa13d0a9d9310ab684b2e747d1a5e276e14b03661c3d6b23494624a5a"
+    }
+  },
+  "verified_artifact_sha256": {
+    "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\registry.json": "29efe41fcd313f4e9a39c8cffc6a6ea26e12f4ff5b5e573bded0883c0b8d967c",
+    "D:\\StockTwits\\Code\\reports\\10_linear_design_results.md": "67687096eb43dae43aa82456bdd841505de10ab1f77ac618b5945a20e1738264",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2.json": "e451344bd453ff1cbf5482e6920e3e99dd3c9d3070a6f55f71e47db68571f465",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2.csv": "3812d9ab1b50e6d06dbebc9a58d992decb8c4965d8ea3f52bd174bc01086d811",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_daily.csv.gz": "db5dd8a14054f82e235f3f6e0c131353242c546245e7046589472080a1934b6b",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_yearly.csv": "3922543432f0fbfbdcd10d89e325f65032ce90546fce50ebb5977331b9ec18c0",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_periods.csv": "b2978393ec051560f283a5034426a30d33b0b0c883c4f27a72f6b5094321b1c2",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_contrasts.csv": "486019a8279e85a7b92b3eea7fdeb8385cdabb2bec599282329e120275dbb526",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_coverage.csv": "ed4f64f3c4cc4732d454fa8b4c2d6181a4bba9050395ad23d0a0fac9b35cb383",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_deciles.csv": "99f687b52e8528c4dec03c1d6239bc029aa192a57caf290ae50cdf752d1d3a48",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_subgroups.csv": "554b1077d9a1f05fb4cd9957018ebde34ee93c48489528865fca03427c1986a7",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_horizons.csv": "d8d8e95aa13d0a9d9310ab684b2e747d1a5e276e14b03661c3d6b23494624a5a"
+  },
+  "verified_models": 228,
+  "verified_months_per_model": 108,
+  "verified_rows_per_model": 3034035,
+  "monthly_checkpoints": 216,
+  "desktop_notification": {
+    "event_id": "e77e5ea7466b054a4e323d4289e066fbe701ca290f8333a853079b9eabd18183",
+    "outcome": "complete",
+    "delivery_status": "delivered",
+    "attempts": [
+      {
+        "attempted_at": "2026-09-21T22:31:56+00:00",
+        "result": {
+          "accepted": true,
+          "tag": "e77e5ea7466b054a",
+          "method": "toast"
+        }
+      }
+    ],
+    "delivered_at": "2026-09-21T22:31:56+00:00"
+  }
+}

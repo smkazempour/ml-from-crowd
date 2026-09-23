@@ -1,0 +1,181 @@
+{
+  "recorded_at": "2026-09-23T01:49:29.486638+00:00",
+  "status": "complete",
+  "controller_pid": 4412,
+  "watcher_pid": 13572,
+  "study_fingerprint": "78b3dd65e0d5f8a64c4ae3f3f50ea4f5715ea38ddf1be3771f99adbd6cfd9436",
+  "run_dir": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6",
+  "status_file": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\status.json",
+  "source_sha256": {
+    "run_linear_interaction_study.py": "d068a4ca105c96dac1935312d5504b435d32a87b184dbf93efc842103d2e22d6",
+    "linear_interaction_core.py": "e7299cf9a1ff81d7de6ceff052fcf128f7649a8982cf5159c58cc283b545fa03",
+    "linear_interaction_runner.py": "39e9e3e3484c170102b059c9a124f118a9d298196c8a159ad7497bd47867d203",
+    "linear_interaction_evaluate.py": "1cb2183c613113dacce8232d71214715bea94fa3a32c8db757c654ef999d77bd",
+    "linear_interaction_report.py": "6c5c3c7d32404646b4547a540abf14087c1c5ba58072b189419db8d1a60f43a7",
+    "linear_optimization_core.py": "eeedac15d626976fd4186de1f567cc7d4626c9d1162dedcf561d20526d367828",
+    "linear_optimization_evaluate.py": "f16691cb96d28f464ea85d42ba8cf41044885d8ce9e50df4b38b3ddf4182f6a2",
+    "run_linear_design_study.py": "952b4469f38ccf62d05c34811573b75ba33be9cd44d1acc7e4c9c4f973bd0c3f",
+    "linear_design_core.py": "e7ab822630e036b41ec00400323cccb5d75779849bbdb899bfc8210bf82584db",
+    "linear_design_runner.py": "3e690956fef742892325451b333d598586429c5804c87163d0e086bb7d93f357",
+    "linear_design_evaluate.py": "23b7f08ecaa9b3771dbaff1a260b195f0363c75f33779faddb8c6a73171e7c27",
+    "linear_design_report.py": "2d0048ca92b18951f3b690fb77dcc6db03cca932dff96434090cb13e05dcbb72",
+    "run_characteristic_study.py": "42e50d5e7bb0e1642a1168d3a78ab884c7305c78593fc49194a048053c05300e",
+    "resume_protocol_nn_study.py": "4a81327843a5bd4978348399aabde2289a4e607f14c51cb1116b57febc191a27",
+    "characteristic_data.py": "7e16e9e77250f6dbc258d0ba536bd032aed844fcf940c8515ca9b3186a1c88dd",
+    "characteristic_linear.py": "6ef9ed71336c723312e0b6a27ad33d8d974ac8b7afda51289d37dc53134ba1ff",
+    "characteristic_evaluate.py": "51fd7102a5e5c8b327bd13ec646eab5cb5f908f11d0dd7d74663cb04eeeb8a84",
+    "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+    "protocol_linear.py": "9033999dcbe9375bff43213908aa4f2e3bedf81eeb53fd2123f0f20007cc8eb5",
+    "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+    "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83"
+  },
+  "spec_sha256": "56ab6993906c3f31d062788f8b609d167a7c161b8fa5f75592cb3d9f0255cd6b",
+  "tests": {
+    "passed": 30,
+    "failed": 0,
+    "elapsed_seconds": 20.159,
+    "command": "python -B -m unittest discover -s tools -p 'test_*linear_interaction*.py' -v",
+    "log": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\implementation_tests.log",
+    "sha256": "f13757cbfa201be8118a5bbc3ece15dc94dae78274efe46018466139fa07c8b5"
+  },
+  "preflight": {
+    "prepared_artifacts_verified": 10,
+    "historical_pilot_checkpoints_verified": 4
+  },
+  "launch_stdout": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\launch_20260922T133204.out.log",
+  "launch_stderr": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\launch_20260922T133204.err.log",
+  "pilot_fitting": {
+    "registry": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\pilot_4e8fd9754fe0c5f2\\registry.json",
+    "models": 148,
+    "checkpoints": [
+      {
+        "month": "2014-01",
+        "target": "dgtw",
+        "models": 74,
+        "seconds": 51.12443189998157,
+        "max_prediction_difference": 0.0,
+        "max_daily_ic_difference": 0.0
+      },
+      {
+        "month": "2022-12",
+        "target": "dgtw",
+        "models": 74,
+        "seconds": 198.60012999991886,
+        "max_prediction_difference": 0.0,
+        "max_daily_ic_difference": 0.0
+      },
+      {
+        "month": "2014-01",
+        "target": "raw",
+        "models": 74,
+        "seconds": 53.499247599975206,
+        "max_prediction_difference": 0.0,
+        "max_daily_ic_difference": 0.0
+      },
+      {
+        "month": "2022-12",
+        "target": "raw",
+        "models": 74,
+        "seconds": 208.41921900003217,
+        "max_prediction_difference": 0.0,
+        "max_daily_ic_difference": 0.0
+      }
+    ]
+  },
+  "completed_pilot_phases": [
+    {
+      "phase": "implementation_pilot",
+      "exit_code": 0,
+      "started_at": "2026-09-22T18:32:12+00:00",
+      "finished_at": "2026-09-22T18:36:57+00:00"
+    },
+    {
+      "phase": "pilot_evaluate",
+      "exit_code": 0,
+      "started_at": "2026-09-22T18:36:57+00:00",
+      "finished_at": "2026-09-22T18:39:28+00:00"
+    },
+    {
+      "phase": "pilot_report",
+      "exit_code": 0,
+      "started_at": "2026-09-22T18:39:28+00:00",
+      "finished_at": "2026-09-22T18:39:29+00:00"
+    }
+  ],
+  "pilot_artifact_sha256": {
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\pilot_4e8fd9754fe0c5f2\\registry.json": "01659011483fb266d0b5781b5b342c8a13ca11b286da54aac1f15be7ab9897e0",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\report.md": "4f736b435f7e3350f826465f34c9a7e8f6efd67422b1e0336504f4f9a63e7116",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\evaluation.json": "02c46e9989f8cb9f4d764d0b8a4125a9219f56ebbdfea21e2309e0b23330b4c0",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\evaluation.csv": "fb937d5940a6b3d77914533d78ea37260c4a17d6752614a942be0645cc6b74d9",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\evaluation_yearly.csv": "396f68272b970c81e134d443667125bfaf7647c70cfb35e6f539f365e6fbb0b7",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\evaluation_periods.csv": "a0e54b99099991c2a0e5950ac51873cb10a9bff756413999f6de383fb0566fbe",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\evaluation_contrasts.csv": "dd435371a5c2f0eddf6d5bec6a8b8ebb74114272fe41084b9485ab215d7ae630",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\evaluation_coverage.csv": "b9ea3289ae73114e90ddba30ebd405a3e5d0bbbb84be1c1a104443b99d3d1009",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\evaluation_deciles.csv": "7c0a79e9f1f81cb6f63d81fb65104952466bca27ff20303272cbf1c3ce2d12d8",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\evaluation_subgroups.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\evaluation_horizons.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\evaluation_daily.csv.gz": "5e796f2318f093b51a813b590b85688a6286825278cb70d5c5fe2986e0b55f13",
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\pilot_checks\\summary.md": "c2d95fbeff0ec587b5e8d32c88e0882cd6b442afd0889356741e972f367ea9bf"
+  },
+  "finished_at": "2026-09-22T21:38:43+00:00",
+  "completed_phases": [
+    {
+      "phase": "implementation_pilot",
+      "exit_code": 0,
+      "started_at": "2026-09-22T18:32:12+00:00",
+      "finished_at": "2026-09-22T18:36:57+00:00"
+    },
+    {
+      "phase": "pilot_evaluate",
+      "exit_code": 0,
+      "started_at": "2026-09-22T18:36:57+00:00",
+      "finished_at": "2026-09-22T18:39:28+00:00"
+    },
+    {
+      "phase": "pilot_report",
+      "exit_code": 0,
+      "started_at": "2026-09-22T18:39:28+00:00",
+      "finished_at": "2026-09-22T18:39:29+00:00"
+    },
+    {
+      "phase": "train_linear",
+      "exit_code": 0,
+      "started_at": "2026-09-22T18:39:29+00:00",
+      "finished_at": "2026-09-22T21:12:18+00:00"
+    },
+    {
+      "phase": "evaluate",
+      "exit_code": 0,
+      "started_at": "2026-09-22T21:13:01+00:00",
+      "finished_at": "2026-09-22T21:38:37+00:00"
+    },
+    {
+      "phase": "report",
+      "exit_code": 0,
+      "started_at": "2026-09-22T21:38:37+00:00",
+      "finished_at": "2026-09-22T21:38:43+00:00"
+    }
+  ],
+  "models": 148,
+  "monthly_jobs": 216,
+  "registry": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\registry.json",
+  "report": "D:\\StockTwits\\Code\\reports\\13_linear_interaction_results.md",
+  "summary_report": "D:\\StockTwits\\Code\\reports\\13a_linear_interaction_summary.md",
+  "artifact_sha256": {
+    "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\registry.json": "2b08574c626a4fe693ca66b9609659fd4db94346143ba1e94db73c71b5a53e67",
+    "D:\\StockTwits\\Code\\reports\\13_linear_interaction_results.md": "61bba9cd7605ad375a79b97cbdb3ab055a45741935f2b4c8d4271a7b45167439",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1.json": "1bcf6879ed6429bdb1b2bc64eeed35bd3d4bf3dffb1eea6c511cc85a06a4ee53",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1.csv": "0bb9a064ec1d2d98982c9b0c2c589aaa9fe265ea34fda26658fa9f58eb291d4a",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_yearly.csv": "206bacfce9d2431e7b579a0afbae47d035cf823d00e07c47d98d56ca909a26bd",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_periods.csv": "2df848eb9729dad872d6f9afb7fa70827d9f0112897cd01337d9a81d308e3421",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_contrasts.csv": "d0fa849b79df06a9ddb3bb9585ca62eac213a43e1730c4b2e4fe059c1c1c2501",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_coverage.csv": "f6cb888c5e640f772ef5badf1641bb7da84c3802e38cb8e7fe5ee57e7d1a8d08",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_deciles.csv": "834fb31fff2d0405e58341e94eef8955db8c91f8dbcc0a230d80dfe1f870c9c9",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_subgroups.csv": "db5d5dd7c65c2c317b7213934f85ced9077f0148d42f394a7085354bcc883415",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_horizons.csv": "00576df7400370f25f4954fb768e5204e5e3e09a0bdb69ffa4164709e7fd2240",
+    "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_daily.csv.gz": "f2afe80d305b2ccb8cfd47f553034d4cae8439c417c36d91ceccc24258a40849",
+    "D:\\StockTwits\\Code\\reports\\13a_linear_interaction_summary.md": "da3313b6a2df9ae9b5456dc73558331830ca096b034f7acd119b2c5ac1d41bf6"
+  },
+  "independent_completion_hashes_verified": 13
+}

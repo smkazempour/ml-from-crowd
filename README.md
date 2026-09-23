@@ -1,50 +1,70 @@
 # Project Guide: Machine Learning from the Crowd
 
-## What This Project Does
+This project measures what StockTwits sentiment, attention and text add to
+stock-return prediction beyond market characteristics and past returns. The
+broader agenda also covers news, fundamentals, and market-level information,
+and may support more than one paper.
 
-For the current research state, start with [reports/00_project_state.md](reports/00_project_state.md).
-The revised 96-model linear comparison is complete:
-[reports/07_protocol_linear_results.md](reports/07_protocol_linear_results.md).
-Text improves return ranking, but equal-weighted portfolio gains are not established.
-The [complete NN3 comparison](reports/08_protocol_nn_results.md) finished September 17, 2026:
-24 NN3 specifications across all three fitting windows, evaluated alongside 96 linear models.
-Completion evidence and run history are in [reports/NN_RUN_STATUS.md](reports/NN_RUN_STATUS.md).
-The current experiment adds past returns and market-based stock characteristics to
-the linear models, with a characteristic-only benchmark and separate sentiment and
-attention increments. See [the fixed design](reports/CHARACTERISTIC_EXPERIMENT.md),
-[run status](reports/CHARACTERISTIC_RUN_STATUS.md), and
-[reproduction instructions](tools/CHARACTERISTIC_STUDY.md).
-Window optimization and further neural-network designs are deferred until these
-linear results are available.
-The [preliminary NN3 report](reports/08a_protocol_nn_preliminary_results.md) remains available
-as the earlier snapshot covering only the 504- and 252-session windows.
-For a separate server run that finishes NN3 and compares network depth, use
-[the server package and instructions](server_nn/README.md). It exports the corrected
-data, completed linear baselines and compatible NN checkpoints into a portable snapshot.
-The [server handoff](reports/SERVER_RUN_HANDOFF.md) identifies the prepared transfer folder and validation results.
-The earlier evaluation recovery and historical NN pilot remain in
-[Report 06](reports/06_evaluation_and_nn_pilot.md).
-The adopted shared procedure is in [reports/EXPERIMENTAL_PROTOCOL.md](reports/EXPERIMENTAL_PROTOCOL.md).
-Its first-close timing trace and concrete training-window design are in
-[reports/TIMING_CONVENTION.md](reports/TIMING_CONVENTION.md).
-The living agenda, including possible directions for multiple papers, is in
-[reports/RESEARCH_QUESTIONS.md](reports/RESEARCH_QUESTIONS.md).
-Older pipeline counts and model registries below are historical; the current text table
-has 480 columns and its 53 non-text features exclude the unfinished cohort/conviction group.
+**Latest status, September 22, 2026:** all studies through explicit interaction
+Stage A are complete. All 148 interaction procedures and 216 monthly outcome jobs,
+evaluation, and reports finished at 4:38 p.m. Central. No run needs resuming.
 
-This project predicts daily stock returns using StockTwits sentiment, attention, engineered
-features and message embeddings. The revised experiment uses 504 fitting sessions plus
-126 validation sessions, monthly retraining, and a common January 2014 to December 2022
-test period. The 252- and 756-session fitting windows are prespecified comparisons.
+For a new conversation, start with [project memory](MEMORY.md),
+[the current project state](reports/00_project_state.md), and
+[the handoff](reports/NEXT_SESSION_HANDOFF.md). Repository instructions in
+[AGENTS.md](AGENTS.md) point to these records.
 
-Use the new [linear protocol notebook](03a%20-%20linear%20regression/prediction_linear_regression_protocol.ipynb)
-and [NN protocol notebook](03d%20-%20neural%20network/prediction_neural_network_protocol.ipynb)
-for these experiments. Both call the same input preparation and split code in
-`tools/protocol_data.py`; `tools/protocol_evaluate.py` evaluates their prediction registries.
-The frozen grids and comparison families are in
-[the experiment specification](reports/data/protocol_v1_1_experiment.json).
-Large prepared arrays, monthly checkpoints and predictions stay under ignored `.runs/`;
-the historical notebooks and `Data/` predictions retain their original settings.
+## Current results and next step
+
+- [Report 13a: short interaction summary](reports/13a_linear_interaction_summary.md)
+  and [Report 13: full register](reports/13_linear_interaction_results.md).
+- [Report 11a: linear optimization](reports/11a_linear_optimization_summary.md),
+  read with [the sample/transformation correction](reports/11b_sample_and_transformation_audit.md):
+  characteristics were already daily ranks, and the model sample already excludes
+  stock-days without retained tagged messages and embeddings.
+- [Report 10a: linear-design findings](reports/10a_linear_design_summary.md),
+  [Report 09: market-characteristic benchmarks](reports/09_characteristic_linear_results.md),
+  and [Report 08: completed social-only NN3 study](reports/08_protocol_nn_results.md).
+
+Market characteristics provide a strong benchmark; sentiment and attention add a
+small detectable increment. The latest primary ridge comparisons do not establish
+positive gains from the 35 individual social products, their joint block, or the
+text-interaction extensions after the declared adjustments. These are results for
+already-inspected development years, not untouched confirmation or net trading profits.
+
+The proposed next stages are tuned trees and then matched characteristic-conditioned
+NN designs in [Report 12](reports/12_interactions_and_nonlinear_plan.md). They have
+not been implemented or launched. The [existing server package](server_nn/README.md)
+and [server handoff](reports/SERVER_RUN_HANDOFF.md) describe the earlier social-only
+study and need a new export for these extensions.
+
+## Current procedure and reproducibility
+
+Use 504 initial training sessions, 126 chronological validation sessions, monthly
+updates, and a final refit on their original 630-session union with maturity
+exclusions preserved. Keep daily return-rank targets, equal day weights,
+validation-selected settings, common prediction keys, and paired calendar-aware
+inference. Raw next-day returns are primary; DGTW is secondary.
+
+The [experimental protocol](reports/EXPERIMENTAL_PROTOCOL.md),
+[timing convention](reports/TIMING_CONVENTION.md), and
+[research questions](reports/RESEARCH_QUESTIONS.md) distinguish current decisions
+from historical methods. Full declarations, evidence and machine-readable result
+tables are under `reports/` and `reports/data/`.
+
+The current interaction [study guide](tools/LINEAR_INTERACTION_STUDY.md),
+[fixed experiment](reports/LINEAR_INTERACTION_EXPERIMENT.md),
+[completion status](reports/LINEAR_INTERACTION_RUN_STATUS.md), and
+[notification record](reports/LINEAR_INTERACTION_COMPLETION.md) provide execution
+details. Its 30 tests and complete early/late-month pilot passed before the full run.
+Thirteen final output hashes were independently checked.
+
+Large prepared arrays, monthly checkpoints, and predictions stay under ignored
+`.runs/`; upstream source data live outside this repo. Git contains the code,
+declarations, reports, aggregate tables, and compressed daily evaluation results.
+A fresh clone needs the separately documented data artifacts to rerun studies.
+The pipeline map and notebooks below are historical; use the current study guides
+and declarations for new research rather than their older default settings.
 
 ---
 

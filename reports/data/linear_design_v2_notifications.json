@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-09-21T19:00:55+00:00",
+  "record_type": "notification_setup_snapshot_not_live_status",
+  "watcher_pid": 37656,
+  "watcher_status_path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\watcher_status.json",
+  "controller_status_path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\status.json",
+  "report_path": "D:\\StockTwits\\Code\\reports\\LINEAR_DESIGN_COMPLETION.md",
+  "poll_interval_seconds": 30,
+  "desktop_transport_test": {
+    "accepted": true,
+    "method": "toast",
+    "tag": "study-test-0921"
+  },
+  "tests_passed": 12,
+  "frozen_study_sources_unchanged": true,
+  "source_sha256": {
+    "watch_study.py": "1aba0a762c9972d3e188e6f39cbc94a5b5130d67d43f38a285192c4f00c33e4d",
+    "notify_study.ps1": "767efdfff00bf7f55a8e6efc52125c4b0506158902a760e66171626ba039aab3",
+    "test_watch_study.py": "3fa41ed97da0f9ca6539800ca50e02efe423241631ba6901224feb95eb4bd8e9"
+  },
+  "scope": "Current study attempt; Windows desktop notification and local report. Watcher runs while Windows is running; restart watcher after reboot using documented command."
+}

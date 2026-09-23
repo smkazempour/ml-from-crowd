@@ -4,15 +4,18 @@ Launched September 19, 2026 at 12:32 p.m. Central (17:32 UTC). This is the
 `characteristics_v1` experiment, following the completed social-only linear/NN3
 study committed and pushed as `9ac568e`.
 
-The full input preparation and implementation pilot are complete. All four pilot
-jobs passed and the controller has advanced to full linear training, followed
-automatically by verification, evaluation and Report 09. This note records the
-launch; consult the live status below for the current phase. There are no full-study
-characteristic-conditioned performance results yet.
+**Complete:** September 19, 2026 at **1:49:53 p.m. Central** (18:49:53 UTC).
+The full [results report](09_characteristic_linear_results.md) is available.
+All **648 monthly checkpoints** and **264 model specifications** completed, with
+108 test months and 3,034,035 eligible prediction rows per model. All 96 reused
+social-only models passed their source and prediction checks. Preparation/pilot,
+training, evaluation and report generation succeeded; all four supervised phases
+returned exit code zero. The controller is no longer running.
 
-At 12:35:53 p.m. Central on September 19, the full run had saved **12 of 648**
-monthly checkpoints without errors. All 96 reused social-only models passed their
-source and prediction checks. The full fitting directory is
+The saved registry, report, evaluation metadata and all nine result tables passed
+independent SHA-256 revalidation on September 19. The completion record is
+[data/characteristics_v1_completion.json](data/characteristics_v1_completion.json).
+The full fitting directory is
 `.runs/characteristics_v1/study/d20631f4712e3eb5/linear/full_fc16bf210fe45a57`.
 
 ## Design and prepared data
@@ -40,16 +43,15 @@ source and prediction checks. The full fitting directory is
 
 ## Process and recovery
 
-Controller PID at launch: **9532**. Six fitting workers use two numerical threads
-each; the four-job implementation pilot uses two workers. Its two test months are
+Controller PID at launch: **9532** (now exited). Six fitting workers used two numerical
+threads each; the four-job implementation pilot used two workers. Its two test months were
 January 2014 and December 2022, for both targets. Pilot outcomes do not select or
 alter the scientific design.
 
 Pilot fit times were 12.7/10.8 seconds for January 2014 (raw/DGTW) and 33.5/30.2
-seconds for December 2022. The earlier complete linear study totaled 4.56 worker-hours
-over 648 jobs. These observations suggest roughly 1-2 hours of fitting, with
-additional time for verification, prediction publication and evaluation; this is
-an initial planning estimate, not a deadline.
+seconds for December 2022. Actual end-to-end controller time was **1 hour 17 minutes
+24 seconds**. The full training/publication phase took 54 minutes 32 seconds;
+evaluation took 19 minutes 46 seconds, followed by 5 seconds for report generation.
 
 Live status:
 `.runs/characteristics_v1/study/d20631f4712e3eb5/status.json`.
@@ -60,19 +62,20 @@ Controller output:
 
 Phase logs, frozen source snapshots, the complete study identity and checkpoints
 live under `.runs/characteristics_v1/study/d20631f4712e3eb5/`.
-The execution snapshot is [data/characteristics_v1_execution.json](data/characteristics_v1_execution.json).
-See [the reproduction and recovery guide](../tools/CHARACTERISTIC_STUDY.md) before
-resuming; do not launch a second copy while this controller is active. File locks,
-checkpoint hashes and deterministic run identities protect restart integrity.
+The historical launch snapshot is [data/characteristics_v1_execution.json](data/characteristics_v1_execution.json);
+its running status records the launch and is superseded by the completion record.
+See [the reproduction and recovery guide](../tools/CHARACTERISTIC_STUDY.md) for
+verification or reproduction. No resume is needed. File locks, checkpoint hashes
+and deterministic run identities protect restart integrity.
 
 Completion requires all 648 monthly fitting checkpoints, a certified 264-model
 registry with 108 test months per model, evaluation, report generation and output
 hash verification. The controller records `status: complete` only after all stages
 succeed. Merely observing that the training process stopped is insufficient.
 
-## Expected outputs and next decision
+## Results and next decision
 
-The controller will write `reports/09_characteristic_linear_results.md` and
+The controller wrote [Report 09](09_characteristic_linear_results.md) and
 `reports/data/characteristics_v1_linear*`. The daily table is published as a gzip
 file; its uncompressed local copy is ignored by Git. Prepared arrays and model
 predictions remain in ignored `.runs/`.

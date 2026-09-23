@@ -1,0 +1,1576 @@
+{
+  "schema_version": "linear_design_v2_evaluation",
+  "created": "2026-09-21T17:31:36.610853",
+  "registry": {
+    "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\registry.json",
+    "bytes": 884419,
+    "mtime_ns": 1790028558819335300
+  },
+  "prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+  "prepared_manifest_sha256": "4d7fc5a6edd68b85effd5f7aaf84accf9c93fcc7a96317702fad0b579a9765d3",
+  "source_limitations": [
+    "nominal 16:00 message routing ignores early closes",
+    "ar_dgtw_21 has known 2013 panel corruption; crsp_ar_dgtw_21 is separately retained",
+    "h>1 imported labels and factor-CAR completeness not certified",
+    "Market-based controls only; no audited point-in-time accounting characteristics.",
+    "Legacy upstream daily bm joins fiscal datadate without reporting lag; excluded from predictors; inherited DGTW target has this limitation.",
+    "Close-t market inputs and nominal-close message routing inherit the executable-close and early-close limitations."
+  ],
+  "arguments": {
+    "registry": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\registry.json",
+    "prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+    "out": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2",
+    "start": "2014-01-01",
+    "end": "2022-12-31",
+    "cap_column": "cap",
+    "diagnostic_fit_days": 504,
+    "skip_horizons": false,
+    "skip_subgroups": false
+  },
+  "prediction_sources": {
+    "ld2_ols_characteristics_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028211245767500
+    },
+    "ld2_ols_characteristics_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028212654820000
+    },
+    "ld2_ols_characteristics_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028214011974400
+    },
+    "ld2_ols_characteristics_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028215400343600
+    },
+    "ld2_ols_characteristics_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028216788331500
+    },
+    "ld2_ols_characteristics_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028218133370100
+    },
+    "ld2_ridge_characteristics_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028219493383400
+    },
+    "ld2_ridge_characteristics_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028220878077800
+    },
+    "ld2_ridge_characteristics_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028222240529500
+    },
+    "ld2_ridge_characteristics_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028223635130000
+    },
+    "ld2_ridge_characteristics_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028225034223200
+    },
+    "ld2_ridge_characteristics_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028226522779400
+    },
+    "ld2_lasso_characteristics_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028227881062700
+    },
+    "ld2_lasso_characteristics_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028229202568600
+    },
+    "ld2_lasso_characteristics_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028230612367500
+    },
+    "ld2_lasso_characteristics_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028232002524600
+    },
+    "ld2_lasso_characteristics_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028233588540500
+    },
+    "ld2_lasso_characteristics_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028235056250000
+    },
+    "ld2_enet_characteristics_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028236473343400
+    },
+    "ld2_enet_characteristics_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028237907251400
+    },
+    "ld2_enet_characteristics_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028239324536800
+    },
+    "ld2_enet_characteristics_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028240708496100
+    },
+    "ld2_enet_characteristics_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028242109042900
+    },
+    "ld2_enet_characteristics_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028243543334700
+    },
+    "ld2_ols_characteristics_core_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028244943757200
+    },
+    "ld2_ols_characteristics_core_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028246396077200
+    },
+    "ld2_ols_characteristics_core_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028247791658800
+    },
+    "ld2_ols_characteristics_core_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028249242836000
+    },
+    "ld2_ols_characteristics_core_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028250717925300
+    },
+    "ld2_ols_characteristics_core_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028252230632500
+    },
+    "ld2_ridge_characteristics_core_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028253629937300
+    },
+    "ld2_ridge_characteristics_core_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028254991305800
+    },
+    "ld2_ridge_characteristics_core_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028256339036700
+    },
+    "ld2_ridge_characteristics_core_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028257692266500
+    },
+    "ld2_ridge_characteristics_core_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028259112200600
+    },
+    "ld2_ridge_characteristics_core_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028260489572400
+    },
+    "ld2_lasso_characteristics_core_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028261863353600
+    },
+    "ld2_lasso_characteristics_core_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028263293342100
+    },
+    "ld2_lasso_characteristics_core_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028264675565300
+    },
+    "ld2_lasso_characteristics_core_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028266053646800
+    },
+    "ld2_lasso_characteristics_core_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028267413519400
+    },
+    "ld2_lasso_characteristics_core_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028268784525600
+    },
+    "ld2_enet_characteristics_core_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028270197942700
+    },
+    "ld2_enet_characteristics_core_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028271606096700
+    },
+    "ld2_enet_characteristics_core_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028273019291100
+    },
+    "ld2_enet_characteristics_core_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028274408101400
+    },
+    "ld2_enet_characteristics_core_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028275836599500
+    },
+    "ld2_enet_characteristics_core_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028277376459800
+    },
+    "ld2_group_ridge_characteristics_core_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028278859441500
+    },
+    "ld2_group_ridge_characteristics_core_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028280326650400
+    },
+    "ld2_group_ridge_characteristics_core_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028281814944900
+    },
+    "ld2_group_ridge_characteristics_core_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028283362160000
+    },
+    "ld2_group_ridge_characteristics_core_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028284979756000
+    },
+    "ld2_group_ridge_characteristics_core_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028286572176800
+    },
+    "ld2_ols_characteristics_textcore_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028288180989500
+    },
+    "ld2_ols_characteristics_textcore_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028289764179400
+    },
+    "ld2_ols_characteristics_textcore_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028291355914400
+    },
+    "ld2_ols_characteristics_textcore_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028292983203400
+    },
+    "ld2_ols_characteristics_textcore_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028294566728500
+    },
+    "ld2_ols_characteristics_textcore_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028296200406900
+    },
+    "ld2_ridge_characteristics_textcore_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028297801753900
+    },
+    "ld2_ridge_characteristics_textcore_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028299498471700
+    },
+    "ld2_ridge_characteristics_textcore_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028301153360100
+    },
+    "ld2_ridge_characteristics_textcore_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028302740384300
+    },
+    "ld2_ridge_characteristics_textcore_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028304396683400
+    },
+    "ld2_ridge_characteristics_textcore_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028306073895400
+    },
+    "ld2_lasso_characteristics_textcore_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028307598251200
+    },
+    "ld2_lasso_characteristics_textcore_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028309003712100
+    },
+    "ld2_lasso_characteristics_textcore_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028310352613800
+    },
+    "ld2_lasso_characteristics_textcore_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028311779650100
+    },
+    "ld2_lasso_characteristics_textcore_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028313232636500
+    },
+    "ld2_lasso_characteristics_textcore_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028314708669300
+    },
+    "ld2_enet_characteristics_textcore_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028316193165800
+    },
+    "ld2_enet_characteristics_textcore_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028317729348100
+    },
+    "ld2_enet_characteristics_textcore_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028319329290800
+    },
+    "ld2_enet_characteristics_textcore_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028320824003100
+    },
+    "ld2_enet_characteristics_textcore_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028322379121400
+    },
+    "ld2_enet_characteristics_textcore_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028323945835600
+    },
+    "ld2_group_ridge_characteristics_textcore_full_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028325544877000
+    },
+    "ld2_group_ridge_characteristics_textcore_full_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028327067757600
+    },
+    "ld2_group_ridge_characteristics_textcore_full_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028328624312000
+    },
+    "ld2_group_ridge_characteristics_textcore_full_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028330248353200
+    },
+    "ld2_group_ridge_characteristics_textcore_full_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028331859625200
+    },
+    "ld2_group_ridge_characteristics_textcore_full_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028333491790700
+    },
+    "ld2_ols_characteristics_textcore_pca_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028335103126700
+    },
+    "ld2_ols_characteristics_textcore_pca_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028336667262600
+    },
+    "ld2_ols_characteristics_textcore_pca_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028338254566600
+    },
+    "ld2_ols_characteristics_textcore_pca_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028339812520600
+    },
+    "ld2_ols_characteristics_textcore_pca_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028341441000700
+    },
+    "ld2_ols_characteristics_textcore_pca_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028343089258500
+    },
+    "ld2_ridge_characteristics_textcore_pca_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028344640610500
+    },
+    "ld2_ridge_characteristics_textcore_pca_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028346301372700
+    },
+    "ld2_ridge_characteristics_textcore_pca_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028347886663300
+    },
+    "ld2_ridge_characteristics_textcore_pca_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028349538496700
+    },
+    "ld2_ridge_characteristics_textcore_pca_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028351143686000
+    },
+    "ld2_ridge_characteristics_textcore_pca_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028352744544500
+    },
+    "ld2_lasso_characteristics_textcore_pca_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028354349557600
+    },
+    "ld2_lasso_characteristics_textcore_pca_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028355934926400
+    },
+    "ld2_lasso_characteristics_textcore_pca_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028357550692900
+    },
+    "ld2_lasso_characteristics_textcore_pca_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028359146583100
+    },
+    "ld2_lasso_characteristics_textcore_pca_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028360717514900
+    },
+    "ld2_lasso_characteristics_textcore_pca_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028362332198600
+    },
+    "ld2_enet_characteristics_textcore_pca_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028363915439500
+    },
+    "ld2_enet_characteristics_textcore_pca_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028365469380000
+    },
+    "ld2_enet_characteristics_textcore_pca_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028367102222800
+    },
+    "ld2_enet_characteristics_textcore_pca_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028368726665100
+    },
+    "ld2_enet_characteristics_textcore_pca_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028370362716300
+    },
+    "ld2_enet_characteristics_textcore_pca_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028371967242000
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_raw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_raw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028373560381500
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_raw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_raw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028375203647700
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028376787620800
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_raw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_raw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028378406093000
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_raw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_raw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028380043341600
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_raw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_raw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028381624317300
+    },
+    "ld2_ols_characteristics_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028383374050900
+    },
+    "ld2_ols_characteristics_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028384824743900
+    },
+    "ld2_ols_characteristics_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028386275986400
+    },
+    "ld2_ols_characteristics_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028387727430600
+    },
+    "ld2_ols_characteristics_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028389161146600
+    },
+    "ld2_ols_characteristics_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028390577871600
+    },
+    "ld2_ridge_characteristics_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028392028985500
+    },
+    "ld2_ridge_characteristics_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028393480236300
+    },
+    "ld2_ridge_characteristics_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028394913043600
+    },
+    "ld2_ridge_characteristics_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028396315959800
+    },
+    "ld2_ridge_characteristics_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028397715190200
+    },
+    "ld2_ridge_characteristics_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028399224261900
+    },
+    "ld2_lasso_characteristics_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028400686542200
+    },
+    "ld2_lasso_characteristics_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028402216428900
+    },
+    "ld2_lasso_characteristics_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028403833535800
+    },
+    "ld2_lasso_characteristics_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028405485292800
+    },
+    "ld2_lasso_characteristics_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028407215102000
+    },
+    "ld2_lasso_characteristics_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028408852791900
+    },
+    "ld2_enet_characteristics_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028410519953500
+    },
+    "ld2_enet_characteristics_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028412153986500
+    },
+    "ld2_enet_characteristics_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028413784307000
+    },
+    "ld2_enet_characteristics_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028415405537800
+    },
+    "ld2_enet_characteristics_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028416948738300
+    },
+    "ld2_enet_characteristics_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028418573660900
+    },
+    "ld2_ols_characteristics_core_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028420147354900
+    },
+    "ld2_ols_characteristics_core_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028421707395600
+    },
+    "ld2_ols_characteristics_core_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028423343668800
+    },
+    "ld2_ols_characteristics_core_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028424909973400
+    },
+    "ld2_ols_characteristics_core_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028426461023300
+    },
+    "ld2_ols_characteristics_core_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_core_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028428078277800
+    },
+    "ld2_ridge_characteristics_core_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028429669236500
+    },
+    "ld2_ridge_characteristics_core_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028431283320400
+    },
+    "ld2_ridge_characteristics_core_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028432891115200
+    },
+    "ld2_ridge_characteristics_core_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028434431980000
+    },
+    "ld2_ridge_characteristics_core_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028435965210800
+    },
+    "ld2_ridge_characteristics_core_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_core_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028437499255200
+    },
+    "ld2_lasso_characteristics_core_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028439087314400
+    },
+    "ld2_lasso_characteristics_core_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028440635392200
+    },
+    "ld2_lasso_characteristics_core_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028442169147400
+    },
+    "ld2_lasso_characteristics_core_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028443752539900
+    },
+    "ld2_lasso_characteristics_core_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028445286397800
+    },
+    "ld2_lasso_characteristics_core_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_core_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028446886911900
+    },
+    "ld2_enet_characteristics_core_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028448342909800
+    },
+    "ld2_enet_characteristics_core_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028449784154300
+    },
+    "ld2_enet_characteristics_core_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028451290273200
+    },
+    "ld2_enet_characteristics_core_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028452839584200
+    },
+    "ld2_enet_characteristics_core_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028454373996100
+    },
+    "ld2_enet_characteristics_core_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_core_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028455973476800
+    },
+    "ld2_group_ridge_characteristics_core_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028457542237400
+    },
+    "ld2_group_ridge_characteristics_core_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028459144988600
+    },
+    "ld2_group_ridge_characteristics_core_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028460677417400
+    },
+    "ld2_group_ridge_characteristics_core_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028462261031500
+    },
+    "ld2_group_ridge_characteristics_core_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028463877945500
+    },
+    "ld2_group_ridge_characteristics_core_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_core_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028465421867000
+    },
+    "ld2_ols_characteristics_textcore_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028467030946300
+    },
+    "ld2_ols_characteristics_textcore_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028468580637900
+    },
+    "ld2_ols_characteristics_textcore_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028470131061900
+    },
+    "ld2_ols_characteristics_textcore_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028471715169500
+    },
+    "ld2_ols_characteristics_textcore_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028473304668900
+    },
+    "ld2_ols_characteristics_textcore_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028474883388600
+    },
+    "ld2_ridge_characteristics_textcore_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028476452311500
+    },
+    "ld2_ridge_characteristics_textcore_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028478020100300
+    },
+    "ld2_ridge_characteristics_textcore_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028479669908600
+    },
+    "ld2_ridge_characteristics_textcore_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028481252651400
+    },
+    "ld2_ridge_characteristics_textcore_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028482803700900
+    },
+    "ld2_ridge_characteristics_textcore_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028484321550500
+    },
+    "ld2_lasso_characteristics_textcore_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028485905385700
+    },
+    "ld2_lasso_characteristics_textcore_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028487473273700
+    },
+    "ld2_lasso_characteristics_textcore_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028489024471600
+    },
+    "ld2_lasso_characteristics_textcore_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028490607003400
+    },
+    "ld2_lasso_characteristics_textcore_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028492158385200
+    },
+    "ld2_lasso_characteristics_textcore_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028493709362900
+    },
+    "ld2_enet_characteristics_textcore_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028495276343000
+    },
+    "ld2_enet_characteristics_textcore_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028496824308800
+    },
+    "ld2_enet_characteristics_textcore_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028498410889800
+    },
+    "ld2_enet_characteristics_textcore_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028499947871200
+    },
+    "ld2_enet_characteristics_textcore_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028501452430500
+    },
+    "ld2_enet_characteristics_textcore_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028502999294600
+    },
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028504468767600
+    },
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028506034879600
+    },
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028507565210800
+    },
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028509133231400
+    },
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028510671053900
+    },
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_full_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028512221268500
+    },
+    "ld2_ols_characteristics_textcore_pca_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028513856183000
+    },
+    "ld2_ols_characteristics_textcore_pca_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028515435682300
+    },
+    "ld2_ols_characteristics_textcore_pca_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028517087796600
+    },
+    "ld2_ols_characteristics_textcore_pca_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028518679957100
+    },
+    "ld2_ols_characteristics_textcore_pca_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028520120095000
+    },
+    "ld2_ols_characteristics_textcore_pca_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ols_characteristics_textcore_pca_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028521565626700
+    },
+    "ld2_ridge_characteristics_textcore_pca_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028523046235700
+    },
+    "ld2_ridge_characteristics_textcore_pca_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028524530247200
+    },
+    "ld2_ridge_characteristics_textcore_pca_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028526080097400
+    },
+    "ld2_ridge_characteristics_textcore_pca_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028527634347800
+    },
+    "ld2_ridge_characteristics_textcore_pca_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028529230473200
+    },
+    "ld2_ridge_characteristics_textcore_pca_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_ridge_characteristics_textcore_pca_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028530756758200
+    },
+    "ld2_lasso_characteristics_textcore_pca_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028532259847000
+    },
+    "ld2_lasso_characteristics_textcore_pca_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028533757420300
+    },
+    "ld2_lasso_characteristics_textcore_pca_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028535281643100
+    },
+    "ld2_lasso_characteristics_textcore_pca_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028536813949100
+    },
+    "ld2_lasso_characteristics_textcore_pca_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028538344053700
+    },
+    "ld2_lasso_characteristics_textcore_pca_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_lasso_characteristics_textcore_pca_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028539855021600
+    },
+    "ld2_enet_characteristics_textcore_pca_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028541376019200
+    },
+    "ld2_enet_characteristics_textcore_pca_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028542896725400
+    },
+    "ld2_enet_characteristics_textcore_pca_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028544410144900
+    },
+    "ld2_enet_characteristics_textcore_pca_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028545959510500
+    },
+    "ld2_enet_characteristics_textcore_pca_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028547503553100
+    },
+    "ld2_enet_characteristics_textcore_pca_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_enet_characteristics_textcore_pca_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028549059984500
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_fixed504_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_dgtw_fixed504_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028550555052800
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_fixed504_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_dgtw_fixed504_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028552075692100
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028553607765300
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_select_retain": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_dgtw_select_retain.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028555164623400
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_select_recent": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_dgtw_select_recent.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028556686654000
+    },
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_select_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear\\full_9590a962af3e2fcb\\predictions_ld2_group_ridge_characteristics_textcore_pca_dgtw_select_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790028558234787200
+    }
+  },
+  "coverage": {
+    "raw": {
+      "models": 114,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 3033080
+    },
+    "dgtw": {
+      "models": 114,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 2748978
+    }
+  },
+  "output_files": {
+    "summary": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2.csv",
+      "bytes": 174557,
+      "mtime_ns": 1790029892273332700
+    },
+    "_daily": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_daily.csv.gz",
+      "bytes": 40406221,
+      "mtime_ns": 1790029900901088600
+    },
+    "_yearly": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_yearly.csv",
+      "bytes": 1585062,
+      "mtime_ns": 1790029896327862100
+    },
+    "_periods": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_periods.csv",
+      "bytes": 540213,
+      "mtime_ns": 1790029896344201700
+    },
+    "_contrasts": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_contrasts.csv",
+      "bytes": 6800147,
+      "mtime_ns": 1790029896469143600
+    },
+    "_coverage": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_coverage.csv",
+      "bytes": 23824,
+      "mtime_ns": 1790029896470502700
+    },
+    "_deciles": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_deciles.csv",
+      "bytes": 6842451,
+      "mtime_ns": 1790029896564438200
+    },
+    "_subgroups": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_subgroups.csv",
+      "bytes": 577737,
+      "mtime_ns": 1790029896595019500
+    },
+    "_horizons": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_horizons.csv",
+      "bytes": 524438,
+      "mtime_ns": 1790029896607779000
+    }
+  },
+  "common_sample": "Joint finite predictions across every registered model within each target; then observed outcome",
+  "primary_metric": "rank_ic",
+  "secondary_metrics": [
+    "ew_spread_bp",
+    "cap_spread_bp"
+  ],
+  "multiplicity": "Bonferroni within target/family/metric/period over the fixed 228-model design. Missing statistics or pilot subsets do not reduce denominators. HAC21/HAC63 are sensitivities. No correction across the project's already-inspected development history.",
+  "contrast_families": {
+    "refit": "Recent F minus retained coefficients; union F+126 minus retained; union minus recent, matched in every other design choice",
+    "history": "Validation-selected F252/F504/F756 minus fixed F504, matched in every other design choice",
+    "group_penalty": "Separate group penalties minus global ridge, at matched inputs, representation, history and refit",
+    "compression": "Validation-selected text PCA dimension minus full text, at matched estimator, inputs, history and refit",
+    "incremental_social": "C+core minus C; C+full-text+core minus C+core; C+PCA-text+core minus C+core. Group C+core uses global-ridge C as its characteristic-only reference",
+    "estimator": "Ridge, lasso, elastic net and group ridge minus OLS, at matched inputs, representation, history and refit"
+  },
+  "inference": "Two-sided normal Bartlett HAC, n/(n-1) correction, missing trading sessions retain actual calendar distance",
+  "hac_lags": [
+    5,
+    21,
+    63
+  ],
+  "min_ic_stocks": 10,
+  "minimum_fractional_stocks_per_decile": 10,
+  "capitalization": "cap",
+  "ties": "Fractional rank intervals; constant forecasts hold cash",
+  "legs": "Raw realized target returns and target returns demeaned by that scope/day's unweighted eligible-stock mean; cash stays zero",
+  "portfolio_limit": "Descriptive gross sorts. No attainable same-close execution, turnover, costs, factor alpha, or investment claim.",
+  "subgroups": "F504 by default; contemporaneous midrank terciles before outcome filtering; equal values stay together",
+  "horizons": "F504 forecasts trained on h1 evaluated against cumulative close-t-to-close-(t+h) returns; not disjoint future-return intervals or h-specific fits",
+  "skipped_horizons": [
+    {
+      "target": "dgtw",
+      "horizon": 21,
+      "reason": "Known source ar_dgtw_21 corruption; excluded pending repair"
+    }
+  ],
+  "python": "3.13.11",
+  "interpreter": "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+  "code_sha256": {
+    "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7"
+  },
+  "planned_models": 228,
+  "included_models": 228,
+  "pilot": false,
+  "preliminary": false,
+  "planned_family_counts": {
+    "refit": 114,
+    "history": 57,
+    "group_penalty": 18,
+    "compression": 30,
+    "incremental_social": 90,
+    "estimator": 90
+  },
+  "observed_family_counts": {
+    "raw": {
+      "refit": 114,
+      "history": 57,
+      "estimator": 90,
+      "incremental_social": 90,
+      "group_penalty": 18,
+      "compression": 30
+    },
+    "dgtw": {
+      "refit": 114,
+      "history": 57,
+      "estimator": 90,
+      "incremental_social": 90,
+      "group_penalty": 18,
+      "compression": 30
+    }
+  },
+  "primary_target": "raw",
+  "secondary_target": "dgtw",
+  "research_status": "2014-2022 is exploratory development evidence; no globally best test-score procedure is selected. No 2023 outcomes scored. 2023 is not an established untouched holdout: available inputs cover only 178 of 250 expected dates and earlier project records mention predictions through 2023. A separate completeness and prior-use audit is required before any confirmation claim.",
+  "coefficient_refits": {
+    "retain": "Keep fitting-block coefficients selected using the following 126 validation sessions",
+    "recent": "After validation selection, refit on the latest F eligible matured sessions",
+    "union": "After validation selection, refit on the exact original fitting and validation rows; F+126 sessions, excluding the original purge"
+  },
+  "window_selection": "Select policy chooses F252/F504/F756 and hyperparameters using only preceding validation rank IC. fixed504 retains the original main history.",
+  "text_compression": "PCA only on 384 embedding coordinates; dimension selected from 16/32/64/128 within validation. The two agreement measures (embed_norm/embed_cos) remain separate inputs in the text penalty group. All transformations are rebuilt on each final refit's permitted inputs.",
+  "kernel_reuse": "Unmodified protocol_evaluate scoring, alignment, calendar and HAC; scoped comparison and summary-metadata adapters only",
+  "reused_kernel_sha256": {
+    "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7"
+  },
+  "wrapper_sha256": "23b7f08ecaa9b3771dbaff1a260b195f0363c75f33779faddb8c6a73171e7c27",
+  "registry_sha256": "29efe41fcd313f4e9a39c8cffc6a6ea26e12f4ff5b5e573bded0883c0b8d967c",
+  "prepared_sha256": {
+    "manifest.json": "4d7fc5a6edd68b85effd5f7aaf84accf9c93fcc7a96317702fad0b579a9765d3",
+    "X.npy": "6950aaa0aa36615df903d7605efb060369e7f04ce299733f1b92e23fa6c1a787",
+    "y.npy": "ef7d0d013b7d44caf7dc6495a5e77d1fd91d0f3607f18a082c4045f59ac2e983",
+    "q.npy": "e5943044cd908a9b214b65a2fa2b110f06c5399a11be0b7cfd05903f872578ba",
+    "codes.npy": "afc9a8efe010cc4ec03b45275b2b9d8360def3582de1d8a9b0da662c47df9518",
+    "calendar.npy": "5b4fc803952c4acf8369619087192805e0d865daba5c6590812b61652534a47c",
+    "keys.pkl": "a26d73a704db186859026b92014bc35409b064ea49042b89b81a95f0046e8631",
+    "evaluation.pkl": "84e9c9bde6f22f18a73dede6904f7e3b06363412adef30620a8c00645ff66dda"
+  },
+  "prediction_sha256": {
+    "ld2_ols_characteristics_full_raw_fixed504_retain": "3a8bc1c652c55808c3735af903cc4b1d2f03fa40bca64a3da350eaee8046b454",
+    "ld2_ols_characteristics_full_raw_fixed504_recent": "cad54211bdad0747234274801989cfde2120f91fbe9fad57f8258fbebd5fc725",
+    "ld2_ols_characteristics_full_raw_fixed504_union": "23a74df99e48da962cdee56869ab12eed321644a2a01db05b0c87231d8cfb863",
+    "ld2_ols_characteristics_full_raw_select_retain": "eacd8bbee46767ad46ecb866d028b8e81fb65f5c0ad8c60acec50a1400c83579",
+    "ld2_ols_characteristics_full_raw_select_recent": "34835142ba2b8f382e379aa781e8c294c2e0c79dae65c149398e79de1e896dc4",
+    "ld2_ols_characteristics_full_raw_select_union": "c753f00170b46393e14343758c0dea32dc8a68323f148fd1550b3691e4b554ef",
+    "ld2_ridge_characteristics_full_raw_fixed504_retain": "b47acac1bdadc3bd03abe6cd4f2570cdea62ca12361238bbb3c2e2e5a77e06de",
+    "ld2_ridge_characteristics_full_raw_fixed504_recent": "4978803a53f74da53188a0c2b8563febcb8a27d93bed85be5bfb0feca87b11ff",
+    "ld2_ridge_characteristics_full_raw_fixed504_union": "d1680b38cbc59816cf1a99c319e9145721e5b66e65bcbc5ea00413a57296435e",
+    "ld2_ridge_characteristics_full_raw_select_retain": "1f770537ab4a6184dd4bad18c7e2d568ccdc763f14a1a7f68284e21de24b6251",
+    "ld2_ridge_characteristics_full_raw_select_recent": "4f64a2fa0da5a48ff036ddfbbb95cd91f51828ac52c57d2972386cef699cd62f",
+    "ld2_ridge_characteristics_full_raw_select_union": "c6c0171af156b5edf952924bf34b058ed13e9b58af17a7639f03ce8b3a4033ec",
+    "ld2_lasso_characteristics_full_raw_fixed504_retain": "c75ca5997a35e99147f2f0a4bfb36dde2a42ea51221867dc0dfa11c0980d2b18",
+    "ld2_lasso_characteristics_full_raw_fixed504_recent": "c4764ab8d7f4849915ee6599756e2b893d8c14cc6bc5fcd58496e5c038953248",
+    "ld2_lasso_characteristics_full_raw_fixed504_union": "21f96bb885f8ec75269ede909e63b02d9d78d8239d58706789d87fe03ceb7cdb",
+    "ld2_lasso_characteristics_full_raw_select_retain": "fb259a0caa8eec3a1bb48f3f0147861c096940f3f536a01a01497d106a42025a",
+    "ld2_lasso_characteristics_full_raw_select_recent": "deab9c4293a6af74cf9cd1830b82549df60b7a10697f5aeb7509dc924b4ce778",
+    "ld2_lasso_characteristics_full_raw_select_union": "7befb7f836a709ff22632f989ab1c8ed4f25b2d1adf9c3a1798c821b99363df8",
+    "ld2_enet_characteristics_full_raw_fixed504_retain": "65c1d9b042b519e7bdc7307992f4e30fa20bd4ba8f2b290e719c15baa1fda4f1",
+    "ld2_enet_characteristics_full_raw_fixed504_recent": "40c86d8255ada363207d765db19d064f5e5e0c5cc4ce96dda35b682944bda83b",
+    "ld2_enet_characteristics_full_raw_fixed504_union": "3c1c801da00ad2ce750d0ad92b541705b5a89fc3231221884a90f0662cd35a8d",
+    "ld2_enet_characteristics_full_raw_select_retain": "edca3b5f4c7cdee1133324aa6a9aee944a71339c51912f51f7848332c7e43660",
+    "ld2_enet_characteristics_full_raw_select_recent": "3fc88765a64e177533a144a1db19525832e0977d155711a8a5c70288e2b9dd61",
+    "ld2_enet_characteristics_full_raw_select_union": "11dcfbe186616fb3a1bd298570aa904460bccd861a020a731b5167cca5c20433",
+    "ld2_ols_characteristics_core_full_raw_fixed504_retain": "138bf02d1202c33631b7a43604cbeb8bd3939df8a943c34add2fd183f3e6e579",
+    "ld2_ols_characteristics_core_full_raw_fixed504_recent": "89c3447de2fa0436379bc3f4aa1d12226ef95ff06ceb58553092b4e806432325",
+    "ld2_ols_characteristics_core_full_raw_fixed504_union": "91e06b257aec66bbf7083e54b725a0cee87391d2ee2e454a9d7e2755d636d5be",
+    "ld2_ols_characteristics_core_full_raw_select_retain": "455dfd17263abf73107b91c701f8ae501b263a2208148fd3ca3cd976411a5dc6",
+    "ld2_ols_characteristics_core_full_raw_select_recent": "5dcf8f09ed1c9a86651fb7e05dd638e23d31b8fee0b01c6617c2f8cf93b29a93",
+    "ld2_ols_characteristics_core_full_raw_select_union": "5ac38a3278fe38af47641e3358263c8845b848d320205bfe290b532c55b0b95f",
+    "ld2_ridge_characteristics_core_full_raw_fixed504_retain": "8a0e13f1d60d1d40c6f0e26d270b6a4ef75d37a8eabcd56c89ced6603f856022",
+    "ld2_ridge_characteristics_core_full_raw_fixed504_recent": "3e5e598b66fa47f799efffabad09a00f2c8505c657ad93484c27b3e82b5e9e06",
+    "ld2_ridge_characteristics_core_full_raw_fixed504_union": "bdf353aafa01c57c60ee6de1b8a1cb1738079288c77890c37a9437f6317cb10f",
+    "ld2_ridge_characteristics_core_full_raw_select_retain": "20688db6c7d908856f76725f9a3a8fd05f9f76ad3802da9a949b170636a36f96",
+    "ld2_ridge_characteristics_core_full_raw_select_recent": "7d84fa8c5ad207f84695fd53fc0ad0bed27070b026595fe6a81be8c907a9c7c7",
+    "ld2_ridge_characteristics_core_full_raw_select_union": "11f6d616cbfd58ebba9d760e5f0de8246f3cce7d38dae5b3138920e0a81141ce",
+    "ld2_lasso_characteristics_core_full_raw_fixed504_retain": "a2eb971578ef03f92b1c877bec09af9c418fa159c7cfff04047d907914f5cd49",
+    "ld2_lasso_characteristics_core_full_raw_fixed504_recent": "00266136033ade6fcf5fd2384198ad8e218d87d221d45384a7d3c4c1f44da8f5",
+    "ld2_lasso_characteristics_core_full_raw_fixed504_union": "8b82a0ed45cd228c3c711b7ea3bf65995337de5a94308a0d8d9952a79a54e621",
+    "ld2_lasso_characteristics_core_full_raw_select_retain": "b16985a6887de730c77de27c3f46f838d76c8862aa07867640d4774a35ecd3bf",
+    "ld2_lasso_characteristics_core_full_raw_select_recent": "49ead3f5490a7aaed5a68577e994a18267cb689544dcfd6b9871e26c711d12e9",
+    "ld2_lasso_characteristics_core_full_raw_select_union": "0239e2eb749a3b635ffa187c40dcf6b5242e8315f656e618ce30da5314334bad",
+    "ld2_enet_characteristics_core_full_raw_fixed504_retain": "1b53c9c21be1343fec4ef3779615dfc82aeb4fa5fe985eb477dc3592123d263e",
+    "ld2_enet_characteristics_core_full_raw_fixed504_recent": "c458d0920b6aed92a6ef684ca8a2c812c7f4ce7e99f631a4065b6b5063ef166c",
+    "ld2_enet_characteristics_core_full_raw_fixed504_union": "26d27d6821d154bf7c8c9c7653a344c3023aaf0bf8910d0c2fdaf6e02c7aac03",
+    "ld2_enet_characteristics_core_full_raw_select_retain": "82665c0dd7ff3db15418f1a510a7da7d4740ddd268cd47e0a12eed40ff99581e",
+    "ld2_enet_characteristics_core_full_raw_select_recent": "0a035c68d2bc509d5870416966abeb87c15da5f1644e38b414629aa73068f167",
+    "ld2_enet_characteristics_core_full_raw_select_union": "6e34fb6df703e7d418057464533d3b6f2e6113f01ad8c549167ddb7971867cd4",
+    "ld2_group_ridge_characteristics_core_full_raw_fixed504_retain": "6228ef7e377a4c675e68e74e085917b733997b4c95756428e99e55ffe09dffee",
+    "ld2_group_ridge_characteristics_core_full_raw_fixed504_recent": "8940d69948507773c52fa587d3b5a7d6e44361421595053dabd2a8bdd525cca2",
+    "ld2_group_ridge_characteristics_core_full_raw_fixed504_union": "1c581f1c25345ec72ae852261f3627082fdde5a92131da0ed6fd3da0ef200b08",
+    "ld2_group_ridge_characteristics_core_full_raw_select_retain": "ca1d3ce094f7140f75ae2da88412a65a88edfa93bc4850ce5dc7c519dadf6703",
+    "ld2_group_ridge_characteristics_core_full_raw_select_recent": "109603035097f826a8ef349a0d4c81a0130ca287074dc7ac62a6a23b3b934bb6",
+    "ld2_group_ridge_characteristics_core_full_raw_select_union": "9bba16e18aa64053deb785829df9f2844ee25b18f1577d0cf6d44e189a3b0c45",
+    "ld2_ols_characteristics_textcore_full_raw_fixed504_retain": "9f78c3514ce77ba6eccaae1381d2332aaddec3b0baf5249ee1d075da950af638",
+    "ld2_ols_characteristics_textcore_full_raw_fixed504_recent": "80db49633b9da3124f0d3f324a52271ff46d8ad176709a4aea1dd6e97ec107ec",
+    "ld2_ols_characteristics_textcore_full_raw_fixed504_union": "858c741fecaee7f9a6b538a71e728a56d5dcda235f0a68d21eb0f57f61fc73da",
+    "ld2_ols_characteristics_textcore_full_raw_select_retain": "a69811f86c8b5f3766e9113f7d39a4f22952d8042d113f98dc8686e95fa61bd9",
+    "ld2_ols_characteristics_textcore_full_raw_select_recent": "c9c644984e1b7b8601efbfe0486dd8280d9b4bdee7c93a075b5f813f0443d75e",
+    "ld2_ols_characteristics_textcore_full_raw_select_union": "750fad41e52bc37bfc72bbb14609b4b6865d143b58ee26dfa73010299498e443",
+    "ld2_ridge_characteristics_textcore_full_raw_fixed504_retain": "9733c77e0ced7f121d94fc02aa14d04bbb6979ed586dd9095e8dd683a384cd39",
+    "ld2_ridge_characteristics_textcore_full_raw_fixed504_recent": "5e8e09840757a463da6f5e13cc756db3eea81dc498a80928d78c8b984409e350",
+    "ld2_ridge_characteristics_textcore_full_raw_fixed504_union": "70feefebe79fae0b61e4c047ef4c132439ebadcf5a6bcd467aa1e65ed5a2456e",
+    "ld2_ridge_characteristics_textcore_full_raw_select_retain": "a71ea5854cfb38d2820ef70571e38361dcd7a76818bfdfd90f76264110747828",
+    "ld2_ridge_characteristics_textcore_full_raw_select_recent": "0eacbbf884bb691e0a90093a07e63577f12ce85fe2b8972ee32a49da4b1877eb",
+    "ld2_ridge_characteristics_textcore_full_raw_select_union": "ff43e2faac15a060f58e7db62f1fa19cb8d43b218cdaf2ce76de76e7f2a49f00",
+    "ld2_lasso_characteristics_textcore_full_raw_fixed504_retain": "f5b3a5268d3d13c89905942ab7abe7390c9c7b55aef1751e7c67c18a05db0b3e",
+    "ld2_lasso_characteristics_textcore_full_raw_fixed504_recent": "0d21e6e2ac6c039448a806159a7110ef91d795787b15fc79ef35cf83816ea193",
+    "ld2_lasso_characteristics_textcore_full_raw_fixed504_union": "5cede8a2145e1ecfd86f5843072be86daaa692f2f75f23f4b544822f4cd32528",
+    "ld2_lasso_characteristics_textcore_full_raw_select_retain": "3fa9a43458ed23f4d76f63924091562b2bb5d06813e7a4031a8d356ffdb6626f",
+    "ld2_lasso_characteristics_textcore_full_raw_select_recent": "f96f3d67c931e2c9fc398bf59ce86919c0c33b8bf47bdac772e558dfd22c71bb",
+    "ld2_lasso_characteristics_textcore_full_raw_select_union": "10ff8002d56f1ecf5a5ff09fb080ad359f1367a72db9180772e8bfb5f19812c4",
+    "ld2_enet_characteristics_textcore_full_raw_fixed504_retain": "d37ff87149bb472cac754755f9c1b03b9c5d8eb5a3e5fd889f124e7b09add67f",
+    "ld2_enet_characteristics_textcore_full_raw_fixed504_recent": "04916607d19fac19d64321c3b74735f8eea9364b328aefe6dc91fa57fb49645d",
+    "ld2_enet_characteristics_textcore_full_raw_fixed504_union": "e45ac4b012ddf5fc245629d8e471dd145906f3534c7136169a62c70eda82fc08",
+    "ld2_enet_characteristics_textcore_full_raw_select_retain": "c8dbce4ec4a8f362a2e77f53e6536a4279b6425182e161b408ad780897f03bdf",
+    "ld2_enet_characteristics_textcore_full_raw_select_recent": "e22c6b0235628fdfd33e6869437a793e96d76c1a2fb20c7b98444d00a0c71a82",
+    "ld2_enet_characteristics_textcore_full_raw_select_union": "588e79ea5f22f7b3915a2263c76483f29cc2b941572e694235b704024782fd1b",
+    "ld2_group_ridge_characteristics_textcore_full_raw_fixed504_retain": "8c74bc035e77ae003fac41b5e6dece4f12ccccd8c0c3af81f75fc063b96f7e5d",
+    "ld2_group_ridge_characteristics_textcore_full_raw_fixed504_recent": "3a0556b22127a6fccacba7074ebedd181f6e8582195808c542d0d11d02f98d42",
+    "ld2_group_ridge_characteristics_textcore_full_raw_fixed504_union": "23bcdeac24f4b19f353a29ba4f8836424f66d64bc7ca468aacfab96701a789e1",
+    "ld2_group_ridge_characteristics_textcore_full_raw_select_retain": "4dbb37c56e922da7c1e6026dcad10d2d7bd3a1f547ffe2c65c3f8a970aab5166",
+    "ld2_group_ridge_characteristics_textcore_full_raw_select_recent": "e666950e87dde8e6052f2c3cbadb8db629aa086f6e62f9be79709d0a153817b7",
+    "ld2_group_ridge_characteristics_textcore_full_raw_select_union": "dc127d23382803936affc2fac4484dd81a46340bf7d2b65c08e69e7d13edda33",
+    "ld2_ols_characteristics_textcore_pca_raw_fixed504_retain": "6147bbc2d956af444fab4e36ba7a69db81b00a5b93697cc4d55e669090903670",
+    "ld2_ols_characteristics_textcore_pca_raw_fixed504_recent": "b920534f2cc85bd806b8020bc98c5735d27992dc412a83193a6456d4bf69a681",
+    "ld2_ols_characteristics_textcore_pca_raw_fixed504_union": "4982d42cae2b4d023fbe101f7e3c9589b15f1e4ead3456a25a3ccd8a0a586d8e",
+    "ld2_ols_characteristics_textcore_pca_raw_select_retain": "67f6d498a5541d742be303b1f47e0ff141996697959daa3fa4d089d5e2f8fe3d",
+    "ld2_ols_characteristics_textcore_pca_raw_select_recent": "0dfbc6e042be72edc4e06d9216438bf8f4e6db092b61b7cf8dbf434220649725",
+    "ld2_ols_characteristics_textcore_pca_raw_select_union": "3e6e0b91c3d28523b0d9165c1a5f2ed958d0b4488a809734e5e1830a9fbfe76b",
+    "ld2_ridge_characteristics_textcore_pca_raw_fixed504_retain": "fe5e6a222866201e601c377c48bd67999b751aa3ce9d1fbb2870828c29b28708",
+    "ld2_ridge_characteristics_textcore_pca_raw_fixed504_recent": "82d5cb84fb793e375867829397a86167a83a70144f07565c53e36bee92ea3d5c",
+    "ld2_ridge_characteristics_textcore_pca_raw_fixed504_union": "f15f6cf0379ccc4a674a5737c8bd0152fe0da7690b756a13426e4e44690a99d5",
+    "ld2_ridge_characteristics_textcore_pca_raw_select_retain": "23688850f6648b40017ad9e9c516a905147e760e9ba75be735a84b3a8b6e186f",
+    "ld2_ridge_characteristics_textcore_pca_raw_select_recent": "ead38df448909659f479ebf808483aa67e1af178ef89bdb1b7c5b98177a6d4b2",
+    "ld2_ridge_characteristics_textcore_pca_raw_select_union": "d9522160f494c0c6caa6b1a8c0d52d2427bd4891c3656d1974445198711ad112",
+    "ld2_lasso_characteristics_textcore_pca_raw_fixed504_retain": "021723d97f0facc626c51b95faa29ac437a026ea35a36c24753d55b5ee030b74",
+    "ld2_lasso_characteristics_textcore_pca_raw_fixed504_recent": "b59558b5c82c40c9e8dffe526cc30f8e1d7a1aa31ee402067f1c0b51fe064007",
+    "ld2_lasso_characteristics_textcore_pca_raw_fixed504_union": "b461e40b063c86e33e3ec567f45e38dba0936fd4678763c9354bfe8760227251",
+    "ld2_lasso_characteristics_textcore_pca_raw_select_retain": "9792fa60a77235ff21cfd8f77b1b449066be96a8fc1e1fb5411115189be02cc2",
+    "ld2_lasso_characteristics_textcore_pca_raw_select_recent": "67c2ace4f36c01bffe315d136763f0baf1e48b33ef8e3478b84c5051ce7a7b2d",
+    "ld2_lasso_characteristics_textcore_pca_raw_select_union": "64dcbdfe89bf1f6ddcecc42a7e73d70d9ff6d51216014059ebf7554bad886727",
+    "ld2_enet_characteristics_textcore_pca_raw_fixed504_retain": "15088167fe30f7f228f99260bf21335a067b0d081cd5e0eeff9361c6a52fc236",
+    "ld2_enet_characteristics_textcore_pca_raw_fixed504_recent": "4a23354049825f63d3e6af4d72d21c3901b39206db1a5d10ecd444ff7e99c5d7",
+    "ld2_enet_characteristics_textcore_pca_raw_fixed504_union": "9bb7a812fefbad475d4d0076e01b1d2ac44b659faa3ccb436f2f9ba507c92ace",
+    "ld2_enet_characteristics_textcore_pca_raw_select_retain": "ca4b2f37edd343ef88cbd597cef7e325a0f4aedf2225d5c3143f7e77fcc33bcf",
+    "ld2_enet_characteristics_textcore_pca_raw_select_recent": "d35e1a66f9d8e6911be993acb12e6bb381a300e8089155f264fd6f451c0eda77",
+    "ld2_enet_characteristics_textcore_pca_raw_select_union": "8224aec00359d7dffc0859fe2da36d4c6c0db0458640cabdbcad85136b03f6fb",
+    "ld2_group_ridge_characteristics_textcore_pca_raw_fixed504_retain": "4606bffe753ffc7595e72fbf88998892319a9ea0614e0fc789e35aa1af933c32",
+    "ld2_group_ridge_characteristics_textcore_pca_raw_fixed504_recent": "3c82008b02d644b0e85938772c0690028e1c4404244330d07e2dac671ef77f7a",
+    "ld2_group_ridge_characteristics_textcore_pca_raw_fixed504_union": "6f660313acee18700d7e44331de21615c5f46dd2794237b019ed25de773d9666",
+    "ld2_group_ridge_characteristics_textcore_pca_raw_select_retain": "92210228b30071034dd7d35b2d895a3be4d3b605a27b5e889f87e4758c4796b6",
+    "ld2_group_ridge_characteristics_textcore_pca_raw_select_recent": "dbdbdd20e14155142deca91035e43f188c3aee48f13ab3ed6ea0bebacf3a9e34",
+    "ld2_group_ridge_characteristics_textcore_pca_raw_select_union": "1ce84742429ddf63b916194b7327504e5ae853c310930078c76d25011f133f85",
+    "ld2_ols_characteristics_full_dgtw_fixed504_retain": "c8cb9f83a799ebe1469cc438738916aa5765d987951a41382f91b3fd59117be1",
+    "ld2_ols_characteristics_full_dgtw_fixed504_recent": "ec26f7ded04d19e0461b2104eb640a25bf2ccf801ff0a7df49e28bbab7e6cbbf",
+    "ld2_ols_characteristics_full_dgtw_fixed504_union": "c9a54037fc859aeefad6a33a49ab96932284e411be0cac75f66167ffc23e744f",
+    "ld2_ols_characteristics_full_dgtw_select_retain": "0a088fc6421b69c6e57349b8826b55158e2c3985d26eaa417d0e9e870eddae09",
+    "ld2_ols_characteristics_full_dgtw_select_recent": "c9db3b843e1c7c1e94231e3de9a9a87443bd1c33c8a1afc78a59f0cbb101011c",
+    "ld2_ols_characteristics_full_dgtw_select_union": "fc476ec270282ac509b0a7bd901fb8fb58ca09c717d2217c6d236623155ad1a4",
+    "ld2_ridge_characteristics_full_dgtw_fixed504_retain": "bc6577a1ec7cae1eba36c5c0a45b73f674e40adbae2f364017cc623428876e9f",
+    "ld2_ridge_characteristics_full_dgtw_fixed504_recent": "a28a52c9bb7f62ccbcced31de9977c0380d78792219cf87df7757b75e493d98e",
+    "ld2_ridge_characteristics_full_dgtw_fixed504_union": "e178a436c495385a6ab065621e33285e44bfa183296aaa646cd9c8fe123c6f0d",
+    "ld2_ridge_characteristics_full_dgtw_select_retain": "7ffceb39a70d5929d5950719c578a4e9882246de686fab6c6a5c70e479d5e7a5",
+    "ld2_ridge_characteristics_full_dgtw_select_recent": "ea63be3b00b091aec1c9e731e52f1549c9636653eb395f402d680b71898baa5e",
+    "ld2_ridge_characteristics_full_dgtw_select_union": "9941be1c1a557a39965cd474bbab6f69e886139c8e445c8c7efd47828a0669f8",
+    "ld2_lasso_characteristics_full_dgtw_fixed504_retain": "e22b7185cca06079818896ec24f4c248a12fdcf02a09b5fb71f4ffcf67fc02e5",
+    "ld2_lasso_characteristics_full_dgtw_fixed504_recent": "173aac01193dbfe7ae256c17006a71cf003a238fc89bc44d5c673771227e6077",
+    "ld2_lasso_characteristics_full_dgtw_fixed504_union": "4c3175b941291be8a8482ea87d2c6a4d52aed38c8e0e6ec9e3f3bd232f2df983",
+    "ld2_lasso_characteristics_full_dgtw_select_retain": "ab634b2320c2bc10803825a017e14823e740586fa827125d0b477833045b84b4",
+    "ld2_lasso_characteristics_full_dgtw_select_recent": "1074097396321b85dcf48f1aeff48f99e809e7c6dfaecf794bbd639677b71905",
+    "ld2_lasso_characteristics_full_dgtw_select_union": "7b690b067f1227c6b7633b6096431dc98fe7ef1e0ca09d67552a3062e6cf0509",
+    "ld2_enet_characteristics_full_dgtw_fixed504_retain": "bfb79ac03a0201ae93670e13da37d884b1e00daf013473bc884d76f4ee46c089",
+    "ld2_enet_characteristics_full_dgtw_fixed504_recent": "7c29b5c612dd16d3d0de21c6d8d022183b45289ba48eab5a130b8b23209a56af",
+    "ld2_enet_characteristics_full_dgtw_fixed504_union": "2ccb2f276555b292d74f9a9235ce445691f25b7c8ad01c28eebc312879d21c55",
+    "ld2_enet_characteristics_full_dgtw_select_retain": "777f688044bd03933152c28192e7d548b2f6ab8acecf2cb7e1b3ed18039426be",
+    "ld2_enet_characteristics_full_dgtw_select_recent": "9c34f1a17cb36de6db2999137115d9b8e1167883561eea6ee39b19f05fb62780",
+    "ld2_enet_characteristics_full_dgtw_select_union": "710a850dc3d7131746e47a1c1f064c1269b5de98ad46b8b88e25f99f1c7b4316",
+    "ld2_ols_characteristics_core_full_dgtw_fixed504_retain": "eb058260742dda420f2fd004b51d75ce9e37ecb905eb435a8d458101b29f9a86",
+    "ld2_ols_characteristics_core_full_dgtw_fixed504_recent": "2ec28842b76c82626fc96fb7e9ab2b712709303c87304b2f76ed348a0008a202",
+    "ld2_ols_characteristics_core_full_dgtw_fixed504_union": "d7d310a42cd8ee40cc2b6fdfd0d6160c7419cddcc115217c428e96b6a008a449",
+    "ld2_ols_characteristics_core_full_dgtw_select_retain": "5ff4058514a2595eecde8de766b8a08107cc2f860bfd57978b56b55349ed8915",
+    "ld2_ols_characteristics_core_full_dgtw_select_recent": "a9deb6f18652ccbbe0665b186cc43debf65298a04733c8b91c1a4f83cc992019",
+    "ld2_ols_characteristics_core_full_dgtw_select_union": "a87eb5e0b7d5043ecf5bf8c9a72a8c859053f8bedba53735f0f198c045a1a6ee",
+    "ld2_ridge_characteristics_core_full_dgtw_fixed504_retain": "e6f667fdff4fbe6fdb52c412efb4b4f9739131306d6e8b9126ca577be5144c1d",
+    "ld2_ridge_characteristics_core_full_dgtw_fixed504_recent": "5b3484c68a2e9a362edac55c4bfb1043b74ee47b35a648cde79f168ba43c111e",
+    "ld2_ridge_characteristics_core_full_dgtw_fixed504_union": "4cce97d7091f6fef39d06c317630b549b60f44072ddfd527d17963b67194fb16",
+    "ld2_ridge_characteristics_core_full_dgtw_select_retain": "aef474607b4cd91140dabc8475ca5a4aeaaf7992f0a058a55c61b608ab96f915",
+    "ld2_ridge_characteristics_core_full_dgtw_select_recent": "168b5f51afadce0287b070a2070a7d6a87bfac92cdf0712a4bc1afd6016a454f",
+    "ld2_ridge_characteristics_core_full_dgtw_select_union": "d058041003769eb11d3843d84f5ce4053fac6ffdf2987ee6bfa44d7f37f97fee",
+    "ld2_lasso_characteristics_core_full_dgtw_fixed504_retain": "d1a3785a5d2fd84f4c0706576d13a16db150ee8d1e58dc432331d0bd79705d9c",
+    "ld2_lasso_characteristics_core_full_dgtw_fixed504_recent": "f318930fd1ebf85d8eeb1755f88dcb749929c0b2d3af29fc92380df08e311bbc",
+    "ld2_lasso_characteristics_core_full_dgtw_fixed504_union": "cf71e6a0cb18563120da79ad68c69c87c99c71967ab9174d5fae2392984b4c9e",
+    "ld2_lasso_characteristics_core_full_dgtw_select_retain": "2aa5f966d316619b5e2f498fc005693033115acbcf3f1da12f8091b314f34f1f",
+    "ld2_lasso_characteristics_core_full_dgtw_select_recent": "f4f22fa7c73a96d7b37f6adbc46ceaa642e4acfdb5285eaadff8cd7f30e9aa51",
+    "ld2_lasso_characteristics_core_full_dgtw_select_union": "41f113828ea0b7e8cdb990d22cb6d39858eb36176ca0867be4422ff6b671248b",
+    "ld2_enet_characteristics_core_full_dgtw_fixed504_retain": "881c14c7800e831c1bac92f154500890255fa18286a003e94f881ce076d7d530",
+    "ld2_enet_characteristics_core_full_dgtw_fixed504_recent": "cbdf5df95607ac1219b71046756ba60522cdfeaf9fc8b5a6727daf4eec672844",
+    "ld2_enet_characteristics_core_full_dgtw_fixed504_union": "d8a9511652943473821153e0bb02ac5f4d654071a067c53bde4579ef2911f2e8",
+    "ld2_enet_characteristics_core_full_dgtw_select_retain": "34e760e7114f00bc634d1186fd17eb2794674e765fea01ee8184d171f96e8fa8",
+    "ld2_enet_characteristics_core_full_dgtw_select_recent": "044c0f1cca5d60008cdddd222c3f9c73cc327e0602b3d5e6f2a9abfb4547fdfa",
+    "ld2_enet_characteristics_core_full_dgtw_select_union": "3044db42e2d15c1f43698e101e9913dc2ff3a54b3efff5a66d968e3c778e7c73",
+    "ld2_group_ridge_characteristics_core_full_dgtw_fixed504_retain": "f207d6834b410a685fa6b5e2ff78d3f2421d1ec0229cb95b10c62495049ad9b9",
+    "ld2_group_ridge_characteristics_core_full_dgtw_fixed504_recent": "23270abb72575937f219bb2115c4482508399c93a9a3d1773411fdbb624dceab",
+    "ld2_group_ridge_characteristics_core_full_dgtw_fixed504_union": "4371c27fad438ba092f37cd85824e34c3c51dc564115a0955013dc9f51b16d36",
+    "ld2_group_ridge_characteristics_core_full_dgtw_select_retain": "2548314b2e396055d79af1aeaa47e65c732472cdc6ab0bb5077cbf7670534420",
+    "ld2_group_ridge_characteristics_core_full_dgtw_select_recent": "8d574a68305e5ca009a3d9ca1a1472a5efeb8e26fa7de1fe006027b818b84635",
+    "ld2_group_ridge_characteristics_core_full_dgtw_select_union": "381f3acb852de9bf3310bfa8d782874685a7f96a9833d77b7500a88b1972650f",
+    "ld2_ols_characteristics_textcore_full_dgtw_fixed504_retain": "3f47767f50ec8f10077308240fdf30d80348eb49c606fd11175e1295fbcd5e09",
+    "ld2_ols_characteristics_textcore_full_dgtw_fixed504_recent": "b7669e2aaed23e1f1c3102bc5db18cb5eb664afdeebc8e69ea10f0194443635a",
+    "ld2_ols_characteristics_textcore_full_dgtw_fixed504_union": "f4b2507a8396cd64c2500ad8d1c6481ed5986f3e0602e9b8193bbfa756215938",
+    "ld2_ols_characteristics_textcore_full_dgtw_select_retain": "32ba5e29a51dab3c2a87a7e4eddd64c47608c45ce72695bb5b6cc1527f7587ec",
+    "ld2_ols_characteristics_textcore_full_dgtw_select_recent": "1d24e9b40e32971089bc96bcf812d0000d7335048bf17b12654f7ff1f631715a",
+    "ld2_ols_characteristics_textcore_full_dgtw_select_union": "116a501584bc901b57315c7965576642ca8ce1884411aa6b91698fcb897cfca8",
+    "ld2_ridge_characteristics_textcore_full_dgtw_fixed504_retain": "69ef19df6a3bad286dde951fb9d28a6493424848f557fea5b702be443106972f",
+    "ld2_ridge_characteristics_textcore_full_dgtw_fixed504_recent": "afbff355de5ce92dc1ed5484608cdb465e9bd6cf78e36b2c091d9a203f4f886c",
+    "ld2_ridge_characteristics_textcore_full_dgtw_fixed504_union": "6acf3e017d9330d8661309e91b5a2ce8ed2361e7a8746840e5b03bdb29156349",
+    "ld2_ridge_characteristics_textcore_full_dgtw_select_retain": "9ee5e2acde28937752d4d2ad7abc1a3161814996e9bfd28f422bb7f01f04c550",
+    "ld2_ridge_characteristics_textcore_full_dgtw_select_recent": "346b8a331bb3d3873ef73b042a124c06f3c46d529ca86701d8220526ceb958eb",
+    "ld2_ridge_characteristics_textcore_full_dgtw_select_union": "be205cfa2d95e223d6685c85a6f61726d0528fadbf159d0a5a77113f4ffc92ff",
+    "ld2_lasso_characteristics_textcore_full_dgtw_fixed504_retain": "645682838d2d0fa5e92d4bf24aea6a9ce1a88871c0d7c7d905ce837cde0e524d",
+    "ld2_lasso_characteristics_textcore_full_dgtw_fixed504_recent": "ba022d0b2ec63d42f55fe4dc780c476b5e18b9dbaa797f38239f0c125a52fbe8",
+    "ld2_lasso_characteristics_textcore_full_dgtw_fixed504_union": "2400e9807a7946797ab59683b98f7ad8ea24bfe07ebe637c4c51dd77e03d3004",
+    "ld2_lasso_characteristics_textcore_full_dgtw_select_retain": "84637e56ff7e6b7fdcb1b6b0cf0ea6987459ba3e1265b8c0945647fb22837c11",
+    "ld2_lasso_characteristics_textcore_full_dgtw_select_recent": "92808aa70dbcaf855d243725c4fec7b72e02e38568dcd3f78fee6ea856b5c12d",
+    "ld2_lasso_characteristics_textcore_full_dgtw_select_union": "903b715ce23351eb76f3f9c4bf00fb0c179896f70ac941802cf88ce4ee39fca0",
+    "ld2_enet_characteristics_textcore_full_dgtw_fixed504_retain": "e82a414c719683b58e2659ddd2302b120c3072363154142b69c7785a4ab0b108",
+    "ld2_enet_characteristics_textcore_full_dgtw_fixed504_recent": "0752f6626a2c4ee5a0c7d550a744ce3abd48bccfc79956420c7511a9f7a4905d",
+    "ld2_enet_characteristics_textcore_full_dgtw_fixed504_union": "28c10b33e970aa037bd77caf29c964ec2cbbe87b55493b502a05e595645bcd03",
+    "ld2_enet_characteristics_textcore_full_dgtw_select_retain": "b9e3b573a1edade16c87324b8ec210b1df1ad694e64f3696b831a6f2431777c1",
+    "ld2_enet_characteristics_textcore_full_dgtw_select_recent": "1ef519f9870796a88e3938c2549e19a4e56780b4629ebf73609e41726ff771f5",
+    "ld2_enet_characteristics_textcore_full_dgtw_select_union": "d90c6966585104b3f5f50fb51c7982734e5f8e9ad7738dff47856e87e70a7116",
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_fixed504_retain": "f32460616c8211aff725fda97e408db6bba68a86b39667b7fa2a834b9c675d7c",
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_fixed504_recent": "293bce9b8f523dc270611e4665b1b971870761804617a3ea131f5979f9a600a8",
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_fixed504_union": "e5507a8eab3b88be74600e9526ab536de8d0d0acdea4cbaf5f3f6d97293a89f3",
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_select_retain": "d577924ebe85a7bc4274f8956256f3b9bd8a70941859355c8f15903ac777de4e",
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_select_recent": "d5f0b0f67034512d07672897e5346666f078e7adbe6cba40e54a15faf4a0c90b",
+    "ld2_group_ridge_characteristics_textcore_full_dgtw_select_union": "c242d8b3d81c3321df6dba7a9d4ad939858b0efcc9ca11fe4c9edb11d9701ed9",
+    "ld2_ols_characteristics_textcore_pca_dgtw_fixed504_retain": "8da37a9b95c9905fb3cdbe3a2be0ece73a547d7494772dc28b9a87f6bdceb2ca",
+    "ld2_ols_characteristics_textcore_pca_dgtw_fixed504_recent": "a1eb866935f7e80bad606c70ab93f01baa781904be3e9ff470356e49f7d15089",
+    "ld2_ols_characteristics_textcore_pca_dgtw_fixed504_union": "c9ab23a1217267bca3a47b31e095f90761f86b57afcb87895cca4e28b3708a9d",
+    "ld2_ols_characteristics_textcore_pca_dgtw_select_retain": "b01e39c6894188ccf0eb29a568c09b458f4fed4131381164fcb5886d79b03733",
+    "ld2_ols_characteristics_textcore_pca_dgtw_select_recent": "3e941969aeb8b73890d187740b92d5814373365532c9ae6438d472507aee679f",
+    "ld2_ols_characteristics_textcore_pca_dgtw_select_union": "07635e9a2a93ac46c6e0584c3350a0e2bef4dded7740c50204ad338f8ab79370",
+    "ld2_ridge_characteristics_textcore_pca_dgtw_fixed504_retain": "391997200a119ff954bc21a6970460759a174d1970ba1a224cb393b5851d7ce9",
+    "ld2_ridge_characteristics_textcore_pca_dgtw_fixed504_recent": "39af58738af794015ef112bcb01a4f8eed1b9fbc383460407d9fd268bc2fb110",
+    "ld2_ridge_characteristics_textcore_pca_dgtw_fixed504_union": "801f6648e8fd249e19a30235365ebd6298b4fe099981632681ea7cf65fa17454",
+    "ld2_ridge_characteristics_textcore_pca_dgtw_select_retain": "b7e495e962927a857e202e43d3433296ab2fe8bd0ebb5a8d84f9ce598ced7cfd",
+    "ld2_ridge_characteristics_textcore_pca_dgtw_select_recent": "236fc919441a28e659b6473d968fec6740559a47c0983f4382db900379debf48",
+    "ld2_ridge_characteristics_textcore_pca_dgtw_select_union": "a9d729e7d10e9413b10ddb301fc91a534717700ba882906483287de0c4e271bf",
+    "ld2_lasso_characteristics_textcore_pca_dgtw_fixed504_retain": "cc789a3a9eb5df2176f215169f698c29120fb6625d3c69dc7cdc69174ce7ebe6",
+    "ld2_lasso_characteristics_textcore_pca_dgtw_fixed504_recent": "051011e447407d9d6d1c7e4b4931711d6bf7ef2bc736338ddeb632c95136df65",
+    "ld2_lasso_characteristics_textcore_pca_dgtw_fixed504_union": "9c2f728886a1c47651efd82389228f31f6b2e1c673b4ab09863d1230ad96e4b6",
+    "ld2_lasso_characteristics_textcore_pca_dgtw_select_retain": "cf8c91cd327c880bac65dd6647db21a1ccec2da7766d5f10010a69e42934face",
+    "ld2_lasso_characteristics_textcore_pca_dgtw_select_recent": "cc00a19e9d6534d8cfc6853a6ca18c6e38893976662895f8b64bace49e506b3b",
+    "ld2_lasso_characteristics_textcore_pca_dgtw_select_union": "7b1dfde5d80e5c1ef94ff54aae4336cdc5cbfd5a03e1ee979861620802d0d79c",
+    "ld2_enet_characteristics_textcore_pca_dgtw_fixed504_retain": "b88ff91da9100abaf4902152b1b7388b7d2ab93b01857c20302fc05b92c0a1df",
+    "ld2_enet_characteristics_textcore_pca_dgtw_fixed504_recent": "f56e0c1d906fc0980d8a970111dd3829ca0deb6260d6b0e2a6266ee91829dda2",
+    "ld2_enet_characteristics_textcore_pca_dgtw_fixed504_union": "ff765039c499a6b2287683077a645f98facce0b5bb6e30c2f95c374930574527",
+    "ld2_enet_characteristics_textcore_pca_dgtw_select_retain": "e2f3f8d177201218b9bb83fa61029f3a027f00219e3e44b398e914e3f3612200",
+    "ld2_enet_characteristics_textcore_pca_dgtw_select_recent": "52f1096664d3cc406162bad82802b98942124959c57c5033ca53b2c8904c8600",
+    "ld2_enet_characteristics_textcore_pca_dgtw_select_union": "8be5ecb41dbb92fdee61f90908d78a43d4af76f8d99029e05047c226cb16084a",
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_fixed504_retain": "a2a8b8716c76d0c1a45819012590ac556da6b91f1715ba95b0358a269ce9eccf",
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_fixed504_recent": "677f408ee2da802f08dd03d2f32e02055e464fb4ee4ca9332095a26ab62cd01d",
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_fixed504_union": "b7e40d54ad75b10c638173dcb25c12827d4e60a4f2d981d1d3952edcd2f310b0",
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_select_retain": "b7b79ea5002ffd082ea17a2e693edaf9cb38c12c0cc718c7efa96f117d326ad0",
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_select_recent": "e7016d4208aee1d3accadaf30946a8bd09ec004e4b548b7f69bbb30855cea852",
+    "ld2_group_ridge_characteristics_textcore_pca_dgtw_select_union": "bcbe88df58a55d47abe819189447962c9362e060903496d59e37104e76f94d5d"
+  },
+  "output_sha256": {
+    "linear_design_v2.csv": "3812d9ab1b50e6d06dbebc9a58d992decb8c4965d8ea3f52bd174bc01086d811",
+    "linear_design_v2_daily.csv.gz": "db5dd8a14054f82e235f3f6e0c131353242c546245e7046589472080a1934b6b",
+    "linear_design_v2_yearly.csv": "3922543432f0fbfbdcd10d89e325f65032ce90546fce50ebb5977331b9ec18c0",
+    "linear_design_v2_periods.csv": "b2978393ec051560f283a5034426a30d33b0b0c883c4f27a72f6b5094321b1c2",
+    "linear_design_v2_contrasts.csv": "486019a8279e85a7b92b3eea7fdeb8385cdabb2bec599282329e120275dbb526",
+    "linear_design_v2_coverage.csv": "ed4f64f3c4cc4732d454fa8b4c2d6181a4bba9050395ad23d0a0fac9b35cb383",
+    "linear_design_v2_deciles.csv": "99f687b52e8528c4dec03c1d6239bc029aa192a57caf290ae50cdf752d1d3a48",
+    "linear_design_v2_subgroups.csv": "554b1077d9a1f05fb4cd9957018ebde34ee93c48489528865fca03427c1986a7",
+    "linear_design_v2_horizons.csv": "d8d8e95aa13d0a9d9310ab684b2e747d1a5e276e14b03661c3d6b23494624a5a"
+  },
+  "daily_artifact": "Deterministic gzip (mtime=0); raw CSV retained locally",
+  "numerical_threads": 2,
+  "elapsed_seconds": 1257.279683400062
+}

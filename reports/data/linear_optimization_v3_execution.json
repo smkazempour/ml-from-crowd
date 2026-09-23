@@ -1,0 +1,9 @@
+﻿{
+    "pid":  35136,
+    "launched_at":  "2026-09-22T02:44:04.7690067Z",
+    "log":  "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\launch_20260922T024404Z.log",
+    "error_log":  "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\launch_20260922T024404Z.err",
+    "workers":  4,
+    "threads":  2,
+    "tests_passed":  29
+}

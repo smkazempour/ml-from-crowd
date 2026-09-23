@@ -1,0 +1,1076 @@
+{
+  "experiment_id": "linear_optimization_v3",
+  "declared_at": "2026-09-22T02:41:04+00:00",
+  "status": "Authorized factorial development exploration; declared before this experiment is fit",
+  "prepared": ".runs/characteristics_v1/prepared/35ef3a5eb0cb5e42",
+  "baseline_registry": ".runs/linear_design_v2/study/c11478141261534f/linear/full_9590a962af3e2fcb/registry.json",
+  "test_start": "2014-01",
+  "test_end": "2022-12",
+  "test_months": 108,
+  "targets": [
+    "raw",
+    "dgtw"
+  ],
+  "primary_target": "raw",
+  "horizon": 1,
+  "fixed_fit_days": 504,
+  "validation_days": 126,
+  "refit": "union",
+  "loss": "Squared error on daily rank target; equal total weight per date; unpenalized intercept",
+  "selection": "Mean daily validation rank IC; no forecast-period selection; LOMO is diagnostic only",
+  "grid": {
+    "original": {
+      "global": {
+        "objective": "0.5*sum(w*residual^2)+alpha*l1_ratio*L1(beta)+0.5*alpha*(1-l1_ratio)*L2(beta)^2; sum(w)=1",
+        "intercept": "unpenalized, fitted using normalized equal-date label weights",
+        "ridge_alphas": [
+          1000.0,
+          100.0,
+          10.0,
+          1.0,
+          0.1,
+          0.01,
+          0.001,
+          0.0001,
+          1e-05,
+          1e-06
+        ],
+        "alpha_fractions": [
+          1.0,
+          0.3,
+          0.1,
+          0.03,
+          0.01,
+          0.003,
+          0.001,
+          0.0003,
+          0.0001
+        ],
+        "lasso_alpha": "fraction * max(abs(centered_X_transpose_weighted_y))",
+        "enet_alpha": "fraction * max(abs(centered_X_transpose_weighted_y)) / l1_ratio",
+        "enet_l1_ratios": [
+          0.1,
+          0.5,
+          0.9
+        ],
+        "selection": "largest mean daily validation Spearman IC, minimum 10 labels/day",
+        "tie_rule": "first declared candidate within 1e-12 of maximum; ridge alpha descending; lasso fraction descending; enet fraction descending then l1_ratio ascending",
+        "refit": false,
+        "solver": "public sklearn.enet_path on equivalent spectral design, then active-set Newton refinement with original-objective certificates",
+        "solver_tolerance": 1e-08,
+        "kkt_absolute_tolerance": 2e-07,
+        "coordinate_descent_max_iterations": 5000,
+        "active_set_max_steps": 2000,
+        "normalized_dual_gap_bound": "max(solver_tolerance * fitting_target_variance, 1e-12)",
+        "coordinate_descent_limit": "recorded; candidate must pass post-refinement KKT and dual-gap checks",
+        "eigen_pseudoinverse_rcond": 1e-12
+      },
+      "social_multipliers": [
+        1.0,
+        10.0
+      ],
+      "text_multipliers": [
+        1.0,
+        10.0,
+        100.0
+      ],
+      "drop_order": [
+        "none",
+        "text",
+        "social",
+        "text_social"
+      ]
+    },
+    "fit_windows": [
+      504
+    ],
+    "validation_days": 126,
+    "refit": "union of original504 fitting dates and126 validation dates; preserve interior purge",
+    "transforms": {
+      "standard": "unchanged v2 training-only scaler and numerical path",
+      "daily_rank": "rank continuous characteristics within all input rows of each formation date before label filtering; average ties;2*(rank-1)/(n_finite-1)-1;singleton0;missing stays missing until training-mean imputation; then training-only standardization;binary flags/social inputs/embeddings unchanged"
+    },
+    "expanded": {
+      "ridge_alphas": [
+        1000.0,
+        300.0,
+        100.0,
+        30.0,
+        10.0,
+        3.0,
+        1.0,
+        0.30000000000000004,
+        0.1,
+        0.03,
+        0.01,
+        0.003,
+        0.001,
+        0.00030000000000000003,
+        0.0001,
+        3.0000000000000004e-05,
+        1e-05,
+        3e-06,
+        1e-06
+      ],
+      "alpha_fractions": [
+        1.0,
+        0.5477225575051661,
+        0.3,
+        0.17320508075688773,
+        0.1,
+        0.05477225575051661,
+        0.03,
+        0.017320508075688773,
+        0.01,
+        0.005477225575051661,
+        0.003,
+        0.0017320508075688774,
+        0.001,
+        0.0005477225575051661,
+        0.0003,
+        0.00017320508075688773,
+        0.0001
+      ],
+      "enet_l1_ratios": [
+        0.01,
+        0.03,
+        0.1,
+        0.5,
+        0.9
+      ],
+      "social_multipliers": [
+        1.0,
+        10.0
+      ],
+      "text_multipliers": [
+        1.0,
+        3.0,
+        10.0,
+        30.0,
+        100.0,
+        300.0,
+        1000.0
+      ],
+      "drop_order": [
+        "none",
+        "text",
+        "social",
+        "text_social"
+      ]
+    },
+    "pca_dimensions": {
+      "original": [
+        16,
+        32,
+        64,
+        128
+      ],
+      "expanded": [
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ]
+    },
+    "selection": "maximum full-validation mean daily Spearman IC;first declared within1e-12",
+    "candidate_order": "PCA dimension ascending;ridge alpha descending;sparse fraction descending then ratio ascending;group drop order, social multiplier ascending,text multiplier ascending,alpha descending",
+    "stability": "diagnostic only: omit each calendar month of validation in turn and reselect from remaining daily ICs;full-validation setting remains the forecast choice",
+    "candidate_reuse": "original candidate solutions retained exactly;additional settings parameterized independently;shared coefficients and scores across nested grid/PCA axes",
+    "model_count_per_target": 86
+  },
+  "procedures": [
+    {
+      "feature_set": "characteristics",
+      "estimator": "ols",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "ols",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "group_ridge",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "group_ridge",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ols",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "full",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ols",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ols",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "original",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "pca",
+      "transform": "standard",
+      "penalty_grid": "expanded",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "ols",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "ols",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "group_ridge",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_core",
+      "estimator": "group_ridge",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ols",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "full",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "none",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ols",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ols",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "ridge",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "lasso",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "enet",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "original",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "original",
+      "history": "fixed504",
+      "refit": "union"
+    },
+    {
+      "feature_set": "characteristics_textcore",
+      "estimator": "group_ridge",
+      "representation": "pca",
+      "transform": "daily_rank",
+      "penalty_grid": "expanded",
+      "pca_grid": "expanded",
+      "history": "fixed504",
+      "refit": "union"
+    }
+  ],
+  "total_models": 172,
+  "month_target_checkpoints": 216,
+  "planned_family_counts": {
+    "estimator": 76,
+    "penalty_expansion": 38,
+    "incremental_social": 72,
+    "group_penalty": 16,
+    "compression": 36,
+    "pca_expansion": 18,
+    "transformation": 43
+  },
+  "primary_metric": "rank_ic",
+  "secondary_metrics": [
+    "ew_spread_bp",
+    "cap_spread_bp"
+  ],
+  "hac_lags": [
+    5,
+    21,
+    63
+  ],
+  "periods": [
+    "full",
+    "2014-2018",
+    "2019-2022"
+  ],
+  "baseline_reproduction": "All19 standard/original fixed504 union procedures monthly against v2; prediction and daily-rank tolerances unchanged",
+  "interpretation": "Development evidence: 2014-2022 has already informed design choices. No certified untouched confirmation sample. 2023 excluded.",
+  "report": "reports/11_linear_optimization_results.md",
+  "summary_report": "reports/11a_linear_optimization_summary.md",
+  "evaluation_prefix": "reports/data/linear_optimization_v3"
+}

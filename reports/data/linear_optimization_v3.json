@@ -1,0 +1,1227 @@
+{
+  "prediction_sources": {
+    "ld3_ols_characteristics_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063093010003500
+    },
+    "ld3_ridge_characteristics_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063094396419000
+    },
+    "ld3_ridge_characteristics_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063095729372000
+    },
+    "ld3_lasso_characteristics_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063097059311200
+    },
+    "ld3_lasso_characteristics_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063098487207100
+    },
+    "ld3_enet_characteristics_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063099878301000
+    },
+    "ld3_enet_characteristics_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063101258116600
+    },
+    "ld3_ols_characteristics_core_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_core_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063102632482600
+    },
+    "ld3_ridge_characteristics_core_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_core_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063104009409200
+    },
+    "ld3_ridge_characteristics_core_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_core_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063105417135600
+    },
+    "ld3_lasso_characteristics_core_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_core_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063106826535300
+    },
+    "ld3_lasso_characteristics_core_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_core_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063108189485800
+    },
+    "ld3_enet_characteristics_core_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_core_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063109544649000
+    },
+    "ld3_enet_characteristics_core_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_core_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063110871678400
+    },
+    "ld3_group_ridge_characteristics_core_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_core_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063112239645600
+    },
+    "ld3_group_ridge_characteristics_core_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_core_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063113654084700
+    },
+    "ld3_ols_characteristics_textcore_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063115064794400
+    },
+    "ld3_ridge_characteristics_textcore_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063116408804600
+    },
+    "ld3_ridge_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063117738326800
+    },
+    "ld3_lasso_characteristics_textcore_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063119083266700
+    },
+    "ld3_lasso_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063120467586100
+    },
+    "ld3_enet_characteristics_textcore_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063121815379100
+    },
+    "ld3_enet_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063123240285200
+    },
+    "ld3_group_ridge_characteristics_textcore_full_raw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_full_raw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063124590271800
+    },
+    "ld3_group_ridge_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063125935040200
+    },
+    "ld3_ols_characteristics_textcore_pca_raw_standard_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_pca_raw_standard_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063127264894900
+    },
+    "ld3_ols_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063128561681000
+    },
+    "ld3_ridge_characteristics_textcore_pca_raw_standard_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_raw_standard_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063129870803100
+    },
+    "ld3_ridge_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063131230540000
+    },
+    "ld3_ridge_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063132565647600
+    },
+    "ld3_ridge_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063133872953000
+    },
+    "ld3_lasso_characteristics_textcore_pca_raw_standard_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_raw_standard_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063135232534200
+    },
+    "ld3_lasso_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063136595030700
+    },
+    "ld3_lasso_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063137909498100
+    },
+    "ld3_lasso_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063139255776800
+    },
+    "ld3_enet_characteristics_textcore_pca_raw_standard_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_raw_standard_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063140658303700
+    },
+    "ld3_enet_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063142062190300
+    },
+    "ld3_enet_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063143398935900
+    },
+    "ld3_enet_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063144763116800
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_raw_standard_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_raw_standard_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063146129914200
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063147528468800
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063148944182400
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063150359177500
+    },
+    "ld3_ols_characteristics_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063151686860900
+    },
+    "ld3_ridge_characteristics_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063153000547100
+    },
+    "ld3_ridge_characteristics_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063154397061800
+    },
+    "ld3_lasso_characteristics_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063155762377600
+    },
+    "ld3_lasso_characteristics_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063157063500200
+    },
+    "ld3_enet_characteristics_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063158442101400
+    },
+    "ld3_enet_characteristics_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063159821367400
+    },
+    "ld3_ols_characteristics_core_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_core_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063161207589100
+    },
+    "ld3_ridge_characteristics_core_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_core_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063162613812100
+    },
+    "ld3_ridge_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063164057180900
+    },
+    "ld3_lasso_characteristics_core_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_core_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063165534767200
+    },
+    "ld3_lasso_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063166996800600
+    },
+    "ld3_enet_characteristics_core_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_core_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063168408524000
+    },
+    "ld3_enet_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063169884815700
+    },
+    "ld3_group_ridge_characteristics_core_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_core_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063171360070800
+    },
+    "ld3_group_ridge_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063172814700400
+    },
+    "ld3_ols_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063174311140700
+    },
+    "ld3_ridge_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063175800736300
+    },
+    "ld3_ridge_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063177308757600
+    },
+    "ld3_lasso_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063178820996300
+    },
+    "ld3_lasso_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063180291168400
+    },
+    "ld3_enet_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063181796832600
+    },
+    "ld3_enet_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063183229947300
+    },
+    "ld3_group_ridge_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063184688570700
+    },
+    "ld3_group_ridge_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063186210418900
+    },
+    "ld3_ols_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063187740581200
+    },
+    "ld3_ols_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063189227318400
+    },
+    "ld3_ridge_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063190721691400
+    },
+    "ld3_ridge_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063192185347500
+    },
+    "ld3_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063193646000900
+    },
+    "ld3_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063195217788000
+    },
+    "ld3_lasso_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063196724315400
+    },
+    "ld3_lasso_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063198229230300
+    },
+    "ld3_lasso_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063199766912100
+    },
+    "ld3_lasso_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063201333848400
+    },
+    "ld3_enet_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063202818144100
+    },
+    "ld3_enet_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063204277699600
+    },
+    "ld3_enet_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063205785832000
+    },
+    "ld3_enet_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063207206907700
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063208632488400
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063210050014600
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063211512150400
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063213016899200
+    },
+    "ld3_ols_characteristics_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063214478454500
+    },
+    "ld3_ridge_characteristics_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063215912431200
+    },
+    "ld3_ridge_characteristics_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063217272411200
+    },
+    "ld3_lasso_characteristics_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063218663891100
+    },
+    "ld3_lasso_characteristics_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063220050778500
+    },
+    "ld3_enet_characteristics_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063221418903300
+    },
+    "ld3_enet_characteristics_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063222780753800
+    },
+    "ld3_ols_characteristics_core_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_core_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063224066930200
+    },
+    "ld3_ridge_characteristics_core_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_core_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063225371627400
+    },
+    "ld3_ridge_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063226824751900
+    },
+    "ld3_lasso_characteristics_core_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_core_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063228237137300
+    },
+    "ld3_lasso_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063229632805100
+    },
+    "ld3_enet_characteristics_core_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_core_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063231095874700
+    },
+    "ld3_enet_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063232545495700
+    },
+    "ld3_group_ridge_characteristics_core_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_core_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063234042665100
+    },
+    "ld3_group_ridge_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063235513997900
+    },
+    "ld3_ols_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063237031544800
+    },
+    "ld3_ridge_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063238495886600
+    },
+    "ld3_ridge_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063239904118300
+    },
+    "ld3_lasso_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063241390087900
+    },
+    "ld3_lasso_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063242889443500
+    },
+    "ld3_enet_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063244330837000
+    },
+    "ld3_enet_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063245803015200
+    },
+    "ld3_group_ridge_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063247324696900
+    },
+    "ld3_group_ridge_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063248749977000
+    },
+    "ld3_ols_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063250222232800
+    },
+    "ld3_ols_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063251685162200
+    },
+    "ld3_ridge_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063253122457000
+    },
+    "ld3_ridge_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063254593063500
+    },
+    "ld3_ridge_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063256083830400
+    },
+    "ld3_ridge_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063257558504300
+    },
+    "ld3_lasso_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063259015270200
+    },
+    "ld3_lasso_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063260424993400
+    },
+    "ld3_lasso_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063261868384000
+    },
+    "ld3_lasso_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063263292107100
+    },
+    "ld3_enet_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063264662053900
+    },
+    "ld3_enet_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063266059552600
+    },
+    "ld3_enet_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063267512393100
+    },
+    "ld3_enet_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063268952419300
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063270394559900
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063271898164000
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063273394234300
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063274859747600
+    },
+    "ld3_ols_characteristics_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063276315886500
+    },
+    "ld3_ridge_characteristics_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063277801390100
+    },
+    "ld3_ridge_characteristics_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063279274086400
+    },
+    "ld3_lasso_characteristics_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063280793325900
+    },
+    "ld3_lasso_characteristics_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063282184662800
+    },
+    "ld3_enet_characteristics_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063283545980300
+    },
+    "ld3_enet_characteristics_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063285003064400
+    },
+    "ld3_ols_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063286478529300
+    },
+    "ld3_ridge_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063287949420500
+    },
+    "ld3_ridge_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063289422405600
+    },
+    "ld3_lasso_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063290863063600
+    },
+    "ld3_lasso_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063292289129600
+    },
+    "ld3_enet_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063293731484900
+    },
+    "ld3_enet_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063295219510200
+    },
+    "ld3_group_ridge_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063296725806100
+    },
+    "ld3_group_ridge_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063298201877800
+    },
+    "ld3_ols_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063299627874200
+    },
+    "ld3_ridge_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063301084208700
+    },
+    "ld3_ridge_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063302523316200
+    },
+    "ld3_lasso_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063303977570700
+    },
+    "ld3_lasso_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063305452008100
+    },
+    "ld3_enet_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063307020677500
+    },
+    "ld3_enet_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063308526880700
+    },
+    "ld3_group_ridge_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063310008182000
+    },
+    "ld3_group_ridge_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063311471233900
+    },
+    "ld3_ols_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063312958703400
+    },
+    "ld3_ols_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ols_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063314437398500
+    },
+    "ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063315876008000
+    },
+    "ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063317365291300
+    },
+    "ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063318856932700
+    },
+    "ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063320331526600
+    },
+    "ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063321787495500
+    },
+    "ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063323209508300
+    },
+    "ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063324698687000
+    },
+    "ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063326217976700
+    },
+    "ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063327691992700
+    },
+    "ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063329162860600
+    },
+    "ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063330587237400
+    },
+    "ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063332127381200
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063333666816300
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063335165825100
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063336678409400
+    },
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\predictions_ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790063338190370600
+    }
+  },
+  "coverage": {
+    "raw": {
+      "models": 86,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 3033080
+    },
+    "dgtw": {
+      "models": 86,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 2748978
+    }
+  },
+  "output_files": {
+    "summary": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_optimization_v3.csv",
+      "bytes": 160025,
+      "mtime_ns": 1790065067037746400
+    },
+    "_yearly": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_optimization_v3_yearly.csv",
+      "bytes": 1449549,
+      "mtime_ns": 1790065067074552400
+    },
+    "_periods": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_optimization_v3_periods.csv",
+      "bytes": 492231,
+      "mtime_ns": 1790065067084578000
+    },
+    "_contrasts": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_optimization_v3_contrasts.csv",
+      "bytes": 6058006,
+      "mtime_ns": 1790065067177816800
+    },
+    "_coverage": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_optimization_v3_coverage.csv",
+      "bytes": 22628,
+      "mtime_ns": 1790065067180116100
+    },
+    "_deciles": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_optimization_v3_deciles.csv",
+      "bytes": 11830491,
+      "mtime_ns": 1790065067323223200
+    },
+    "_subgroups": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_optimization_v3_subgroups.csv",
+      "bytes": 1031749,
+      "mtime_ns": 1790065067355098900
+    },
+    "_horizons": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_optimization_v3_horizons.csv",
+      "bytes": 937761,
+      "mtime_ns": 1790065067383880300
+    },
+    "_daily": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_optimization_v3_daily.csv.gz",
+      "bytes": 31771984,
+      "mtime_ns": 1790065070098682900
+    }
+  },
+  "skipped_horizons": [
+    {
+      "target": "dgtw",
+      "horizon": 21,
+      "reason": "Known source ar_dgtw_21 corruption; excluded pending repair"
+    }
+  ],
+  "source_limitations": [
+    "nominal 16:00 message routing ignores early closes",
+    "ar_dgtw_21 has known 2013 panel corruption; crsp_ar_dgtw_21 is separately retained",
+    "h>1 imported labels and factor-CAR completeness not certified",
+    "Market-based controls only; no audited point-in-time accounting characteristics.",
+    "Legacy upstream daily bm joins fiscal datadate without reporting lag; excluded from predictors; inherited DGTW target has this limitation.",
+    "Close-t market inputs and nominal-close message routing inherit the executable-close and early-close limitations."
+  ],
+  "schema_version": "linear_optimization_v3_evaluation",
+  "created": "2026-09-22T03:17:50.402439",
+  "registry": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\registry.json",
+  "registry_sha256": "b6f7cb2eb4ada16248c8949d7af9d552a2c845e4b2b20aee33e79568b3f75408",
+  "prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+  "prepared_sha256": {
+    "manifest.json": "4d7fc5a6edd68b85effd5f7aaf84accf9c93fcc7a96317702fad0b579a9765d3",
+    "X.npy": "6950aaa0aa36615df903d7605efb060369e7f04ce299733f1b92e23fa6c1a787",
+    "y.npy": "ef7d0d013b7d44caf7dc6495a5e77d1fd91d0f3607f18a082c4045f59ac2e983",
+    "q.npy": "e5943044cd908a9b214b65a2fa2b110f06c5399a11be0b7cfd05903f872578ba",
+    "codes.npy": "afc9a8efe010cc4ec03b45275b2b9d8360def3582de1d8a9b0da662c47df9518",
+    "calendar.npy": "5b4fc803952c4acf8369619087192805e0d865daba5c6590812b61652534a47c",
+    "keys.pkl": "a26d73a704db186859026b92014bc35409b064ea49042b89b81a95f0046e8631",
+    "evaluation.pkl": "84e9c9bde6f22f18a73dede6904f7e3b06363412adef30620a8c00645ff66dda"
+  },
+  "prediction_sha256": {
+    "ld3_ols_characteristics_full_raw_standard_original_none_fixed504_union": "23a74df99e48da962cdee56869ab12eed321644a2a01db05b0c87231d8cfb863",
+    "ld3_ridge_characteristics_full_raw_standard_original_none_fixed504_union": "d1680b38cbc59816cf1a99c319e9145721e5b66e65bcbc5ea00413a57296435e",
+    "ld3_ridge_characteristics_full_raw_standard_expanded_none_fixed504_union": "7d419ea7193e19711847aa7c42d806afb2ae20e2f6bfb021c1dca39124abc1bf",
+    "ld3_lasso_characteristics_full_raw_standard_original_none_fixed504_union": "21f96bb885f8ec75269ede909e63b02d9d78d8239d58706789d87fe03ceb7cdb",
+    "ld3_lasso_characteristics_full_raw_standard_expanded_none_fixed504_union": "d54cbd886df35c62a0bd595b383105cefdad27976d78869fb1e930e54d385fc8",
+    "ld3_enet_characteristics_full_raw_standard_original_none_fixed504_union": "3c1c801da00ad2ce750d0ad92b541705b5a89fc3231221884a90f0662cd35a8d",
+    "ld3_enet_characteristics_full_raw_standard_expanded_none_fixed504_union": "a757f2bac00e710bb0a92bc9e0aedc45f07e752da59d03cbc2a29fefc18adb43",
+    "ld3_ols_characteristics_core_full_raw_standard_original_none_fixed504_union": "91e06b257aec66bbf7083e54b725a0cee87391d2ee2e454a9d7e2755d636d5be",
+    "ld3_ridge_characteristics_core_full_raw_standard_original_none_fixed504_union": "bdf353aafa01c57c60ee6de1b8a1cb1738079288c77890c37a9437f6317cb10f",
+    "ld3_ridge_characteristics_core_full_raw_standard_expanded_none_fixed504_union": "cfe45a316bdef685067284e30a1f26346016a6256afab3cec9e6f35d7ab7136f",
+    "ld3_lasso_characteristics_core_full_raw_standard_original_none_fixed504_union": "8b82a0ed45cd228c3c711b7ea3bf65995337de5a94308a0d8d9952a79a54e621",
+    "ld3_lasso_characteristics_core_full_raw_standard_expanded_none_fixed504_union": "949799a3a42495f52cc619397731c18538961f5d1a324f95288b29b81520306d",
+    "ld3_enet_characteristics_core_full_raw_standard_original_none_fixed504_union": "26d27d6821d154bf7c8c9c7653a344c3023aaf0bf8910d0c2fdaf6e02c7aac03",
+    "ld3_enet_characteristics_core_full_raw_standard_expanded_none_fixed504_union": "c0cc3a68ea80bcfe8b83cc7e4b404124bb178639af0d4dbcab0ce62948f55c54",
+    "ld3_group_ridge_characteristics_core_full_raw_standard_original_none_fixed504_union": "1c581f1c25345ec72ae852261f3627082fdde5a92131da0ed6fd3da0ef200b08",
+    "ld3_group_ridge_characteristics_core_full_raw_standard_expanded_none_fixed504_union": "78eee6d759432cfc55e9de22e06eff3bb4b22017dab56795aa6bca3024d55c1c",
+    "ld3_ols_characteristics_textcore_full_raw_standard_original_none_fixed504_union": "858c741fecaee7f9a6b538a71e728a56d5dcda235f0a68d21eb0f57f61fc73da",
+    "ld3_ridge_characteristics_textcore_full_raw_standard_original_none_fixed504_union": "70feefebe79fae0b61e4c047ef4c132439ebadcf5a6bcd467aa1e65ed5a2456e",
+    "ld3_ridge_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union": "c17b81e8e64cd492b24c9c717d619dcc672578c43352acfdce526a99a8376179",
+    "ld3_lasso_characteristics_textcore_full_raw_standard_original_none_fixed504_union": "5cede8a2145e1ecfd86f5843072be86daaa692f2f75f23f4b544822f4cd32528",
+    "ld3_lasso_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union": "932d2f9e10b1f194ef476b325a9ecdc76a094b85d8eec39184ea82442496ba76",
+    "ld3_enet_characteristics_textcore_full_raw_standard_original_none_fixed504_union": "e45ac4b012ddf5fc245629d8e471dd145906f3534c7136169a62c70eda82fc08",
+    "ld3_enet_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union": "71ba3e532c3119cbf5cdd7d2c4ad012454ca272745b370bfd534e86a8de88072",
+    "ld3_group_ridge_characteristics_textcore_full_raw_standard_original_none_fixed504_union": "23bcdeac24f4b19f353a29ba4f8836424f66d64bc7ca468aacfab96701a789e1",
+    "ld3_group_ridge_characteristics_textcore_full_raw_standard_expanded_none_fixed504_union": "574aa3b3bbbaf130b39846525445c9670798fbc85c18a77401a354e915c1b322",
+    "ld3_ols_characteristics_textcore_pca_raw_standard_original_original_fixed504_union": "4982d42cae2b4d023fbe101f7e3c9589b15f1e4ead3456a25a3ccd8a0a586d8e",
+    "ld3_ols_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union": "ac9557beb7a20b40acaf9a0388cd3a3732a9f397302f3584f0b8b71b8bdd3066",
+    "ld3_ridge_characteristics_textcore_pca_raw_standard_original_original_fixed504_union": "f15f6cf0379ccc4a674a5737c8bd0152fe0da7690b756a13426e4e44690a99d5",
+    "ld3_ridge_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union": "dfd21395a396ecac723c84457f8738eaedd2a568faee582d3e805cca18fb2b00",
+    "ld3_ridge_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union": "80446a37b90cd9f37e0f0e91fcc6fa71d4e910ade8244e4f27cbb7411ec34fd3",
+    "ld3_ridge_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union": "0029609d7a3a04eeff99f5161350243071b6757551455ce611b5c2ec9efe3ca3",
+    "ld3_lasso_characteristics_textcore_pca_raw_standard_original_original_fixed504_union": "b461e40b063c86e33e3ec567f45e38dba0936fd4678763c9354bfe8760227251",
+    "ld3_lasso_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union": "641157eaa5d8bd0bd421695b8200b0bdb6009e1d6539a06e0b86d764b0ad4745",
+    "ld3_lasso_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union": "d5a0983c490bd8a94a69d01b88a6a80a36c60be0e8de30f22fc3ea0876602709",
+    "ld3_lasso_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union": "19e943fdafc34011e3e89bbad9d0fce5627110296518cc2934a66515b8e8ec37",
+    "ld3_enet_characteristics_textcore_pca_raw_standard_original_original_fixed504_union": "9bb7a812fefbad475d4d0076e01b1d2ac44b659faa3ccb436f2f9ba507c92ace",
+    "ld3_enet_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union": "d7b76ba45acfb5e5201f805c60ca3cddfb9ea05d60e55589e7334713913cc5cd",
+    "ld3_enet_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union": "838117b4d20889c188adbc7ed74dd845462286268a836f2658c022d6b69b3e50",
+    "ld3_enet_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union": "19ff0668006f89071bc54b0ca22e88479193cb7e4d61396ae7554f8bd70fbcf0",
+    "ld3_group_ridge_characteristics_textcore_pca_raw_standard_original_original_fixed504_union": "6f660313acee18700d7e44331de21615c5f46dd2794237b019ed25de773d9666",
+    "ld3_group_ridge_characteristics_textcore_pca_raw_standard_original_expanded_fixed504_union": "69ef277ae36b3de13cebc105af82a08c1548f05a57c5575cd8180c43b7127fb5",
+    "ld3_group_ridge_characteristics_textcore_pca_raw_standard_expanded_original_fixed504_union": "f051a94283128cc0babad58662de3d0fd9aca0d09a8548f9da48c0d3ed927076",
+    "ld3_group_ridge_characteristics_textcore_pca_raw_standard_expanded_expanded_fixed504_union": "f26d2b2cffba47226709a13ab74909c1ef9d01cc5c9450e29d4bf788056cd6d2",
+    "ld3_ols_characteristics_full_raw_daily_rank_original_none_fixed504_union": "bab3356ccba14273200dd5dc85728316318482189721ea3d138dd3a4ad8fbb22",
+    "ld3_ridge_characteristics_full_raw_daily_rank_original_none_fixed504_union": "b8240532d806068968c7aede4d6fa3bdd3c81e5af3e33cf37e777c812919c762",
+    "ld3_ridge_characteristics_full_raw_daily_rank_expanded_none_fixed504_union": "d97c7c17098b5f54cfbf1b6bfc955c27b8e9c17c9535e3ded0945711ac7c4cad",
+    "ld3_lasso_characteristics_full_raw_daily_rank_original_none_fixed504_union": "f34987284694f114c769b4f55ad5e986550247b82311f4f57ede28ae8a2ca7c3",
+    "ld3_lasso_characteristics_full_raw_daily_rank_expanded_none_fixed504_union": "3156f6e59628f0c3d2406f135c603d0639f6f72fe8f9dbb39eaad6462997d09c",
+    "ld3_enet_characteristics_full_raw_daily_rank_original_none_fixed504_union": "9ae51b9573a5ec4a799a4823e0dcb87da0f8ac1770a696945551f97ed4f0f7f0",
+    "ld3_enet_characteristics_full_raw_daily_rank_expanded_none_fixed504_union": "1462af297d010a61957dc67efef1d653e339e130c8c17f548278aac76b3e76a7",
+    "ld3_ols_characteristics_core_full_raw_daily_rank_original_none_fixed504_union": "80aa80939016a0d4e571bfc0fdd3c49520164e6447ead1e864f25fcbf6a39db6",
+    "ld3_ridge_characteristics_core_full_raw_daily_rank_original_none_fixed504_union": "121b46574395e3ccca67c9fad92af7d36bde7bf0f6da948259e06cf411e30e5f",
+    "ld3_ridge_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union": "f73f9ba967dde2e2c82bc4bac444722ef1af37c32c8b5722ef14959c19afc463",
+    "ld3_lasso_characteristics_core_full_raw_daily_rank_original_none_fixed504_union": "076ecc62267dd5bdcfc385f56202e6e3fa45b368ca58be980cc048bacff8d278",
+    "ld3_lasso_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union": "afdd24cbd0eb20f1a83771d6663e97b07e9be6f66dacf994b26d228122fef47d",
+    "ld3_enet_characteristics_core_full_raw_daily_rank_original_none_fixed504_union": "807455cbe0533ac4bcfd071f3436fda471dff17622bb567bf4229053576847f3",
+    "ld3_enet_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union": "8157c7760f906542ecae445df3810e1f76b93364058ee4a7331a6cb96a89270b",
+    "ld3_group_ridge_characteristics_core_full_raw_daily_rank_original_none_fixed504_union": "c1631dc04c8a0deac7ee2bfbc9bf07ceaf8fb734f8bb4a7a9b169bc461b96390",
+    "ld3_group_ridge_characteristics_core_full_raw_daily_rank_expanded_none_fixed504_union": "e44902d7acfa02146b1bae1c4b55c72dae24e33634761425b69444adc5cf797c",
+    "ld3_ols_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union": "6538d6ee90e149bb7ba8ca244f8766290e2fbb055c82e3ff24ff2589a9a98aa5",
+    "ld3_ridge_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union": "ef83c4f0a1a1ccdd76b165923737d012ea5e68a543f9b3fd7099527c8c33bb74",
+    "ld3_ridge_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union": "0f9003d647cd5d8f4f95496dcf8a04910666b19494d59419116c468741d24765",
+    "ld3_lasso_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union": "74d6d54bdf15245fbfe428e025645dc643527e7b8262be663651015d924b89fe",
+    "ld3_lasso_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union": "114971d93617209efc928d98b4a7262d5b21870baefe43343e1c46e81b3e5e2d",
+    "ld3_enet_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union": "17954e9a0fe807b7854134988f38dc34ab563a4210fe2b109bfbc1576fceb106",
+    "ld3_enet_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union": "6d1ff6f13d45561d165a3825f038b8b4fa18d355cd08de51b3c8b3cce2877260",
+    "ld3_group_ridge_characteristics_textcore_full_raw_daily_rank_original_none_fixed504_union": "1d4db50989ef08f70e3b48b675cad164982ef6919d7f03741c21a60f23359845",
+    "ld3_group_ridge_characteristics_textcore_full_raw_daily_rank_expanded_none_fixed504_union": "87c55d1ebf09c7186b85601d7c224a74da83e3368b285bc9059c598ca9ebf726",
+    "ld3_ols_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union": "069d8a5ef566193c308acc6d698fd49f83633594c1775c0875eabb41018e59f8",
+    "ld3_ols_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union": "972db18996d2540d567d9550696cc4fdf8083bad08857ed9ec366562006bc9a3",
+    "ld3_ridge_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union": "a60a6d37a3a99949caf6a7d98dd685b3a0a15f03506cf3e7d2f4aef4638ad345",
+    "ld3_ridge_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union": "ffb12493e1bbd847e205d63393dbf356dc6b4fadd42a00004d2f296f00701fd9",
+    "ld3_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union": "f619eb5584cac80b8bfd6457d148981b9139d13dc777ce7ad806f7594409d489",
+    "ld3_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union": "ebeb07956bd73ee7196236eda4750ade53c378e3f6e34eafb1729e1eea52e19e",
+    "ld3_lasso_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union": "61e020c946bd51981c379987fde33cec9e8d69d23f2bbada2ab232bd49090689",
+    "ld3_lasso_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union": "07986470dfa75ff5f98492118559a41dcbeeca59bd9e3fb09df3291d436d0e84",
+    "ld3_lasso_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union": "e918f1aa77a14c3e79ca98450d8ea590ddbe406ee2e4426c27695bced43f05be",
+    "ld3_lasso_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union": "e9086e2f71451b8058981b3bb93d8c0bbee4b174ed143197f1141913ff7db0c0",
+    "ld3_enet_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union": "37c6298008cfe7f817e0ed693066ac0ae0ea8a833ca6d5fdf9c052efe1e4dc5d",
+    "ld3_enet_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union": "16a72c7b9ebf4970faaa30fb02dc93d607cdade81ed737a16b9627985c2ee123",
+    "ld3_enet_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union": "debe21a7abf1b22eb24252ea74e048210de00a22ae4209ef0a9c346d6b4c4763",
+    "ld3_enet_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union": "142f5028a6ca82c8eb09cfc614806a5ca9e53290f96a3258611ad4c72da846c0",
+    "ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_original_original_fixed504_union": "fbe8bbbadd6de8cf5f4fd35486a245d9c3f065f46d2e33d4d9ae7be22c731e6b",
+    "ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_original_expanded_fixed504_union": "7061b9edaca7efe68660d55848d9465c0c44b5aa7ebdf73beecbddd3295ef70f",
+    "ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_original_fixed504_union": "5dedf0cc5e4ebcc53f4cc35a84833c66d602c60125d3ecc784f22fd31360227a",
+    "ld3_group_ridge_characteristics_textcore_pca_raw_daily_rank_expanded_expanded_fixed504_union": "de1eb9e082a34816b4a1c544550507cb5eb36a5d1cd00aa904cb608396139376",
+    "ld3_ols_characteristics_full_dgtw_standard_original_none_fixed504_union": "c9a54037fc859aeefad6a33a49ab96932284e411be0cac75f66167ffc23e744f",
+    "ld3_ridge_characteristics_full_dgtw_standard_original_none_fixed504_union": "e178a436c495385a6ab065621e33285e44bfa183296aaa646cd9c8fe123c6f0d",
+    "ld3_ridge_characteristics_full_dgtw_standard_expanded_none_fixed504_union": "a71f26bf525faab29b472108e9b877b188615f28b9ec6ece985001ebcc4e879b",
+    "ld3_lasso_characteristics_full_dgtw_standard_original_none_fixed504_union": "4c3175b941291be8a8482ea87d2c6a4d52aed38c8e0e6ec9e3f3bd232f2df983",
+    "ld3_lasso_characteristics_full_dgtw_standard_expanded_none_fixed504_union": "60851bca33df811f964ef61df2c4b30b1e84460bf272194f20071f09425974cb",
+    "ld3_enet_characteristics_full_dgtw_standard_original_none_fixed504_union": "2ccb2f276555b292d74f9a9235ce445691f25b7c8ad01c28eebc312879d21c55",
+    "ld3_enet_characteristics_full_dgtw_standard_expanded_none_fixed504_union": "b5958b53035fd988cf3206eada84e4941cd01f35e401067d746957764053a5ed",
+    "ld3_ols_characteristics_core_full_dgtw_standard_original_none_fixed504_union": "d7d310a42cd8ee40cc2b6fdfd0d6160c7419cddcc115217c428e96b6a008a449",
+    "ld3_ridge_characteristics_core_full_dgtw_standard_original_none_fixed504_union": "4cce97d7091f6fef39d06c317630b549b60f44072ddfd527d17963b67194fb16",
+    "ld3_ridge_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union": "e9f63b392e590a3a9c15d8d4e86c241bfc5e6913f1ac9833c1f1ccb35299e930",
+    "ld3_lasso_characteristics_core_full_dgtw_standard_original_none_fixed504_union": "cf71e6a0cb18563120da79ad68c69c87c99c71967ab9174d5fae2392984b4c9e",
+    "ld3_lasso_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union": "bfa9f4440c0935dd3d55639b8dceedeff9940ec2c76a6ac3d7f27f200bd292c2",
+    "ld3_enet_characteristics_core_full_dgtw_standard_original_none_fixed504_union": "d8a9511652943473821153e0bb02ac5f4d654071a067c53bde4579ef2911f2e8",
+    "ld3_enet_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union": "0fb7ba75000979fe54c39348ac88c5d8365be5b8d8a73127ee65e26150cb56df",
+    "ld3_group_ridge_characteristics_core_full_dgtw_standard_original_none_fixed504_union": "4371c27fad438ba092f37cd85824e34c3c51dc564115a0955013dc9f51b16d36",
+    "ld3_group_ridge_characteristics_core_full_dgtw_standard_expanded_none_fixed504_union": "e2ba7ef2d031ff15166f3c79b8dec95c6c298e90298e3438c487998c4bcbe6be",
+    "ld3_ols_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union": "f4b2507a8396cd64c2500ad8d1c6481ed5986f3e0602e9b8193bbfa756215938",
+    "ld3_ridge_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union": "6acf3e017d9330d8661309e91b5a2ce8ed2361e7a8746840e5b03bdb29156349",
+    "ld3_ridge_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union": "5c110dea2088dd5fb24054900a3c1f8c4fccc2cefa67247d34c7f0673b51168d",
+    "ld3_lasso_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union": "2400e9807a7946797ab59683b98f7ad8ea24bfe07ebe637c4c51dd77e03d3004",
+    "ld3_lasso_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union": "430dd828fd09b0c6dfb6b2cbf023c04dde7c672bbd6ed15d7d22e3c73b3cd1a6",
+    "ld3_enet_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union": "28c10b33e970aa037bd77caf29c964ec2cbbe87b55493b502a05e595645bcd03",
+    "ld3_enet_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union": "56e39c7baecf5b62b4d7231eecf1d525f7987835b2057080857a4df85c28c788",
+    "ld3_group_ridge_characteristics_textcore_full_dgtw_standard_original_none_fixed504_union": "e5507a8eab3b88be74600e9526ab536de8d0d0acdea4cbaf5f3f6d97293a89f3",
+    "ld3_group_ridge_characteristics_textcore_full_dgtw_standard_expanded_none_fixed504_union": "872213aafe0a421132c86db1be027ee24ccd44bcc735f0522395937213f66a80",
+    "ld3_ols_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union": "c9ab23a1217267bca3a47b31e095f90761f86b57afcb87895cca4e28b3708a9d",
+    "ld3_ols_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union": "e33f92d8f56f07ab7123a99dfd76d55917f3a4081aa4273399e7a5f80708a5b7",
+    "ld3_ridge_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union": "801f6648e8fd249e19a30235365ebd6298b4fe099981632681ea7cf65fa17454",
+    "ld3_ridge_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union": "3c0f39aa00bf825287c7b8dcb1216d575ddd70611926017955f0a3467d1101c7",
+    "ld3_ridge_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union": "f8479fac3487f77ed36ce385eee15293b7f0af45b42d533ca42fc1555d717002",
+    "ld3_ridge_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union": "3c95d3d049975219982b901af451598bd2025c43ceeedf57bacf942c38c9c979",
+    "ld3_lasso_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union": "9c2f728886a1c47651efd82389228f31f6b2e1c673b4ab09863d1230ad96e4b6",
+    "ld3_lasso_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union": "8213ae81710d0a53bada28250ed04f73941ce1fc302d333027e4da7f8b071546",
+    "ld3_lasso_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union": "a466cbe216a4df2ba92d07e9cad2f9bc6a91dafbaacada84259fa2889cd15273",
+    "ld3_lasso_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union": "8793a436818c6ab56edf3ac0060c4f23ce33bf1d5f09f4d099bdc44a87cabae8",
+    "ld3_enet_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union": "ff765039c499a6b2287683077a645f98facce0b5bb6e30c2f95c374930574527",
+    "ld3_enet_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union": "cc9be96b2e966f1fbd9008f0045d4e0e58e05fb2688847df4cd8a26628effe4a",
+    "ld3_enet_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union": "4717432524d4de090ea134c189e04eaa91f72a9c726fa5cf19efbc50b7486acf",
+    "ld3_enet_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union": "e76c4de9667edea220041dee4e395331e8c34c01a680cfff1ca37439cdedded0",
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_original_original_fixed504_union": "b7e40d54ad75b10c638173dcb25c12827d4e60a4f2d981d1d3952edcd2f310b0",
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_original_expanded_fixed504_union": "f4742eb63be781a4053c870c92ad3321a8e3d87aad0928004f289cb5d4e653f6",
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_expanded_original_fixed504_union": "fd61560f2329b7bee8b0165110ae0f883dacf5176ba6373c7a691c7f1feec12d",
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_standard_expanded_expanded_fixed504_union": "645c82f754add1b4bd00469898d98d63a086bc90b04b3ffb5a54eefbe6bcae3f",
+    "ld3_ols_characteristics_full_dgtw_daily_rank_original_none_fixed504_union": "0b3ffb7e0cd3f095a4c8cf060d5111952f4299b042c26fc30eef30d82237aa52",
+    "ld3_ridge_characteristics_full_dgtw_daily_rank_original_none_fixed504_union": "d93639a380a150b398fc0b4c563b3f8750b73b0b14f8168a4c2a84216ae53582",
+    "ld3_ridge_characteristics_full_dgtw_daily_rank_expanded_none_fixed504_union": "a1d17a74f1396121c23dc2aeabb6405b7f317db1549a3a26e8ce63362c7fbbf9",
+    "ld3_lasso_characteristics_full_dgtw_daily_rank_original_none_fixed504_union": "050ffea6b272ec9a7a600af979e9dabd1c0ad718fc01408f4b607928c2c9d200",
+    "ld3_lasso_characteristics_full_dgtw_daily_rank_expanded_none_fixed504_union": "d0fb3fc772bb8a1625708d68e7b078b5c8cd8065e7e0875bd42a578f896f6a23",
+    "ld3_enet_characteristics_full_dgtw_daily_rank_original_none_fixed504_union": "19314d26e5de2cf4a79176ca0d97ccd729395dbe8e8dda119973ed6eb4a51179",
+    "ld3_enet_characteristics_full_dgtw_daily_rank_expanded_none_fixed504_union": "511f615cbd10d469109fcf4b2e3bcbdc77e95a1aac92234b490e2a9cdc24661c",
+    "ld3_ols_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union": "6595944a1eb7d8e51b256ff2be9dbbc70846ed6e4ba4ae07577ded2f70171660",
+    "ld3_ridge_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union": "da09a98a03aeaf99d3ad5053fb2eb8d111d5f4f3e9fc4c2aa345b54a445c3ed9",
+    "ld3_ridge_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union": "f16177965d2aa6d07f609bb531cbcc1030c13981e8890c9ecfc7d327d8b3b397",
+    "ld3_lasso_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union": "fbbdbad2686100f7f555fd0f949b0745e718088d9c20ff28d094e9a7309c7ab3",
+    "ld3_lasso_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union": "d3a07efa9e028117422be76fe8415c9acf0c8ba256e9303e71323797c1510448",
+    "ld3_enet_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union": "03bc8fb9f05aac97cb8af24f53b2c7b1c011f22619a1984457e3335b038b4310",
+    "ld3_enet_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union": "aeba2330ec910b120c783310f85c9977d7611c272fd5265c816055be28168a82",
+    "ld3_group_ridge_characteristics_core_full_dgtw_daily_rank_original_none_fixed504_union": "87bbe1646d52728229f174de3df5a3e86452477ae52f25d9bcb4e5b01cc6b3c5",
+    "ld3_group_ridge_characteristics_core_full_dgtw_daily_rank_expanded_none_fixed504_union": "d8e108f73621091a86ce8499b6c614340be9d019ff80471cc9f29c4403183cb1",
+    "ld3_ols_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union": "4f69433a481a7f49614eaf0a14a56b50fb8f948d1e8f58a0841d9a0333b053f0",
+    "ld3_ridge_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union": "03e525f9da910a4cafad413c9d760affe6de85b84ec7e8a8998f180d2811c52e",
+    "ld3_ridge_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union": "15110610938fc2d86bc87f7769c07a7f5203326ce5c470f30d497318f38a14b9",
+    "ld3_lasso_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union": "9a410bc9f06db717b6583e2a4a322d3837f67539449326064a97738b5f3e4767",
+    "ld3_lasso_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union": "b1089f08b20f6977ba4e7b98cb90a3796b1ad8fd5598ce57d54f63daf1af0711",
+    "ld3_enet_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union": "331cab23a12942e31ca042b07d7153b29af1bf39516f1cecd79819bb4cc16e9a",
+    "ld3_enet_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union": "99bc41d4a87084e2ed87eacd21fcf3c7bac54689dd56d04d603bde5b58f88cb6",
+    "ld3_group_ridge_characteristics_textcore_full_dgtw_daily_rank_original_none_fixed504_union": "50db0251c29936b987995c952ca2f5a08aba3d1748998f91966f77edd31095a2",
+    "ld3_group_ridge_characteristics_textcore_full_dgtw_daily_rank_expanded_none_fixed504_union": "6949f5f9dedd77f1f1ba760afe738d9fe1b46635d18f7f991dd39609f04534f4",
+    "ld3_ols_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union": "b0883b7e0cb41fb67e6a1c8445600da29341e1ab78e005dec5835d6c0284453e",
+    "ld3_ols_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union": "1ea2fd28d9212bcc022192c3262db57d0437707d22205ae27013ac9c3ae269fd",
+    "ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union": "828f62a5ff8fb5dd099f37c7261ed2725935636ac2c68581570c3f88de870c9c",
+    "ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union": "be83b4e538d02e5ba10b0e4e2c5cedbd049a3dbab20f7f123dd878228c8f688e",
+    "ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union": "0dd900160e0f57d283e1e32e451847e448b95ffea15764ea97109085f31c4cda",
+    "ld3_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union": "e0d61be06d79bd8813d86764a342c6ec70881bd446f976a28569d659c1970e50",
+    "ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union": "94fd276b73dc88b75e22dbda88b566c63ea22eb740daeb798004256b7e3297ac",
+    "ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union": "26953ef1207ba2478b3b736287119e471645edf7151af929c0e933fbf2bf222f",
+    "ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union": "87c371d443a4eb7912229a68c86db1c23f8d437591826667a5ac52f0f01247a7",
+    "ld3_lasso_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union": "568524ba920f2847f139d41fd1abd07891d979c6676547cd619189047bd66ca7",
+    "ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union": "399117250b022074ad74e4b3eb25559287d00980983053b5fa946e1ca95282d0",
+    "ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union": "3b22796c04bf78466f35dc048dbb2d756617d24fb335ec451346081326fab3a5",
+    "ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union": "6e50a02071ae3d9032e90da7cb3e7ae71d2087e02fcbf60c5923c937cb39b454",
+    "ld3_enet_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union": "db3a36e1422425ffa4297a0bf638046952a4a1ede422663ba8bbb84f43889749",
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_original_fixed504_union": "a58301342eb76a163077dd290a91d88b09b0097a407ddecd012599a811b0223c",
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_original_expanded_fixed504_union": "4f8b373aaa3829417b0c4d1cbf2b0cbfb17b652efffdd9d59380f9322b6ed1c5",
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_original_fixed504_union": "64a2f2c7e7fbad7a653c0296f3880e535eb046c37f54fe1a33eab772e656f47b",
+    "ld3_group_ridge_characteristics_textcore_pca_dgtw_daily_rank_expanded_expanded_fixed504_union": "9a1b3fd859bc4cad7022ea0978147f627ce602b3d8ede675ef09edb93d357c82"
+  },
+  "reused_kernel_sha256": {
+    "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7"
+  },
+  "wrapper_sha256": "f16691cb96d28f464ea85d42ba8cf41044885d8ce9e50df4b38b3ddf4182f6a2",
+  "planned_models": 172,
+  "included_models": 172,
+  "pilot": false,
+  "preliminary": false,
+  "planned_family_counts": {
+    "estimator": 76,
+    "penalty_expansion": 38,
+    "incremental_social": 72,
+    "group_penalty": 16,
+    "compression": 36,
+    "pca_expansion": 18,
+    "transformation": 43
+  },
+  "observed_family_counts": {
+    "raw": {
+      "estimator": 76,
+      "penalty_expansion": 38,
+      "incremental_social": 72,
+      "group_penalty": 16,
+      "compression": 36,
+      "pca_expansion": 18,
+      "transformation": 43
+    },
+    "dgtw": {
+      "estimator": 76,
+      "penalty_expansion": 38,
+      "incremental_social": 72,
+      "group_penalty": 16,
+      "compression": 36,
+      "pca_expansion": 18,
+      "transformation": 43
+    }
+  },
+  "contrast_families": {
+    "penalty_expansion": "Expanded minus original penalty menu, with every other choice matched",
+    "transformation": "Daily characteristic ranks minus historical standardization, with every other choice matched",
+    "pca_expansion": "PCA menu including 4 and 8 components minus original PCA menu, with every other choice matched",
+    "compression": "PCA text minus full text, matching estimator, transformation and penalty menu",
+    "incremental_social": "Sentiment/attention given characteristics; full or PCA text given characteristics and sentiment/attention",
+    "group_penalty": "Separate group penalties minus global ridge, with all input and search-menu choices matched",
+    "estimator": "Each penalized procedure minus OLS; OLS has no penalty-menu axis"
+  },
+  "multiplicity": "Bonferroni within target/family/metric/period over the predeclared complete 172-model design. Missing statistics and pilot subsets never reduce denominators. HAC21/HAC63 are sensitivities. Prior development research is not covered.",
+  "primary_target": "raw",
+  "secondary_target": "dgtw",
+  "primary_metric": "rank_ic",
+  "secondary_metrics": [
+    "ew_spread_bp",
+    "cap_spread_bp"
+  ],
+  "hac_lags": [
+    5,
+    21,
+    63
+  ],
+  "inference": "Two-sided normal Bartlett HAC; complete supplied exchange calendar retains missing sessions",
+  "common_sample": "Joint finite predictions across all registered models within each target, then observed outcomes; established before bounded-batch scoring",
+  "research_status": "2014-2022 is already-inspected development evidence. No test-score winner is selected. No 2023 outcomes are scored; 2023 lacks a completeness and prior-use audit.",
+  "portfolio_limit": "Gross descriptive decile sorts; no attainable same-close execution, turnover, costs or factor alpha estimated",
+  "kernel_reuse": "Unchanged protocol_evaluate alignment, score_scope, score_day, terciles, summarize_daily and calendar_hac_mean; new bounded-batch orchestration and registered comparisons",
+  "daily_artifact": "Deterministic gzip (mtime=0); uncompressed local daily table retained",
+  "monthly_selection": {
+    "path": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\monthly_selection.csv",
+    "sha256": "de293370994850dcd68e26f45b96472ddb4d96ff0953c864a474827dd08ef298"
+  },
+  "numerical_threads": 2,
+  "prediction_batch_size": 8,
+  "elapsed_seconds": 1675.5954029998975,
+  "output_sha256": {
+    "linear_optimization_v3.csv": "dfe0cf064ce453c90260e357800c07a378082f860614b0393a4f0bdb6a370ccc",
+    "linear_optimization_v3_yearly.csv": "77d0f76fb50deb29868e680762984bf285005f020ff159e737daffee013c9fe2",
+    "linear_optimization_v3_periods.csv": "dd828ca176096ee05660c978d41b164fce57ce78e4fd98fd13951a5f71deae15",
+    "linear_optimization_v3_contrasts.csv": "b83786312a7b1a859f5e88529a7358e9abe9c8074f324937e47121b61225b20d",
+    "linear_optimization_v3_coverage.csv": "4576a3c2a2f5ea6e9fa58d84eeced76ee57d55d7402dfee7850482bd2effbaa1",
+    "linear_optimization_v3_deciles.csv": "b6a807237f954645f6d7cb755176f020619da60387cdc69866be8348c0e67c35",
+    "linear_optimization_v3_subgroups.csv": "b13d0a233163080099bc568e889d4b10ff36b32c6dc137844b8505ff08c35418",
+    "linear_optimization_v3_horizons.csv": "2a1b0d961f32eafea57865b8ad6fd54eeefe7afba4ff9f4b0d214540c6835556",
+    "linear_optimization_v3_daily.csv.gz": "5e52ee86eae6d766ce1f9f04a84f2ff24252c84a7fd0702c072619d13b2253cc"
+  },
+  "arguments": {
+    "registry": "D:\\StockTwits\\Code\\.runs\\linear_optimization_v3\\study\\ed854a1f5bf3da39\\linear\\full_b217f4648f5fe89a\\registry.json",
+    "prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+    "out": "D:\\StockTwits\\Code\\reports\\data\\linear_optimization_v3",
+    "threads": 2,
+    "batch_size": 8,
+    "start": "2014-01-01",
+    "end": "2022-12-31",
+    "skip_horizons": false,
+    "skip_subgroups": false,
+    "allow_pilot": false
+  },
+  "python": "3.13.11",
+  "interpreter": "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe"
+}

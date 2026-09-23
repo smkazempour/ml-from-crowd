@@ -1,25 +1,48 @@
 # Shared experimental protocol
 
-Version: v1.1, 2026-09-12. Adopted for the current matched one-day return experiments;
-extensions to other targets and information sets remain specifications for future work.
+Historical baseline: **v1.1, adopted 2026-09-12**. Current implementation and
+method amendments updated **2026-09-22**. This is a living protocol, not a
+replacement for the frozen specification of any completed experiment.
 
-Revision v1.1 makes the user-confirmed first-close timing explicit and replaces the
-varying 80/20 history splits with 252/504/756 fitting dates plus a fixed 126-date
-validation block. The primary fit length is 504 dates. The code trace and
-exact session-index formulas are in [TIMING_CONVENTION.md](TIMING_CONVENTION.md).
+Revision v1.1 made the user-confirmed first-close timing explicit and replaced
+varying 80/20 histories with 252/504/756 fitting dates plus 126 validation dates.
+The original primary history was F504, and fitted coefficients were retained
+without refitting on validation. Those rules describe the completed social-only
+linear [Report 07](07_protocol_linear_results.md) and NN3
+[Report 08](08_protocol_nn_results.md); their results are not relabeled.
 
-This is the recommended procedure for new experiments, written in response to the
-discussion about fair linear/nonlinear comparisons and the broader research agenda.
-The shared data/split pipeline and matched linear and NN runners are implemented.
-Corrected linear training and evaluation are complete: 96 model specifications,
-648 month-target checkpoints and 108 test months; see
-[Report 07](07_protocol_linear_results.md). The standard-budget NN study completed
-on September 17, 2026: [Report 08](08_protocol_nn_results.md) evaluates all 24 NN3
-specifications alongside 96 linear models; [NN_RUN_STATUS.md](NN_RUN_STATUS.md)
-records completion and execution history. This is not a claim that every extension
-or economic validation described below has been implemented or completed.
-The [research questions](RESEARCH_QUESTIONS.md) define what each experiment is intended
-to answer. Existing results and predictions retain their original specifications.
+**Current procedure for the characteristic-conditioned experiments:** 504 initial
+training sessions, 126 chronological validation sessions, then a final monthly
+refit on their exact union (630 input sessions), preserving the original maturity
+exclusions. Validation selects settings before this refit. Fitting-only scaling
+and PCA are rebuilt on the permitted combined inputs; no forecast-month outcomes
+enter estimation or selection. The exact signal-session formulas remain in
+[TIMING_CONVENTION.md](TIMING_CONVENTION.md).
+
+Completed subsequent studies are the characteristic benchmarks
+([09](09_characteristic_linear_results.md)), refitting/history/penalty/PCA design
+([10](10_linear_design_results.md)), expanded linear search
+([11](11_linear_optimization_results.md)) and explicit interactions
+([13 summary](13a_linear_interaction_summary.md)). Stage A completed successfully
+on September 22; no model run is active. Optimized trees (Stage B) and
+characteristic-conditioned NN comparisons with a combined refit (Stage C) are
+proposed in [Report 12](12_interactions_and_nonlinear_plan.md), but are not yet
+implemented or running. The social-only NN3 runner does not supply that new NN
+refit procedure.
+
+**Transformation correction:** the characteristic cache already contained daily
+ranks. Report 11's `standard` branch used those ranks plus fitted scaling;
+`daily_rank` ranked the stored values again, including missing values previously
+set to neutral zero. It did not test raw standardized characteristics against
+ranks. The numerical results remain results for those actual procedures, and
+Stage A uses the original once-ranked inputs. The intended raw-versus-ranked
+comparison remains outstanding; see [audit 11b](11b_sample_and_transformation_audit.md).
+
+All 2014-2022 comparisons are development evidence. No untouched confirmation
+sample is certified; 2023 is incomplete and has prior recorded use. The
+[research questions](RESEARCH_QUESTIONS.md) distinguish completed evidence from
+future news, fundamentals, aggregate-market and corpus extensions. Each frozen
+experiment specification controls the interpretation of its own outputs.
 
 The common standard is the same information set, sample, timing, fitting opportunity,
 and evaluation within a comparison. Different scientific tasks require different targets
@@ -31,7 +54,7 @@ and losses. In this document, **benchmark model** means a comparison estimator;
 | Source | Verified procedure | Decision for this project |
 |---|---|---|
 | GKX, published 2020 article, Sections 1.1–1.2 and 2.1 | Monthly excess-return levels; squared loss and selected Huber variants. Characteristics ranked cross-sectionally; missing characteristics median-imputed. Initial 18-year training and 12-year validation blocks, annual tests; training expands. Fitted parameters use training alone. | Adopt temporal validation and comparable transformations. Our daily frequency, shorter history and rank target require explicitly different settings. |
-| GKX, Sections 1.2.1 and 1.8 | Pooled observation loss; inverse-cross-section-size and capitalization weights also considered. Return R-squared against zero and date-level forecast comparisons. | Equal-date weighting is our proposed primary choice because coverage changes strongly. Report actual-return accuracy separately from ranking accuracy. |
+| GKX, Sections 1.2.1 and 1.8 | Pooled observation loss; inverse-cross-section-size and capitalization weights also considered. Return R-squared against zero and date-level forecast comparisons. | Equal-date weighting is our implemented primary choice because coverage changes strongly. Report actual-return accuracy separately from ranking accuracy. |
 | CKX, February 2026 revision, Sections 2.2–2.3 | Frozen text representations with downstream return prediction; annual rolling six-year training, two-year validation and one-year test. News timing and open-to-open returns are aligned explicitly. | Keep representation and estimator comparisons separate. Specify a forecast clock for social messages, news and prices before interpreting a trading result. |
 | CKX, Sections 3.4–3.5 and 4 | Ridge and nonlinear comparisons; turnover/cost analysis, delayed formation and information-content checks. Several implementation details, including an exact normalized ridge objective and final refit policy, are not explicit. | Define those details ourselves; do not infer equivalence from matching nominal penalty values. |
 
@@ -91,12 +114,19 @@ not saved row numbers. Freeze coverage using contemporaneously observable rules.
 delisted securities and audit corporate actions and missing realized returns; do not select
 today's surviving tickers or silently discard difficult outcomes.
 
-For the immediate replication, use the current tagged-message common-stock universe.
+The completed comparisons use the current tagged-message common-stock universe.
 For each comparison family, build one feature table from the union of required columns,
 then give every estimator the same eligible fitting, validation and prediction rows.
 Use explicit imputation rules instead of estimator-specific complete-case selection.
 Report any coverage restriction and its economic meaning. Different families may use
 different universes, but their scores are not directly comparable without a common sample.
+
+The implemented text panel excludes stock-days without retained tagged messages and
+embeddings. Every 2014-2022 prediction row has a positive embedding count; the
+characteristic-only model receives exactly those same rows. Broader CRSP histories
+are used to calculate controls, not to add no-message days. These experiments test
+content conditional on coverage, not message presence versus absence across all
+stocks. See [audit 11b](11b_sample_and_transformation_audit.md).
 
 Distinguish three cases:
 
@@ -132,10 +162,12 @@ rank zero, with a missingness indicator. Record the observed count used in that 
 denominator. If the whole feature is missing, flag it and assign zero; report the occurrence.
 Binary availability indicators and categorical encodings retain their meanings.
 
-This rank convention is a proposed new version: existing notebooks use percentile rank
-directly and have a small finite-sample centering difference. Apply the new formula to all
-matched models together. Daily ranking can change the pooled ordering of observations,
-so it can affect tree models as well as linear models and networks.
+This rank convention is implemented in the certified protocol and characteristic
+caches. Earlier legacy notebooks used percentile ranks directly and differ in
+finite-sample centering. Daily ranking can change pooled observation ordering,
+so it can affect trees as well as linear models and networks. Do not apply a
+second ranking to prepared scalar inputs; that was the Report 11 comparison
+error documented above.
 
 Keep the 384 embedding coordinates unranked. Preserve the current pooling convention
 and retain embedding norm/cosine agreement as separate, unranked scalar features. Do not
@@ -154,9 +186,10 @@ as predictors, or supervised embedding adaptation. Any learned representation or
 is fit inside the training procedure and selected on validation. A frozen pretrained encoder
 is versioned, including tokenizer, pooling, text truncation and revision.
 
-Daily ranks discard common shifts and magnitudes. Retain a declared native-scale robustness
-using domain transforms such as log(1 + count), trained scaling, and the same data splits
-for all compared estimators. When market-wide activity is a predictor, preserve it separately.
+Daily ranks discard common shifts and magnitudes. A genuine native-scale comparison
+remains unimplemented: register a separate study using the saved unranked controls,
+explicit missingness rules, fitting-only scaling and the same data splits. Report 11
+does not supply this comparison. When market-wide activity is a predictor, preserve it separately.
 
 ### Target and loss
 
@@ -185,7 +218,7 @@ Predictions for otherwise eligible rows are still retained.
 
 Rank-target squared loss estimates expected relative rank, not expected return in percent.
 Do not calculate return-unit R-squared from rank predictions. Portfolio returns always use
-actual realized returns, never ranks. Raw-return ranking is the proposed primary task;
+actual realized returns, never ranks. Raw-return ranking is the implemented primary task;
 DGTW and return-level fits are declared companion tasks, not replacements chosen afterward.
 
 For a fitting block with D eligible dates and N_t labeled observations per date:
@@ -209,24 +242,28 @@ is estimated inside the fitting block and reported as a separate specification.
 
 ## 4. Training, validation and test schedule
 
-Use F for actual fitting dates and V for validation dates. The proposed main comparison
-holds V fixed while varying F, so changing fitting history does not also change the
-period used for model selection:
+Use F for the initial fitting dates and V for validation dates. The original
+v1.1 comparison held V fixed while varying F. The table preserves those historical
+window comparisons and identifies the current combined-refit default; varying F
+is not required for every subsequent study.
 
 | Element | Rule |
 |---|---|
 | Re-estimation | Monthly; complete selection using outcomes realized by the preceding month's last trading close |
-| Primary fitting history | F=504 trading dates |
+| Current initial fitting history | F=504 trading dates |
+| Current final refit | Original F504 fitting rows plus V126 validation rows, 630 input sessions; preserve the interior purge and exclude immature labels |
 | Validation | V=126 trading dates, ending at the latest signal date whose h-day label is available by the selection cutoff |
-| Fitting-history comparisons | F=252 and F=756, with the identical V=126 validation dates at a given horizon |
+| Historical fitting-history comparisons | Reports 07-08 compare F=252/504/756 at fixed V126; Report 10 also tests validation-selected history and three final-fit policies |
 | Historical reference | Existing 252 total dates = 202 fitting + 50 validation, explicitly labeled legacy |
 | Test | Following calendar month's eligible trading dates; parameters fixed for that month |
 | Evaluation span | January 2014–December 2022 common h=1 comparison, subject to feature/label coverage checks; 504/126 results from January 2013 as a supplemental history |
 | Longer-validation robustness | A separate comparison holding F fixed; do not mix it with the primary fitting-history comparison |
 | Expanding-history robustness | A separately registered later experiment with common start and validation rules |
 
-This supersedes v1's 252/504/756 **total-history** 80/20 splits. Two years of actual fitting
-is the proposed starting point, not an established optimum. Report all three windows.
+The historical v1.1 schedule superseded v1's 252/504/756 **total-history** 80/20
+splits. Current studies keep two years of initial fitting plus six months of
+validation and the combined refit; this is a working design, not an established
+global optimum. Completed window comparisons remain in their original reports.
 The original 2012–2022 tables remain historical references, since the text-master input
 starts on 2010-06-02 and the longer new windows cannot cover that entire test period.
 The [calendar audit](data/window_calendar_audit.json) verifies initial warm-up from full
@@ -255,8 +292,9 @@ gap, 126 validation dates and one final date with an immature label: 632 session
 
 If a label is published after its closing endpoint, use that later availability and move
 the block accordingly. Irregular earnings/event outcomes require their actual publication
-timestamps. Current code's month-start-minus-two-calendar-days heuristic is not equivalent
-to this schedule; the trace gives a weekend-boundary example. Document actual dates,
+timestamps. The legacy notebook's month-start-minus-two-calendar-days heuristic
+is not equivalent to the implemented exchange-session schedule; the trace gives
+a weekend-boundary example. Document actual dates,
 counts and dropped labels for each monthly fit.
 
 All stocks on a date belong to the same temporal block. No random row cross-validation
@@ -264,11 +302,20 @@ or random stock-day train/test splits. Earlier outer-test outcomes may enter a l
 window after realization under the declared walk-forward rule; that is distinct from using
 a future month's results to choose its own model.
 
-Select penalties, architecture candidates, training duration and any ensemble weights using
-validation only. For the primary matched experiment, retain parameters fitted on the fitting
-block; **do not refit on fitting plus validation** after selection. A final-refit experiment
-would need a shared rule for every estimator, including how NN epochs are fixed without
-reusing the validation data for early stopping.
+Select penalties, architecture candidates, training duration and ensemble weights
+using validation only. **Historical v1.1 / Reports 07-08:** retain the parameters
+estimated on the initial fitting block; do not retrospectively describe those
+forecasts as combined refits. **Current characteristic-conditioned procedure:**
+freeze the validation-selected settings, then refit on the exact original fitting
+and validation rows. This union excludes the original internal purge rather than
+silently filling it with extra observations. Recompute permitted fitting-only
+scaling/PCA and numerical sparse-penalty scale under the declared refit rule.
+
+For future trees, freeze the validation-selected iteration/tree count before the
+combined refit. For future NNs, fix stopping epochs and the learning-rate schedule
+before that refit; do not use observations now in the fitting sample as an
+independent early-stopping set. These characteristic-conditioned tree/NN refit
+extensions remain planned, not implemented.
 
 The fixed 126-date validation block gives more time diversity than the old 50-date block,
 but selection can still be noisy. Report penalty instability and convergence. Keep grids
@@ -278,13 +325,13 @@ unreported full-test-driven grid expansion.
 
 ### NN and model-specific mechanics
 
-For the immediate NN3 comparison, start from the implemented 128–64–32 network, ReLU,
+The completed historical NN3 comparison used the implemented 128–64–32 network, ReLU,
 batch normalization, Adam, five fixed seeds, learning rate 0.001, batch size 10,000,
 100-epoch ceiling and patience five. The current weight-decay candidates are
 0.00001, 0.0001 and 0.001. This is an adapted project recipe.
 
 Use the same seed list for every comparable NN input set. For each penalty, save each
-seed's checkpoint at its best validation IC. **Proposed selection is the mean daily
+seed's checkpoint at its best validation IC. **Implemented historical selection is the mean daily
 validation IC of the averaged seed predictions**, matching the ensemble ultimately used
 for prediction. Resolve exact ties using a recorded candidate order. Average all declared
 seeds; do not choose the luckiest seed. Record learning curves, failures and selected epochs.
@@ -302,8 +349,12 @@ trading thresholds on validation as well, rather than on the reported test Sharp
 For current returns, retain core OLS using net sentiment and log volume as the recognizable
 historical reference. Add an OLS/ridge benchmark under the new matched protocol.
 Compare richer inputs within each estimator and different estimators on identical inputs.
-The current primary feature sets have 2, 53, 388 and 439 columns; the unfinished
-cohort/conviction output is not part of the 53.
+The historical social-only feature sets have 2, 53, 388 and 439 columns; the
+unfinished cohort/conviction output is not part of the 53. Current additive
+characteristic-conditioned references have 34 columns (17 characteristics plus
+17 flags), 36 with sentiment/attention, and 422 with full text. Stage A adds the
+explicit bases declared in [its specification](LINEAR_INTERACTION_EXPERIMENT.md),
+including 35 individual social products and joint models up to 604 columns.
 
 For incremental social information beyond market data, the relevant contrast is
 market/characteristics/history versus those same inputs plus social features. For news,
@@ -345,8 +396,10 @@ Report Pearson and Spearman correlations with explicit labels.
 
 ### Portfolios and interpretation
 
-Report gross equal- and lagged-cap-weighted spreads, long and short legs, yearly performance,
-size/liquidity splits and a declared microcap exclusion. Keep fractional sort mechanics
+The completed evaluators report gross equal-weighted and close-t capitalization-
+weighted spreads and legs, yearly performance, and size/activity diagnostics. A
+lagged-cap weighting variant, liquidity splits and a declared microcap exclusion
+require their own explicitly recorded implementation. Keep fractional sort mechanics
 consistent. Disclose minimum effective names and days excluded for sparse portfolios.
 Calculate investable leg performance from realizable return series; date-demeaned leg
 Sharpes are descriptive and do not establish investability.
@@ -397,14 +450,18 @@ automatically transfer.
 
 ### Historical development versus untouched evidence
 
-The 2012–2022 linear results and January 2012/December 2022 NN pilots have already been
-examined. These are historical development comparisons, not a newly untouched holdout.
-Do not relabel their best discovered specification as prospectively selected.
+The early 2012-2022 comparisons, NN pilots, completed social-only NN3 study and
+all characteristic-conditioned Reports 09-13 have been examined. The common
+2014-2022 period is development evidence. Do not relabel its best discovered
+specification as prospectively selected or call the early/late subperiods
+independent confirmation.
 
 The source audit now confirms incomplete `text_master.pkl` coverage across
 September–December 2023, beyond the previously noticed missing October predictions:
 only 4/20, 0/22, 1/21 and 6/20 CRSP session dates, respectively, have any text rows.
-Repair and audit this source coverage before reporting an extension. Do not automatically
+Overall, 178 of 250 expected 2023 dates are available. Prior project records also
+mention predictions through 2023. Repair coverage and audit prior use before
+reporting an extension; completeness alone would not restore untouched status. Do not automatically
 designate 2023, 2024, or any other available year a
 holdout without checking prior use and data completeness. Reserve genuinely unexamined
 data for final confirmation when available, and record all accesses.
@@ -433,16 +490,28 @@ that different estimators receive identical transformed inputs and weights. Pilo
 verify computation; they do not select winners using their realized test performance.
 Document negative findings and failed runs as well as successful ones.
 
-Implementation status for the authorized one-day comparison:
+Implementation status as of September 22, 2026:
 
 | Component | Current status and limits |
 |---|---|
-| [Shared data and splits](../tools/protocol_data.py) | Implemented: fixed input universe, centered ranks, fitting-only equal-date scaling, missingness rules, minimum target cross-section, full CRSP session calendar and explicit label-end purging. Source panels are unchanged. |
-| [Matched linear models](../tools/protocol_linear.py) | Complete: 96 OLS/ridge/lasso/elastic-net specifications over 108 test months, with 648 month-target checkpoints. The corrected run combines 468 certified unaffected reuses and 180 completed reruns. Results are in [Report 07](07_protocol_linear_results.md). |
-| [Matched neural networks](../tools/protocol_nn.py) | Implemented on the same prepared inputs and splits, with seed-ensemble validation selection and resumable runs. The standard-budget pilot passed training, restart and exact restored-state checks; the full study has started. Full NN results remain pending. See [live NN status](NN_RUN_STATUS.md). |
-| [Protocol evaluation](../tools/protocol_evaluate.py) | Corrected full linear evaluation is complete and reported in [Report 07](07_protocol_linear_results.md). Additional economic validation and full NN comparisons remain outstanding. |
-| Source timing and targets | The corrected cache excludes a known nonconsecutive stock/session h=1 target and the associated gap-crossing raw/DGTW h>1 diagnostic labels. All 3,033,080 finite primary-period raw targets now pass the next-session check. Actual early-close routing, delayed benchmark publication and broader longer-horizon label completeness remain limitations. |
-| Other research tracks | Return-level/Huber fits, native-scale and expanding-window variants, added return-history/news/event datasets, aggregate-market forecasts and transaction-cost analysis remain future experiments. |
+| [Shared data and splits](../tools/protocol_data.py) | Implemented: fixed input universe, centered ranks, fitting-only equal-date scaling, missingness rules, full exchange calendar and explicit label maturity. Source panels are unchanged. |
+| Historical social-only linear and NN3 studies | Complete: 96 linear specifications ([07](07_protocol_linear_results.md)) and 24 NN3 specifications ([08](08_protocol_nn_results.md)); these retain pre-validation coefficient fits. They do not implement characteristic-conditioned combined-refit NNs. |
+| Characteristic data and linear benchmarks | Complete: 17 market/past-return controls plus 17 missingness flags on the same tagged-message rows; [09](09_characteristic_linear_results.md). No point-in-time accounting or news controls. |
+| Linear design and optimization | Complete: 228 procedures in [10](10_linear_design_results.md) and 172 in [11](11_linear_optimization_results.md). Report 11 requires [correction 11b](11b_sample_and_transformation_audit.md): raw-versus-ranked inputs were not tested. |
+| Explicit interactions, Stage A | Complete: 148 procedures, 216 month-target jobs, 108 forecast months; [13 summary](13a_linear_interaction_summary.md). Ridge is primary; all 35 individual social terms are reported with the full correction budget. |
+| Optimized trees / characteristic-conditioned NNs | Stage B / Stage C are planned in [12](12_interactions_and_nonlinear_plan.md), not implemented or running. No model run is active. |
+| Evaluation | Completed studies retain common-sample daily ranking, paired HAC5/21/63, early/late periods and gross portfolio diagnostics. These are not net implementable returns; transaction costs, holdings and execution validation remain outstanding. |
+| Source timing and targets | The corrected cache excludes the known nonconsecutive h=1 target and associated gap-crossing longer-horizon labels. All 3,033,080 finite primary-period raw h=1 targets pass the next-session check. Early-close routing and broader longer-horizon completeness remain limitations. |
+| Other research tracks | Genuine raw-level/rank comparison, news/accounting/event datasets, aggregate-market forecasts, return-level/Huber models, expanding history and untagged-corpus expansion remain separate future experiments. |
+
+Current evidence should not be read as "all interactions never help." In Stage A,
+sentiment/attention added to quadratic characteristics improves primary raw-return
+ridge IC by 0.000999 (HAC5 family-adjusted p = 5.64e-7). None of the 35 individual
+social products passes the adjusted primary test, and their joint block has no
+established gain. Characteristic-by-characteristic products help some comparisons,
+including secondary DGTW specifications; these distinctions remain in
+[Report 13](13_linear_interaction_results.md). No tested social/text interaction
+finding establishes a causal mechanism or substitutes for independent confirmation.
 
 The source-input audit passes all required dates for all 108 primary test months,
 January 2014–December 2022, at F=252/504/756 and V=126. A prescribed date window need
@@ -454,7 +523,7 @@ have their full eligible fitting-date counts; each first validation block has 12
 Run split records retain both prescribed bounds and actual labeled-day/row counts.
 See [the detailed timing and source audit](TIMING_CONVENTION.md#implemented-source-and-coverage-audit).
 
-The active prepared version is
+The historical social-only prepared version is
 [`8f3f4eb44b399771`](../.runs/protocol_v1_1/prepared/8f3f4eb44b399771/manifest.json),
 an immutable derivative of the preserved original `15426a6f29a923e3` cache. The
 [repair audit](../.runs/protocol_v1_1/prepared/8f3f4eb44b399771/horizon_repair_audit.json)
@@ -481,3 +550,21 @@ rerun. Corrected training and evaluation are complete across all 648 checkpoints
 Existing prediction files retain their original methods and results. The revised
 runners write isolated run artifacts; their implementation and pilot checks do not
 substitute for complete full-period estimates or the additional economic tests above.
+
+
+### Current characteristic cache and amendment record
+
+Characteristic-conditioned studies use
+[`35ef3a5eb0cb5e42`](../.runs/characteristics_v1/prepared/35ef3a5eb0cb5e42/manifest.json),
+an immutable derivative of the corrected social-only cache described above. It
+preserves economic keys, targets and calendar, appends ranked market controls and
+missingness flags, and separately retains unranked controls in
+`characteristics_raw.npy`. The current primary prediction universe remains
+3,034,035 stock-days. Individual frozen specifications and completion certificates
+identify the actual code, configuration and artifacts for each study.
+
+2026-09-22 maintenance update: separated the historical retained-fit v1.1 procedure
+from the currently executed 504/126 union-refit design, recorded completion through
+Stage A, corrected stale NN-pilot and characteristic-availability statements, and
+linked the ranked-input audit. Historical studies, certified reports and frozen
+sources retain their original provenance. Stages B-C are plans, not active runs.

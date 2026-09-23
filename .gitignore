@@ -56,6 +56,9 @@ Thumbs.db
 
 # Full characteristic daily results are published as a byte-verified gzip file.
 reports/data/characteristics_v1_linear_daily.csv
+reports/data/linear_design_v2_daily.csv
+reports/data/linear_optimization_v3_daily.csv
+reports/data/linear_interactions_v1_daily.csv
 
 # Data files (optional - uncomment if you want to ignore large data files)
 # *.csv

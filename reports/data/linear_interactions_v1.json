@@ -1,0 +1,1092 @@
+{
+  "prediction_sources": {
+    "li1_ols_additive_c_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_additive_c_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111323416618200
+    },
+    "li1_ridge_additive_c_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_additive_c_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111324829296800
+    },
+    "li1_enet_additive_c_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_additive_c_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111326223250700
+    },
+    "li1_ols_additive_cs_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_additive_cs_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111327616463600
+    },
+    "li1_ridge_additive_cs_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_additive_cs_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111328993440300
+    },
+    "li1_enet_additive_cs_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_additive_cs_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111330403564400
+    },
+    "li1_ols_additive_cst_full_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_additive_cst_full_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111331795255100
+    },
+    "li1_ridge_additive_cst_full_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_additive_cst_full_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111333196105500
+    },
+    "li1_enet_additive_cst_full_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_additive_cst_full_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111334610479700
+    },
+    "li1_ols_c_squares_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_c_squares_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111336057513600
+    },
+    "li1_ridge_c_squares_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_c_squares_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111337453173800
+    },
+    "li1_enet_c_squares_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_c_squares_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111338829517400
+    },
+    "li1_ols_c_quadratic_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_c_quadratic_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111340206925500
+    },
+    "li1_ridge_c_quadratic_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_c_quadratic_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111341601295300
+    },
+    "li1_enet_c_quadratic_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_c_quadratic_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111342966981800
+    },
+    "li1_ols_cq_s_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_cq_s_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111344313273700
+    },
+    "li1_ridge_cq_s_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_cq_s_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111345662150800
+    },
+    "li1_enet_cq_s_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_cq_s_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111346993378300
+    },
+    "li1_ols_cq_s_squares_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_cq_s_squares_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111348322171500
+    },
+    "li1_ridge_cq_s_squares_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_cq_s_squares_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111349699193000
+    },
+    "li1_enet_cq_s_squares_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_cq_s_squares_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111351013745700
+    },
+    "li1_ols_cs_joint_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_cs_joint_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111352359935200
+    },
+    "li1_ridge_cs_joint_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_cs_joint_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111353722924000
+    },
+    "li1_enet_cs_joint_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_cs_joint_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111355117169900
+    },
+    "li1_ols_text_main_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_text_main_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111356480626000
+    },
+    "li1_ridge_text_main_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_text_main_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111357844674000
+    },
+    "li1_enet_text_main_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_text_main_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111359222966700
+    },
+    "li1_ols_text_squares_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_text_squares_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111360587937200
+    },
+    "li1_ridge_text_squares_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_text_squares_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111361949330700
+    },
+    "li1_enet_text_squares_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_text_squares_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111363311138700
+    },
+    "li1_ols_agreement_c_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_agreement_c_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111364706556400
+    },
+    "li1_ridge_agreement_c_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_agreement_c_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111366085773200
+    },
+    "li1_enet_agreement_c_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_agreement_c_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111367477466800
+    },
+    "li1_ols_text_c_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_text_c_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111368838085700
+    },
+    "li1_ridge_text_c_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_text_c_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111370214937400
+    },
+    "li1_enet_text_c_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_text_c_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111371592917900
+    },
+    "li1_ols_text_s_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_text_s_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111372955289900
+    },
+    "li1_ridge_text_s_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_text_s_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111374299556400
+    },
+    "li1_enet_text_s_joint_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_text_s_joint_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111375675605800
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret1_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret1_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111376960428200
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret5_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret5_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111378277332700
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111379698638900
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret63_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret63_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111381096596600
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret126_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret126_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111382492785900
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret252_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret252_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111383905707800
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_momentum252_skip21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_momentum252_skip21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111385327397700
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_log_market_cap_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_log_market_cap_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111386689482300
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_log_price_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_log_price_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111388085369900
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_turnover1_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_turnover1_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111389431666600
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_turnover21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_turnover21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111390811193300
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume1_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume1_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111392172240900
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111393555285500
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_volatility21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_volatility21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111394958965600
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_volatility63_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_volatility63_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111396385777400
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_max_return21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_max_return21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111397757050600
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_amihud21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_amihud21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111399157470200
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret1_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret1_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111400560436200
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret5_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret5_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111402022830600
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111403474515000
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret63_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret63_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111404991696600
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret126_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret126_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111406508796600
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret252_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret252_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111408012282400
+    },
+    "li1_ridge_single_social192_log_volume__x__char_momentum252_skip21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_momentum252_skip21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111409518886800
+    },
+    "li1_ridge_single_social192_log_volume__x__char_log_market_cap_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_log_market_cap_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111411135255300
+    },
+    "li1_ridge_single_social192_log_volume__x__char_log_price_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_log_price_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111412668833900
+    },
+    "li1_ridge_single_social192_log_volume__x__char_turnover1_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_turnover1_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111414222466200
+    },
+    "li1_ridge_single_social192_log_volume__x__char_turnover21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_turnover21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111415769265400
+    },
+    "li1_ridge_single_social192_log_volume__x__char_log_dollar_volume1_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_log_dollar_volume1_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111417297268700
+    },
+    "li1_ridge_single_social192_log_volume__x__char_log_dollar_volume21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_log_dollar_volume21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111418834476400
+    },
+    "li1_ridge_single_social192_log_volume__x__char_volatility21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_volatility21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111420281805600
+    },
+    "li1_ridge_single_social192_log_volume__x__char_volatility63_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_volatility63_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111421797022500
+    },
+    "li1_ridge_single_social192_log_volume__x__char_max_return21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_max_return21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111423308546100
+    },
+    "li1_ridge_single_social192_log_volume__x__char_amihud21_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_amihud21_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111424856969300
+    },
+    "li1_ridge_single_social192_net_sentiment__x__log_volume_raw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__log_volume_raw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111426376087700
+    },
+    "li1_ols_additive_c_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_additive_c_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111427832158600
+    },
+    "li1_ridge_additive_c_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_additive_c_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111429223140300
+    },
+    "li1_enet_additive_c_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_additive_c_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111430602691600
+    },
+    "li1_ols_additive_cs_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_additive_cs_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111432029050100
+    },
+    "li1_ridge_additive_cs_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_additive_cs_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111433434625200
+    },
+    "li1_enet_additive_cs_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_additive_cs_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111434808086000
+    },
+    "li1_ols_additive_cst_full_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_additive_cst_full_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111436200910100
+    },
+    "li1_ridge_additive_cst_full_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_additive_cst_full_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111437609837600
+    },
+    "li1_enet_additive_cst_full_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_additive_cst_full_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111439066267800
+    },
+    "li1_ols_c_squares_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_c_squares_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111440511792800
+    },
+    "li1_ridge_c_squares_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_c_squares_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111442001774000
+    },
+    "li1_enet_c_squares_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_c_squares_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111443491001900
+    },
+    "li1_ols_c_quadratic_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_c_quadratic_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111445045300900
+    },
+    "li1_ridge_c_quadratic_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_c_quadratic_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111446566267300
+    },
+    "li1_enet_c_quadratic_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_c_quadratic_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111448048079100
+    },
+    "li1_ols_cq_s_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_cq_s_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111449546854200
+    },
+    "li1_ridge_cq_s_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_cq_s_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111451052423200
+    },
+    "li1_enet_cq_s_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_cq_s_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111452543646800
+    },
+    "li1_ols_cq_s_squares_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_cq_s_squares_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111454035177600
+    },
+    "li1_ridge_cq_s_squares_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_cq_s_squares_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111455524880100
+    },
+    "li1_enet_cq_s_squares_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_cq_s_squares_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111457021277900
+    },
+    "li1_ols_cs_joint_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_cs_joint_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111458584306400
+    },
+    "li1_ridge_cs_joint_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_cs_joint_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111460121173200
+    },
+    "li1_enet_cs_joint_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_cs_joint_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111461627702800
+    },
+    "li1_ols_text_main_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_text_main_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111463222010000
+    },
+    "li1_ridge_text_main_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_text_main_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111464690284500
+    },
+    "li1_enet_text_main_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_text_main_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111466098209800
+    },
+    "li1_ols_text_squares_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_text_squares_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111467506886200
+    },
+    "li1_ridge_text_squares_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_text_squares_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111468900272700
+    },
+    "li1_enet_text_squares_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_text_squares_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111470358922600
+    },
+    "li1_ols_agreement_c_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_agreement_c_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111471801366500
+    },
+    "li1_ridge_agreement_c_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_agreement_c_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111473301664200
+    },
+    "li1_enet_agreement_c_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_agreement_c_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111474816708000
+    },
+    "li1_ols_text_c_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_text_c_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111476323866800
+    },
+    "li1_ridge_text_c_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_text_c_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111477862780400
+    },
+    "li1_enet_text_c_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_text_c_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111479355909100
+    },
+    "li1_ols_text_s_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ols_text_s_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111480858878900
+    },
+    "li1_ridge_text_s_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_text_s_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111482349142200
+    },
+    "li1_enet_text_s_joint_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_enet_text_s_joint_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111483870467300
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret1_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret1_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111485411049300
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret5_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret5_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111487012675900
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111488517447600
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret63_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret63_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111490052720800
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret126_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret126_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111491622903100
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_ret252_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_ret252_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111493176836500
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_momentum252_skip21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_momentum252_skip21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111494746306200
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_log_market_cap_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_log_market_cap_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111496269784600
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_log_price_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_log_price_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111497776471800
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_turnover1_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_turnover1_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111499305652500
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_turnover21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_turnover21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111500775329500
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume1_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume1_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111502282792200
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111503805725400
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_volatility21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_volatility21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111505281103600
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_volatility63_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_volatility63_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111506778755400
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_max_return21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_max_return21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111508307341200
+    },
+    "li1_ridge_single_social192_net_sentiment__x__char_amihud21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__char_amihud21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111509794973400
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret1_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret1_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111511236657000
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret5_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret5_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111512724467200
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111514292497700
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret63_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret63_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111515862996400
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret126_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret126_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111517410491600
+    },
+    "li1_ridge_single_social192_log_volume__x__char_ret252_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_ret252_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111519008914000
+    },
+    "li1_ridge_single_social192_log_volume__x__char_momentum252_skip21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_momentum252_skip21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111520608462200
+    },
+    "li1_ridge_single_social192_log_volume__x__char_log_market_cap_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_log_market_cap_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111522150040900
+    },
+    "li1_ridge_single_social192_log_volume__x__char_log_price_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_log_price_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111523610323600
+    },
+    "li1_ridge_single_social192_log_volume__x__char_turnover1_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_turnover1_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111525182970300
+    },
+    "li1_ridge_single_social192_log_volume__x__char_turnover21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_turnover21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111526698050400
+    },
+    "li1_ridge_single_social192_log_volume__x__char_log_dollar_volume1_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_log_dollar_volume1_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111528131995000
+    },
+    "li1_ridge_single_social192_log_volume__x__char_log_dollar_volume21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_log_dollar_volume21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111529609065500
+    },
+    "li1_ridge_single_social192_log_volume__x__char_volatility21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_volatility21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111531104923400
+    },
+    "li1_ridge_single_social192_log_volume__x__char_volatility63_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_volatility63_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111532555986300
+    },
+    "li1_ridge_single_social192_log_volume__x__char_max_return21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_max_return21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111534057236000
+    },
+    "li1_ridge_single_social192_log_volume__x__char_amihud21_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_log_volume__x__char_amihud21_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111535583591900
+    },
+    "li1_ridge_single_social192_net_sentiment__x__log_volume_dgtw_fixed504_union": {
+      "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\predictions_li1_ridge_single_social192_net_sentiment__x__log_volume_dgtw_fixed504_union.pkl",
+      "bytes": 117017962,
+      "mtime_ns": 1790111537134913600
+    }
+  },
+  "coverage": {
+    "raw": {
+      "models": 74,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 3033080
+    },
+    "dgtw": {
+      "models": 74,
+      "eligible_stock_days": 3034035,
+      "common_prediction_stock_days": 3034035,
+      "common_scored_stock_days": 2748978
+    }
+  },
+  "output_files": {
+    "summary": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1.csv",
+      "bytes": 142092,
+      "mtime_ns": 1790113114105630600
+    },
+    "_yearly": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_yearly.csv",
+      "bytes": 1296921,
+      "mtime_ns": 1790113114137641500
+    },
+    "_periods": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_periods.csv",
+      "bytes": 439123,
+      "mtime_ns": 1790113114137641500
+    },
+    "_contrasts": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_contrasts.csv",
+      "bytes": 2644778,
+      "mtime_ns": 1790113114201364500
+    },
+    "_coverage": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_coverage.csv",
+      "bytes": 16246,
+      "mtime_ns": 1790113114201364500
+    },
+    "_deciles": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_deciles.csv",
+      "bytes": 8554170,
+      "mtime_ns": 1790113114334455300
+    },
+    "_subgroups": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_subgroups.csv",
+      "bytes": 919744,
+      "mtime_ns": 1790113114360109500
+    },
+    "_horizons": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_horizons.csv",
+      "bytes": 837939,
+      "mtime_ns": 1790113114381478300
+    },
+    "_daily": {
+      "path": "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1_daily.csv.gz",
+      "bytes": 35273802,
+      "mtime_ns": 1790113117449535100
+    }
+  },
+  "skipped_horizons": [
+    {
+      "target": "dgtw",
+      "horizon": 21,
+      "reason": "Known source ar_dgtw_21 corruption; excluded pending repair"
+    }
+  ],
+  "source_limitations": [
+    "nominal 16:00 message routing ignores early closes",
+    "ar_dgtw_21 has known 2013 panel corruption; crsp_ar_dgtw_21 is separately retained",
+    "h>1 imported labels and factor-CAR completeness not certified",
+    "Market-based controls only; no audited point-in-time accounting characteristics.",
+    "Legacy upstream daily bm joins fiscal datadate without reporting lag; excluded from predictors; inherited DGTW target has this limitation.",
+    "Close-t market inputs and nominal-close message routing inherit the executable-close and early-close limitations."
+  ],
+  "schema_version": "linear_interactions_v1_evaluation",
+  "created": "2026-09-22T16:38:37.795380",
+  "registry": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\registry.json",
+  "registry_sha256": "2b08574c626a4fe693ca66b9609659fd4db94346143ba1e94db73c71b5a53e67",
+  "prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+  "prepared_sha256": {
+    "manifest.json": "4d7fc5a6edd68b85effd5f7aaf84accf9c93fcc7a96317702fad0b579a9765d3",
+    "X.npy": "6950aaa0aa36615df903d7605efb060369e7f04ce299733f1b92e23fa6c1a787",
+    "y.npy": "ef7d0d013b7d44caf7dc6495a5e77d1fd91d0f3607f18a082c4045f59ac2e983",
+    "q.npy": "e5943044cd908a9b214b65a2fa2b110f06c5399a11be0b7cfd05903f872578ba",
+    "codes.npy": "afc9a8efe010cc4ec03b45275b2b9d8360def3582de1d8a9b0da662c47df9518",
+    "calendar.npy": "5b4fc803952c4acf8369619087192805e0d865daba5c6590812b61652534a47c",
+    "keys.pkl": "a26d73a704db186859026b92014bc35409b064ea49042b89b81a95f0046e8631",
+    "evaluation.pkl": "84e9c9bde6f22f18a73dede6904f7e3b06363412adef30620a8c00645ff66dda"
+  },
+  "prediction_sha256": {
+    "li1_ols_additive_c_joint_raw_fixed504_union": "23a74df99e48da962cdee56869ab12eed321644a2a01db05b0c87231d8cfb863",
+    "li1_ridge_additive_c_joint_raw_fixed504_union": "d1680b38cbc59816cf1a99c319e9145721e5b66e65bcbc5ea00413a57296435e",
+    "li1_enet_additive_c_joint_raw_fixed504_union": "3c1c801da00ad2ce750d0ad92b541705b5a89fc3231221884a90f0662cd35a8d",
+    "li1_ols_additive_cs_joint_raw_fixed504_union": "91e06b257aec66bbf7083e54b725a0cee87391d2ee2e454a9d7e2755d636d5be",
+    "li1_ridge_additive_cs_joint_raw_fixed504_union": "bdf353aafa01c57c60ee6de1b8a1cb1738079288c77890c37a9437f6317cb10f",
+    "li1_enet_additive_cs_joint_raw_fixed504_union": "26d27d6821d154bf7c8c9c7653a344c3023aaf0bf8910d0c2fdaf6e02c7aac03",
+    "li1_ols_additive_cst_full_joint_raw_fixed504_union": "858c741fecaee7f9a6b538a71e728a56d5dcda235f0a68d21eb0f57f61fc73da",
+    "li1_ridge_additive_cst_full_joint_raw_fixed504_union": "70feefebe79fae0b61e4c047ef4c132439ebadcf5a6bcd467aa1e65ed5a2456e",
+    "li1_enet_additive_cst_full_joint_raw_fixed504_union": "e45ac4b012ddf5fc245629d8e471dd145906f3534c7136169a62c70eda82fc08",
+    "li1_ols_c_squares_joint_raw_fixed504_union": "6facc47c8958c1b6918af7861ee1775c70a3dd743dba793521dda4ca4672b02f",
+    "li1_ridge_c_squares_joint_raw_fixed504_union": "704b5953df9881bcb74ec7e46b767a1fee2760aa7abff2e799f2bdff5f5c8682",
+    "li1_enet_c_squares_joint_raw_fixed504_union": "76453a90293136d27bf3f1075dac070dbddde799c447837d33cde2eedf8c46f7",
+    "li1_ols_c_quadratic_joint_raw_fixed504_union": "833dabba1b63bf125d2f66881cce9ada3e694da66d8834a3bf6d7fc7bc98e758",
+    "li1_ridge_c_quadratic_joint_raw_fixed504_union": "2f84c14034cba9ddebd5546a26cbd7ae84f981466c4491e5af928159dff3570f",
+    "li1_enet_c_quadratic_joint_raw_fixed504_union": "3b2c28de755268ad76e8780465716cceb792fd4c8bc96736fd5abe797c7a5ba5",
+    "li1_ols_cq_s_joint_raw_fixed504_union": "05fa3397d660c89f1e671e7f2c28b7c9bea8b7929cbf404723e47badaac2d7d8",
+    "li1_ridge_cq_s_joint_raw_fixed504_union": "a218adba1b10f53a427807eedc727fa1f84e1a7138a6637d2021d9c102062dc9",
+    "li1_enet_cq_s_joint_raw_fixed504_union": "a61387c669bb9ac864b6ff6eb7fd3473fca322b0292d1eab86868577b2c9196d",
+    "li1_ols_cq_s_squares_joint_raw_fixed504_union": "94e7f6dd74ddc02732b4e6aa355b54b5900950238a1b5e41e528001d1892ef0e",
+    "li1_ridge_cq_s_squares_joint_raw_fixed504_union": "97ee5f480e27cc16caa4d1e2ab66c10069315348e9098422aea648da883651c0",
+    "li1_enet_cq_s_squares_joint_raw_fixed504_union": "7211c879e86d9f0e6bf277dbda44b6524879400d841388a54a0dcae98f3db157",
+    "li1_ols_cs_joint_joint_raw_fixed504_union": "7cb6c3aa16f13be85de7528a4bb9ba58959729a2ccc37f0ecb2b8264f848afb6",
+    "li1_ridge_cs_joint_joint_raw_fixed504_union": "833a20d6c55cc18d2a98e89c2fb503acc50fe6ad81b0be331bee00f529170b87",
+    "li1_enet_cs_joint_joint_raw_fixed504_union": "3040ce518eb9efa4a9991ac980f6481c7de5bdbf2a50399e2b8814d201c865e8",
+    "li1_ols_text_main_joint_raw_fixed504_union": "0377185c8faf0c339ba65d655081f68aa880c9a36b2eab5086bb235d4a553c73",
+    "li1_ridge_text_main_joint_raw_fixed504_union": "9f5cbeabef4aec66253b45d19ff2e45c84747af3816ba860943ff534964deb22",
+    "li1_enet_text_main_joint_raw_fixed504_union": "876757ee56292113c8d2320efa3b7949e635de1dc6d24136562a5ff4e38888d0",
+    "li1_ols_text_squares_joint_raw_fixed504_union": "15e4dc083a413f9f3b507f1693a0091eec7eecad9d663b5f89f13ab0bda70017",
+    "li1_ridge_text_squares_joint_raw_fixed504_union": "289e1ce030f8b92922f537561871bbe1cc29b4c28873aa20526c4e43370a6d60",
+    "li1_enet_text_squares_joint_raw_fixed504_union": "2576627645f1805dfdc1a6fefc8f18d99e9dbe7041c5f35655782200a531dcaf",
+    "li1_ols_agreement_c_joint_raw_fixed504_union": "aa3ec0856f356299dc5cb12f6e8f4a82c7e7aced16bb9d931782963048761f20",
+    "li1_ridge_agreement_c_joint_raw_fixed504_union": "9096428aaa5a728502ac980089063bb50fb86f0995d7b6e2eade57734863f7ca",
+    "li1_enet_agreement_c_joint_raw_fixed504_union": "622c39a12caf7f6ae5a0d85531c4f1c82d060690f0c2a10c86396ba88eaf1027",
+    "li1_ols_text_c_joint_raw_fixed504_union": "f810a7d4036691b1068a1a46439659faf17754443a2d652b02fca7a45fd289dc",
+    "li1_ridge_text_c_joint_raw_fixed504_union": "cf10d2d5c39fab4e07eabf4ee7220a858a3101483af28de111bb351ab38b5e12",
+    "li1_enet_text_c_joint_raw_fixed504_union": "2c8dbff9aee78152bfda7199552a5891dbeebecf47b4e69722ec8928e32455b3",
+    "li1_ols_text_s_joint_raw_fixed504_union": "d7e85b1ae482101395ff0e83d91bd6ae070a4e37305d3fd7d1c669ec22e10f49",
+    "li1_ridge_text_s_joint_raw_fixed504_union": "25092f6854ad71af0b74cf05367103dcfe74210dc19e38df9865a347ecc9756b",
+    "li1_enet_text_s_joint_raw_fixed504_union": "e60103ec9b3498fa11ccf2cb0647e5feb3198390fd526947397c3774ced35a99",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret1_raw_fixed504_union": "b3f63240179435ceb75a53b4ec36922e1a3e9faa38f2dc3f2021a1a168129a23",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret5_raw_fixed504_union": "79be22368ecf16b0e00914852c90117421bb8dc78d4d91a71f1dded7f77613e8",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret21_raw_fixed504_union": "6d010389bd4cdb9ddbf95d68ffc54fe3b12e34dc3827b97c0875646e991abeb4",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret63_raw_fixed504_union": "57e8cef856d857053b6b19116b5d53621a5d81f9e2bfac0a571df54285ff9b3c",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret126_raw_fixed504_union": "f72047b4dad6948b4187da4d88be851efcfdb9eb1e2deeac80a7c57ecd3444c6",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret252_raw_fixed504_union": "86b5c328d200437046a33c4cbe9d069994292c7d86b434d241bdb2d1f86c05cb",
+    "li1_ridge_single_social192_net_sentiment__x__char_momentum252_skip21_raw_fixed504_union": "fb697b749cd57aa01cd234eecdbf2df0ad8ff918df4a8e1924d567f18ce3fe6d",
+    "li1_ridge_single_social192_net_sentiment__x__char_log_market_cap_raw_fixed504_union": "263ccc3e2687a20feb991f668b25fab7d14bd49a2ebc256043b6dfe0da90d674",
+    "li1_ridge_single_social192_net_sentiment__x__char_log_price_raw_fixed504_union": "3b0c6f52662568d1e30a29c6ea62c835e11ff57a3f9cd7641ef87f987ea74661",
+    "li1_ridge_single_social192_net_sentiment__x__char_turnover1_raw_fixed504_union": "be5f5f56543dda7cc572e1ab36b9d945691664fb75d702282a992611e1b9d8c8",
+    "li1_ridge_single_social192_net_sentiment__x__char_turnover21_raw_fixed504_union": "53d927064136bafd92f9cfb355a9a0ac073d77cfc17060f0913d941c3bc37338",
+    "li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume1_raw_fixed504_union": "af9878f535d05791217c32277ab2c10b0eb0a4eebb9d78f3b58ffdea6575693f",
+    "li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume21_raw_fixed504_union": "9f37f7236fe599d8207176b0b4ef32a8063ef3d4cb182632c262b96b52e94919",
+    "li1_ridge_single_social192_net_sentiment__x__char_volatility21_raw_fixed504_union": "ea8b3826916c22805d5acd8f07f1d68b658e98b22ffc97b9c166c92788daaa01",
+    "li1_ridge_single_social192_net_sentiment__x__char_volatility63_raw_fixed504_union": "163695950ae978d0db027bbf04897b3141bc86a88b429176acaa8b580a0faaa5",
+    "li1_ridge_single_social192_net_sentiment__x__char_max_return21_raw_fixed504_union": "ecc214eba4476dd7ebff28087ba7af57811cc25d2e63e6ca44cc8c8fe4a2dd52",
+    "li1_ridge_single_social192_net_sentiment__x__char_amihud21_raw_fixed504_union": "0f18662cc1398894a2a74f4e1baf8fa35629cac4762e5eca648051d1d0d823f8",
+    "li1_ridge_single_social192_log_volume__x__char_ret1_raw_fixed504_union": "e7282e5b681e57782784c414067e4ccdd1f4e9c9b6693abecb7536a678a636a5",
+    "li1_ridge_single_social192_log_volume__x__char_ret5_raw_fixed504_union": "45864c97fa674e16b551952ef294987f4ab9fff46efe0faec7ddc8376e45273c",
+    "li1_ridge_single_social192_log_volume__x__char_ret21_raw_fixed504_union": "b8bf24ddf05acf4afa36487f784a52cf3394c37b9b0cca529a3c50f3f9bf2dcd",
+    "li1_ridge_single_social192_log_volume__x__char_ret63_raw_fixed504_union": "4ed794bc00cee53abd6fdffc6627d1f8204e0121ba719b15e3a701827f5c72cb",
+    "li1_ridge_single_social192_log_volume__x__char_ret126_raw_fixed504_union": "1954b44b301ec836b98c32b50419e12295b32e1437f423ad91d50911fc4bd923",
+    "li1_ridge_single_social192_log_volume__x__char_ret252_raw_fixed504_union": "708544c2b52c2d765902eb1a535e9731c1e04244e1bf2af9b362c787515ae189",
+    "li1_ridge_single_social192_log_volume__x__char_momentum252_skip21_raw_fixed504_union": "59c9e6105aa9daeb482be36ad577604dbe0dd5d01b39191efd8f48283699ba75",
+    "li1_ridge_single_social192_log_volume__x__char_log_market_cap_raw_fixed504_union": "6c7b4700ba2b3ed51e7751ea0fe5824bd08d9ef54c739fe2d8de34c68d2e040b",
+    "li1_ridge_single_social192_log_volume__x__char_log_price_raw_fixed504_union": "ac8e7b4ce1a09796d7ab16a319fb782c9c62b655502f94022b4f1022722859e1",
+    "li1_ridge_single_social192_log_volume__x__char_turnover1_raw_fixed504_union": "63f59fcde645c4c7992530dc76539a47411d3efe239bede7a380c6529c7a41b2",
+    "li1_ridge_single_social192_log_volume__x__char_turnover21_raw_fixed504_union": "b14e0aa99eeb802e207524d8aecf74fbd4de4f9089fb26a0a7ebe0fbd5a82d84",
+    "li1_ridge_single_social192_log_volume__x__char_log_dollar_volume1_raw_fixed504_union": "046463f542179b75f83d561b494b498c364ebe3c20b40d85ba2b57903238b823",
+    "li1_ridge_single_social192_log_volume__x__char_log_dollar_volume21_raw_fixed504_union": "97a8f4792302ad69d88c9bb4c7eef2df3ba050cc79a1e7830e9546defbe6b08f",
+    "li1_ridge_single_social192_log_volume__x__char_volatility21_raw_fixed504_union": "2a4f4b23ae6c0bdbeeb71095135253afb2e642d4c56ac2487bd633ce6ed5ccbf",
+    "li1_ridge_single_social192_log_volume__x__char_volatility63_raw_fixed504_union": "9714690281e7d9cb4535a267d680eef8c0b5e27fe459ede81675d2afb6ab7687",
+    "li1_ridge_single_social192_log_volume__x__char_max_return21_raw_fixed504_union": "b2d536a409d49899304cb75e6192b0ad26b98c989089d814e91ac369537c790a",
+    "li1_ridge_single_social192_log_volume__x__char_amihud21_raw_fixed504_union": "31cf44e188d6257d3627d838dd77428bf963d19d663eb79e5821507f9085b97e",
+    "li1_ridge_single_social192_net_sentiment__x__log_volume_raw_fixed504_union": "98832ea67b4f6c8c44785975c4a99fb8cd096016881bd679ab1fb96a06796545",
+    "li1_ols_additive_c_joint_dgtw_fixed504_union": "c9a54037fc859aeefad6a33a49ab96932284e411be0cac75f66167ffc23e744f",
+    "li1_ridge_additive_c_joint_dgtw_fixed504_union": "e178a436c495385a6ab065621e33285e44bfa183296aaa646cd9c8fe123c6f0d",
+    "li1_enet_additive_c_joint_dgtw_fixed504_union": "2ccb2f276555b292d74f9a9235ce445691f25b7c8ad01c28eebc312879d21c55",
+    "li1_ols_additive_cs_joint_dgtw_fixed504_union": "d7d310a42cd8ee40cc2b6fdfd0d6160c7419cddcc115217c428e96b6a008a449",
+    "li1_ridge_additive_cs_joint_dgtw_fixed504_union": "4cce97d7091f6fef39d06c317630b549b60f44072ddfd527d17963b67194fb16",
+    "li1_enet_additive_cs_joint_dgtw_fixed504_union": "d8a9511652943473821153e0bb02ac5f4d654071a067c53bde4579ef2911f2e8",
+    "li1_ols_additive_cst_full_joint_dgtw_fixed504_union": "f4b2507a8396cd64c2500ad8d1c6481ed5986f3e0602e9b8193bbfa756215938",
+    "li1_ridge_additive_cst_full_joint_dgtw_fixed504_union": "6acf3e017d9330d8661309e91b5a2ce8ed2361e7a8746840e5b03bdb29156349",
+    "li1_enet_additive_cst_full_joint_dgtw_fixed504_union": "28c10b33e970aa037bd77caf29c964ec2cbbe87b55493b502a05e595645bcd03",
+    "li1_ols_c_squares_joint_dgtw_fixed504_union": "dd60b1ebd9c154b09b217a884dabfb5ffbac1725c406f0b0d5583176667624e3",
+    "li1_ridge_c_squares_joint_dgtw_fixed504_union": "54c8ab96856f0a5853d857405f4faa9a48bf8a59a8e4b9dc8d1be3e3d3814a9a",
+    "li1_enet_c_squares_joint_dgtw_fixed504_union": "aeb9c65e53a8a21c39feabd706af90a56be00ac694ac4fb160268ba5d2f0db77",
+    "li1_ols_c_quadratic_joint_dgtw_fixed504_union": "4e6044d72437dfa2cd4d63b2ccd18a1736e578c28b37152654eb6fde205bd3fe",
+    "li1_ridge_c_quadratic_joint_dgtw_fixed504_union": "d2fbc90069c9e0e288c954051ab0442e52611bb892aff7d0c715abe917e7c434",
+    "li1_enet_c_quadratic_joint_dgtw_fixed504_union": "ebf13206be1c75a3c39748b6ad646700e380cf688911f2a25543607eadf68350",
+    "li1_ols_cq_s_joint_dgtw_fixed504_union": "35f87c84a19ba8feafafa680dfc22944f23692fd22b600294a392fed14846725",
+    "li1_ridge_cq_s_joint_dgtw_fixed504_union": "313f25e4ca4b71ec8ca00053632dc26e8e7eb5c038582b90f396372180453acd",
+    "li1_enet_cq_s_joint_dgtw_fixed504_union": "a34e1d4ed9e063e2b6626aab3cb5054cdbba5a057dd51abc27469111226cdd88",
+    "li1_ols_cq_s_squares_joint_dgtw_fixed504_union": "138844e959e856b9b531d0b535c3182bdd0b2be9396077e2b7b8c08cffac52fc",
+    "li1_ridge_cq_s_squares_joint_dgtw_fixed504_union": "197ec8fc03072fa78aaaee715431b03b511febee14ca81cf12e50a961ee4e125",
+    "li1_enet_cq_s_squares_joint_dgtw_fixed504_union": "71367cf304e6a5ac0eaafe90ff2756058a15cd8d5337ec2c24eff60e545ab136",
+    "li1_ols_cs_joint_joint_dgtw_fixed504_union": "419da6184f4c2d686c3747b57c01b861a6cd2837da69b77701ac3ce58990bcfe",
+    "li1_ridge_cs_joint_joint_dgtw_fixed504_union": "900b9985f90c083ac5faf9362dff182709ede9282fab7b0490c3f66c29519301",
+    "li1_enet_cs_joint_joint_dgtw_fixed504_union": "6bb0dfd1a952480d9700fbb882675f277aa9f870307e59f3b3c1f398fe80477e",
+    "li1_ols_text_main_joint_dgtw_fixed504_union": "3a679c66ff16d88b116d3360ebc9dcc33d938f902cabadf03753e51aa7bde03b",
+    "li1_ridge_text_main_joint_dgtw_fixed504_union": "ae9fe1cc0cdb0758234a1e530ef95f82fa321913fd8c4b479d476f5ef4c432cf",
+    "li1_enet_text_main_joint_dgtw_fixed504_union": "b1564ff6ec2d991b6fb52ada4677127f214114a40ec589f03153a80b5d905546",
+    "li1_ols_text_squares_joint_dgtw_fixed504_union": "44a25af91f7c0476fca77a0872dc2c33290d047a1c7e4ea91594ccfc8631b00b",
+    "li1_ridge_text_squares_joint_dgtw_fixed504_union": "93a54f91e2d5d4c22e4fbcacd3e884a782dd552bdcc7611257f017d2a78e5628",
+    "li1_enet_text_squares_joint_dgtw_fixed504_union": "872c9d5eaa9f75be093cd66f28c1835bf21734ec66136b510b09a6fc3313273a",
+    "li1_ols_agreement_c_joint_dgtw_fixed504_union": "f653b795e16db35db30fc84a2105924f0772193d55662d4c8afdd7759f9f432c",
+    "li1_ridge_agreement_c_joint_dgtw_fixed504_union": "becdbcfd7a59fa1c04ba092762e66a5a517bed8c0cf1442ec0ded71085f45ebd",
+    "li1_enet_agreement_c_joint_dgtw_fixed504_union": "8edffe09832b53bb06e8ee0136419d4d4af7a9ae148ae01cf472a096e383cc64",
+    "li1_ols_text_c_joint_dgtw_fixed504_union": "9a1736d8585f74f3dd9f7fc8321ae1360175bdd1b120e6d13505a4f0e5d03f0d",
+    "li1_ridge_text_c_joint_dgtw_fixed504_union": "988f53089422794da3073d5821e85b9f5accf5106b8c8c270a7b49ccb3dadc42",
+    "li1_enet_text_c_joint_dgtw_fixed504_union": "a549c4f25a325b15961a91427b8c204f7098cd852a578088ea7ac61be24ad3f8",
+    "li1_ols_text_s_joint_dgtw_fixed504_union": "101f3d02f0ac8ca1234cb14c7b6a9fa913b857054654074638ce75406323bbfc",
+    "li1_ridge_text_s_joint_dgtw_fixed504_union": "5b9a10db4554ac00db6867cb5883d97b5d4aa221145185dca9f79e6dfdeab879",
+    "li1_enet_text_s_joint_dgtw_fixed504_union": "8d6dcc3a3667f9ec60db5624b799a19e3eb5d1fcfdb0bcdd482b95b6c3980289",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret1_dgtw_fixed504_union": "7f6804880c7fc174949c500b6906e448dfc96dfbc6540c7245cf36cfdb6f0a9a",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret5_dgtw_fixed504_union": "8941961edaae7db239315db7e104aad09b66d27ce3531c845c928899deda50c8",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret21_dgtw_fixed504_union": "19ac95823368b3290e9fcd6a3e886567af5f95b096ccc979a7743d6e4065d585",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret63_dgtw_fixed504_union": "ee5c325f5fd2427dfb060dba7c31dee9f8bf22cdb623ddc19b1c504a8d6fac8c",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret126_dgtw_fixed504_union": "9c4d77da8f90748152734a115430d8f75edd7a3bddcd0182186caebc21fc1aeb",
+    "li1_ridge_single_social192_net_sentiment__x__char_ret252_dgtw_fixed504_union": "672f508a8f405c688bbf9bc428c1ebcbe2cf91a46b116bc928c33653c7b475ca",
+    "li1_ridge_single_social192_net_sentiment__x__char_momentum252_skip21_dgtw_fixed504_union": "aff08d86d1ffc7d6fdb9abfa7cc54a7193f7de2898edf0a2449925491bb80405",
+    "li1_ridge_single_social192_net_sentiment__x__char_log_market_cap_dgtw_fixed504_union": "3858174e97a19e0896c3ee8dc3819aeaf61c7bdc255abbe68aa6ec39c0f6560b",
+    "li1_ridge_single_social192_net_sentiment__x__char_log_price_dgtw_fixed504_union": "3ff06d61b6e205494629e539608a5bede6ed8a1fc2d0b420f8cefe84004e4e3d",
+    "li1_ridge_single_social192_net_sentiment__x__char_turnover1_dgtw_fixed504_union": "6467460ce74aa6b568f64f76b9c48405ce7d858651725072a88f94b5103307c9",
+    "li1_ridge_single_social192_net_sentiment__x__char_turnover21_dgtw_fixed504_union": "a9a0caaeb041207472782c6e6d38c597e01f25192d557c3647cbb76f756e9f1e",
+    "li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume1_dgtw_fixed504_union": "0b09dfdc2be5ee5b4571b6ca82606e69c233414b6b5cbddaaf4e5fca5546fabd",
+    "li1_ridge_single_social192_net_sentiment__x__char_log_dollar_volume21_dgtw_fixed504_union": "053e296345c7fac4a5885884ac92b5c8b64bd5062fd717c86d9286e50b5605b6",
+    "li1_ridge_single_social192_net_sentiment__x__char_volatility21_dgtw_fixed504_union": "19e6654162b18e18c6bc4b05d8096798cf46e5581c9fb21df0b1650669441051",
+    "li1_ridge_single_social192_net_sentiment__x__char_volatility63_dgtw_fixed504_union": "0a7b31249e18f3cfd91965acbc19d61ef32efcfebdbbcab189baf0fef32ad854",
+    "li1_ridge_single_social192_net_sentiment__x__char_max_return21_dgtw_fixed504_union": "1aa8ea16859fb5592b5264fbe4decbb18bd5d5fa9d7a24f672a388687857977d",
+    "li1_ridge_single_social192_net_sentiment__x__char_amihud21_dgtw_fixed504_union": "d64b4149765a0b2f4de719bba7ecec6b926c6c1360e35626d45eefe4e6d50ab2",
+    "li1_ridge_single_social192_log_volume__x__char_ret1_dgtw_fixed504_union": "6a8cc0cef9ffc152a9b58216a7f8ba0667ffc50835404586953e5f78c363734e",
+    "li1_ridge_single_social192_log_volume__x__char_ret5_dgtw_fixed504_union": "0eed46ba2df4f17ecabd5e2de70848624cb984971bb19c9a45b128298b101f85",
+    "li1_ridge_single_social192_log_volume__x__char_ret21_dgtw_fixed504_union": "099b7e811f61bfcac959f090170279e7fe09d3fb41f47136d18e0679c59e40a6",
+    "li1_ridge_single_social192_log_volume__x__char_ret63_dgtw_fixed504_union": "16d85fe747cc48689e7a57605869c47c12431b50be4920ca6366ce5a041260e1",
+    "li1_ridge_single_social192_log_volume__x__char_ret126_dgtw_fixed504_union": "1f8d7f4e8ae57cff5025797219fea5f44a9d9683e3872cbd5c94387f9dd5994b",
+    "li1_ridge_single_social192_log_volume__x__char_ret252_dgtw_fixed504_union": "3a9e874862ebd82f9afde2b1481e7be791eb07ed3562d84dc9b90d5f8e0b2f87",
+    "li1_ridge_single_social192_log_volume__x__char_momentum252_skip21_dgtw_fixed504_union": "e002f2e1cc09255af7ba6c6cce0d71e36cefb5a7fd669efad3a627eda9c915e3",
+    "li1_ridge_single_social192_log_volume__x__char_log_market_cap_dgtw_fixed504_union": "4f5ae50ef4e76d26fa28a5fe1d11d4d0268f5a2797c3e7392f1c0985baf03d62",
+    "li1_ridge_single_social192_log_volume__x__char_log_price_dgtw_fixed504_union": "54d647cc82ed6dcf98bcad7252fb4d78f090bde75328ce486297715cbe1c54f2",
+    "li1_ridge_single_social192_log_volume__x__char_turnover1_dgtw_fixed504_union": "69a4fdf82152f4a242131592c58be612444c7ddaf3b91ea4c5c1bcfd0cd55262",
+    "li1_ridge_single_social192_log_volume__x__char_turnover21_dgtw_fixed504_union": "ea8fda0ff4cc37f911dba08265450478a2c089ebbdcd4b2faef1b6e57ec2cab2",
+    "li1_ridge_single_social192_log_volume__x__char_log_dollar_volume1_dgtw_fixed504_union": "4817196082d582360eb272716b0a29b52e6effbc6e95b34ccef7c3b2e70573b5",
+    "li1_ridge_single_social192_log_volume__x__char_log_dollar_volume21_dgtw_fixed504_union": "4077d795fab83a020e7cd330f43663806b24b635dc473fe3ab6f97a9bb740cc0",
+    "li1_ridge_single_social192_log_volume__x__char_volatility21_dgtw_fixed504_union": "a5bf7ec5759e93c85d81dfe3247682263def464318d8494d3db054a8ce6a9ab7",
+    "li1_ridge_single_social192_log_volume__x__char_volatility63_dgtw_fixed504_union": "7ed00dcbf2ab9170bdffd00b83950002c80433f0934f6f904c2d4493e1dea127",
+    "li1_ridge_single_social192_log_volume__x__char_max_return21_dgtw_fixed504_union": "84c8fff6fb2c130929240f7a1abb3b0c47405ac3fa6dc1756e637aec061d826e",
+    "li1_ridge_single_social192_log_volume__x__char_amihud21_dgtw_fixed504_union": "dd0ca2da145a0fd90b53813fca1a88c16664c2f81987495c6de376e448e1fa9e",
+    "li1_ridge_single_social192_net_sentiment__x__log_volume_dgtw_fixed504_union": "e98a2dafa960df636fe3396812c8a714b0f341b4095d27eb64dfb202f2f799c4"
+  },
+  "reused_kernel_sha256": {
+    "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+    "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+    "linear_optimization_evaluate.py": "f16691cb96d28f464ea85d42ba8cf41044885d8ce9e50df4b38b3ddf4182f6a2"
+  },
+  "wrapper_sha256": "1cb2183c613113dacce8232d71214715bea94fa3a32c8db757c654ef999d77bd",
+  "planned_models": 148,
+  "included_models": 148,
+  "pilot": false,
+  "preliminary": false,
+  "planned_family_counts": {
+    "estimator": 39,
+    "social_information": 12,
+    "text_information": 18,
+    "characteristic_shape": 9,
+    "social_shape": 9,
+    "additive_reference": 18,
+    "text_shape": 15,
+    "individual_social": 35
+  },
+  "observed_family_counts": {
+    "raw": {
+      "estimator": 39,
+      "social_information": 12,
+      "text_information": 18,
+      "characteristic_shape": 9,
+      "social_shape": 9,
+      "additive_reference": 18,
+      "text_shape": 15,
+      "individual_social": 35
+    },
+    "dgtw": {
+      "estimator": 39,
+      "social_information": 12,
+      "text_information": 18,
+      "characteristic_shape": 9,
+      "social_shape": 9,
+      "additive_reference": 18,
+      "text_shape": 15,
+      "individual_social": 35
+    }
+  },
+  "contrast_families": {
+    "characteristic_shape": "Characteristic squares versus main effects; quadratic versus squares; quadratic versus main effects",
+    "social_information": "Additive social main effects given additive C; social main effects, squares and joint products each given quadratic C",
+    "social_shape": "Social squares versus social main effects; joint social products versus social squares; joint social model versus social main effects",
+    "individual_social": "Each of all 35 named social products added separately to the same 191-column ridge benchmark",
+    "text_information": "Additive full text given additive C+S; each compressed-text extension given the 226-column C+S interaction benchmark",
+    "text_shape": "Successive text squares, agreement-by-C, embedding-PC-by-C, and text-by-S additions; combined text-by-C block versus text squares",
+    "estimator": "Ridge and elastic net versus OLS, plus elastic net versus ridge, on each of the 13 joint/reference bases",
+    "additive_reference": "Joint social versus additive C+S; each compressed-text interaction basis versus additive full-embedding C+S+text. These are compound procedure comparisons"
+  },
+  "multiplicity": "Bonferroni within target/family/metric/period over the predeclared 148-model design. All 35 individual ridge terms share a 35-comparison budget. Missing statistics and pilots never reduce denominators. No across-family or development-history error guarantee.",
+  "primary_target": "raw",
+  "secondary_target": "dgtw",
+  "primary_metric": "rank_ic",
+  "secondary_metrics": [
+    "ew_spread_bp",
+    "cap_spread_bp"
+  ],
+  "primary_estimator": "ridge",
+  "hac_lags": [
+    5,
+    21,
+    63
+  ],
+  "inference": "Two-sided normal Bartlett HAC; complete exchange calendar retains missing sessions; HAC21/63 are sensitivities",
+  "common_sample": "Joint finite predictions across all models within each target before observed-outcome filtering, established before bounded-batch scoring",
+  "research_status": "2014-2022 is already-inspected development evidence; no test-score winner is selected; no 2023 outcomes scored",
+  "transformation": "Existing once-ranked continuous characteristics/social scalars; missing characteristic ranks neutral zero with separate binary flags. Products are not reranked. Fitting-only basis scaling and PCA; PCA16 rebuilt on final permitted fitting inputs.",
+  "hierarchy": "Parent main-effect columns are retained; ordinary elastic net does not enforce nonzero parent coefficients",
+  "interpretation": "Named single additions are conditional prediction tests, not causal effects or coefficient-sign tests. Monthly text PCs can rotate; interpret blocks, not stable PC topics.",
+  "portfolio_limit": "Gross descriptive decile sorts; no attainable same-close execution, turnover, costs or factor alpha estimated",
+  "kernel_reuse": "Local bounded-batch orchestration adapted from v3; unchanged protocol alignment, score_scope, score_day, terciles and calendar_hac_mean",
+  "daily_artifact": "Deterministic gzip (mtime=0); uncompressed local table retained",
+  "monthly_selection": {
+    "path": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\monthly_selection.csv",
+    "sha256": "f3717e044c26dec4d0d18730a14cf0a64e17389a0111cdab4e7f84842428986a"
+  },
+  "numerical_threads": 2,
+  "prediction_batch_size": 8,
+  "elapsed_seconds": 1531.3619612000184,
+  "output_sha256": {
+    "linear_interactions_v1.csv": "0bb9a064ec1d2d98982c9b0c2c589aaa9fe265ea34fda26658fa9f58eb291d4a",
+    "linear_interactions_v1_yearly.csv": "206bacfce9d2431e7b579a0afbae47d035cf823d00e07c47d98d56ca909a26bd",
+    "linear_interactions_v1_periods.csv": "2df848eb9729dad872d6f9afb7fa70827d9f0112897cd01337d9a81d308e3421",
+    "linear_interactions_v1_contrasts.csv": "d0fa849b79df06a9ddb3bb9585ca62eac213a43e1730c4b2e4fe059c1c1c2501",
+    "linear_interactions_v1_coverage.csv": "f6cb888c5e640f772ef5badf1641bb7da84c3802e38cb8e7fe5ee57e7d1a8d08",
+    "linear_interactions_v1_deciles.csv": "834fb31fff2d0405e58341e94eef8955db8c91f8dbcc0a230d80dfe1f870c9c9",
+    "linear_interactions_v1_subgroups.csv": "db5d5dd7c65c2c317b7213934f85ced9077f0148d42f394a7085354bcc883415",
+    "linear_interactions_v1_horizons.csv": "00576df7400370f25f4954fb768e5204e5e3e09a0bdb69ffa4164709e7fd2240",
+    "linear_interactions_v1_daily.csv.gz": "f2afe80d305b2ccb8cfd47f553034d4cae8439c417c36d91ceccc24258a40849"
+  },
+  "arguments": {
+    "registry": "D:\\StockTwits\\Code\\.runs\\linear_interactions_v1\\study\\78b3dd65e0d5f8a6\\linear\\full_9f279d17e34278c6\\registry.json",
+    "prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+    "out": "D:\\StockTwits\\Code\\reports\\data\\linear_interactions_v1",
+    "threads": 2,
+    "batch_size": 8,
+    "start": "2014-01-01",
+    "end": "2022-12-31",
+    "skip_horizons": false,
+    "skip_subgroups": false,
+    "allow_pilot": false
+  },
+  "python": "3.13.11",
+  "interpreter": "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe"
+}

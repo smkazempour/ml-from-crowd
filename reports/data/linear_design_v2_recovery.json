@@ -1,0 +1,319 @@
+{
+  "experiment_id": "linear_design_v2",
+  "recorded_at": "2026-09-21T18:20:20+00:00",
+  "record_type": "recovery_launch_snapshot_not_live_status",
+  "supersedes_run_dir": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\93abd4871c37fe50",
+  "controller_pid_at_launch": 20204,
+  "workers": 4,
+  "threads_per_worker": 2,
+  "live_status_path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\status.json",
+  "launch_stdout": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\launch_20260921T181919Z.log",
+  "launch_stderr": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\launch_20260921T181919Z.err",
+  "resume_command": [
+    "C:/Users/skazempour/AppData/Local/anaconda3/envs/py313/python.exe",
+    "-B",
+    "tools/run_linear_design_study.py",
+    "--workers",
+    "4",
+    "--threads",
+    "2"
+  ],
+  "launch_status": {
+    "status": "running",
+    "phase": "implementation_pilot",
+    "pid": 20204,
+    "child_pid": 30188,
+    "attempt": 1,
+    "started_at": "2026-09-21T18:19:20+00:00",
+    "fingerprint": "c11478141261534f5b10fc4e1285ecb07ce67f631eb447a5e22adde8a30d6293",
+    "run_dir": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f",
+    "workers": 4,
+    "threads": 2,
+    "commands": [],
+    "updated_at": "2026-09-21T18:20:15+00:00",
+    "command": [
+      "C:\\Users\\skazempour\\AppData\\Local\\anaconda3\\envs\\py313\\python.exe",
+      "-B",
+      "D:\\StockTwits\\Code\\tools\\linear_design_runner.py",
+      "--prepared",
+      "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+      "--baseline-registry",
+      "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\registry.json",
+      "--spec",
+      "D:\\StockTwits\\Code\\reports\\data\\linear_design_v2_experiment.json",
+      "--out-root",
+      "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\linear",
+      "--threads",
+      "2",
+      "--months",
+      "2014-01",
+      "2022-12",
+      "--workers",
+      "2"
+    ],
+    "log": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\study\\c11478141261534f\\pilot_attempt_001.log"
+  },
+  "study_identity": {
+    "experiment": {
+      "experiment_id": "linear_design_v2",
+      "declared_date": "2026-09-21",
+      "status": "Authorized design exploration; specified before fitting this experiment",
+      "prepared": ".runs/characteristics_v1/prepared/35ef3a5eb0cb5e42",
+      "baseline_registry": ".runs/characteristics_v1/study/d20631f4712e3eb5/linear/full_fc16bf210fe45a57/registry.json",
+      "test_start": "2014-01",
+      "test_end": "2022-12",
+      "test_months": 108,
+      "interpretation": "Historical development comparison; these years have already informed design choices",
+      "confirmation": "No untouched confirmation sample certified. 2023 has 72 missing input sessions and prior predictions; no 2023 scoring in this experiment.",
+      "targets": [
+        "raw",
+        "dgtw"
+      ],
+      "primary_target": "raw",
+      "horizon": 1,
+      "validation_days": 126,
+      "validation_scheme": "Same single chronological validation block as the previous study; no new folds or near-tie rule",
+      "feature_sets": [
+        "characteristics",
+        "characteristics_core",
+        "characteristics_textcore"
+      ],
+      "feature_sets_description": "C; C plus sentiment and attention; C plus sentiment, attention,384 embeddings and2 agreement measures",
+      "global_estimators": [
+        "ols",
+        "ridge",
+        "lasso",
+        "enet"
+      ],
+      "group_estimator": "group_ridge",
+      "group_feature_sets": [
+        "characteristics_core",
+        "characteristics_textcore"
+      ],
+      "global_penalty_grid": "Unchanged protocol_linear.grid_specification; exact source and grid recorded at launch",
+      "group_ridge": {
+        "base_alphas": [
+          1000,
+          100,
+          10,
+          1,
+          0.1,
+          0.01,
+          0.001,
+          0.0001,
+          1e-05,
+          1e-06
+        ],
+        "social_penalty_multipliers": [
+          1,
+          10
+        ],
+        "text_penalty_multipliers": [
+          1,
+          10,
+          100
+        ],
+        "off_candidates": "Explicitly exclude social and/or entire text block; retain exact smaller-model candidates",
+        "groups": "C includes17 controls and17 missingness flags; S is sentiment and attention; T includes embedding coordinates or PCs plus2 agreement measures"
+      },
+      "representations": {
+        "full": "Original inputs unchanged",
+        "pca": "For characteristics_textcore only; dimension selected among16,32,64,128 on validation jointly with other settings",
+        "pca_dimensions": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "pca_fit": "Equal-date covariance of fitting-scaled384 embedding coordinates using eligible input rows without outcome conditioning; no whitening before PCA; component scores subsequently fitting-standardized",
+        "agreement_measures": "Retained separately from PCA and assigned to the text penalty group",
+        "final_refit": "Re-estimate all fitted scaling and PCA transformations on the final fitting rows"
+      },
+      "history_policies": [
+        "fixed504",
+        "select"
+      ],
+      "fixed_fit_days": 504,
+      "selected_fit_days": [
+        504,
+        252,
+        756
+      ],
+      "refit_policies": {
+        "retain": "Keep selected coefficients and transformations estimated before validation",
+        "recent": "Refit using latest selected F exchange-session signal dates with matured labels before the test month",
+        "union": "Refit using the union of original fitting and validation input rows; F+126 sessions; preserve original boundary exclusions"
+      },
+      "union_examples_sessions": {
+        "252": 378,
+        "504": 630,
+        "756": 882
+      },
+      "penalty_transfer": "Carry selected ridge alpha/group multipliers; for lasso/enet carry alpha_fraction and l1_ratio, recomputing alpha_max on final fitting data",
+      "selection": "Highest mean daily validation Spearman IC, first declared candidate within existing numerical tie tolerance; no test-period model selection",
+      "base_procedures_per_target": 19,
+      "models_per_target": 114,
+      "total_models": 228,
+      "month_target_checkpoints": 216,
+      "baseline_reproduction": "Verify all12 retained fixed504 full-input global forecasts per target against the preceding characteristic checkpoints",
+      "primary_metric": "rank_ic",
+      "secondary_metrics": [
+        "ew_spread_bp",
+        "cap_spread_bp"
+      ],
+      "hac_lags": [
+        5,
+        21,
+        63
+      ],
+      "periods": [
+        "full",
+        "2014-2018",
+        "2019-2022"
+      ],
+      "family_sizes_per_target_metric_period": {
+        "refit": 114,
+        "history": 57,
+        "group_penalty": 18,
+        "compression": 30,
+        "incremental_social": 90,
+        "estimator": 90
+      },
+      "deferred": [
+        "near-tie selection rule",
+        "new validation folds",
+        "expanded penalty grids",
+        "exponential time weights",
+        "all-social feature extensions",
+        "alternative targets or losses",
+        "neural networks"
+      ],
+      "report": "reports/10_linear_design_results.md",
+      "evaluation_prefix": "reports/data/linear_design_v2"
+    },
+    "spec_sha256": "3f441b137d2d3112d091d9d14956e6ccca7c194d696c2fdc4c0601c97506a33e",
+    "prepared": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\prepared\\35ef3a5eb0cb5e42",
+    "prepared_manifest_sha256": "4d7fc5a6edd68b85effd5f7aaf84accf9c93fcc7a96317702fad0b579a9765d3",
+    "baseline_registry": "D:\\StockTwits\\Code\\.runs\\characteristics_v1\\study\\d20631f4712e3eb5\\linear\\full_fc16bf210fe45a57\\registry.json",
+    "baseline_registry_sha256": "44ad947e526e26b870c9ae07b254cce4e42cbea3799e180696d2189c9de83375",
+    "code": {
+      "run_linear_design_study.py": "952b4469f38ccf62d05c34811573b75ba33be9cd44d1acc7e4c9c4f973bd0c3f",
+      "linear_design_core.py": "e7ab822630e036b41ec00400323cccb5d75779849bbdb899bfc8210bf82584db",
+      "linear_design_runner.py": "3e690956fef742892325451b333d598586429c5804c87163d0e086bb7d93f357",
+      "linear_design_evaluate.py": "23b7f08ecaa9b3771dbaff1a260b195f0363c75f33779faddb8c6a73171e7c27",
+      "linear_design_report.py": "2d0048ca92b18951f3b690fb77dcc6db03cca932dff96434090cb13e05dcbb72",
+      "run_characteristic_study.py": "42e50d5e7bb0e1642a1168d3a78ab884c7305c78593fc49194a048053c05300e",
+      "resume_protocol_nn_study.py": "4a81327843a5bd4978348399aabde2289a4e607f14c51cb1116b57febc191a27",
+      "characteristic_data.py": "7e16e9e77250f6dbc258d0ba536bd032aed844fcf940c8515ca9b3186a1c88dd",
+      "characteristic_linear.py": "6ef9ed71336c723312e0b6a27ad33d8d974ac8b7afda51289d37dc53134ba1ff",
+      "characteristic_evaluate.py": "51fd7102a5e5c8b327bd13ec646eab5cb5f908f11d0dd7d74663cb04eeeb8a84",
+      "protocol_data.py": "21e6e960b4a6df56a868ce706c4cd840f05d4fe4a2a266e483c0d74d3819498a",
+      "protocol_linear.py": "9033999dcbe9375bff43213908aa4f2e3bedf81eeb53fd2123f0f20007cc8eb5",
+      "protocol_evaluate.py": "ab0484ded276eaba01519e56d8f32e6ba0c0562205487ac77138db9066108d7f",
+      "prediction_metrics.py": "1f75e6086fe8c18068a4e95e15d8e4b183684369d4cc4dcb40fd32ce919528b7",
+      "nn_checkpoint.py": "d69308a7bb7b61f4c07cbbd80df45b98dae696a8c125d163e671133eba069d83"
+    },
+    "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:21:58) [MSC v.1929 64 bit (AMD64)]",
+    "threads": 2
+  },
+  "change": "Preserve historical retained-fit transformations and moments before subsetting inputs. Only linear_design_core.py changed among the 15 study sources; experimental declaration and all certificate thresholds unchanged.",
+  "focused_tests_passed": 31,
+  "regression_evidence_path": "D:\\StockTwits\\Code\\.runs\\linear_design_v2\\rounding_repair_audit.json",
+  "regression_evidence_sha256": "d16ab440e3bde6ec6c1d0c59846d5b41d87b0ec3b4fd763aaf9f1c939a209ee0",
+  "regression_evidence": {
+    "month": "2014-03",
+    "target": "raw",
+    "procedure_count": 114,
+    "baseline_checks": 12,
+    "elapsed_seconds": 64.9687010999769,
+    "core_sha256": "e7ab822630e036b41ec00400323cccb5d75779849bbdb899bfc8210bf82584db",
+    "all_baseline_checks_passed": true,
+    "baseline_audit": {
+      "ld2_ols_characteristics_full_raw_fixed504_retain": {
+        "max_abs_difference": 5.551115123125783e-17,
+        "max_abs_difference_over_prediction_sd": 3.711411349985669e-15,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "ols_characteristics_raw_fit504_val126"
+      },
+      "ld2_ridge_characteristics_full_raw_fixed504_retain": {
+        "max_abs_difference": 1.0408340855860843e-17,
+        "max_abs_difference_over_prediction_sd": 8.930650885575223e-16,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "ridge_characteristics_raw_fit504_val126"
+      },
+      "ld2_lasso_characteristics_full_raw_fixed504_retain": {
+        "max_abs_difference": 2.0816681711721685e-17,
+        "max_abs_difference_over_prediction_sd": 1.4595412231934957e-15,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "lasso_characteristics_raw_fit504_val126"
+      },
+      "ld2_enet_characteristics_full_raw_fixed504_retain": {
+        "max_abs_difference": 1.5612511283791264e-17,
+        "max_abs_difference_over_prediction_sd": 1.094690808337982e-15,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "enet_characteristics_raw_fit504_val126"
+      },
+      "ld2_ols_characteristics_core_full_raw_fixed504_retain": {
+        "max_abs_difference": 5.551115123125783e-17,
+        "max_abs_difference_over_prediction_sd": 3.730967222381642e-15,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "ols_characteristics_core_raw_fit504_val126"
+      },
+      "ld2_ridge_characteristics_core_full_raw_fixed504_retain": {
+        "max_abs_difference": 1.0408340855860843e-17,
+        "max_abs_difference_over_prediction_sd": 8.886151846580685e-16,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "ridge_characteristics_core_raw_fit504_val126"
+      },
+      "ld2_lasso_characteristics_core_full_raw_fixed504_retain": {
+        "max_abs_difference": 2.0816681711721685e-17,
+        "max_abs_difference_over_prediction_sd": 1.467373598067939e-15,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "lasso_characteristics_core_raw_fit504_val126"
+      },
+      "ld2_enet_characteristics_core_full_raw_fixed504_retain": {
+        "max_abs_difference": 2.0816681711721685e-17,
+        "max_abs_difference_over_prediction_sd": 1.4674204695804402e-15,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "enet_characteristics_core_raw_fit504_val126"
+      },
+      "ld2_ols_characteristics_textcore_full_raw_fixed504_retain": {
+        "max_abs_difference": 2.0816681711721685e-16,
+        "max_abs_difference_over_prediction_sd": 7.0566076845422916e-15,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "ols_characteristics_textcore_raw_fit504_val126"
+      },
+      "ld2_ridge_characteristics_textcore_full_raw_fixed504_retain": {
+        "max_abs_difference": 6.938893903907228e-18,
+        "max_abs_difference_over_prediction_sd": 1.0863924071640656e-15,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "ridge_characteristics_textcore_raw_fit504_val126"
+      },
+      "ld2_lasso_characteristics_textcore_full_raw_fixed504_retain": {
+        "max_abs_difference": 3.469446951953614e-18,
+        "max_abs_difference_over_prediction_sd": 3.613921653308099e-16,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "lasso_characteristics_textcore_raw_fit504_val126"
+      },
+      "ld2_enet_characteristics_textcore_full_raw_fixed504_retain": {
+        "max_abs_difference": 3.469446951953614e-18,
+        "max_abs_difference_over_prediction_sd": 3.6774780387126065e-16,
+        "max_daily_ic_difference": 0.0,
+        "compared_dates": 21,
+        "historical_model_id": "enet_characteristics_textcore_raw_fit504_val126"
+      }
+    }
+  },
+  "old_checkpoints": "Preserved under old identity and recomputed in the repaired study."
+}
